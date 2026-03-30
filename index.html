@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>P.S. 165Q — Edith K. Bergtraum School</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --navy: #0a1128;
+      --blue: #1e3a8a;
+      --blue-light: #3b82f6;
+      --blue-glow: #60a5fa;
+      --accent: #f59e0b;
+      --accent-light: #fbbf24;
+      --white: #ffffff;
+      --off-white: #f8fafc;
+      --gray-100: #f1f5f9;
+      --gray-200: #e2e8f0;
+      --gray-400: #94a3b8;
+      --gray-600: #475569;
+      --gray-800: #1e293b;
+      --radius: 16px;
+      --radius-sm: 8px;
+      --transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--off-white);
+      color: var(--gray-800);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      padding: 16px 0;
+      transition: var(--transition);
+      background: transparent;
+    }
+    .navbar.scrolled {
+      background: rgba(10, 17, 40, 0.92);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      padding: 10px 0;
+      box-shadow: 0 4px 30px rgba(0,0,0,0.15);
+    }
+    .nav-inner { display: flex; justify-content: space-between; align-items: center; }
+    .nav-brand { display: flex; align-items: center; gap: 12px; }
+    .nav-logo {
+      width: 42px; height: 42px;
+      background: linear-gradient(135deg, var(--blue-light), var(--accent));
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 800; font-size: 18px; color: white;
+    }
+    .nav-brand-text { color: white; font-weight: 600; font-size: 1.1rem; letter-spacing: -0.02em; }
+    .nav-brand-text span { color: var(--accent-light); }
+    .nav-links { display: flex; gap: 32px; list-style: none; align-items: center; }
+    .nav-links a {
+      color: rgba(255,255,255,0.8); font-size: 0.9rem; font-weight: 500;
+      transition: var(--transition); position: relative;
+    }
+    .nav-links a::after {
+      content: ''; position: absolute; bottom: -4px; left: 0;
+      width: 0; height: 2px; background: var(--accent); transition: width 0.3s ease;
+    }
+    .nav-links a:hover { color: white; }
+    .nav-links a:hover::after { width: 100%; }
+    .nav-cta {
+      background: var(--accent) !important; color: var(--navy) !important;
+      padding: 10px 24px; border-radius: 50px; font-weight: 600 !important; transition: var(--transition);
+    }
+    .nav-cta:hover { background: var(--accent-light) !important; transform: translateY(-2px); }
+    .nav-cta::after { display: none !important; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; z-index: 1001; }
+    .hamburger span { width: 24px; height: 2px; background: white; transition: var(--transition); }
+    .hero {
+      min-height: 100vh; display: flex; align-items: center;
+      position: relative; background: var(--navy); overflow: hidden;
+    }
+    .hero::before {
+      content: ''; position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 70% 40%, rgba(59, 130, 246, 0.15), transparent),
+        radial-gradient(ellipse 60% 50% at 20% 80%, rgba(245, 158, 11, 0.08), transparent);
+    }
+    .hero-grid {
+      position: absolute; inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+      mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
+    }
+    .hero-content { position: relative; z-index: 2; padding: 120px 0 80px; }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(59, 130, 246, 0.15); border: 1px solid rgba(59, 130, 246, 0.3);
+      padding: 8px 20px; border-radius: 50px;
+      color: var(--blue-glow); font-size: 0.85rem; font-weight: 500;
+      margin-bottom: 32px; backdrop-filter: blur(10px);
+    }
+    .hero-badge .dot {
+      width: 8px; height: 8px; background: var(--accent);
+      border-radius: 50%; animation: pulse 2s infinite;
+    }
+    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(3rem, 6vw, 5.5rem); font-weight: 700;
+      line-height: 1.05; color: white; letter-spacing: -0.03em;
+      margin-bottom: 24px; max-width: 700px;
+    }
+    .hero h1 .highlight {
+      background: linear-gradient(135deg, var(--accent), var(--accent-light));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .hero p {
+      font-size: 1.15rem; color: rgba(255,255,255,0.6);
+      max-width: 520px; line-height: 1.7; margin-bottom: 40px;
+    }
+    .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 14px 32px; border-radius: 50px; font-weight: 600;
+      font-size: 0.95rem; transition: var(--transition); cursor: pointer; border: none;
+    }
+    .btn-primary { background: var(--accent); color: var(--navy); }
+    .btn-primary:hover { background: var(--accent-light); transform: translateY(-2px); box-shadow: 0 8px 30px rgba(245, 158, 11, 0.3); }
+    .btn-secondary { background: rgba(255,255,255,0.08); color: white; border: 1px solid rgba(255,255,255,0.15); }
+    .btn-secondary:hover { background: rgba(255,255,255,0.15); transform: translateY(-2px); }
+    .hero-stats {
+      display: flex; gap: 48px; margin-top: 64px; padding-top: 48px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+    .stat-item h3 { font-size: 2.2rem; font-weight: 800; color: white; letter-spacing: -0.02em; }
+    .stat-item p {
+      font-size: 0.85rem; color: rgba(255,255,255,0.45); margin: 0;
+      text-transform: uppercase; letter-spacing: 0.08em; font-weight: 500;
+    }
+    .hero-orb {
+      position: absolute; right: -5%; top: 15%; width: 500px; height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(59,130,246,0.12), transparent 70%);
+      filter: blur(60px); animation: float 8s ease-in-out infinite;
+    }
+    @keyframes float { 0%, 100% { transform: translateY(0) scale(1); } 50% { transform: translateY(-30px) scale(1.05); } }
+    section { padding: 100px 0; }
+    .section-label {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 0.8rem; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 0.12em; color: var(--blue-light); margin-bottom: 16px;
+    }
+    .section-label .line { width: 32px; height: 2px; background: var(--blue-light); border-radius: 2px; }
+    .section-title {
+      font-family: 'Playfair Display', serif; font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700; letter-spacing: -0.02em; color: var(--navy); margin-bottom: 16px;
+    }
+    .section-subtitle { font-size: 1.05rem; color: var(--gray-600); max-width: 560px; line-height: 1.7; }
+    .values-section { background: white; }
+    .values-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px; margin-top: 48px; }
+    .value-chip {
+      background: var(--gray-100); border: 1px solid var(--gray-200);
+      padding: 20px 16px; border-radius: var(--radius);
+      text-align: center; font-weight: 600; font-size: 0.9rem;
+      color: var(--navy); transition: var(--transition);
+    }
+    .value-chip:hover {
+      background: var(--navy); color: white; border-color: var(--navy);
+      transform: translateY(-4px); box-shadow: 0 12px 40px rgba(10, 17, 40, 0.15);
+    }
+    .value-chip .emoji { display: block; font-size: 1.8rem; margin-bottom: 8px; }
+    .programs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 24px; margin-top: 48px; }
+    .program-card {
+      background: white; border: 1px solid var(--gray-200); border-radius: var(--radius);
+      padding: 36px; transition: var(--transition); position: relative; overflow: hidden;
+    }
+    .program-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(90deg, var(--blue-light), var(--accent)); opacity: 0; transition: var(--transition);
+    }
+    .program-card:hover {
+      transform: translateY(-6px); box-shadow: 0 20px 60px rgba(10, 17, 40, 0.08); border-color: transparent;
+    }
+    .program-card:hover::before { opacity: 1; }
+    .program-icon {
+      width: 52px; height: 52px; border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.5rem; margin-bottom: 20px;
+    }
+    .program-icon.blue { background: rgba(59, 130, 246, 0.1); }
+    .program-icon.amber { background: rgba(245, 158, 11, 0.1); }
+    .program-icon.emerald { background: rgba(16, 185, 129, 0.1); }
+    .program-icon.purple { background: rgba(139, 92, 246, 0.1); }
+    .program-card h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 10px; color: var(--navy); }
+    .program-card p { font-size: 0.92rem; color: var(--gray-600); line-height: 1.65; }
+    .program-tag {
+      display: inline-block; margin-top: 16px; padding: 6px 14px;
+      background: var(--gray-100); border-radius: 50px;
+      font-size: 0.78rem; font-weight: 600; color: var(--blue);
+      text-transform: uppercase; letter-spacing: 0.06em;
+    }
+    .message-section { background: var(--navy); color: white; position: relative; overflow: hidden; }
+    .message-section::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 80% 50%, rgba(59,130,246,0.1), transparent 60%);
+    }
+    .message-content {
+      position: relative; z-index: 2;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;
+    }
+    .message-text .section-label { color: var(--accent-light); }
+    .message-text .section-label .line { background: var(--accent-light); }
+    .message-text .section-title { color: white; }
+    .message-quote { font-size: 1.15rem; color: rgba(255,255,255,0.7); line-height: 1.8; margin-top: 24px; }
+    .message-quote p { margin-bottom: 16px; }
+    .message-author { margin-top: 32px; display: flex; align-items: center; gap: 16px; }
+    .author-avatar {
+      width: 56px; height: 56px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--blue-light), var(--accent));
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 1.2rem;
+    }
+    .author-info h4 { font-weight: 600; font-size: 1rem; }
+    .author-info p { color: rgba(255,255,255,0.5); font-size: 0.85rem; margin: 0; }
+    .message-visual { display: flex; flex-direction: column; gap: 16px; }
+    .lang-card {
+      background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--radius); padding: 24px; backdrop-filter: blur(10px); transition: var(--transition);
+    }
+    .lang-card:hover { background: rgba(255,255,255,0.1); transform: translateX(8px); }
+    .lang-card h4 { font-size: 0.95rem; font-weight: 600; margin-bottom: 4px; }
+    .lang-card p { font-size: 0.82rem; color: rgba(255,255,255,0.45); margin: 0; }
+    .lang-flag { font-size: 1.4rem; margin-right: 12px; }
+    .links-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px; margin-top: 48px; }
+    .link-item {
+      display: flex; align-items: center; gap: 16px; padding: 20px 24px;
+      background: white; border: 1px solid var(--gray-200); border-radius: var(--radius);
+      transition: var(--transition); cursor: pointer;
+    }
+    .link-item:hover {
+      border-color: var(--blue-light); transform: translateX(6px);
+      box-shadow: 0 4px 20px rgba(59, 130, 246, 0.08);
+    }
+    .link-icon {
+      width: 44px; height: 44px; background: var(--gray-100); border-radius: 12px;
+      display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0;
+    }
+    .link-item:hover .link-icon { background: rgba(59, 130, 246, 0.1); }
+    .link-text h4 { font-size: 0.92rem; font-weight: 600; color: var(--navy); }
+    .link-text p { font-size: 0.8rem; color: var(--gray-400); margin: 0; }
+    .link-arrow { margin-left: auto; color: var(--gray-400); transition: var(--transition); font-size: 1.2rem; }
+    .link-item:hover .link-arrow { color: var(--blue-light); transform: translateX(4px); }
+    .contact-section { background: white; }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; margin-top: 48px; }
+    .contact-card { background: var(--gray-100); border-radius: var(--radius); padding: 36px; }
+    .contact-card h3 { font-size: 1.1rem; font-weight: 700; color: var(--navy); margin-bottom: 24px; }
+    .contact-row { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 16px; }
+    .contact-row .icon {
+      width: 36px; height: 36px; background: white; border-radius: 10px;
+      display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0;
+    }
+    .contact-row .info h4 { font-size: 0.85rem; font-weight: 600; color: var(--navy); }
+    .contact-row .info p { font-size: 0.85rem; color: var(--gray-600); margin: 0; }
+    .map-placeholder { background: var(--gray-100); border-radius: var(--radius); height: 100%; min-height: 300px; overflow: hidden; }
+    .map-placeholder iframe { width: 100%; height: 100%; min-height: 300px; border: 0; border-radius: var(--radius); }
+    footer { background: var(--navy); color: white; padding: 48px 0; }
+    .footer-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 24px; }
+    .footer-brand { display: flex; align-items: center; gap: 12px; }
+    .footer-brand .nav-logo { width: 36px; height: 36px; font-size: 14px; border-radius: 10px; }
+    .footer-brand p { color: rgba(255,255,255,0.4); font-size: 0.85rem; }
+    .footer-links { display: flex; gap: 24px; list-style: none; }
+    .footer-links a { color: rgba(255,255,255,0.5); font-size: 0.85rem; transition: var(--transition); }
+    .footer-links a:hover { color: white; }
+    .footer-socials { display: flex; gap: 12px; }
+    .social-icon {
+      width: 40px; height: 40px; border-radius: 12px; background: rgba(255,255,255,0.08);
+      display: flex; align-items: center; justify-content: center; font-size: 1.1rem; transition: var(--transition);
+    }
+    .social-icon:hover { background: var(--blue-light); transform: translateY(-3px); }
+    .footer-bottom {
+      margin-top: 32px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.08);
+      display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px;
+    }
+    .footer-bottom p { color: rgba(255,255,255,0.3); font-size: 0.8rem; }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .nav-links.open {
+        display: flex; flex-direction: column; position: fixed; inset: 0;
+        background: rgba(10, 17, 40, 0.98); backdrop-filter: blur(20px);
+        justify-content: center; align-items: center; gap: 24px; z-index: 999;
+      }
+      .nav-links.open a { font-size: 1.3rem; }
+      .hero-stats { flex-wrap: wrap; gap: 32px; }
+      .message-content { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .programs-grid { grid-template-columns: 1fr; }
+      .footer-inner { flex-direction: column; text-align: center; }
+      .footer-links { flex-wrap: wrap; justify-content: center; }
+    }
+    .page-loader {
+      position: fixed; inset: 0; background: var(--navy); z-index: 9999;
+      display: flex; align-items: center; justify-content: center;
+      transition: opacity 0.6s ease, visibility 0.6s ease;
+    }
+    .page-loader.hidden { opacity: 0; visibility: hidden; }
+    .loader-ring {
+      width: 48px; height: 48px; border: 3px solid rgba(255,255,255,0.1);
+      border-top-color: var(--accent); border-radius: 50%; animation: spin 0.8s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .announcement {
+      background: linear-gradient(90deg, var(--blue), var(--blue-light));
+      color: white; text-align: center; padding: 10px 24px;
+      font-size: 0.82rem; font-weight: 500; position: relative; z-index: 1001;
+    }
+    .announcement a { text-decoration: underline; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <div class="page-loader" id="loader"><div class="loader-ring"></div></div>
+  <div class="announcement">Enrollment for 2026–2027 is now open — <a href="#contact">Learn more &rarr;</a></div>
+  <nav class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="#" class="nav-brand">
+        <div class="nav-logo">165</div>
+        <div class="nav-brand-text">PS<span>165Q</span></div>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#programs">Programs</a></li>
+        <li><a href="#leadership">Leadership</a></li>
+        <li><a href="#resources">Resources</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#contact" class="nav-cta">Enroll Now</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+  <section class="hero" id="hero">
+    <div class="hero-grid"></div>
+    <div class="hero-orb"></div>
+    <div class="container hero-content">
+      <div class="hero-badge"><span class="dot"></span>Now Enrolling 2026–2027</div>
+      <h1>Where Every<br>Learner <span class="highlight">Thrives</span></h1>
+      <p>Cultivating a solid and equitable foundation for students to become citizens of the world and life-long learners — through critical thinking, creativity, collaboration, and communication.</p>
+      <div class="hero-actions">
+        <a href="#programs" class="btn btn-primary">Explore Programs →</a>
+        <a href="#leadership" class="btn btn-secondary">Meet Our Team</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item reveal"><h3>Pre-K–5</h3><p>Grade Levels</p></div>
+        <div class="stat-item reveal reveal-delay-1"><h3>10+</h3><p>Years of Leadership</p></div>
+        <div class="stat-item reveal reveal-delay-2"><h3>5</h3><p>Languages Supported</p></div>
+        <div class="stat-item reveal reveal-delay-3"><h3>D25</h3><p>Flushing, Queens</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="values-section" id="about">
+    <div class="container">
+      <div class="reveal">
+        <div class="section-label"><span class="line"></span>Our Core Values</div>
+        <h2 class="section-title">Built on What Matters</h2>
+        <p class="section-subtitle">Seven principles that guide everything we do — from classroom instruction to community engagement.</p>
+      </div>
+      <div class="values-grid">
+        <div class="value-chip reveal reveal-delay-1"><span class="emoji">🤝</span>Respect</div>
+        <div class="value-chip reveal reveal-delay-1"><span class="emoji">⚡</span>Responsibility</div>
+        <div class="value-chip reveal reveal-delay-2"><span class="emoji">💛</span>Kindness</div>
+        <div class="value-chip reveal reveal-delay-2"><span class="emoji">🧠</span>Intellectualism</div>
+        <div class="value-chip reveal reveal-delay-3"><span class="emoji">🌍</span>Diversity</div>
+        <div class="value-chip reveal reveal-delay-3"><span class="emoji">🫂</span>Inclusivity</div>
+        <div class="value-chip reveal reveal-delay-4"><span class="emoji">🔥</span>Perseverance</div>
+      </div>
+    </div>
+  </section>
+  <section id="programs">
+    <div class="container">
+      <div class="reveal">
+        <div class="section-label"><span class="line"></span>What We Offer</div>
+        <h2 class="section-title">Programs & Enrichment</h2>
+        <p class="section-subtitle">A well-rounded education that nurtures the whole child — academically, socially, and creatively.</p>
+      </div>
+      <div class="programs-grid">
+        <div class="program-card reveal reveal-delay-1">
+          <div class="program-icon blue">🎓</div>
+          <h3>Gifted & Talented</h3>
+          <p>Rigorous, inquiry-based curriculum designed to challenge and inspire advanced learners at every grade level.</p>
+          <span class="program-tag">G&T Program</span>
+        </div>
+        <div class="program-card reveal reveal-delay-2">
+          <div class="program-icon amber">🎨</div>
+          <h3>The Arts at PS 165Q</h3>
+          <p>Visual arts, music, and performance programs that develop creative expression and cultural literacy.</p>
+          <span class="program-tag">Arts Integration</span>
+        </div>
+        <div class="program-card reveal reveal-delay-3">
+          <div class="program-icon emerald">🏀</div>
+          <h3>Sports & Athletics</h3>
+          <p>Competitive and recreational athletics building teamwork, discipline, and physical wellness across all grades.</p>
+          <span class="program-tag">After School</span>
+        </div>
+        <div class="program-card reveal reveal-delay-1">
+          <div class="program-icon purple">🧩</div>
+          <h3>NEST Program</h3>
+          <p>Specialized support and enrichment for students who benefit from differentiated instructional approaches.</p>
+          <span class="program-tag">Specialized</span>
+        </div>
+        <div class="program-card reveal reveal-delay-2">
+          <div class="program-icon blue">💚</div>
+          <h3>Social-Emotional Learning</h3>
+          <p>Comprehensive SEL framework supporting student well-being, self-regulation, and healthy relationships.</p>
+          <span class="program-tag">Whole Child</span>
+        </div>
+        <div class="program-card reveal reveal-delay-3">
+          <div class="program-icon amber">💻</div>
+          <h3>Technology Integration</h3>
+          <p>Modern digital literacy programs preparing students for a technology-driven future with hands-on learning.</p>
+          <span class="program-tag">Digital Literacy</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="message-section" id="leadership">
+    <div class="container">
+      <div class="message-content">
+        <div class="message-text reveal">
+          <div class="section-label"><span class="line"></span>From Our Principal</div>
+          <h2 class="section-title">A Decade of Dedicated Leadership</h2>
+          <div class="message-quote">
+            <p>Welcome to P.S. 165Q, the Edith K. Bergtraum School. As I enter my 10th year of leadership here, I remain deeply committed to providing a safe, inclusive environment where every student receives high-quality instruction.</p>
+            <p>Our partnership with families is the foundation of our success. Together, aligned with Chancellor's Priorities and District 25 goals, we are shaping the next generation of learners.</p>
+          </div>
+          <div class="message-author">
+            <div class="author-avatar">TD</div>
+            <div class="author-info">
+              <h4>Principal Tiffany L. Davis-Nealy</h4>
+              <p>P.S. 165Q — Edith K. Bergtraum School</p>
+            </div>
+          </div>
+        </div>
+        <div class="message-visual reveal reveal-delay-2">
+          <div class="lang-card"><span class="lang-flag">🇺🇸</span><h4>English</h4><p>Principal's welcome letter available</p></div>
+          <div class="lang-card"><span class="lang-flag">🇨🇳</span><h4>中文 (Mandarin Chinese)</h4><p>校长欢迎信</p></div>
+          <div class="lang-card"><span class="lang-flag">🇪🇸</span><h4>Español</h4><p>Carta de bienvenida de la directora</p></div>
+          <div class="lang-card"><span class="lang-flag">🇵🇰</span><h4>اردو (Urdu)</h4><p>پرنسپل کا خوش آمدید خط</p></div>
+          <div class="lang-card"><span class="lang-flag">🇮🇱</span><h4>עברית (Hebrew)</h4><p>מכתב ברכה מהמנהלת</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="resources">
+    <div class="container">
+      <div class="reveal">
+        <div class="section-label"><span class="line"></span>Quick Access</div>
+        <h2 class="section-title">Parent & Family Resources</h2>
+        <p class="section-subtitle">Everything you need, in one place.</p>
+      </div>
+      <div class="links-grid">
+        <a class="link-item reveal reveal-delay-1" href="#"><div class="link-icon">📅</div><div class="link-text"><h4>School Calendar</h4><p>Key dates & events</p></div><span class="link-arrow">→</span></a>
+        <a class="link-item reveal reveal-delay-1" href="#"><div class="link-icon">📖</div><div class="link-text"><h4>Parent Handbook</h4><p>Policies & procedures</p></div><span class="link-arrow">→</span></a>
+        <a class="link-item reveal reveal-delay-2" href="#"><div class="link-icon">🍎</div><div class="link-text"><h4>Lunch Menu</h4><p>Monthly meal schedules</p></div><span class="link-arrow">→</span></a>
+        <a class="link-item reveal reveal-delay-2" href="#"><div class="link-icon">📱</div><div class="link-text"><h4>ParentSquare</h4><p>School communications hub</p></div><span class="link-arrow">→</span></a>
+        <a class="link-item reveal reveal-delay-3" href="#"><div class="link-icon">📋</div><div class="link-text"><h4>School Supplies</h4><p>Grade-level lists</p></div><span class="link-arrow">→</span></a>
+        <a class="link-item reveal reveal-delay-3" href="#"><div class="link-icon">🎒</div><div class="link-text"><h4>After School Programs</h4><p>Extracurricular activities</p></div><span class="link-arrow">→</span></a>
+        <a class="link-item reveal reveal-delay-4" href="#"><div class="link-icon">📚</div><div class="link-text"><h4>Academic Support</h4><p>Literacy & math resources</p></div><span class="link-arrow">→</span></a>
+        <a class="link-item reveal reveal-delay-4" href="#"><div class="link-icon">📰</div><div class="link-text"><h4>DOE Updates</h4><p>District & city news</p></div><span class="link-arrow">→</span></a>
+        <a class="link-item reveal reveal-delay-4" href="#"><div class="link-icon">🏛️</div><div class="link-text"><h4>PTA</h4><p>Parent-Teacher Association</p></div><span class="link-arrow">→</span></a>
+      </div>
+    </div>
+  </section>
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="reveal">
+        <div class="section-label"><span class="line"></span>Get In Touch</div>
+        <h2 class="section-title">Visit or Contact Us</h2>
+        <p class="section-subtitle">We'd love to welcome you to our school community.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-card reveal">
+          <h3>Contact Information</h3>
+          <div class="contact-row"><div class="icon">📍</div><div class="info"><h4>Address</h4><p>70-35 150 Street, Flushing, NY 11367</p></div></div>
+          <div class="contact-row"><div class="icon">📞</div><div class="info"><h4>Phone</h4><p>(718) 263-4004</p></div></div>
+          <div class="contact-row"><div class="icon">📠</div><div class="info"><h4>Fax</h4><p>(718) 793-9812</p></div></div>
+          <div class="contact-row"><div class="icon">👤</div><div class="info"><h4>Principal</h4><p>Tiffany L. Davis-Nealy</p></div></div>
+          <div class="contact-row"><div class="icon">👥</div><div class="info"><h4>Assistant Principals</h4><p>Andrea L. Luongo &amp; Marianna H. Werth</p></div></div>
+          <div style="margin-top: 24px; display: flex; gap: 12px;">
+            <a href="https://instagram.com/PS165Queens" class="social-icon" style="background: rgba(30,58,138,0.1); color: var(--blue);">📷</a>
+            <a href="https://twitter.com/PS165Queens" class="social-icon" style="background: rgba(30,58,138,0.1); color: var(--blue);">🐦</a>
+          </div>
+        </div>
+        <div class="map-placeholder reveal reveal-delay-2">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.0!2d-73.8076!3d40.7287!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2607c5c7e3c6f%3A0x2b9d2c5ac64c9f4e!2s70-35%20150th%20St%2C%20Flushing%2C%20NY%2011367!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="nav-logo">165</div>
+          <div>
+            <div class="nav-brand-text" style="font-size: 1rem;">PS<span>165Q</span></div>
+            <p>Edith K. Bergtraum School</p>
+          </div>
+        </div>
+        <ul class="footer-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#programs">Programs</a></li>
+          <li><a href="#leadership">Leadership</a></li>
+          <li><a href="#resources">Resources</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="footer-socials">
+          <a href="https://instagram.com/PS165Queens" class="social-icon">📷</a>
+          <a href="https://twitter.com/PS165Queens" class="social-icon">🐦</a>
+          <a href="https://twitter.com/PrincipalNealy" class="social-icon">🎓</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 P.S. 165Q Edith K. Bergtraum School. All rights reserved.</p>
+        <p>Accessibility · Privacy Policy · NYC DOE</p>
+      </div>
+    </div>
+  </footer>
+  <script>
+    window.addEventListener('load', () => { setTimeout(() => document.getElementById('loader').classList.add('hidden'), 400); });
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 50); });
+    function toggleMenu() { document.getElementById('navLinks').classList.toggle('open'); }
+    document.querySelectorAll('#navLinks a').forEach(a => { a.addEventListener('click', () => document.getElementById('navLinks').classList.remove('open')); });
+    const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); }); }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    function animateCounters() {
+      document.querySelectorAll('.stat-item h3').forEach(counter => {
+        const text = counter.textContent; const num = parseInt(text);
+        if (!isNaN(num) && num > 0) {
+          let current = 0; const step = Math.max(1, Math.floor(num / 30));
+          const suffix = text.replace(num.toString(), '');
+          const timer = setInterval(() => { current += step; if (current >= num) { current = num; clearInterval(timer); } counter.textContent = current + suffix; }, 30);
+        }
+      });
+    }
+    const heroObserver = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { animateCounters(); heroObserver.disconnect(); } }); }, { threshold: 0.5 });
+    const statsEl = document.querySelector('.hero-stats');
+    if (statsEl) heroObserver.observe(statsEl);
+  </script>
+</body>
+</html>
