@@ -1,1316 +1,519 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="P.S. 165Q Edith K. Bergtraum School — A Pre-K through Grade 5 public school in Flushing, Queens, District 25. Home of the Shooting Stars. Cultivating world-ready learners through critical thinking, creativity, and collaboration.">
-    <meta name="keywords" content="PS 165Q, PS165Q, Edith K Bergtraum, Flushing Queens school, District 25 school, NYC public school, elementary school Flushing, Pre-K Queens, Gifted and Talented Queens, NEST program Queens, D25 school, Kew Garden Hills school">
-    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
-    <meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)">
-    <meta name="color-scheme" content="light dark">
-    <meta name="robots" content="index, follow">
-    <meta name="author" content="P.S. 165Q Edith K. Bergtraum School">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="P.S. 165Q Edith K. Bergtraum School — Pre-K through Grade 5 in Flushing, Queens, District 25. Home of the Shooting Stars. G&T, NEST, Arts, SEL, and more.">
+<meta name="keywords" content="PS 165Q, PS165Q, Edith K Bergtraum, Flushing Queens school, District 25 school, NYC public school, elementary school Flushing, Pre-K Queens, Gifted Talented Queens, NEST program Queens, D25 school, Kew Garden Hills">
+<meta name="theme-color" content="#faf8f5"><meta name="color-scheme" content="light dark">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="P.S. 165Q — Edith K. Bergtraum School | Flushing, Queens">
+<meta property="og:description" content="Pre-K through Grade 5 in Flushing, Queens. Home of the Shooting Stars.">
+<meta property="og:type" content="website"><meta property="og:url" content="https://droppedmic.github.io/ps165q-site/">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@PS165Queens">
+<link rel="canonical" href="https://droppedmic.github.io/ps165q-site/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='16' fill='%231746a2'/%3E%3Ctext x='50' y='66' font-size='42' font-weight='600' text-anchor='middle' fill='%23eab308' font-family='Georgia'%3E165%3C/text%3E%3C/svg%3E" type="image/svg+xml">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"School","name":"P.S. 165Q Edith K. Bergtraum School","alternateName":["PS 165Q","PS165Q","Bergtraum School"],"url":"https://droppedmic.github.io/ps165q-site/","telephone":"(718) 263-4004","address":{"@type":"PostalAddress","streetAddress":"70-35 150 Street","addressLocality":"Flushing","addressRegion":"NY","postalCode":"11367","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":40.7282,"longitude":-73.8189},"sameAs":["https://www.instagram.com/ps165queens/","https://twitter.com/PS165Queens","https://www.facebook.com/PS165Q/","https://www.schools.nyc.gov/schools/Q165"],"employee":[{"@type":"Person","name":"Tiffany L. Davis-Nealy","jobTitle":"Principal"},{"@type":"Person","name":"Andrea L. Luongo","jobTitle":"Assistant Principal"},{"@type":"Person","name":"Marianna H. Werth","jobTitle":"Assistant Principal"}]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,600;1,6..72,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<title>P.S. 165Q — Edith K. Bergtraum School | Flushing, Queens</title>
+<style>
+:root {
+  --ink: #1a1612;
+  --ink-secondary: #4a4540;
+  --ink-muted: #8a847d;
+  --ink-faint: #b5afa8;
+  --surface: #faf8f5;
+  --surface-warm: #f3efe9;
+  --surface-card: #ffffff;
+  --border: #e8e2da;
+  --border-light: #f0ece6;
+  --royal: #1746a2;
+  --royal-bright: #2563eb;
+  --royal-muted: #d4dff7;
+  --gold: #c7940a;
+  --gold-bright: #eab308;
+  --gold-muted: #fef3c7;
+  --coral: #c52d3e;
+  --coral-muted: #fce4ec;
+  --emerald: #0f7b56;
+  --emerald-muted: #d1fae5;
+  --violet: #6d3dbf;
+  --violet-muted: #ede9fe;
+  --max-w: 1200px;
+  --nav-h: 68px;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+[data-theme="dark"] {
+  --ink: #ede8e2;
+  --ink-secondary: #bab4ac;
+  --ink-muted: #7a746d;
+  --ink-faint: #4a4540;
+  --surface: #141210;
+  --surface-warm: #1c1a17;
+  --surface-card: #1e1c19;
+  --border: #2e2b27;
+  --border-light: #242220;
+  --royal: #6b9cf7;
+  --royal-bright: #93b4f9;
+  --royal-muted: rgba(107,156,247,0.1);
+  --gold: #eab308;
+  --gold-bright: #fbbf24;
+  --gold-muted: rgba(234,179,8,0.1);
+  --coral: #fb7185;
+  --coral-muted: rgba(251,113,133,0.08);
+  --emerald: #34d399;
+  --emerald-muted: rgba(52,211,153,0.08);
+  --violet: #a78bfa;
+  --violet-muted: rgba(167,139,250,0.08);
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--nav-h)+32px)}
+body{font-family:'Outfit',system-ui,sans-serif;font-weight:400;font-size:1.0625rem;line-height:1.75;color:var(--ink-secondary);background:var(--surface);-webkit-font-smoothing:antialiased;overflow-x:hidden;transition:background .5s var(--ease),color .5s var(--ease)}
+a{color:var(--royal);text-decoration:none;transition:color .2s}
+a:hover{color:var(--royal-bright)}
+a:focus-visible{outline:2px solid var(--royal);outline-offset:3px;border-radius:3px}
+img{max-width:100%;display:block}
+.skip{position:absolute;top:-100%;left:16px;background:var(--royal);color:#fff;padding:12px 24px;border-radius:6px;font-weight:500;z-index:10000}
+.skip:focus{top:12px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.wrap{max-width:var(--max-w);margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:'Newsreader',Georgia,serif;color:var(--ink);line-height:1.15}
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="P.S. 165Q — Edith K. Bergtraum School | Flushing, Queens">
-    <meta property="og:description" content="Pre-K through Grade 5 in Flushing, Queens. Home of the Shooting Stars. G&T, NEST, Arts, SEL, and more.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://droppedmic.github.io/ps165q-site/">
-    <meta property="og:locale" content="en_US">
-    <meta property="og:site_name" content="P.S. 165Q Bergtraum School">
+/* ===== NAV ===== */
+.nav{position:fixed;top:0;left:0;right:0;height:var(--nav-h);z-index:1000;background:color-mix(in srgb,var(--surface) 85%,transparent);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--border-light);transition:box-shadow .4s var(--ease)}
+.nav.scrolled{box-shadow:0 1px 20px rgba(0,0,0,.04)}
+.nav-inner{max-width:var(--max-w);margin:0 auto;padding:0 24px;height:100%;display:flex;align-items:center;justify-content:space-between}
+.nav-brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}
+.nav-mark{width:36px;height:36px;border-radius:8px;background:var(--royal);color:var(--gold-bright);display:flex;align-items:center;justify-content:center;font-family:'Newsreader',serif;font-weight:600;font-size:.8125rem}
+.nav-id{display:flex;flex-direction:column;line-height:1.2}
+.nav-id-top{font-size:.6875rem;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-muted)}
+.nav-id-bot{font-size:.9375rem;font-weight:500;color:var(--ink)}
+.nav-links{display:none;list-style:none;gap:0;align-items:center}
+.nav-links a{display:block;padding:8px 14px;font-size:.875rem;font-weight:400;color:var(--ink-muted);border-radius:6px;transition:all .15s}
+.nav-links a:hover{color:var(--ink);background:var(--surface-warm)}
+.nav-right{display:flex;align-items:center;gap:6px}
+.ico-btn{width:40px;height:40px;border:none;background:transparent;color:var(--ink-muted);cursor:pointer;border-radius:6px;display:flex;align-items:center;justify-content:center;transition:all .15s}
+.ico-btn:hover{color:var(--ink);background:var(--surface-warm)}
+.ico-btn svg{width:20px;height:20px}
+[data-theme="dark"] .icon-sun{display:block}[data-theme="dark"] .icon-moon{display:none}
+[data-theme="light"] .icon-sun{display:none}[data-theme="light"] .icon-moon{display:block}
+.ham .icon-x{display:none}.ham[aria-expanded="true"] .icon-bars{display:none}.ham[aria-expanded="true"] .icon-x{display:block}
+.mob-menu{position:fixed;inset:var(--nav-h) 0 0 0;background:var(--surface);z-index:999;padding:20px;display:none;flex-direction:column;gap:2px;overflow-y:auto}
+.mob-menu.open{display:flex}
+.mob-menu a{display:flex;align-items:center;gap:14px;padding:14px 16px;font-size:1.0625rem;font-weight:400;color:var(--ink);border-radius:10px;transition:background .15s}
+.mob-menu a:hover{background:var(--surface-warm)}
+.mob-menu a svg{width:20px;height:20px;color:var(--royal);flex-shrink:0}
+.mob-sep{height:1px;background:var(--border);margin:10px 0}
+.mob-label{font-size:.625rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);padding:6px 16px 2px}
+.mob-bottom{margin-top:auto;padding:12px}
+.mob-bottom .btn{width:100%;justify-content:center}
+@media(min-width:1024px){.nav-links{display:flex}.ham{display:none}}
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@PS165Queens">
-    <meta name="twitter:creator" content="@PrincipalNealy">
-    <meta name="twitter:title" content="P.S. 165Q — Edith K. Bergtraum School">
-    <meta name="twitter:description" content="Pre-K through Grade 5 in Flushing, Queens. Home of the Shooting Stars.">
+/* ===== BUTTONS ===== */
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 28px;font-family:inherit;font-size:.9375rem;font-weight:500;border:none;border-radius:8px;cursor:pointer;transition:all .25s var(--ease);text-decoration:none;white-space:nowrap}
+.btn svg{width:16px;height:16px}
+.btn-royal{background:var(--royal);color:#fff}.btn-royal:hover{background:var(--royal-bright);color:#fff;transform:translateY(-2px);box-shadow:0 6px 20px color-mix(in srgb,var(--royal) 30%,transparent)}
+.btn-gold{background:var(--gold);color:#fff}.btn-gold:hover{background:var(--gold-bright);color:var(--ink);transform:translateY(-2px)}
+.btn-outline{background:transparent;color:var(--ink);border:1.5px solid var(--border);padding:12px 26px}.btn-outline:hover{border-color:var(--royal);color:var(--royal)}
+.btn-ghost{background:transparent;color:var(--royal);padding:6px 2px}.btn-ghost:hover{color:var(--royal-bright)}
+.btn-sm{padding:9px 20px;font-size:.8125rem}
 
-    <!-- Canonical -->
-    <link rel="canonical" href="https://droppedmic.github.io/ps165q-site/">
+/* ===== HERO ===== */
+.hero{min-height:100svh;display:grid;grid-template-columns:1fr;align-items:center;padding:calc(var(--nav-h)+48px) 0 80px;position:relative;overflow:hidden}
+@media(min-width:768px){.hero{grid-template-columns:1fr 1fr;gap:64px}}
+.hero-bg-num{position:absolute;right:-5%;top:50%;transform:translateY(-50%);font-family:'Newsreader',serif;font-size:clamp(18rem,40vw,42rem);font-weight:300;line-height:1;color:var(--border);opacity:.4;pointer-events:none;user-select:none}
+[data-theme="dark"] .hero-bg-num{opacity:.06}
+.hero-left{position:relative;z-index:1}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.8125rem;font-weight:500;letter-spacing:.04em;text-transform:uppercase;color:var(--gold);margin-bottom:28px}
+.hero-eyebrow::before{content:'';width:32px;height:2px;background:var(--gold)}
+.hero-h1{font-size:clamp(2.8rem,7vw,5rem);font-weight:300;letter-spacing:-.03em;line-height:1.0;margin-bottom:20px}
+.hero-h1 strong{font-weight:600;color:var(--royal)}
+.hero-h1 em{font-style:italic;font-weight:400;color:var(--gold)}
+.hero-desc{font-size:1.1875rem;font-weight:300;line-height:1.9;color:var(--ink-secondary);max-width:480px;margin-bottom:14px}
+.hero-meta{font-size:.875rem;color:var(--ink-muted);margin-bottom:36px;display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.hero-meta .sep{color:var(--border)}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px}
+.hero-right{position:relative;z-index:1;display:none}
+@media(min-width:768px){.hero-right{display:block}}
+.hero-card{background:var(--surface-card);border:1px solid var(--border);border-radius:16px;padding:32px;margin-bottom:16px}
+.hero-card-label{font-size:.6875rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:12px}
+.hero-card-title{font-family:'Newsreader',serif;font-size:1.5rem;font-weight:400;color:var(--ink);margin-bottom:8px}
+.hero-card-body{font-size:.9375rem;color:var(--ink-muted);line-height:1.6}
+.hero-card.accent-gold{border-left:4px solid var(--gold)}
+.hero-card.accent-royal{border-left:4px solid var(--royal)}
 
-    <!-- Favicon -->
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%231d4ed8'/%3E%3Ctext x='50' y='68' font-size='44' font-weight='300' text-anchor='middle' fill='%23fbbf24' font-family='system-ui'%3E165%3C/text%3E%3C/svg%3E" type="image/svg+xml">
+/* ===== RIBBON ===== */
+.ribbon{background:var(--royal);color:#fff;padding:12px 0;font-size:.875rem;font-weight:400;overflow:hidden}
+.ribbon-track{display:flex;animation:marquee 30s linear infinite;gap:48px;white-space:nowrap}
+.ribbon-item{display:inline-flex;align-items:center;gap:10px;flex-shrink:0}
+.ribbon-dot{width:5px;height:5px;border-radius:50%;background:var(--gold-bright);flex-shrink:0}
+@keyframes marquee{to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.ribbon-track{animation:none;flex-wrap:wrap;justify-content:center;gap:20px}}
 
-    <!-- JSON-LD Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "School",
-        "name": "P.S. 165Q Edith K. Bergtraum School",
-        "alternateName": ["PS 165Q", "PS165Q", "Bergtraum School", "P.S. 165 Queens"],
-        "url": "https://droppedmic.github.io/ps165q-site/",
-        "telephone": "(718) 263-4004",
-        "faxNumber": "(718) 793-9812",
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "70-35 150 Street",
-            "addressLocality": "Flushing",
-            "addressRegion": "NY",
-            "postalCode": "11367",
-            "addressCountry": "US"
-        },
-        "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": 40.7282,
-            "longitude": -73.8189
-        },
-        "sameAs": [
-            "https://www.instagram.com/ps165queens/",
-            "https://twitter.com/PS165Queens",
-            "https://twitter.com/PrincipalNealy",
-            "https://www.facebook.com/PS165Q/",
-            "https://www.schools.nyc.gov/schools/Q165"
-        ],
-        "priceRange": "Free",
-        "educationalLevel": "Pre-K through Grade 5",
-        "parentOrganization": {
-            "@type": "Organization",
-            "name": "NYC Department of Education — District 25"
-        },
-        "employee": [
-            { "@type": "Person", "name": "Tiffany L. Davis-Nealy", "jobTitle": "Principal" },
-            { "@type": "Person", "name": "Andrea L. Luongo", "jobTitle": "Assistant Principal" },
-            { "@type": "Person", "name": "Marianna H. Werth", "jobTitle": "Assistant Principal" }
-        ],
-        "description": "Cultivating a solid and equitable foundation for students to become citizens of the world and life-long learners through critical thinking, creativity, collaboration, and communication."
-    }
-    </script>
+/* ===== SECTIONS ===== */
+.sec{padding:clamp(80px,14vw,160px) 0}
+.sec-warm{background:var(--surface-warm)}
+.sec-header{margin-bottom:clamp(48px,8vw,80px)}
+.sec-eyebrow{font-size:.75rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;margin-bottom:10px}
+.sec-eyebrow.blue{color:var(--royal)}.sec-eyebrow.gold{color:var(--gold)}.sec-eyebrow.coral{color:var(--coral)}.sec-eyebrow.emerald{color:var(--emerald)}.sec-eyebrow.violet{color:var(--violet)}
+.sec-title{font-size:clamp(2rem,4.5vw,3.25rem);font-weight:300;letter-spacing:-.025em}
+.sec-subtitle{font-size:1.125rem;font-weight:300;color:var(--ink-muted);margin-top:12px;max-width:520px;line-height:1.7}
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+/* ===== QUICK ACCESS ===== */
+.qa-grid{display:grid;grid-template-columns:1fr;gap:2px;background:var(--border);border-radius:16px;overflow:hidden}
+@media(min-width:600px){.qa-grid{grid-template-columns:1fr 1fr}}
+@media(min-width:900px){.qa-grid{grid-template-columns:1fr 1fr 1fr}}
+.qa-card{background:var(--surface-card);padding:28px 24px;display:flex;gap:16px;align-items:flex-start;transition:background .2s var(--ease);text-decoration:none;color:var(--ink)}
+.qa-card:hover{background:var(--surface-warm)}
+.qa-card:hover .qa-dot{transform:scale(1.3)}
+.qa-dot{width:10px;height:10px;border-radius:50%;margin-top:7px;flex-shrink:0;transition:transform .3s var(--ease)}
+.qa-dot.blue{background:var(--royal)}.qa-dot.gold{background:var(--gold)}.qa-dot.coral{background:var(--coral)}.qa-dot.emerald{background:var(--emerald)}.qa-dot.violet{background:var(--violet)}
+.qa-title{font-weight:500;font-size:1rem;color:var(--ink);margin-bottom:2px}
+.qa-desc{font-size:.875rem;color:var(--ink-muted);line-height:1.5}
 
-    <title>P.S. 165Q — Edith K. Bergtraum School | Flushing, Queens | District 25</title>
+/* ===== MISSION ===== */
+.mission{background:var(--royal);color:#fff;border-radius:20px;padding:clamp(48px,8vw,80px);position:relative;overflow:hidden}
+.mission::after{content:'165';position:absolute;right:-3%;bottom:-20%;font-family:'Newsreader',serif;font-size:clamp(12rem,30vw,24rem);font-weight:300;color:rgba(255,255,255,.04);line-height:1;pointer-events:none}
+.mission h2{color:#fff;font-size:clamp(1.75rem,3.5vw,2.75rem);font-weight:300;max-width:640px;position:relative}
+.mission .gold{color:var(--gold-bright)}
+.mission p{font-size:1.125rem;font-weight:300;line-height:1.9;color:rgba(255,255,255,.78);max-width:560px;margin-top:20px;position:relative}
 
-    <style>
-        /* ============================================================
-           V5 — THE DEFINITIVE SCHOOL WEBSITE
-           Readable · Colorful · Alive · ADA AA · Mobile-first
-           ============================================================ */
+/* ===== PROGRAMS ===== */
+.prog-grid{display:grid;grid-template-columns:1fr;gap:20px}
+@media(min-width:768px){.prog-grid{grid-template-columns:7fr 5fr}.prog-grid .wide{grid-column:1/2}.prog-grid .narrow{grid-column:2/3}}
+.prog-card{border:1px solid var(--border);border-radius:16px;padding:clamp(28px,4vw,40px);background:var(--surface-card);position:relative;overflow:hidden;transition:transform .3s var(--ease),box-shadow .3s var(--ease)}
+.prog-card:hover{transform:translateY(-3px);box-shadow:0 12px 40px rgba(0,0,0,.05)}
+.prog-bar{position:absolute;top:0;left:0;right:0;height:3px}
+.prog-bar.blue{background:var(--royal)}.prog-bar.gold{background:var(--gold)}.prog-bar.coral{background:var(--coral)}.prog-bar.emerald{background:var(--emerald)}.prog-bar.violet{background:var(--violet)}
+.prog-label{font-size:.6875rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;margin-bottom:10px}
+.prog-label.blue{color:var(--royal)}.prog-label.gold{color:var(--gold)}.prog-label.coral{color:var(--coral)}.prog-label.emerald{color:var(--emerald)}.prog-label.violet{color:var(--violet)}
+.prog-name{font-family:'Newsreader',serif;font-size:clamp(1.25rem,2.5vw,1.75rem);font-weight:400;color:var(--ink);margin-bottom:10px}
+.prog-desc{font-size:.9375rem;color:var(--ink-secondary);line-height:1.7}
+.prog-row{display:grid;grid-template-columns:1fr;gap:20px}
+@media(min-width:768px){.prog-row{grid-template-columns:1fr 1fr 1fr}}
+.prog-row-2{display:grid;grid-template-columns:1fr;gap:20px}
+@media(min-width:768px){.prog-row-2{grid-template-columns:1fr 1fr}}
 
-        :root {
-            /* ----- School Colors ----- */
-            --royal: #1d4ed8;
-            --royal-light: #3b82f6;
-            --royal-dark: #1e40af;
-            --royal-50: #eff6ff;
-            --royal-100: #dbeafe;
+/* ===== PS BANNER ===== */
+.ps-banner{border:1px solid var(--border);border-radius:16px;padding:clamp(28px,5vw,48px);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px;background:var(--surface-card)}
 
-            --gold: #f59e0b;
-            --gold-light: #fbbf24;
-            --gold-dark: #d97706;
-            --gold-50: #fffbeb;
+/* ===== LEADERS ===== */
+.leaders{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.leader{border:1px solid var(--border);border-radius:16px;padding:36px 24px;text-align:center;background:var(--surface-card);transition:all .3s var(--ease)}
+.leader:hover{border-color:var(--royal);transform:translateY(-3px);box-shadow:0 8px 28px rgba(0,0,0,.05)}
+.leader-av{width:72px;height:72px;border-radius:50%;background:var(--royal);margin:0 auto 18px;display:flex;align-items:center;justify-content:center;font-family:'Newsreader',serif;font-weight:400;font-size:1.25rem;color:#fff}
+.leader-name{font-family:'Newsreader',serif;font-weight:600;font-size:1.0625rem;color:var(--ink);margin-bottom:2px}
+.leader-role{font-size:.875rem;color:var(--royal);font-weight:500}
 
-            --coral: #f43f5e;
-            --coral-50: #fff1f2;
+/* ===== CALENDAR ===== */
+.cal-list{display:flex;flex-direction:column;gap:8px}
+.cal-item{border:1px solid var(--border);border-radius:12px;padding:18px 22px;display:flex;align-items:center;gap:22px;background:var(--surface-card);transition:all .2s var(--ease)}
+.cal-item:hover{border-color:var(--royal);transform:translateX(4px)}
+.cal-mo{font-size:.6875rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--royal)}
+.cal-dy{font-family:'Newsreader',serif;font-size:1.75rem;font-weight:400;color:var(--ink);line-height:1}
+.cal-date{text-align:center;min-width:50px;flex-shrink:0}
+.cal-title{font-weight:500;font-size:.9375rem;color:var(--ink)}
+.cal-time{font-size:.875rem;color:var(--ink-muted)}
 
-            --emerald: #10b981;
-            --emerald-50: #ecfdf5;
+/* ===== SOCIAL ===== */
+.soc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px}
+.soc-card{border:1px solid var(--border);border-radius:16px;padding:24px;background:var(--surface-card);transition:all .3s var(--ease);text-decoration:none;color:var(--ink);display:flex;flex-direction:column}
+.soc-card:hover{transform:translateY(-3px);border-color:transparent;box-shadow:0 12px 36px rgba(0,0,0,.07)}
+.soc-head{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.soc-ico{width:40px;height:40px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.soc-ico svg{width:18px;height:18px}
+.soc-ico.ig{background:linear-gradient(135deg,#f09433,#dc2743,#bc1888);color:#fff}
+.soc-ico.x{background:var(--ink);color:var(--surface)}.soc-ico.fb{background:#1877F2;color:#fff}
+.soc-handle{font-weight:600;font-size:.875rem;color:var(--ink)}
+.soc-plat{font-size:.75rem;color:var(--ink-muted)}
+.soc-body{font-size:.9375rem;color:var(--ink-secondary);line-height:1.6;flex:1;margin-bottom:12px}
+.soc-foot{font-size:.8125rem;font-weight:500;color:var(--royal)}
 
-            --violet: #8b5cf6;
-            --violet-50: #f5f3ff;
+/* ===== CONTACT ===== */
+.contact-grid{display:grid;grid-template-columns:1fr;gap:20px}
+@media(min-width:768px){.contact-grid{grid-template-columns:1fr 1fr}}
+.contact-card{border:1px solid var(--border);border-radius:16px;padding:36px;background:var(--surface-card)}
+.c-row{display:flex;align-items:flex-start;gap:16px;padding:16px 0;border-bottom:1px solid var(--border-light)}
+.c-row:last-child{border-bottom:none}
+.c-row svg{width:20px;height:20px;color:var(--royal);flex-shrink:0;margin-top:2px}
+.c-label{font-size:.6875rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:3px}
+.c-val{font-size:.9375rem;color:var(--ink)}
+.map-wrap{border:1px solid var(--border);border-radius:16px;overflow:hidden;min-height:320px}
+.map-wrap iframe{width:100%;height:100%;min-height:320px;border:0}
 
-            /* ----- Neutrals ----- */
-            --slate-50: #f8fafc;
-            --slate-100: #f1f5f9;
-            --slate-200: #e2e8f0;
-            --slate-300: #cbd5e1;
-            --slate-400: #94a3b8;
-            --slate-500: #64748b;
-            --slate-600: #475569;
-            --slate-700: #334155;
-            --slate-800: #1e293b;
-            --slate-900: #0f172a;
+/* ===== FOOTER ===== */
+.footer{background:var(--ink);color:var(--ink-faint);padding:64px 0 28px}
+[data-theme="dark"] .footer{background:#0a0908}
+.foot-grid{display:grid;grid-template-columns:1fr;gap:36px;margin-bottom:48px}
+@media(min-width:768px){.foot-grid{grid-template-columns:2fr 1fr 1fr 1fr}}
+.foot-brand{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.foot-mark{width:36px;height:36px;border-radius:8px;background:var(--royal);color:var(--gold-bright);display:flex;align-items:center;justify-content:center;font-family:'Newsreader',serif;font-weight:600;font-size:.8125rem}
+.foot-bname{color:#fff;font-weight:500;font-size:.9375rem}
+.foot-about{font-size:.875rem;color:#8a847d;line-height:1.7;max-width:300px}
+.foot-h{font-size:.625rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#5a554e;margin-bottom:16px}
+.foot-links{list-style:none;display:flex;flex-direction:column;gap:10px}
+.foot-links a{font-size:.875rem;color:#8a847d;transition:color .15s}.foot-links a:hover{color:#fff}
+.foot-bot{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:14px;padding-top:28px;border-top:1px solid #2e2b27;font-size:.75rem;color:#5a554e}
+.foot-soc{display:flex;gap:6px}
+.foot-soc a{width:36px;height:36px;border-radius:8px;background:#2e2b27;color:#8a847d;display:flex;align-items:center;justify-content:center;transition:all .15s}
+.foot-soc a:hover{background:var(--royal);color:#fff}
+.foot-soc svg{width:16px;height:16px}
 
-            /* ----- Semantic (Light) ----- */
-            --bg: #ffffff;
-            --bg-warm: #fafaf8;
-            --bg-section: var(--slate-50);
-            --bg-card: #ffffff;
-            --text: var(--slate-900);
-            --text-body: var(--slate-700);
-            --text-muted: var(--slate-500);
-            --text-faint: var(--slate-400);
-            --border: var(--slate-200);
-            --border-light: var(--slate-100);
-            --accent: var(--royal);
-            --accent-hover: var(--royal-dark);
+/* ===== REVEAL ===== */
+.rv{opacity:0;transform:translateY(20px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.rv.v{opacity:1;transform:translateY(0)}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
 
-            /* Glass */
-            --glass: rgba(255,255,255,0.8);
-            --glass-border: rgba(255,255,255,0.5);
+/* ===== BTT ===== */
+.btt{position:fixed;bottom:20px;right:20px;width:44px;height:44px;border-radius:50%;background:var(--royal);color:#fff;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transform:translateY(6px);transition:all .3s var(--ease);z-index:900;box-shadow:0 4px 16px color-mix(in srgb,var(--royal) 30%,transparent)}
+.btt.v{opacity:1;visibility:visible;transform:translateY(0)}
+.btt:hover{transform:translateY(-2px)}
+.btt svg{width:20px;height:20px}
 
-            /* Layout */
-            --max-w: 1200px;
-            --nav-h: 72px;
-            --radius: 20px;
-            --radius-md: 14px;
-            --radius-sm: 10px;
-            --radius-xs: 6px;
-
-            /* Motion */
-            --ease: cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
-        [data-theme="dark"] {
-            --bg: var(--slate-900);
-            --bg-warm: #0c1222;
-            --bg-section: var(--slate-800);
-            --bg-card: var(--slate-800);
-            --text: #f1f5f9;
-            --text-body: var(--slate-300);
-            --text-muted: var(--slate-400);
-            --text-faint: var(--slate-600);
-            --border: var(--slate-700);
-            --border-light: var(--slate-800);
-            --accent: var(--royal-light);
-            --accent-hover: var(--royal);
-            --glass: rgba(15,23,42,0.8);
-            --glass-border: rgba(255,255,255,0.06);
-            --royal-50: rgba(59,130,246,0.08);
-            --royal-100: rgba(59,130,246,0.12);
-            --gold-50: rgba(245,158,11,0.08);
-            --coral-50: rgba(244,63,94,0.08);
-            --emerald-50: rgba(16,185,129,0.08);
-            --violet-50: rgba(139,92,246,0.08);
-        }
-
-        /* ---------- RESET ---------- */
-        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; scroll-padding-top: calc(var(--nav-h) + 32px); }
-
-        body {
-            font-family: 'Inter', system-ui, -apple-system, sans-serif;
-            font-weight: 400;
-            font-size: 1.0625rem;
-            line-height: 1.8;
-            color: var(--text-body);
-            background: var(--bg);
-            -webkit-font-smoothing: antialiased;
-            overflow-x: hidden;
-            transition: background 0.5s var(--ease), color 0.5s var(--ease);
-        }
-
-        a { color: var(--accent); text-decoration: none; transition: all 0.2s; }
-        a:hover { color: var(--accent-hover); }
-        a:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
-
-        /* ---------- ADA: Skip Link ---------- */
-        .skip-link {
-            position: absolute; top: -100%; left: 16px;
-            background: var(--royal); color: #fff; padding: 12px 24px;
-            border-radius: var(--radius-xs); font-weight: 500; z-index: 10000;
-        }
-        .skip-link:focus { top: 16px; }
-
-        /* ---------- UTILITY ---------- */
-        .container { max-width: var(--max-w); margin: 0 auto; padding: 0 24px; }
-        .sr-only { position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0; }
-
-        /* ---------- TYPOGRAPHY ---------- */
-        h1, h2, h3, h4 {
-            font-family: 'Playfair Display', Georgia, serif;
-            color: var(--text);
-            line-height: 1.2;
-        }
-
-        .display-xl {
-            font-size: clamp(3rem, 8vw, 5.5rem);
-            font-weight: 400;
-            letter-spacing: -0.03em;
-            line-height: 1.0;
-        }
-
-        .heading-lg {
-            font-size: clamp(2rem, 4vw, 3rem);
-            font-weight: 400;
-            letter-spacing: -0.02em;
-        }
-
-        .heading-md {
-            font-size: clamp(1.375rem, 2.5vw, 1.75rem);
-            font-weight: 400;
-        }
-
-        .body-lg {
-            font-family: 'Inter', sans-serif;
-            font-size: 1.1875rem;
-            font-weight: 300;
-            line-height: 1.9;
-            color: var(--text-body);
-        }
-
-        .label {
-            font-family: 'Inter', sans-serif;
-            display: inline-flex; align-items: center; gap: 8px;
-            font-size: 0.8125rem; font-weight: 600;
-            letter-spacing: 0.06em; text-transform: uppercase;
-        }
-
-        /* ---------- SECTION ---------- */
-        .section { padding: clamp(72px, 12vw, 140px) 0; }
-        .section-alt { background: var(--bg-section); }
-        .section-header { margin-bottom: clamp(48px, 8vw, 72px); }
-
-        /* ---------- COLOR DOT LABELS ---------- */
-        .label-blue { color: var(--royal); }
-        .label-blue::before { content:''; width:8px; height:8px; border-radius:50%; background:var(--royal); }
-        .label-gold { color: var(--gold-dark); }
-        .label-gold::before { content:''; width:8px; height:8px; border-radius:50%; background:var(--gold); }
-        .label-coral { color: var(--coral); }
-        .label-coral::before { content:''; width:8px; height:8px; border-radius:50%; background:var(--coral); }
-        .label-emerald { color: var(--emerald); }
-        .label-emerald::before { content:''; width:8px; height:8px; border-radius:50%; background:var(--emerald); }
-        .label-violet { color: var(--violet); }
-        .label-violet::before { content:''; width:8px; height:8px; border-radius:50%; background:var(--violet); }
-
-        /* ---------- NAV ---------- */
-        .nav {
-            position: fixed; top: 0; left: 0; right: 0;
-            height: var(--nav-h); z-index: 1000;
-            background: var(--glass);
-            backdrop-filter: blur(24px) saturate(1.8);
-            -webkit-backdrop-filter: blur(24px) saturate(1.8);
-            border-bottom: 1px solid var(--glass-border);
-            transition: box-shadow 0.4s var(--ease);
-        }
-        .nav.scrolled { box-shadow: 0 4px 30px rgba(0,0,0,0.06); }
-        .nav-inner {
-            max-width: var(--max-w); margin: 0 auto; padding: 0 24px;
-            height: 100%; display: flex; align-items: center; justify-content: space-between;
-        }
-        .nav-brand {
-            display: flex; align-items: center; gap: 14px;
-            text-decoration: none; color: var(--text);
-        }
-        .nav-crest {
-            width: 42px; height: 42px; border-radius: var(--radius-xs);
-            background: var(--royal); color: var(--gold-light);
-            display: flex; align-items: center; justify-content: center;
-            font-weight: 500; font-size: 0.875rem; letter-spacing: -0.02em;
-        }
-        .nav-brand-text { display: flex; flex-direction: column; line-height: 1.25; }
-        .nav-ps { font-size: 0.75rem; font-weight: 500; color: var(--royal); letter-spacing: 0.04em; }
-        .nav-school { font-size: 0.9375rem; font-weight: 500; color: var(--text); letter-spacing: -0.01em; }
-
-        .nav-links { display: none; list-style: none; gap: 2px; align-items: center; }
-        .nav-links a {
-            padding: 8px 16px; font-size: 0.9rem; font-weight: 400;
-            color: var(--text-muted); border-radius: var(--radius-xs);
-            transition: all 0.2s;
-        }
-        .nav-links a:hover { color: var(--text); background: var(--royal-50); }
-
-        .nav-actions { display: flex; align-items: center; gap: 8px; }
-
-        .theme-toggle {
-            width: 42px; height: 42px; border: none; background: transparent;
-            color: var(--text-muted); cursor: pointer; border-radius: var(--radius-xs);
-            display: flex; align-items: center; justify-content: center; transition: all 0.2s;
-        }
-        .theme-toggle:hover { color: var(--text); background: var(--royal-50); }
-        .theme-toggle svg { width: 20px; height: 20px; }
-        [data-theme="dark"] .icon-sun { display: block; }
-        [data-theme="dark"] .icon-moon { display: none; }
-        [data-theme="light"] .icon-sun { display: none; }
-        [data-theme="light"] .icon-moon { display: block; }
-
-        .nav-toggle {
-            width: 42px; height: 42px; border: none; background: transparent;
-            color: var(--text); cursor: pointer; display: flex;
-            align-items: center; justify-content: center; border-radius: var(--radius-xs);
-        }
-        .nav-toggle svg { width: 24px; height: 24px; }
-        .nav-toggle .icon-close { display: none; }
-        .nav-toggle[aria-expanded="true"] .icon-menu { display: none; }
-        .nav-toggle[aria-expanded="true"] .icon-close { display: block; }
-
-        /* Mobile menu */
-        .mobile-menu {
-            position: fixed; inset: var(--nav-h) 0 0 0;
-            background: var(--bg); z-index: 999; padding: 16px;
-            display: none; flex-direction: column; gap: 2px; overflow-y: auto;
-        }
-        .mobile-menu.open { display: flex; }
-        .mobile-menu a {
-            display: flex; align-items: center; gap: 14px;
-            padding: 16px; font-size: 1.0625rem; font-weight: 400;
-            color: var(--text); border-radius: var(--radius-sm); transition: background 0.2s;
-        }
-        .mobile-menu a:hover { background: var(--royal-50); }
-        .mobile-menu a svg { width: 22px; height: 22px; color: var(--royal); flex-shrink: 0; }
-        .mobile-divider { height: 1px; background: var(--border); margin: 12px 0; }
-        .mobile-group-label {
-            font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.1em;
-            text-transform: uppercase; color: var(--text-faint); padding: 8px 16px 4px;
-        }
-        .mobile-cta { margin-top: auto; padding: 16px; }
-        .mobile-cta .btn { width: 100%; justify-content: center; }
-
-        @media (min-width: 1024px) {
-            .nav-links { display: flex; }
-            .nav-toggle { display: none; }
-        }
-
-        /* ---------- BUTTONS ---------- */
-        .btn {
-            display: inline-flex; align-items: center; gap: 10px;
-            padding: 14px 32px; font-family: inherit; font-size: 0.9375rem;
-            font-weight: 500; border: none; border-radius: 100px; cursor: pointer;
-            transition: all 0.3s var(--ease); text-decoration: none; white-space: nowrap;
-        }
-        .btn svg { width: 18px; height: 18px; }
-        .btn-royal {
-            background: var(--royal); color: #fff;
-            box-shadow: 0 2px 8px rgba(29,78,216,0.2);
-        }
-        .btn-royal:hover {
-            background: var(--royal-dark); color: #fff;
-            transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(29,78,216,0.3);
-        }
-        .btn-gold {
-            background: var(--gold); color: var(--slate-900);
-            box-shadow: 0 2px 8px rgba(245,158,11,0.25);
-        }
-        .btn-gold:hover {
-            background: var(--gold-dark); color: #fff;
-            transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(245,158,11,0.35);
-        }
-        .btn-outline {
-            background: transparent; color: var(--text);
-            border: 1.5px solid var(--border); padding: 13px 30px;
-        }
-        .btn-outline:hover { border-color: var(--royal); color: var(--royal); background: var(--royal-50); }
-        .btn-ghost { background: transparent; color: var(--accent); padding: 8px 4px; }
-        .btn-ghost:hover { color: var(--accent-hover); }
-        .btn-sm { padding: 10px 22px; font-size: 0.875rem; }
-
-        /* ---------- HERO ---------- */
-        .hero {
-            min-height: 100svh; display: flex; align-items: center;
-            position: relative; overflow: hidden;
-            padding: calc(var(--nav-h) + 40px) 0 80px;
-            background: linear-gradient(135deg, var(--royal-50) 0%, var(--bg) 40%, var(--gold-50) 100%);
-        }
-        [data-theme="dark"] .hero {
-            background: linear-gradient(135deg, rgba(29,78,216,0.08) 0%, var(--bg) 40%, rgba(245,158,11,0.04) 100%);
-        }
-        .hero-deco {
-            position: absolute; top: -20%; right: -10%; width: 60vw; height: 60vw;
-            border-radius: 50%;
-            background: radial-gradient(circle, var(--royal-100) 0%, transparent 70%);
-            opacity: 0.5; pointer-events: none;
-        }
-        [data-theme="dark"] .hero-deco { opacity: 0.15; }
-        .hero-content { position: relative; z-index: 1; max-width: 720px; }
-        .hero-badge {
-            display: inline-flex; align-items: center; gap: 10px;
-            padding: 8px 18px 8px 8px;
-            background: var(--bg-card); border: 1.5px solid var(--border);
-            border-radius: 100px; font-size: 0.875rem; font-weight: 500;
-            color: var(--text); margin-bottom: 32px;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.04);
-        }
-        .hero-badge-star {
-            width: 28px; height: 28px; border-radius: 50%;
-            background: var(--gold); color: var(--slate-900);
-            display: flex; align-items: center; justify-content: center;
-        }
-        .hero-badge-star svg { width: 14px; height: 14px; }
-        .hero-title { margin-bottom: 16px; color: var(--text); }
-        .hero-title .accent { color: var(--royal); }
-        .hero-title .accent-gold {
-            color: var(--gold-dark);
-            font-style: italic;
-        }
-        [data-theme="dark"] .hero-title .accent { color: var(--royal-light); }
-        [data-theme="dark"] .hero-title .accent-gold { color: var(--gold-light); }
-        .hero-sub {
-            font-family: 'Inter', sans-serif;
-            font-size: 1.25rem; font-weight: 300; line-height: 1.8;
-            color: var(--text-body); margin-bottom: 12px;
-            max-width: 560px;
-        }
-        .hero-district {
-            font-size: 0.9375rem; font-weight: 400; color: var(--text-muted);
-            margin-bottom: 40px;
-            display: flex; flex-wrap: wrap; gap: 6px; align-items: center;
-        }
-        .hero-district .sep { color: var(--text-faint); }
-        .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 64px; }
-        .hero-stats {
-            display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
-            max-width: 480px;
-        }
-        .hero-stat {
-            background: var(--bg-card); border: 1px solid var(--border);
-            border-radius: var(--radius-md); padding: 20px 16px; text-align: center;
-            transition: all 0.3s var(--ease);
-        }
-        .hero-stat:hover { border-color: var(--royal); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.06); }
-        .hero-stat-val {
-            font-family: 'Playfair Display', serif; font-size: 1.75rem;
-            font-weight: 400; color: var(--royal); line-height: 1; margin-bottom: 4px;
-        }
-        [data-theme="dark"] .hero-stat-val { color: var(--royal-light); }
-        .hero-stat-label {
-            font-size: 0.75rem; font-weight: 500; color: var(--text-muted);
-            text-transform: uppercase; letter-spacing: 0.06em;
-        }
-
-        /* ---------- RIBBON ---------- */
-        .ribbon {
-            background: var(--royal); color: #fff;
-            padding: 14px 0; font-size: 0.9375rem; font-weight: 400;
-            overflow: hidden;
-        }
-        .ribbon-track {
-            display: flex; animation: marquee 35s linear infinite;
-            gap: 56px; white-space: nowrap;
-        }
-        .ribbon-item { display: inline-flex; align-items: center; gap: 10px; flex-shrink: 0; }
-        .ribbon-item .dot {
-            width: 6px; height: 6px; border-radius: 50%;
-            background: var(--gold-light); flex-shrink: 0;
-        }
-        @keyframes marquee { to { transform: translateX(-50%); } }
-        @media (prefers-reduced-motion: reduce) {
-            .ribbon-track { animation: none; flex-wrap: wrap; justify-content: center; gap: 24px; }
-        }
-
-        /* ---------- QUICK ACCESS CARDS ---------- */
-        .qa-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 20px;
-        }
-        .qa-card {
-            background: var(--bg-card); border: 1.5px solid var(--border);
-            border-radius: var(--radius); padding: 28px;
-            display: flex; gap: 20px; align-items: flex-start;
-            transition: all 0.3s var(--ease); text-decoration: none; color: var(--text);
-            position: relative; overflow: hidden;
-        }
-        .qa-card::before {
-            content: ''; position: absolute; top: 0; left: 0;
-            width: 4px; height: 100%; border-radius: 4px 0 0 4px;
-            transition: width 0.3s var(--ease);
-        }
-        .qa-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 40px rgba(0,0,0,0.08);
-            border-color: transparent;
-        }
-        .qa-card:hover::before { width: 6px; }
-
-        /* Color-coded left borders */
-        .qa-card.blue::before { background: var(--royal); }
-        .qa-card.blue:hover { border-color: var(--royal); }
-        .qa-card.gold::before { background: var(--gold); }
-        .qa-card.gold:hover { border-color: var(--gold); }
-        .qa-card.coral::before { background: var(--coral); }
-        .qa-card.coral:hover { border-color: var(--coral); }
-        .qa-card.emerald::before { background: var(--emerald); }
-        .qa-card.emerald:hover { border-color: var(--emerald); }
-        .qa-card.violet::before { background: var(--violet); }
-        .qa-card.violet:hover { border-color: var(--violet); }
-
-        .qa-icon {
-            width: 52px; height: 52px; border-radius: var(--radius-sm);
-            display: flex; align-items: center; justify-content: center;
-            flex-shrink: 0; transition: all 0.3s var(--ease);
-        }
-        .qa-icon svg { width: 24px; height: 24px; }
-        .qa-icon.blue { background: var(--royal-50); color: var(--royal); }
-        .qa-card:hover .qa-icon.blue { background: var(--royal); color: #fff; }
-        .qa-icon.gold { background: var(--gold-50); color: var(--gold-dark); }
-        .qa-card:hover .qa-icon.gold { background: var(--gold); color: #fff; }
-        .qa-icon.coral { background: var(--coral-50); color: var(--coral); }
-        .qa-card:hover .qa-icon.coral { background: var(--coral); color: #fff; }
-        .qa-icon.emerald { background: var(--emerald-50); color: var(--emerald); }
-        .qa-card:hover .qa-icon.emerald { background: var(--emerald); color: #fff; }
-        .qa-icon.violet { background: var(--violet-50); color: var(--violet); }
-        .qa-card:hover .qa-icon.violet { background: var(--violet); color: #fff; }
-
-        .qa-text { flex: 1; }
-        .qa-title {
-            font-family: 'Inter', sans-serif; font-weight: 600;
-            font-size: 1.0625rem; color: var(--text); margin-bottom: 4px;
-        }
-        .qa-desc { font-size: 0.9375rem; color: var(--text-muted); line-height: 1.6; }
-        .qa-arrow {
-            position: absolute; top: 28px; right: 28px;
-            width: 20px; height: 20px; color: var(--text-faint);
-            opacity: 0; transform: translate(-4px, 4px); transition: all 0.3s var(--ease);
-        }
-        .qa-card:hover .qa-arrow { opacity: 1; transform: translate(0,0); }
-
-        /* ---------- MISSION ---------- */
-        .mission-block {
-            background: var(--royal); color: #fff;
-            border-radius: var(--radius); padding: clamp(48px, 8vw, 80px);
-            position: relative; overflow: hidden;
-        }
-        .mission-block::before {
-            content: '165'; position: absolute; right: -2%; bottom: -15%;
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(10rem, 25vw, 20rem); font-weight: 400;
-            color: rgba(255,255,255,0.06); line-height: 1; pointer-events: none;
-        }
-        .mission-block h2 {
-            color: #fff; margin-bottom: 24px; position: relative;
-        }
-        .mission-block .gold-text { color: var(--gold-light); }
-        .mission-body {
-            font-size: 1.1875rem; font-weight: 300; line-height: 2;
-            color: rgba(255,255,255,0.85); max-width: 600px; position: relative;
-        }
-
-        /* ---------- BENTO PROGRAMS ---------- */
-        .bento {
-            display: grid;
-            grid-template-columns: repeat(12, 1fr);
-            gap: 20px;
-        }
-        .bento-card {
-            background: var(--bg-card); border: 1.5px solid var(--border);
-            border-radius: var(--radius); padding: clamp(28px, 4vw, 40px);
-            display: flex; flex-direction: column; justify-content: space-between;
-            min-height: 220px; transition: all 0.3s var(--ease);
-            position: relative; overflow: hidden;
-        }
-        .bento-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 16px 48px rgba(0,0,0,0.08);
-        }
-        .bento-card .color-bar {
-            position: absolute; top: 0; left: 0; right: 0; height: 4px;
-        }
-        .color-bar.blue { background: var(--royal); }
-        .color-bar.gold { background: var(--gold); }
-        .color-bar.coral { background: var(--coral); }
-        .color-bar.emerald { background: var(--emerald); }
-        .color-bar.violet { background: var(--violet); }
-
-        .bento-card.span-7 { grid-column: span 12; }
-        .bento-card.span-5 { grid-column: span 12; }
-        .bento-card.span-4 { grid-column: span 12; }
-        .bento-card.span-6 { grid-column: span 12; }
-        @media (min-width: 768px) {
-            .bento-card.span-7 { grid-column: span 7; }
-            .bento-card.span-5 { grid-column: span 5; }
-            .bento-card.span-4 { grid-column: span 4; }
-            .bento-card.span-6 { grid-column: span 6; }
-        }
-        .bento-label {
-            font-family: 'Inter', sans-serif;
-            font-size: 0.75rem; font-weight: 600;
-            letter-spacing: 0.08em; text-transform: uppercase;
-            margin-bottom: 12px;
-        }
-        .bento-title {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(1.375rem, 2.5vw, 1.875rem);
-            font-weight: 400; color: var(--text); margin-bottom: 12px;
-        }
-        .bento-desc {
-            font-size: 1rem; color: var(--text-body); line-height: 1.8;
-        }
-        .bento-foot { margin-top: 20px; }
-
-        /* ---------- PARENTSQUARE BANNER ---------- */
-        .ps-banner {
-            background: linear-gradient(135deg, var(--royal-50), var(--gold-50));
-            border: 1.5px solid var(--border); border-radius: var(--radius);
-            padding: clamp(32px, 5vw, 48px);
-            display: flex; flex-wrap: wrap; align-items: center;
-            justify-content: space-between; gap: 24px;
-        }
-        [data-theme="dark"] .ps-banner {
-            background: linear-gradient(135deg, rgba(29,78,216,0.1), rgba(245,158,11,0.06));
-        }
-        .ps-title { font-family: 'Inter', sans-serif; font-weight: 600; font-size: 1.25rem; color: var(--text); margin-bottom: 6px; }
-        .ps-desc { font-size: 1rem; color: var(--text-body); max-width: 480px; }
-
-        /* ---------- LEADERSHIP ---------- */
-        .leaders-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 20px;
-        }
-        .leader-card {
-            background: var(--bg-card); border: 1.5px solid var(--border);
-            border-radius: var(--radius); padding: 36px 28px; text-align: center;
-            transition: all 0.3s var(--ease);
-        }
-        .leader-card:hover {
-            border-color: var(--royal); transform: translateY(-4px);
-            box-shadow: 0 12px 36px rgba(0,0,0,0.06);
-        }
-        .leader-avatar {
-            width: 80px; height: 80px; border-radius: 50%;
-            background: linear-gradient(135deg, var(--royal), var(--royal-light));
-            margin: 0 auto 20px; display: flex; align-items: center;
-            justify-content: center; font-weight: 300; font-size: 1.5rem;
-            color: #fff; letter-spacing: 0.02em;
-        }
-        .leader-name {
-            font-family: 'Playfair Display', serif; font-weight: 500;
-            font-size: 1.125rem; color: var(--text); margin-bottom: 4px;
-        }
-        .leader-role {
-            font-size: 0.9375rem; color: var(--royal); font-weight: 500;
-        }
-
-        /* ---------- CALENDAR ---------- */
-        .cal-list {
-            display: flex; flex-direction: column; gap: 12px;
-        }
-        .cal-item {
-            background: var(--bg-card); border: 1.5px solid var(--border);
-            border-radius: var(--radius-md); padding: 20px 24px;
-            display: flex; align-items: center; gap: 24px;
-            transition: all 0.3s var(--ease);
-        }
-        .cal-item:hover {
-            border-color: var(--royal); transform: translateX(4px);
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-        }
-        .cal-date {
-            text-align: center; min-width: 56px; flex-shrink: 0;
-        }
-        .cal-month {
-            font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em;
-            text-transform: uppercase; color: var(--royal);
-        }
-        .cal-day {
-            font-family: 'Playfair Display', serif;
-            font-size: 2rem; font-weight: 400; color: var(--text); line-height: 1;
-        }
-        .cal-info { flex: 1; }
-        .cal-title { font-weight: 600; font-size: 1rem; color: var(--text); }
-        .cal-time { font-size: 0.9375rem; color: var(--text-muted); }
-
-        /* ---------- SOCIAL ---------- */
-        .social-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 20px;
-        }
-        .social-card {
-            background: var(--bg-card); border: 1.5px solid var(--border);
-            border-radius: var(--radius); padding: 28px;
-            transition: all 0.3s var(--ease); text-decoration: none; color: var(--text);
-            display: flex; flex-direction: column;
-        }
-        .social-card:hover {
-            transform: translateY(-4px); border-color: transparent;
-            box-shadow: 0 12px 40px rgba(0,0,0,0.08);
-        }
-        .social-header { display: flex; align-items: center; gap: 14px; margin-bottom: 18px; }
-        .social-icon {
-            width: 44px; height: 44px; border-radius: var(--radius-xs);
-            display: flex; align-items: center; justify-content: center; flex-shrink: 0;
-        }
-        .social-icon svg { width: 20px; height: 20px; }
-        .social-icon.ig { background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #bc1888); color: #fff; }
-        .social-icon.x { background: var(--slate-900); color: #fff; }
-        [data-theme="dark"] .social-icon.x { background: var(--slate-700); }
-        .social-icon.fb { background: #1877F2; color: #fff; }
-        .social-handle { font-weight: 600; font-size: 0.9375rem; color: var(--text); }
-        .social-platform { font-size: 0.8125rem; color: var(--text-muted); }
-        .social-body {
-            font-size: 1rem; color: var(--text-body); line-height: 1.7;
-            flex: 1; margin-bottom: 16px;
-        }
-        .social-foot { font-size: 0.875rem; font-weight: 500; color: var(--accent); }
-
-        /* ---------- CONTACT ---------- */
-        .contact-grid {
-            display: grid; grid-template-columns: 1fr; gap: 20px;
-        }
-        @media (min-width: 768px) { .contact-grid { grid-template-columns: 1fr 1fr; } }
-        .contact-card {
-            background: var(--bg-card); border: 1.5px solid var(--border);
-            border-radius: var(--radius); padding: 40px;
-        }
-        .contact-row {
-            display: flex; align-items: flex-start; gap: 18px;
-            padding: 18px 0; border-bottom: 1px solid var(--border-light);
-        }
-        .contact-row:last-child { border-bottom: none; }
-        .contact-row svg { width: 22px; height: 22px; color: var(--royal); flex-shrink: 0; margin-top: 2px; }
-        .contact-label {
-            font-size: 0.75rem; font-weight: 600; letter-spacing: 0.06em;
-            text-transform: uppercase; color: var(--text-muted); margin-bottom: 4px;
-        }
-        .contact-value { font-size: 1rem; color: var(--text); }
-        .map-card {
-            border: 1.5px solid var(--border); border-radius: var(--radius);
-            overflow: hidden; min-height: 340px;
-        }
-        .map-card iframe { width: 100%; height: 100%; min-height: 340px; border: 0; }
-
-        /* ---------- FOOTER ---------- */
-        .footer {
-            background: var(--slate-900); color: var(--slate-300);
-            padding: 72px 0 32px;
-        }
-        [data-theme="dark"] .footer { background: #060a14; }
-        .footer-grid {
-            display: grid; grid-template-columns: 1fr;
-            gap: 40px; margin-bottom: 48px;
-        }
-        @media (min-width: 768px) { .footer-grid { grid-template-columns: 2fr 1fr 1fr 1fr; } }
-        .footer-brand { display: flex; align-items: center; gap: 14px; margin-bottom: 16px; }
-        .footer-crest {
-            width: 40px; height: 40px; border-radius: var(--radius-xs);
-            background: var(--royal); color: var(--gold-light);
-            display: flex; align-items: center; justify-content: center;
-            font-weight: 500; font-size: 0.8125rem;
-        }
-        .footer-brand-name { color: #fff; font-weight: 500; font-size: 0.9375rem; }
-        .footer-brand-sub { font-size: 0.75rem; color: var(--slate-400); }
-        .footer-about { font-size: 0.9375rem; color: var(--slate-400); line-height: 1.8; max-width: 320px; }
-        .footer-heading {
-            font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.1em;
-            text-transform: uppercase; color: var(--slate-500); margin-bottom: 20px;
-        }
-        .footer-links { list-style: none; display: flex; flex-direction: column; gap: 12px; }
-        .footer-links a { font-size: 0.9375rem; color: var(--slate-400); transition: color 0.2s; }
-        .footer-links a:hover { color: #fff; }
-        .footer-bottom {
-            display: flex; flex-wrap: wrap; justify-content: space-between;
-            align-items: center; gap: 16px; padding-top: 32px;
-            border-top: 1px solid var(--slate-800);
-            font-size: 0.8125rem; color: var(--slate-500);
-        }
-        .footer-socials { display: flex; gap: 8px; }
-        .footer-socials a {
-            width: 38px; height: 38px; border-radius: var(--radius-xs);
-            background: var(--slate-800); color: var(--slate-400);
-            display: flex; align-items: center; justify-content: center;
-            transition: all 0.2s;
-        }
-        .footer-socials a:hover { background: var(--royal); color: #fff; }
-        .footer-socials svg { width: 18px; height: 18px; }
-
-        /* ---------- SCROLL REVEAL ---------- */
-        .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.8s var(--ease), transform 0.8s var(--ease); }
-        .reveal.visible { opacity: 1; transform: translateY(0); }
-        @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
-
-        /* ---------- BACK TO TOP ---------- */
-        .btt {
-            position: fixed; bottom: 24px; right: 24px;
-            width: 48px; height: 48px; border-radius: 50%;
-            background: var(--royal); color: #fff; border: none; cursor: pointer;
-            display: flex; align-items: center; justify-content: center;
-            opacity: 0; visibility: hidden; transform: translateY(8px);
-            transition: all 0.3s var(--ease); z-index: 900;
-            box-shadow: 0 4px 20px rgba(29,78,216,0.3);
-        }
-        .btt.visible { opacity: 1; visibility: visible; transform: translateY(0); }
-        .btt:hover { transform: translateY(-3px); box-shadow: 0 8px 28px rgba(29,78,216,0.4); }
-        .btt svg { width: 22px; height: 22px; }
-
-        /* ---------- PRINT ---------- */
-        @media print {
-            .nav, .ribbon, .mobile-menu, .theme-toggle, .btt, .hero-deco { display: none !important; }
-            body { font-size: 11pt; color: #000; background: #fff; }
-            .hero { min-height: auto; padding: 32px 0; background: none; }
-            .section { padding: 24px 0; }
-            .mission-block { background: #eee; color: #000; }
-            .mission-block h2 { color: #000; }
-            .footer { background: #eee; color: #333; }
-        }
-    </style>
+@media print{.nav,.ribbon,.mob-menu,.btt,.hero-bg-num{display:none!important}body{font-size:11pt;color:#000;background:#fff}.hero{min-height:auto;padding:32px 0}.sec{padding:24px 0}.mission{background:#eee;color:#000}.mission h2{color:#000}.footer{background:#eee;color:#333}}
+</style>
 </head>
-
 <body>
-    <a href="#main" class="skip-link">Skip to main content</a>
+<a href="#main" class="skip">Skip to main content</a>
 
-    <!-- ===== NAV ===== -->
-    <nav class="nav" role="navigation" aria-label="Main navigation">
-        <div class="nav-inner">
-            <a href="#" class="nav-brand" aria-label="P.S. 165Q Home">
-                <div class="nav-crest" aria-hidden="true">165</div>
-                <div class="nav-brand-text">
-                    <span class="nav-ps">P.S. 165Q</span>
-                    <span class="nav-school">Bergtraum School</span>
-                </div>
-            </a>
-            <ul class="nav-links" role="menubar">
-                <li role="none"><a href="#programs" role="menuitem">Programs</a></li>
-                <li role="none"><a href="#calendar" role="menuitem">Calendar</a></li>
-                <li role="none"><a href="#leadership" role="menuitem">Leadership</a></li>
-                <li role="none"><a href="#community" role="menuitem">Community</a></li>
-                <li role="none"><a href="#contact" role="menuitem">Contact</a></li>
-                <li role="none"><a href="https://www.parentsquare.com" target="_blank" rel="noopener" role="menuitem" class="btn btn-royal btn-sm">ParentSquare</a></li>
-            </ul>
-            <div class="nav-actions">
-                <button class="theme-toggle" aria-label="Toggle dark mode" type="button">
-                    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/></svg>
-                    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-                </button>
-                <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu" type="button">
-                    <svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
-                    <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-                </button>
-            </div>
-        </div>
-    </nav>
+<nav class="nav" role="navigation" aria-label="Main">
+<div class="nav-inner">
+<a href="#" class="nav-brand" aria-label="Home">
+<div class="nav-mark" aria-hidden="true">165</div>
+<div class="nav-id"><span class="nav-id-top">P.S. 165Q</span><span class="nav-id-bot">Bergtraum School</span></div>
+</a>
+<ul class="nav-links" role="menubar">
+<li role="none"><a href="#programs" role="menuitem">Programs</a></li>
+<li role="none"><a href="#calendar" role="menuitem">Calendar</a></li>
+<li role="none"><a href="#leadership" role="menuitem">Leadership</a></li>
+<li role="none"><a href="#community" role="menuitem">Community</a></li>
+<li role="none"><a href="#contact" role="menuitem">Contact</a></li>
+<li role="none"><a href="https://www.parentsquare.com" target="_blank" rel="noopener" role="menuitem" class="btn btn-royal btn-sm" style="margin-left:8px">ParentSquare</a></li>
+</ul>
+<div class="nav-right">
+<button class="ico-btn" aria-label="Toggle dark mode" type="button" id="theme-btn">
+<svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/></svg>
+<svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+</button>
+<button class="ico-btn ham" aria-label="Menu" aria-expanded="false" aria-controls="mob" type="button" id="ham-btn">
+<svg class="icon-bars" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+<svg class="icon-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+</button>
+</div>
+</div>
+</nav>
 
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="mobile-menu" role="menu" aria-label="Mobile navigation">
-        <div class="mobile-group-label">Navigate</div>
-        <a href="#programs" role="menuitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg>Programs</a>
-        <a href="#calendar" role="menuitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Calendar</a>
-        <a href="#leadership" role="menuitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Leadership</a>
-        <a href="#community" role="menuitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Community</a>
-        <a href="#contact" role="menuitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Contact</a>
-        <div class="mobile-divider"></div>
-        <div class="mobile-group-label">Resources</div>
-        <a href="https://www.ps165q.net/calendar" target="_blank" rel="noopener" role="menuitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Full School Calendar</a>
-        <a href="https://www.schools.nyc.gov/schools/Q165" target="_blank" rel="noopener" role="menuitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>NYC DOE Profile</a>
-        <a href="https://www.ps165q.net/" target="_blank" rel="noopener" role="menuitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>Schoolwires Site</a>
-        <div class="mobile-cta">
-            <a href="https://www.parentsquare.com" target="_blank" rel="noopener" class="btn btn-royal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Open ParentSquare</a>
-        </div>
-    </div>
+<div id="mob" class="mob-menu" role="menu">
+<div class="mob-label">Navigate</div>
+<a href="#programs"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg>Programs</a>
+<a href="#calendar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Calendar</a>
+<a href="#leadership"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Leadership</a>
+<a href="#community"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Community</a>
+<a href="#contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Contact</a>
+<div class="mob-sep"></div>
+<div class="mob-label">Resources</div>
+<a href="https://www.ps165q.net/calendar" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Full School Calendar</a>
+<a href="https://www.schools.nyc.gov/schools/Q165" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>NYC DOE Profile</a>
+<div class="mob-bottom"><a href="https://www.parentsquare.com" target="_blank" rel="noopener" class="btn btn-royal">Open ParentSquare</a></div>
+</div>
 
-    <!-- ===== MAIN ===== -->
-    <main id="main">
+<main id="main">
+<section class="hero">
+<div class="hero-bg-num" aria-hidden="true">165</div>
+<div class="wrap" style="display:contents">
+<div class="hero-left" style="padding:0 24px;max-width:640px">
+<div class="hero-eyebrow rv">Home of the Shooting Stars</div>
+<h1 class="hero-h1 rv"><strong>Edith K.</strong><br><em>Bergtraum</em> School</h1>
+<p class="hero-desc rv">A Pre-K through Grade 5 public school where every child becomes a citizen of the world and a life-long learner.</p>
+<p class="hero-meta rv"><span>P.S. 165Q</span><span class="sep">/</span><span>Flushing, Queens</span><span class="sep">/</span><span>District 25</span><span class="sep">/</span><span>NYC DOE</span></p>
+<div class="hero-actions rv">
+<a href="https://www.parentsquare.com" target="_blank" rel="noopener" class="btn btn-royal">ParentSquare</a>
+<a href="#programs" class="btn btn-outline">Explore Programs</a>
+<a href="tel:7182634004" class="btn btn-ghost" style="font-size:.9375rem">(718) 263-4004</a>
+</div>
+</div>
+<div class="hero-right" style="padding:0 24px">
+<div class="hero-card accent-gold rv">
+<div class="hero-card-label">Now Enrolling</div>
+<div class="hero-card-title">2026–2027 Registration</div>
+<div class="hero-card-body">Pre-K through Grade 5 applications are open. Join our community of Shooting Stars.</div>
+</div>
+<div class="hero-card accent-royal rv">
+<div class="hero-card-label">Featured Program</div>
+<div class="hero-card-title">Gifted & Talented</div>
+<div class="hero-card-body">Accelerated curriculum with advanced problem-solving and enriched content across all subjects.</div>
+</div>
+</div>
+</div>
+</section>
 
-        <!-- HERO -->
-        <section class="hero" aria-labelledby="hero-heading">
-            <div class="hero-deco" aria-hidden="true"></div>
-            <div class="container hero-content">
-                <div class="hero-badge reveal">
-                    <span class="hero-badge-star" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
-                    Home of the Shooting Stars
-                </div>
-                <h1 id="hero-heading" class="display-xl hero-title reveal">
-                    <span class="accent">Edith K.</span><br><span class="accent-gold">Bergtraum</span><br>School
-                </h1>
-                <p class="hero-sub reveal">Public School 165Q in Flushing, Queens — where every child becomes a citizen of the world and a life-long learner.</p>
-                <p class="hero-district reveal">
-                    <span>Pre-K through Grade 5</span>
-                    <span class="sep" aria-hidden="true">/</span>
-                    <span>District 25</span>
-                    <span class="sep" aria-hidden="true">/</span>
-                    <span>NYC DOE</span>
-                </p>
-                <div class="hero-actions reveal">
-                    <a href="https://www.parentsquare.com" target="_blank" rel="noopener" class="btn btn-royal">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-                        ParentSquare
-                    </a>
-                    <a href="#programs" class="btn btn-outline">
-                        Explore Programs
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-                    </a>
-                    <a href="tel:7182634004" class="btn btn-ghost" style="font-size: 0.9375rem;">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="width:18px;height:18px;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                        (718) 263-4004
-                    </a>
-                </div>
-                <div class="hero-stats reveal">
-                    <div class="hero-stat">
-                        <div class="hero-stat-val">Pre-K</div>
-                        <div class="hero-stat-label">Starting</div>
-                    </div>
-                    <div class="hero-stat">
-                        <div class="hero-stat-val">5th</div>
-                        <div class="hero-stat-label">Through</div>
-                    </div>
-                    <div class="hero-stat">
-                        <div class="hero-stat-val">D25</div>
-                        <div class="hero-stat-label">District</div>
-                    </div>
-                </div>
-            </div>
-        </section>
+<div class="ribbon" role="marquee" aria-label="Announcements">
+<div class="ribbon-track" aria-hidden="true">
+<span class="ribbon-item"><span class="ribbon-dot"></span>Now Enrolling 2026–2027</span>
+<span class="ribbon-item"><span class="ribbon-dot"></span>G&T and NEST Programs Available</span>
+<span class="ribbon-item"><span class="ribbon-dot"></span>Join ParentSquare for Updates</span>
+<span class="ribbon-item"><span class="ribbon-dot"></span>After School Programs Open</span>
+<span class="ribbon-item"><span class="ribbon-dot"></span>Follow @PS165Queens</span>
+<span class="ribbon-item"><span class="ribbon-dot"></span>Now Enrolling 2026–2027</span>
+<span class="ribbon-item"><span class="ribbon-dot"></span>G&T and NEST Programs Available</span>
+<span class="ribbon-item"><span class="ribbon-dot"></span>Join ParentSquare for Updates</span>
+<span class="ribbon-item"><span class="ribbon-dot"></span>After School Programs Open</span>
+<span class="ribbon-item"><span class="ribbon-dot"></span>Follow @PS165Queens</span>
+</div>
+</div>
 
-        <!-- RIBBON -->
-        <div class="ribbon" role="marquee" aria-label="Announcements">
-            <div class="ribbon-track" aria-hidden="true">
-                <span class="ribbon-item"><span class="dot"></span> Now Enrolling for 2026-2027</span>
-                <span class="ribbon-item"><span class="dot"></span> G&T and NEST Programs Available</span>
-                <span class="ribbon-item"><span class="dot"></span> Join ParentSquare for Updates</span>
-                <span class="ribbon-item"><span class="dot"></span> After School Programs Now Open</span>
-                <span class="ribbon-item"><span class="dot"></span> Follow @PS165Queens on Instagram</span>
-                <span class="ribbon-item"><span class="dot"></span> Now Enrolling for 2026-2027</span>
-                <span class="ribbon-item"><span class="dot"></span> G&T and NEST Programs Available</span>
-                <span class="ribbon-item"><span class="dot"></span> Join ParentSquare for Updates</span>
-                <span class="ribbon-item"><span class="dot"></span> After School Programs Now Open</span>
-                <span class="ribbon-item"><span class="dot"></span> Follow @PS165Queens on Instagram</span>
-            </div>
-        </div>
+<section class="sec" id="quickaccess">
+<div class="wrap">
+<div class="sec-header rv"><div class="sec-eyebrow blue">Quick Access</div><h2 class="sec-title">Find what you need</h2></div>
+<div class="qa-grid rv">
+<a href="https://www.parentsquare.com" target="_blank" rel="noopener" class="qa-card"><div class="qa-dot blue"></div><div><div class="qa-title">ParentSquare</div><div class="qa-desc">Messages, alerts, permission slips, auto-translated.</div></div></a>
+<a href="https://www.ps165q.net/calendar" target="_blank" rel="noopener" class="qa-card"><div class="qa-dot gold"></div><div><div class="qa-title">School Calendar</div><div class="qa-desc">Holidays, conferences, testing dates.</div></div></a>
+<a href="https://www.ps165q.net/" target="_blank" rel="noopener" class="qa-card"><div class="qa-dot coral"></div><div><div class="qa-title">Parent Handbook</div><div class="qa-desc">Policies, dress code, school supplies.</div></div></a>
+<a href="https://www.schools.nyc.gov/school-meals" target="_blank" rel="noopener" class="qa-card"><div class="qa-dot emerald"></div><div><div class="qa-title">Lunch Menu</div><div class="qa-desc">Free breakfast and lunch for all students.</div></div></a>
+<a href="https://www.ps165q.net/" target="_blank" rel="noopener" class="qa-card"><div class="qa-dot violet"></div><div><div class="qa-title">After School</div><div class="qa-desc">Enrichment, tutoring, sports, arts.</div></div></a>
+<a href="https://www.ps165q.net/" target="_blank" rel="noopener" class="qa-card"><div class="qa-dot blue"></div><div><div class="qa-title">PTA</div><div class="qa-desc">Meetings, volunteering, fundraisers.</div></div></a>
+</div>
+</div>
+</section>
 
-        <!-- QUICK ACCESS -->
-        <section class="section" id="quickaccess" aria-labelledby="qa-heading">
-            <div class="container">
-                <div class="section-header reveal">
-                    <div class="label label-blue">Quick Access</div>
-                    <h2 id="qa-heading" class="heading-lg" style="margin-top: 12px;">What are you looking for?</h2>
-                    <p class="body-lg" style="margin-top: 12px; max-width: 520px;">Everything parents, staff, and community members need — one click away.</p>
-                </div>
-                <div class="qa-grid">
-                    <a href="https://www.parentsquare.com" target="_blank" rel="noopener" class="qa-card blue reveal">
-                        <svg class="qa-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-                        <div class="qa-icon blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
-                        <div class="qa-text"><div class="qa-title">ParentSquare</div><div class="qa-desc">Messages, announcements, permission slips, and auto-translated alerts.</div></div>
-                    </a>
-                    <a href="https://www.ps165q.net/calendar" target="_blank" rel="noopener" class="qa-card gold reveal">
-                        <svg class="qa-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-                        <div class="qa-icon gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
-                        <div class="qa-text"><div class="qa-title">School Calendar</div><div class="qa-desc">Holidays, half-days, conferences, and all key dates for 2025-2026.</div></div>
-                    </a>
-                    <a href="https://www.ps165q.net/" target="_blank" rel="noopener" class="qa-card coral reveal">
-                        <svg class="qa-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-                        <div class="qa-icon coral"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
-                        <div class="qa-text"><div class="qa-title">Parent Handbook</div><div class="qa-desc">Policies, dress code, school supplies, and everything families need.</div></div>
-                    </a>
-                    <a href="https://www.schools.nyc.gov/school-meals" target="_blank" rel="noopener" class="qa-card emerald reveal">
-                        <svg class="qa-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-                        <div class="qa-icon emerald"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg></div>
-                        <div class="qa-text"><div class="qa-title">Lunch Menu</div><div class="qa-desc">Free breakfast and lunch for all students. View menus and nutrition info.</div></div>
-                    </a>
-                    <a href="https://www.ps165q.net/" target="_blank" rel="noopener" class="qa-card violet reveal">
-                        <svg class="qa-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-                        <div class="qa-icon violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
-                        <div class="qa-text"><div class="qa-title">After School Programs</div><div class="qa-desc">Enrichment, tutoring, sports, and arts. Registration info and schedules.</div></div>
-                    </a>
-                    <a href="https://www.ps165q.net/" target="_blank" rel="noopener" class="qa-card blue reveal">
-                        <svg class="qa-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-                        <div class="qa-icon blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-                        <div class="qa-text"><div class="qa-title">PTA</div><div class="qa-desc">Meetings, volunteer opportunities, fundraisers, and community events.</div></div>
-                    </a>
-                </div>
-            </div>
-        </section>
+<section class="sec sec-warm">
+<div class="wrap">
+<div class="mission rv">
+<h2>Cultivating citizens of the world and <span class="gold">life-long learners</span></h2>
+<p>We build a solid and equitable foundation through critical thinking, creativity, collaboration, and communication — preparing every student to thrive in a diverse, interconnected world.</p>
+</div>
+</div>
+</section>
 
-        <!-- MISSION -->
-        <section class="section" aria-labelledby="mission-heading">
-            <div class="container">
-                <div class="mission-block reveal">
-                    <div class="label" style="color: var(--gold-light); margin-bottom: 20px;"><span style="width:8px;height:8px;border-radius:50%;background:var(--gold-light);display:inline-block;margin-right:8px;"></span> Our Mission</div>
-                    <h2 id="mission-heading" class="heading-lg">Cultivating citizens of the world and <span class="gold-text">life-long learners</span></h2>
-                    <p class="mission-body">We build a solid and equitable foundation through critical thinking, creativity, collaboration, and communication — preparing every student to thrive in a diverse and interconnected world.</p>
-                </div>
-            </div>
-        </section>
+<section class="sec" id="programs">
+<div class="wrap">
+<div class="sec-header rv"><div class="sec-eyebrow gold">Academic Programs</div><h2 class="sec-title">Programs that set our<br>Shooting Stars apart</h2></div>
+<div class="prog-grid rv" style="margin-bottom:20px">
+<div class="prog-card wide"><div class="prog-bar blue"></div><div class="prog-label blue">Gifted & Talented</div><div class="prog-name">G&T Program</div><div class="prog-desc">An accelerated curriculum for students identified through NYC DOE admissions. Emphasizes advanced problem-solving, independent research, and enriched content across all core subjects.</div><div style="margin-top:16px"><a href="https://www.ps165q.net/" target="_blank" rel="noopener" class="btn-ghost">Learn more &rarr;</a></div></div>
+<div class="prog-card narrow"><div class="prog-bar gold"></div><div class="prog-label gold">Enrichment</div><div class="prog-name">NEST Program</div><div class="prog-desc">Nurturing Excellence through STEM and the arts. Project-based learning with integrated technology for deeper engagement.</div></div>
+</div>
+<div class="prog-row rv" style="margin-bottom:20px">
+<div class="prog-card"><div class="prog-bar emerald"></div><div class="prog-label emerald">Wellbeing</div><div class="prog-name">Social-Emotional Learning</div><div class="prog-desc">Building self-awareness, empathy, and responsible decision-making across every grade.</div></div>
+<div class="prog-card"><div class="prog-bar coral"></div><div class="prog-label coral">Creative Arts</div><div class="prog-name">The Arts</div><div class="prog-desc">Visual arts, music, and theater — including celebrated annual productions.</div></div>
+<div class="prog-card"><div class="prog-bar violet"></div><div class="prog-label violet">Athletics</div><div class="prog-name">Sports</div><div class="prog-desc">Competitive and recreational athletics developing teamwork and discipline.</div></div>
+</div>
+<div class="prog-row-2 rv">
+<div class="prog-card"><div class="prog-bar blue"></div><div class="prog-label blue">Academic Support</div><div class="prog-name">Literacy & Math Intervention</div><div class="prog-desc">Targeted small-group instruction and tutoring to ensure every student meets grade-level standards.</div></div>
+<div class="prog-card"><div class="prog-bar gold"></div><div class="prog-label gold">Technology</div><div class="prog-name">Digital Learning</div><div class="prog-desc">1:1 devices, coding curriculum, and digital citizenship for a technology-driven future.</div></div>
+</div>
+</div>
+</section>
 
-        <!-- PROGRAMS -->
-        <section class="section" id="programs" aria-labelledby="programs-heading">
-            <div class="container">
-                <div class="section-header reveal">
-                    <div class="label label-gold">Academic Programs</div>
-                    <h2 id="programs-heading" class="heading-lg" style="margin-top: 12px;">Programs that set our Shooting Stars apart</h2>
-                </div>
-                <div class="bento">
-                    <div class="bento-card span-7 reveal">
-                        <div class="color-bar blue"></div>
-                        <div>
-                            <div class="bento-label label-blue">Gifted & Talented</div>
-                            <div class="bento-title">G&T Program</div>
-                            <div class="bento-desc">An accelerated curriculum for students identified through the NYC DOE admissions process. Emphasizes advanced problem-solving, independent research, and enriched content across all core subjects.</div>
-                        </div>
-                        <div class="bento-foot"><a href="https://www.ps165q.net/" target="_blank" rel="noopener" class="btn btn-ghost">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="width:16px;height:16px;"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></div>
-                    </div>
-                    <div class="bento-card span-5 reveal">
-                        <div class="color-bar gold"></div>
-                        <div>
-                            <div class="bento-label label-gold">Enrichment</div>
-                            <div class="bento-title">NEST Program</div>
-                            <div class="bento-desc">Nurturing Excellence through STEM and the arts. Project-based learning with integrated technology experiences for deeper engagement.</div>
-                        </div>
-                    </div>
-                    <div class="bento-card span-4 reveal">
-                        <div class="color-bar emerald"></div>
-                        <div>
-                            <div class="bento-label label-emerald">Wellbeing</div>
-                            <div class="bento-title">Social-Emotional Learning</div>
-                            <div class="bento-desc">Building self-awareness, empathy, and responsible decision-making across every grade level.</div>
-                        </div>
-                    </div>
-                    <div class="bento-card span-4 reveal">
-                        <div class="color-bar coral"></div>
-                        <div>
-                            <div class="bento-label label-coral">Creative Arts</div>
-                            <div class="bento-title">The Arts</div>
-                            <div class="bento-desc">Visual arts, music, and theater — including our celebrated annual productions that build confidence and creativity.</div>
-                        </div>
-                    </div>
-                    <div class="bento-card span-4 reveal">
-                        <div class="color-bar violet"></div>
-                        <div>
-                            <div class="bento-label label-violet">Athletics</div>
-                            <div class="bento-title">Sports</div>
-                            <div class="bento-desc">Competitive and recreational athletics developing teamwork, discipline, and physical fitness.</div>
-                        </div>
-                    </div>
-                    <div class="bento-card span-6 reveal">
-                        <div class="color-bar blue"></div>
-                        <div>
-                            <div class="bento-label label-blue">Academic Support</div>
-                            <div class="bento-title">Literacy & Math Intervention</div>
-                            <div class="bento-desc">Targeted small-group instruction and one-on-one tutoring to ensure every student meets or exceeds grade-level standards in reading and mathematics.</div>
-                        </div>
-                    </div>
-                    <div class="bento-card span-6 reveal">
-                        <div class="color-bar gold"></div>
-                        <div>
-                            <div class="bento-label label-gold">Technology</div>
-                            <div class="bento-title">Digital Learning</div>
-                            <div class="bento-desc">1:1 device integration, coding curriculum, and digital citizenship preparing students for a technology-driven future.</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+<section class="sec sec-warm" style="padding-top:0">
+<div class="wrap">
+<div class="ps-banner rv">
+<div style="flex:1;min-width:240px"><div style="font-weight:600;font-size:1.125rem;color:var(--ink);margin-bottom:4px">Stay connected with ParentSquare</div><div style="font-size:.9375rem;color:var(--ink-secondary);max-width:440px">Real-time announcements, permission slips, and auto-translated messages in your language.</div></div>
+<a href="https://www.parentsquare.com" target="_blank" rel="noopener" class="btn btn-gold">Join ParentSquare</a>
+</div>
+</div>
+</section>
 
-        <!-- PARENTSQUARE BANNER -->
-        <section class="section" style="padding-top: 0;" aria-label="ParentSquare">
-            <div class="container">
-                <div class="ps-banner reveal">
-                    <div>
-                        <div class="ps-title">Stay connected with ParentSquare</div>
-                        <div class="ps-desc">Real-time announcements, permission slips, and auto-translated messages in your preferred language. Your one-stop school communication hub.</div>
-                    </div>
-                    <a href="https://www.parentsquare.com" target="_blank" rel="noopener" class="btn btn-gold">
-                        Join ParentSquare
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="width:18px;height:18px;"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-                    </a>
-                </div>
-            </div>
-        </section>
+<section class="sec" id="leadership">
+<div class="wrap">
+<div class="sec-header rv"><div class="sec-eyebrow blue">Leadership</div><h2 class="sec-title">Our leadership team</h2></div>
+<div class="leaders rv">
+<div class="leader"><div class="leader-av">TD</div><div class="leader-name">Tiffany L. Davis-Nealy</div><div class="leader-role">Principal</div></div>
+<div class="leader"><div class="leader-av">AL</div><div class="leader-name">Andrea L. Luongo</div><div class="leader-role">Assistant Principal</div></div>
+<div class="leader"><div class="leader-av">MW</div><div class="leader-name">Marianna H. Werth</div><div class="leader-role">Assistant Principal</div></div>
+</div>
+</div>
+</section>
 
-        <!-- LEADERSHIP -->
-        <section class="section section-alt" id="leadership" aria-labelledby="leadership-heading">
-            <div class="container">
-                <div class="section-header reveal">
-                    <div class="label label-blue">Leadership</div>
-                    <h2 id="leadership-heading" class="heading-lg" style="margin-top: 12px;">Our leadership team</h2>
-                </div>
-                <div class="leaders-grid reveal">
-                    <div class="leader-card">
-                        <div class="leader-avatar" aria-hidden="true">TD</div>
-                        <div class="leader-name">Tiffany L. Davis-Nealy</div>
-                        <div class="leader-role">Principal</div>
-                    </div>
-                    <div class="leader-card">
-                        <div class="leader-avatar" aria-hidden="true">AL</div>
-                        <div class="leader-name">Andrea L. Luongo</div>
-                        <div class="leader-role">Assistant Principal</div>
-                    </div>
-                    <div class="leader-card">
-                        <div class="leader-avatar" aria-hidden="true">MW</div>
-                        <div class="leader-name">Marianna H. Werth</div>
-                        <div class="leader-role">Assistant Principal</div>
-                    </div>
-                </div>
-            </div>
-        </section>
+<section class="sec sec-warm" id="calendar">
+<div class="wrap">
+<div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px;margin-bottom:clamp(48px,8vw,80px)">
+<div class="rv"><div class="sec-eyebrow coral">Upcoming</div><h2 class="sec-title">School calendar</h2></div>
+<a href="https://www.ps165q.net/calendar" target="_blank" rel="noopener" class="btn btn-outline btn-sm rv">Full calendar &rarr;</a>
+</div>
+<div class="cal-list">
+<div class="cal-item rv"><div class="cal-date"><div class="cal-mo">Apr</div><div class="cal-dy">4</div></div><div><div class="cal-title">Parent-Teacher Conferences</div><div class="cal-time">12 PM – 2:20 PM & 5 PM – 8 PM</div></div></div>
+<div class="cal-item rv"><div class="cal-date"><div class="cal-mo">Apr</div><div class="cal-dy">14</div></div><div><div class="cal-title">Spring Recess Begins</div><div class="cal-time">Schools closed April 14–22</div></div></div>
+<div class="cal-item rv"><div class="cal-date"><div class="cal-mo">Apr</div><div class="cal-dy">23</div></div><div><div class="cal-title">Students Return</div><div class="cal-time">Regular schedule resumes</div></div></div>
+<div class="cal-item rv"><div class="cal-date"><div class="cal-mo">May</div><div class="cal-dy">5</div></div><div><div class="cal-title">ELA State Testing</div><div class="cal-time">Grades 3–5</div></div></div>
+<div class="cal-item rv"><div class="cal-date"><div class="cal-mo">May</div><div class="cal-dy">26</div></div><div><div class="cal-title">Memorial Day</div><div class="cal-time">Schools closed</div></div></div>
+<div class="cal-item rv"><div class="cal-date"><div class="cal-mo">Jun</div><div class="cal-dy">26</div></div><div><div class="cal-title">Last Day of School</div><div class="cal-time">Early dismissal</div></div></div>
+</div>
+</div>
+</section>
 
-        <!-- CALENDAR -->
-        <section class="section" id="calendar" aria-labelledby="calendar-heading">
-            <div class="container">
-                <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px;margin-bottom:clamp(48px,8vw,72px);">
-                    <div class="reveal">
-                        <div class="label label-coral">Upcoming Events</div>
-                        <h2 id="calendar-heading" class="heading-lg" style="margin-top: 12px;">School calendar</h2>
-                    </div>
-                    <a href="https://www.ps165q.net/calendar" target="_blank" rel="noopener" class="btn btn-outline btn-sm reveal">
-                        View full calendar
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="width:16px;height:16px;"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-                    </a>
-                </div>
-                <div class="cal-list">
-                    <div class="cal-item reveal"><div class="cal-date"><div class="cal-month">Apr</div><div class="cal-day">4</div></div><div class="cal-info"><div class="cal-title">Parent-Teacher Conferences</div><div class="cal-time">12:00 PM – 2:20 PM & 5:00 PM – 8:00 PM</div></div></div>
-                    <div class="cal-item reveal"><div class="cal-date"><div class="cal-month">Apr</div><div class="cal-day">14</div></div><div class="cal-info"><div class="cal-title">Spring Recess Begins</div><div class="cal-time">Schools closed April 14–22</div></div></div>
-                    <div class="cal-item reveal"><div class="cal-date"><div class="cal-month">Apr</div><div class="cal-day">23</div></div><div class="cal-info"><div class="cal-title">Students Return from Spring Break</div><div class="cal-time">Regular schedule resumes</div></div></div>
-                    <div class="cal-item reveal"><div class="cal-date"><div class="cal-month">May</div><div class="cal-day">5</div></div><div class="cal-info"><div class="cal-title">ELA State Testing Begins</div><div class="cal-time">Grades 3–5</div></div></div>
-                    <div class="cal-item reveal"><div class="cal-date"><div class="cal-month">May</div><div class="cal-day">26</div></div><div class="cal-info"><div class="cal-title">Memorial Day — No School</div><div class="cal-time">Schools closed</div></div></div>
-                    <div class="cal-item reveal"><div class="cal-date"><div class="cal-month">Jun</div><div class="cal-day">26</div></div><div class="cal-info"><div class="cal-title">Last Day of School</div><div class="cal-time">Early dismissal</div></div></div>
-                </div>
-            </div>
-        </section>
+<section class="sec" id="community">
+<div class="wrap">
+<div class="sec-header rv"><div class="sec-eyebrow emerald">Community</div><h2 class="sec-title">Follow our Shooting Stars</h2></div>
+<div class="soc-grid">
+<a href="https://www.instagram.com/ps165queens/" target="_blank" rel="noopener" class="soc-card rv"><div class="soc-head"><div class="soc-ico ig"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div><div><div class="soc-handle">@PS165Queens</div><div class="soc-plat">Instagram</div></div></div><div class="soc-body">Daily highlights, classroom spotlights, performances, and field trips.</div><div class="soc-foot">View on Instagram &rarr;</div></a>
+<a href="https://twitter.com/PS165Queens" target="_blank" rel="noopener" class="soc-card rv"><div class="soc-head"><div class="soc-ico x"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></div><div><div class="soc-handle">@PS165Queens</div><div class="soc-plat">X (Twitter)</div></div></div><div class="soc-body">Announcements, event updates, and real-time school news.</div><div class="soc-foot">View on X &rarr;</div></a>
+<a href="https://twitter.com/PrincipalNealy" target="_blank" rel="noopener" class="soc-card rv"><div class="soc-head"><div class="soc-ico x"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></div><div><div class="soc-handle">@PrincipalNealy</div><div class="soc-plat">X (Twitter)</div></div></div><div class="soc-body">Direct updates from Principal Davis-Nealy.</div><div class="soc-foot">View on X &rarr;</div></a>
+<a href="https://www.facebook.com/PS165Q/" target="_blank" rel="noopener" class="soc-card rv"><div class="soc-head"><div class="soc-ico fb"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></div><div><div class="soc-handle">PS 165Q</div><div class="soc-plat">Facebook</div></div></div><div class="soc-body">Community events, PTA updates, and photo albums.</div><div class="soc-foot">View on Facebook &rarr;</div></a>
+</div>
+</div>
+</section>
 
-        <!-- COMMUNITY -->
-        <section class="section section-alt" id="community" aria-labelledby="community-heading">
-            <div class="container">
-                <div class="section-header reveal">
-                    <div class="label label-emerald">Community</div>
-                    <h2 id="community-heading" class="heading-lg" style="margin-top: 12px;">Follow our Shooting Stars</h2>
-                </div>
-                <div class="social-grid">
-                    <a href="https://www.instagram.com/ps165queens/" target="_blank" rel="noopener" class="social-card reveal">
-                        <div class="social-header"><div class="social-icon ig" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div><div><div class="social-handle">@PS165Queens</div><div class="social-platform">Instagram</div></div></div>
-                        <div class="social-body">Daily highlights, classroom spotlights, performances, field trips, and celebrations from across our school community.</div>
-                        <div class="social-foot">View on Instagram &rarr;</div>
-                    </a>
-                    <a href="https://twitter.com/PS165Queens" target="_blank" rel="noopener" class="social-card reveal">
-                        <div class="social-header"><div class="social-icon x" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></div><div><div class="social-handle">@PS165Queens</div><div class="social-platform">X (Twitter)</div></div></div>
-                        <div class="social-body">School announcements, event updates, and real-time news. Stay informed with our official account.</div>
-                        <div class="social-foot">View on X &rarr;</div>
-                    </a>
-                    <a href="https://twitter.com/PrincipalNealy" target="_blank" rel="noopener" class="social-card reveal">
-                        <div class="social-header"><div class="social-icon x" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></div><div><div class="social-handle">@PrincipalNealy</div><div class="social-platform">X (Twitter)</div></div></div>
-                        <div class="social-body">Direct updates from Principal Davis-Nealy — leadership insights, school highlights, and community celebrations.</div>
-                        <div class="social-foot">View on X &rarr;</div>
-                    </a>
-                    <a href="https://www.facebook.com/PS165Q/" target="_blank" rel="noopener" class="social-card reveal">
-                        <div class="social-header"><div class="social-icon fb" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></div><div><div class="social-handle">PS 165Q</div><div class="social-platform">Facebook</div></div></div>
-                        <div class="social-body">Community events, PTA updates, photo albums, and family engagement on our official Facebook page.</div>
-                        <div class="social-foot">View on Facebook &rarr;</div>
-                    </a>
-                </div>
-            </div>
-        </section>
+<section class="sec sec-warm" id="contact">
+<div class="wrap">
+<div class="sec-header rv"><div class="sec-eyebrow blue">Contact</div><h2 class="sec-title">Get in touch</h2></div>
+<div class="contact-grid rv">
+<div class="contact-card">
+<div class="c-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><div><div class="c-label">Address</div><div class="c-val">70-35 150 Street, Flushing, NY 11367</div></div></div>
+<div class="c-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg><div><div class="c-label">Main Office</div><div class="c-val"><a href="tel:7182634004">(718) 263-4004</a></div></div></div>
+<div class="c-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22 6 12 13 2 6"/></svg><div><div class="c-label">Fax</div><div class="c-val">(718) 793-9812</div></div></div>
+<div class="c-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><div><div class="c-label">Hours</div><div class="c-val">Mon – Fri, 8:00 AM – 2:20 PM</div></div></div>
+<div class="c-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg><div><div class="c-label">NYC DOE</div><div class="c-val"><a href="https://www.schools.nyc.gov/schools/Q165" target="_blank" rel="noopener">schools.nyc.gov/schools/Q165</a></div></div></div>
+</div>
+<div class="map-wrap"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.23!2d-73.821!3d40.728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2604b39e0e3c3%3A0x0!2s70-35+150th+St%2C+Flushing%2C+NY+11367!5e0!3m2!1sen!2sus!4v1" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Map: P.S. 165Q at 70-35 150 Street, Flushing, NY 11367"></iframe></div>
+</div>
+</div>
+</section>
+</main>
 
-        <!-- CONTACT -->
-        <section class="section" id="contact" aria-labelledby="contact-heading">
-            <div class="container">
-                <div class="section-header reveal">
-                    <div class="label label-blue">Contact</div>
-                    <h2 id="contact-heading" class="heading-lg" style="margin-top: 12px;">Get in touch</h2>
-                </div>
-                <div class="contact-grid reveal">
-                    <div class="contact-card">
-                        <div class="contact-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><div><div class="contact-label">Address</div><div class="contact-value">70-35 150 Street<br>Flushing, NY 11367</div></div></div>
-                        <div class="contact-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg><div><div class="contact-label">Main Office</div><div class="contact-value"><a href="tel:7182634004">(718) 263-4004</a></div></div></div>
-                        <div class="contact-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22 6 12 13 2 6"/></svg><div><div class="contact-label">Fax</div><div class="contact-value">(718) 793-9812</div></div></div>
-                        <div class="contact-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><div><div class="contact-label">School Hours</div><div class="contact-value">Monday – Friday, 8:00 AM – 2:20 PM</div></div></div>
-                        <div class="contact-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg><div><div class="contact-label">NYC DOE Profile</div><div class="contact-value"><a href="https://www.schools.nyc.gov/schools/Q165" target="_blank" rel="noopener">schools.nyc.gov/schools/Q165</a></div></div></div>
-                    </div>
-                    <div class="map-card">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.23!2d-73.821!3d40.728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2604b39e0e3c3%3A0x0!2s70-35+150th+St%2C+Flushing%2C+NY+11367!5e0!3m2!1sen!2sus!4v1" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Map showing P.S. 165Q at 70-35 150 Street, Flushing, NY 11367"></iframe>
-                    </div>
-                </div>
-            </div>
-        </section>
+<footer class="footer">
+<div class="wrap">
+<div class="foot-grid">
+<div><div class="foot-brand"><div class="foot-mark">165</div><div><div class="foot-bname">P.S. 165Q Bergtraum</div></div></div><p class="foot-about">Preparing citizens of the world and life-long learners in Flushing, Queens. Home of the Shooting Stars.</p></div>
+<div><div class="foot-h">Academics</div><ul class="foot-links"><li><a href="#programs">Programs</a></li><li><a href="https://www.ps165q.net/" target="_blank" rel="noopener">G&T Program</a></li><li><a href="https://www.ps165q.net/" target="_blank" rel="noopener">NEST Program</a></li></ul></div>
+<div><div class="foot-h">Families</div><ul class="foot-links"><li><a href="https://www.parentsquare.com" target="_blank" rel="noopener">ParentSquare</a></li><li><a href="https://www.ps165q.net/calendar" target="_blank" rel="noopener">Calendar</a></li><li><a href="https://www.schools.nyc.gov/school-meals" target="_blank" rel="noopener">Lunch Menu</a></li></ul></div>
+<div><div class="foot-h">Connect</div><ul class="foot-links"><li><a href="https://www.schools.nyc.gov/schools/Q165" target="_blank" rel="noopener">NYC DOE Profile</a></li><li><a href="https://insideschools.org/school/25Q165" target="_blank" rel="noopener">InsideSchools</a></li><li><a href="#contact">Contact Us</a></li></ul></div>
+</div>
+<div class="foot-bot">
+<span>&copy; 2026 P.S. 165Q Edith K. Bergtraum School &middot; District 25</span>
+<div class="foot-soc">
+<a href="https://www.instagram.com/ps165queens/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/></svg></a>
+<a href="https://twitter.com/PS165Queens" target="_blank" rel="noopener" aria-label="X"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+<a href="https://www.facebook.com/PS165Q/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+</div>
+</div>
+</div>
+</footer>
 
-    </main>
+<button class="btt" aria-label="Back to top" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg></button>
 
-    <!-- ===== FOOTER ===== -->
-    <footer class="footer" role="contentinfo">
-        <div class="container">
-            <div class="footer-grid">
-                <div>
-                    <div class="footer-brand">
-                        <div class="footer-crest" aria-hidden="true">165</div>
-                        <div><div class="footer-brand-name">P.S. 165Q Bergtraum School</div><div class="footer-brand-sub">Edith K. Bergtraum</div></div>
-                    </div>
-                    <p class="footer-about">Preparing citizens of the world and life-long learners in Flushing, Queens since 1967. Home of the Shooting Stars.</p>
-                </div>
-                <div>
-                    <div class="footer-heading">Academics</div>
-                    <ul class="footer-links">
-                        <li><a href="#programs">Programs</a></li>
-                        <li><a href="https://www.ps165q.net/" target="_blank" rel="noopener">G&T Program</a></li>
-                        <li><a href="https://www.ps165q.net/" target="_blank" rel="noopener">NEST Program</a></li>
-                        <li><a href="https://www.ps165q.net/" target="_blank" rel="noopener">Enrichment</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <div class="footer-heading">For Families</div>
-                    <ul class="footer-links">
-                        <li><a href="https://www.parentsquare.com" target="_blank" rel="noopener">ParentSquare</a></li>
-                        <li><a href="https://www.ps165q.net/calendar" target="_blank" rel="noopener">Calendar</a></li>
-                        <li><a href="https://www.ps165q.net/" target="_blank" rel="noopener">Parent Handbook</a></li>
-                        <li><a href="https://www.schools.nyc.gov/school-meals" target="_blank" rel="noopener">Lunch Menu</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <div class="footer-heading">Connect</div>
-                    <ul class="footer-links">
-                        <li><a href="https://www.ps165q.net/" target="_blank" rel="noopener">Schoolwires Site</a></li>
-                        <li><a href="https://www.schools.nyc.gov/schools/Q165" target="_blank" rel="noopener">NYC DOE Profile</a></li>
-                        <li><a href="https://insideschools.org/school/25Q165" target="_blank" rel="noopener">InsideSchools</a></li>
-                        <li><a href="#contact">Contact Us</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <span>&copy; 2026 P.S. 165Q Edith K. Bergtraum School &middot; NYC DOE District 25</span>
-                <div class="footer-socials">
-                    <a href="https://www.instagram.com/ps165queens/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
-                    <a href="https://twitter.com/PS165Queens" target="_blank" rel="noopener" aria-label="X Twitter"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
-                    <a href="https://www.facebook.com/PS165Q/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Back to Top -->
-    <button class="btt" aria-label="Back to top" type="button">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
-    </button>
-
-    <script>
-    (function() {
-        'use strict';
-
-        // Theme
-        const html = document.documentElement;
-        const toggle = document.querySelector('.theme-toggle');
-        const stored = localStorage.getItem('theme');
-        if (stored) html.setAttribute('data-theme', stored);
-        else if (window.matchMedia('(prefers-color-scheme: dark)').matches) html.setAttribute('data-theme', 'dark');
-        toggle.addEventListener('click', () => {
-            const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-            html.setAttribute('data-theme', next);
-            localStorage.setItem('theme', next);
-        });
-
-        // Nav scroll
-        const nav = document.querySelector('.nav');
-        window.addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 20), { passive: true });
-
-        // Mobile menu
-        const menuBtn = document.querySelector('.nav-toggle');
-        const menu = document.getElementById('mobile-menu');
-        menuBtn.addEventListener('click', () => {
-            const open = menuBtn.getAttribute('aria-expanded') === 'true';
-            menuBtn.setAttribute('aria-expanded', !open);
-            menu.classList.toggle('open', !open);
-            document.body.style.overflow = !open ? 'hidden' : '';
-        });
-        menu.querySelectorAll('a').forEach(l => l.addEventListener('click', () => {
-            menuBtn.setAttribute('aria-expanded', 'false');
-            menu.classList.remove('open');
-            document.body.style.overflow = '';
-        }));
-
-        // Scroll reveal
-        if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-            const obs = new IntersectionObserver(entries => {
-                entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
-            }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
-            document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
-        } else {
-            document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
-        }
-
-        // Back to top
-        const btt = document.querySelector('.btt');
-        window.addEventListener('scroll', () => btt.classList.toggle('visible', scrollY > 500), { passive: true });
-        btt.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-
-        // Smooth anchors
-        document.querySelectorAll('a[href^="#"]').forEach(a => {
-            a.addEventListener('click', e => {
-                const t = document.querySelector(a.getAttribute('href'));
-                if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth' }); }
-            });
-        });
-    })();
-    </script>
+<script>
+(function(){
+'use strict';
+const h=document.documentElement,tb=document.getElementById('theme-btn');
+const s=localStorage.getItem('t');
+if(s)h.dataset.theme=s;else if(matchMedia('(prefers-color-scheme:dark)').matches)h.dataset.theme='dark';
+tb.addEventListener('click',()=>{const n=h.dataset.theme==='dark'?'light':'dark';h.dataset.theme=n;localStorage.setItem('t',n)});
+const nav=document.querySelector('.nav');
+addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>16),{passive:true});
+const hb=document.getElementById('ham-btn'),mob=document.getElementById('mob');
+hb.addEventListener('click',()=>{const o=hb.getAttribute('aria-expanded')==='true';hb.setAttribute('aria-expanded',!o);mob.classList.toggle('open',!o);document.body.style.overflow=!o?'hidden':''});
+mob.querySelectorAll('a').forEach(l=>l.addEventListener('click',()=>{hb.setAttribute('aria-expanded','false');mob.classList.remove('open');document.body.style.overflow=''}));
+if(!matchMedia('(prefers-reduced-motion:reduce)').matches){
+const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('v');io.unobserve(e.target)}})},{threshold:.06,rootMargin:'0px 0px -20px 0px'});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+}else document.querySelectorAll('.rv').forEach(el=>el.classList.add('v'));
+const bt=document.querySelector('.btt');
+addEventListener('scroll',()=>bt.classList.toggle('v',scrollY>500),{passive:true});
+bt.addEventListener('click',()=>scrollTo({top:0,behavior:'smooth'}));
+document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'})}}));
+})();
+</script>
 </body>
 </html>
