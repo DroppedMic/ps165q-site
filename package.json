@@ -1,0 +1,23 @@
+{
+  "name": "ps165q-site",
+  "type": "module",
+  "version": "11.0.0",
+  "private": true,
+  "description": "P.S. 165Q Edith K. Bergtraum School — official site, built with Astro.",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "check": "astro check"
+  },
+  "dependencies": {
+    "@astrojs/rss": "^4.0.18",
+    "@astrojs/sitemap": "^3.7.2",
+    "astro": "^6.3.6",
+    "sharp": "^0.34.5"
+  }
+}
