@@ -64,6 +64,12 @@
   --wide:1440px;
   --ease:cubic-bezier(.42,0,.58,1);
   --ease-out:cubic-bezier(.16,1,.3,1);
+  --ease-apple:cubic-bezier(.28,.16,.22,1);
+  --ease-spring:cubic-bezier(.32,.72,0,1);
+  --dur-fast:.35s;
+  --dur-med:.7s;
+  --dur-slow:1.2s;
+  --dur-xslow:1.6s;
   --r-tile:22px;
   --gap-tile:12px;
 }
@@ -487,10 +493,57 @@ html[data-theme="dark"] .afoot-bot-links a{color:#86868b;border-right-color:#3a3
 html[data-theme="dark"] .afoot-bot-links a:hover{color:#f5f5f7}
 
 /* ============ REVEAL ============ */
-.rv{opacity:0;transform:translateY(18px);transition:opacity .8s var(--ease-out),transform .8s var(--ease-out)}
-.rv.v{opacity:1;transform:translateY(0)}
-.rv-d1{transition-delay:.06s}.rv-d2{transition-delay:.12s}.rv-d3{transition-delay:.18s}.rv-d4{transition-delay:.24s}.rv-d5{transition-delay:.3s}.rv-d6{transition-delay:.36s}
-@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none;animation:none}}
+/* Apple-grade reveal: scale + translate + opacity, long ease */
+.rv{opacity:0;transform:translateY(32px) scale(.97);transition:opacity var(--dur-slow) var(--ease-apple),transform var(--dur-slow) var(--ease-apple);will-change:opacity,transform}
+.rv.v{opacity:1;transform:translateY(0) scale(1)}
+.rv-d1{transition-delay:.08s}.rv-d2{transition-delay:.18s}.rv-d3{transition-delay:.28s}.rv-d4{transition-delay:.38s}.rv-d5{transition-delay:.48s}.rv-d6{transition-delay:.58s}
+
+/* Per-word fade-in stagger — set --i index inline */
+.word{display:inline-block;opacity:0;transform:translateY(.5em);transition:opacity .9s var(--ease-apple),transform .9s var(--ease-apple);transition-delay:calc(var(--i,0) * 55ms + 80ms);will-change:opacity,transform}
+.word.v{opacity:1;transform:translateY(0)}
+
+/* Scroll-linked transforms */
+.hero-mark{will-change:transform,opacity}
+.tile.hero{transition:transform .9s var(--ease-apple)}
+
+/* Smooth body-bg color sync (driven by JS adding data-mood) */
+body{transition:background-color var(--dur-xslow) var(--ease-apple),color .55s var(--ease)}
+body[data-mood="dark"]{background:#f0eee5}
+body[data-mood="gold"]{background:#fff8e0}
+html[data-theme="dark"] body[data-mood="dark"]{background:#0a0a0c}
+html[data-theme="dark"] body[data-mood="gold"]{background:#2a2218}
+
+/* Tile-level hover: subtle Apple zoom */
+.tile{transition:transform .9s var(--ease-apple),background-color var(--dur-slow) var(--ease-apple)}
+@media(hover:hover) and (pointer:fine){
+  .tile:hover{transform:translateY(-2px)}
+}
+
+/* Nav blur intensification on scroll */
+.gnav{transition:backdrop-filter .8s var(--ease-apple),background-color .8s var(--ease-apple)}
+.gnav.deep{background:rgba(0,0,0,.92);backdrop-filter:saturate(180%) blur(36px);-webkit-backdrop-filter:saturate(180%) blur(36px)}
+
+/* Smooth section dividing snap (off by default — class added by JS on big screens) */
+.snap-scroll{scroll-snap-type:y proximity}
+.snap-scroll .tile{scroll-snap-align:start;scroll-snap-stop:always}
+
+/* Mouse-following hero spotlight — uses CSS custom props updated by JS */
+.tile.hero{position:relative;isolation:isolate}
+.tile.hero::after{content:'';position:absolute;inset:0;background:radial-gradient(600px circle at var(--mx,50%) var(--my,50%),rgba(246,201,78,.18),transparent 55%);opacity:0;transition:opacity 1s var(--ease-apple);pointer-events:none;z-index:0}
+.tile.hero.lit::after{opacity:1}
+.tile.hero > *{position:relative;z-index:1}
+
+/* Sticky scrolly word reveal — Apple letter-by-letter with cascade */
+.scrolly-quote span{transition:color .25s var(--ease-apple),opacity .4s var(--ease-apple);will-change:color,opacity}
+
+/* Theme toggle — long smooth transition on every color change */
+html,html *{transition-property:background-color,border-color}
+html.theme-tx,html.theme-tx *{transition-duration:.9s !important;transition-timing-function:var(--ease-apple) !important}
+
+@media(prefers-reduced-motion:reduce){
+  .rv,.word,.tile,.gnav,body,html *{transition:none !important;animation:none !important;transform:none !important;opacity:1 !important;will-change:auto}
+  .rv,.word{transform:none}
+}
 
 /* ============ BACK TO TOP ============ */
 .btt{position:fixed;bottom:24px;right:24px;width:40px;height:40px;border-radius:50%;background:var(--ink);color:var(--bg);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transform:translateY(8px);transition:all .3s var(--ease);z-index:900;box-shadow:0 8px 24px rgba(0,0,0,.2)}
@@ -1272,6 +1325,147 @@ if(isFine && !reduced){
         var u=new URL(location.href);u.searchParams.set('lang',l);history.replaceState(null,'',u);
       });
     });
+  }
+})();
+
+/* ============ V19 APPLE-GRADE MOTION ============ */
+(function(){
+  if(reduced)return;
+
+  /* ===== Hero word-by-word reveal ===== */
+  var hero=document.querySelector('.tile.hero');
+  var heroH=hero && hero.querySelector('.tile-h');
+  var heroSub=hero && hero.querySelector('.tile-sub');
+  var heroEye=hero && hero.querySelector('.tile-eyebrow');
+  function wrapWords(el,startIndex){
+    if(!el)return startIndex;
+    var lines=el.innerHTML.split(/<br\s*\/?>/i);
+    var idx=startIndex||0;
+    el.innerHTML=lines.map(function(line){
+      return line.split(/(\s+)/).map(function(tok){
+        if(!tok.trim())return tok;
+        var span='<span class="word" style="--i:'+idx+'">'+tok+'</span>';
+        idx++;
+        return span;
+      }).join('');
+    }).join('<br>');
+    return idx;
+  }
+  var wi=0;
+  if(heroEye){heroEye.classList.add('word');heroEye.style.setProperty('--i',0);wi=1;}
+  if(heroH)wi=wrapWords(heroH,wi);
+  if(heroSub)wi=wrapWords(heroSub,wi+1);
+  // Reveal after a frame so transitions kick in
+  requestAnimationFrame(function(){
+    requestAnimationFrame(function(){
+      document.querySelectorAll('.tile.hero .word').forEach(function(w){w.classList.add('v');});
+    });
+  });
+
+  /* ===== Section header word stagger (sec-h, psec-h, gtile-h, qtile-h, tile-h not on hero) ===== */
+  var headerSel='.psec-h, .gtile-h, .qtile-h, .nsec h2, .cal-h';
+  document.querySelectorAll(headerSel).forEach(function(h){
+    if(h.closest('.tile.hero'))return;
+    wrapWords(h,0);
+  });
+  var headIo=new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if(e.isIntersecting){
+        e.target.querySelectorAll('.word').forEach(function(w){w.classList.add('v');});
+        headIo.unobserve(e.target);
+      }
+    });
+  },{threshold:.15});
+  document.querySelectorAll(headerSel).forEach(function(h){if(!h.closest('.tile.hero'))headIo.observe(h);});
+
+  /* ===== Scroll-driven hero mark (zoom-down + translate) ===== */
+  var heroMark=document.querySelector('.hero-mark');
+  var heroSection=document.querySelector('.tile.hero');
+  function updateHero(){
+    if(!heroMark||!heroSection)return;
+    var r=heroSection.getBoundingClientRect();
+    var h=window.innerHeight;
+    var p=Math.min(1,Math.max(0,-r.top/(r.height*0.7)));
+    var scale=1-p*0.18;
+    var ty=-p*40;
+    var op=1-p*0.55;
+    heroMark.style.transform='translate3d(0,'+ty+'px,0) scale('+scale+')';
+    heroMark.style.opacity=op;
+    // also shrink the hero title slightly as you scroll past
+    if(heroH){
+      var tScale=1-p*0.05;
+      var tOp=1-p*0.4;
+      heroH.style.transform='translate3d(0,'+(-p*20)+'px,0) scale('+tScale+')';
+      heroH.style.opacity=tOp;
+    }
+  }
+  addEventListener('scroll',updateHero,{passive:true});
+  addEventListener('resize',updateHero);
+  updateHero();
+
+  /* ===== Mouse-following hero spotlight + parallax ===== */
+  if(isFine && heroSection){
+    var pX=50,pY=50;
+    heroSection.addEventListener('mouseenter',function(){heroSection.classList.add('lit');});
+    heroSection.addEventListener('mouseleave',function(){
+      heroSection.classList.remove('lit');
+      heroSection.style.setProperty('--mx','50%');
+      heroSection.style.setProperty('--my','50%');
+      if(heroEye)heroEye.style.transform='';
+      if(heroH)heroH.style.transform='';
+      if(heroMark)heroMark.style.transform='';
+    });
+    heroSection.addEventListener('mousemove',function(e){
+      var r=heroSection.getBoundingClientRect();
+      var nx=(e.clientX-r.left)/r.width;
+      var ny=(e.clientY-r.top)/r.height;
+      heroSection.style.setProperty('--mx',(nx*100)+'%');
+      heroSection.style.setProperty('--my',(ny*100)+'%');
+      // subtle parallax — different depths per layer
+      var dx=(nx-.5),dy=(ny-.5);
+      if(heroEye)heroEye.style.transform='translate3d('+(dx*-6)+'px,'+(dy*-4)+'px,0)';
+      if(heroH)heroH.style.transform='translate3d('+(dx*-12)+'px,'+(dy*-8)+'px,0)';
+      if(heroMark)heroMark.style.transform='translate3d('+(dx*22)+'px,'+(dy*16)+'px,0)';
+    });
+  }
+
+  /* ===== Body bg color sync — driven by which tile dominates the viewport ===== */
+  var moodTiles=Array.from(document.querySelectorAll('.tile.dark, .tile.gold, .scrolly, .nsec'));
+  var moodIo=new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      var el=e.target;
+      var mood='';
+      if(el.classList.contains('gold'))mood='gold';
+      else if(el.classList.contains('dark')||el.classList.contains('scrolly')||el.classList.contains('nsec'))mood='dark';
+      if(e.intersectionRatio>0.55){
+        document.body.setAttribute('data-mood',mood);
+      }
+    });
+  },{threshold:[0,0.55,1]});
+  moodTiles.forEach(function(t){moodIo.observe(t);});
+  // clear mood when none dominates
+  var clearIo=new IntersectionObserver(function(es){
+    var anyDom=moodTiles.some(function(t){var r=t.getBoundingClientRect();return r.top<window.innerHeight*.45 && r.bottom>window.innerHeight*.55;});
+    if(!anyDom)document.body.removeAttribute('data-mood');
+  },{threshold:0});
+  addEventListener('scroll',function(){
+    var anyDom=moodTiles.some(function(t){var r=t.getBoundingClientRect();return r.top<window.innerHeight*.45 && r.bottom>window.innerHeight*.55;});
+    if(!anyDom)document.body.removeAttribute('data-mood');
+  },{passive:true});
+
+  /* ===== Nav blur intensification when scrolled away from top ===== */
+  var gnav=document.querySelector('.gnav, .nav');
+  if(gnav){
+    addEventListener('scroll',function(){gnav.classList.toggle('deep',scrollY>40);},{passive:true});
+  }
+
+  /* ===== Smooth theme transition flag ===== */
+  var themeBtn=document.getElementById('theme-toggle');
+  if(themeBtn){
+    themeBtn.addEventListener('click',function(){
+      document.documentElement.classList.add('theme-tx');
+      setTimeout(function(){document.documentElement.classList.remove('theme-tx');},950);
+    },{capture:true});
   }
 })();
 
