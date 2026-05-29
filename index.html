@@ -773,11 +773,19 @@ html[data-theme="dark"] ::-webkit-scrollbar-thumb{background:rgba(255,255,255,.1
 <div class="tile-eyebrow" style="color:var(--gold)">Newsletter</div>
 <h2 class="tile-h">Don't miss<br>a moment.</h2>
 <p class="tile-sub">The weekly Shooting Stars digest — calendar reminders, classroom highlights, PTA news. Every Sunday evening.</p>
-<form class="tile-cta" id="news-form" novalidate style="margin-top:28px;width:100%;justify-content:center;max-width:480px;margin-left:auto;margin-right:auto">
-<input class="cmdk-input" id="news-email" type="email" placeholder="your@email.com" aria-label="Email" required style="background:rgba(255,255,255,.06);border:1.5px solid rgba(255,255,255,.1);border-radius:980px;color:#fff;padding:12px 22px;font-size:15px;min-width:0;flex:1">
+<!--
+  Newsletter form ships disabled until a real endpoint is wired up.
+  To enable:
+    1. Create a form at formspree.io (or buttondown.email / mailchimp).
+    2. Replace the action URL below with your form ID.
+    3. Remove data-stub and the e.preventDefault() will release.
+-->
+<form class="tile-cta" id="news-form" action="https://formspree.io/f/REPLACE_WITH_FORM_ID" method="POST" data-stub="1" novalidate style="margin-top:28px;width:100%;justify-content:center;max-width:480px;margin-left:auto;margin-right:auto">
+<input class="cmdk-input" id="news-email" name="email" type="email" placeholder="your@email.com" aria-label="Email address" autocomplete="email" required style="background:rgba(255,255,255,.06);border:1.5px solid rgba(255,255,255,.1);border-radius:980px;color:#fff;padding:12px 22px;font-size:15px;min-width:0;flex:1">
+<input type="hidden" name="_subject" value="New Shooting Stars Digest subscriber">
 <button class="btn btn-pill-gold" type="submit">Subscribe</button>
 </form>
-<div id="news-ok" style="display:none;margin-top:14px;font-size:14px;color:#86efac">You're on the list — welcome aboard.</div>
+<div id="news-ok" role="status" aria-live="polite" style="display:none;margin-top:14px;font-size:14px;color:#86efac">You're on the list — welcome aboard.</div>
 </section>
 </div>
 
@@ -988,13 +996,45 @@ function animCount(el){var target=parseInt(el.getAttribute('data-count')||el.tex
 var cio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){animCount(e.target);cio.unobserve(e.target);}});},{threshold:.4});
 document.querySelectorAll('[data-count]').forEach(function(el){cio.observe(el);});
 
-/* NAV ACTIVE */
+/* NAV ACTIVE (with aria-current for assistive tech) */
 (function(){
   var gl=document.querySelectorAll('#gnav-links a, #snav-links a');
   var map={};gl.forEach(function(a){var k=a.getAttribute('href').slice(1);(map[k]=map[k]||[]).push(a);});
   var sections=Array.from(document.querySelectorAll('main section[id]'));
-  var spy=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var id=e.target.id;gl.forEach(function(l){l.classList.remove('active');});(map[id]||[]).forEach(function(l){l.classList.add('active');});}});},{rootMargin:'-40% 0px -55% 0px'});
+  var spy=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var id=e.target.id;gl.forEach(function(l){l.classList.remove('active');l.removeAttribute('aria-current');});(map[id]||[]).forEach(function(l){l.classList.add('active');l.setAttribute('aria-current','location');});}});},{rootMargin:'-40% 0px -55% 0px'});
   sections.forEach(function(s){spy.observe(s);});
+})();
+
+/* FOCUS TRAP for modals — captures Tab within an open modal and restores
+   focus to the trigger element on close. */
+(function(){
+  var modals=[{open:'.cmdk-bg.open',box:'.cmdk',watch:document.getElementById('cmdk-bg')},
+              {open:'.lb.open',box:'.lb-content',watch:document.getElementById('lb')},
+              {open:'.mob.open',box:'.mob',watch:document.getElementById('mob')}];
+  document.addEventListener('keydown',function(e){
+    if(e.key!=='Tab')return;
+    var found=null;
+    for(var i=0;i<modals.length;i++){if(document.querySelector(modals[i].open)){found=modals[i];break;}}
+    if(!found)return;
+    var box=document.querySelector(found.box);if(!box)return;
+    var fo=box.querySelectorAll('a[href]:not([disabled]),button:not([disabled]),input:not([disabled]),textarea:not([disabled]),[tabindex]:not([tabindex="-1"])');
+    if(!fo.length)return;
+    var first=fo[0],last=fo[fo.length-1];
+    if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}
+    else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}
+  });
+  /* Restore focus to opener on close via class-change observation */
+  var stash={};
+  modals.forEach(function(m){
+    if(!m.watch)return;
+    var key=m.box;
+    var obs=new MutationObserver(function(){
+      var isOpen=m.watch.classList.contains('open');
+      if(isOpen && !stash[key]){stash[key]=document.activeElement;}
+      else if(!isOpen && stash[key]){var el=stash[key];stash[key]=null;setTimeout(function(){if(el && el.focus)try{el.focus();}catch(_){}},30);}
+    });
+    obs.observe(m.watch,{attributes:true,attributeFilter:['class']});
+  });
 })();
 
 /* SMOOTH ANCHORS */
@@ -1072,16 +1112,26 @@ if(isFine && !reduced){
   q.parentElement.addEventListener('mouseenter',function(){clearInterval(auto);});
 })();
 
-/* NEWSLETTER */
+/* NEWSLETTER — when data-stub is set we intercept; otherwise the form
+   posts to its action (Formspree etc.) and we still show the inline ack
+   via Formspree's AJAX path. */
 (function(){
   var f=document.getElementById('news-form');if(!f)return;
-  f.addEventListener('submit',function(e){
-    e.preventDefault();
-    var email=document.getElementById('news-email').value.trim();
-    if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email))return;
-    document.getElementById('news-ok').style.display='block';
+  function ack(){
+    var ok=document.getElementById('news-ok');
+    ok.style.display='block';
     document.getElementById('news-email').value='';
-    setTimeout(function(){document.getElementById('news-ok').style.display='none';},6000);
+    setTimeout(function(){ok.style.display='none';},6000);
+  }
+  f.addEventListener('submit',function(e){
+    var email=document.getElementById('news-email').value.trim();
+    if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){e.preventDefault();return;}
+    if(f.hasAttribute('data-stub')){e.preventDefault();ack();return;}
+    /* Real submit: progressively enhance with fetch so the user stays on the page */
+    e.preventDefault();
+    fetch(f.action,{method:'POST',body:new FormData(f),headers:{Accept:'application/json'}})
+      .then(function(r){if(r.ok)ack();else f.submit();})
+      .catch(function(){f.submit();});
   });
 })();
 
