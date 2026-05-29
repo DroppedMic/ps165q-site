@@ -1,18 +1,21 @@
 # P.S. 165Q · GitHub Pages deploy
 #
-# This workflow ships the current static single-file build (index.html + 404 +
-# manifest + sw + sitemap + admin + assets) to GitHub Pages via the official
-# actions/deploy-pages action.
+# Astro build pipeline. Runs `npm ci && npm run build` and ships the
+# resulting `dist/` directory to GitHub Pages via actions/deploy-pages.
 #
-# It is gated to manual dispatch + main pushes that touch the static surface,
-# so it cannot accidentally fight the existing "Deploy from a branch" setting.
-# To switch over fully:
+# The static files at the repo root (V13 single-file index.html, 404,
+# manifest, sw, sitemap, rss, robots, public/admin) are NOT used by this
+# workflow — Astro's build produces equivalents from src/, and the
+# extras in public/ (admin/, sw.js, manifest.webmanifest, robots.txt,
+# 404.html if present there) get copied through automatically.
+#
+# To switch over from the legacy branch-based deploy:
 #   1. Repo Settings → Pages → Source = "GitHub Actions"
-#   2. Confirm this workflow succeeds end-to-end
+#   2. Confirm a workflow run succeeds end-to-end
 #   3. Remove or disable the legacy branch-based deploy
 #
-# When the Astro migration in src/ is ready, swap the "prepare artifact" step
-# to run `npm ci && npm run build` and upload `dist/` instead of `.`.
+# Until Pages is flipped, the existing root index.html keeps serving the
+# live site. Both can coexist on `main` without conflict.
 
 name: Deploy to GitHub Pages
 
@@ -21,14 +24,12 @@ on:
   push:
     branches: [main]
     paths:
-      - "index.html"
-      - "404.html"
-      - "manifest.webmanifest"
-      - "sw.js"
-      - "robots.txt"
-      - "sitemap.xml"
-      - "rss.xml"
+      - "src/**"
       - "public/**"
+      - "astro.config.mjs"
+      - "package.json"
+      - "package-lock.json"
+      - "tsconfig.json"
       - ".github/workflows/deploy.yml"
 
 permissions:
@@ -47,14 +48,19 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Prepare artifact
-        run: |
-          mkdir -p _site
-          # Static surface (single-file build)
-          cp index.html 404.html manifest.webmanifest sw.js _site/
-          cp -f robots.txt sitemap.xml rss.xml _site/ 2>/dev/null || true
-          # Anything intended to ship at the root goes under public/
-          if [ -d public ]; then cp -R public/. _site/; fi
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build Astro site
+        run: npm run build
+        env:
+          NODE_ENV: production
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -62,7 +68,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: _site
+          path: dist
 
   deploy:
     needs: build

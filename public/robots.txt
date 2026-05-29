@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://droppedmic.github.io/ps165q-site/sitemap.xml

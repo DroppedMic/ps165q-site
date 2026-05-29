@@ -1,0 +1,184 @@
+---
+import '../styles/v13.css';
+import { getLocaleFromUrl, t, type Locale } from '../i18n/ui';
+
+interface Props {
+  title: string;
+  description?: string;
+  ogImage?: string;
+  noIndex?: boolean;
+  showSubNav?: boolean;
+}
+
+const {
+  title,
+  description = 'P.S. 165Q Edith K. Bergtraum School — Pre-K through Grade 5 in Flushing, Queens, District 25. Home of the Shooting Stars.',
+  ogImage,
+  noIndex = false,
+  showSubNav = true,
+} = Astro.props;
+
+const locale: Locale = getLocaleFromUrl(Astro.url.pathname);
+const i18n = t(locale);
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const canonical = new URL(Astro.url.pathname, Astro.site ?? 'https://droppedmic.github.io').toString();
+const fullTitle = title.includes('P.S. 165Q') ? title : `${title} — P.S. 165Q`;
+
+const schoolSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'School',
+  name: 'P.S. 165Q Edith K. Bergtraum School',
+  alternateName: ['PS 165Q', 'PS165Q', 'Bergtraum School'],
+  url: 'https://droppedmic.github.io/ps165q-site/',
+  telephone: '(718) 263-4004',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: '70-35 150 Street',
+    addressLocality: 'Flushing',
+    addressRegion: 'NY',
+    postalCode: '11367',
+    addressCountry: 'US',
+  },
+  geo: { '@type': 'GeoCoordinates', latitude: 40.7282, longitude: -73.8189 },
+};
+
+const navLinks = [
+  { href: `${base}/#about`, label: i18n.nav.about },
+  { href: `${base}/#programs`, label: i18n.nav.programs },
+  { href: `${base}/#life`, label: 'Life at 165Q' },
+  { href: `${base}/#voices`, label: i18n.nav.voices },
+  { href: `${base}/#calendar`, label: i18n.nav.calendar },
+  { href: `${base}/#contact`, label: i18n.nav.contact },
+];
+
+const faviconDataUrl = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23000'/%3E%3Ctext x='50' y='66' font-size='38' font-weight='700' text-anchor='middle' fill='%23f6c94e' font-family='-apple-system,system-ui'%3E165%3C/text%3E%3C/svg%3E";
+---
+
+<!DOCTYPE html>
+<html lang={i18n.lang.html} data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#fbfbfd" media="(prefers-color-scheme: light)" />
+    {noIndex && <meta name="robots" content="noindex,nofollow" />}
+    {!noIndex && <meta name="robots" content="index,follow" />}
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    {ogImage && <meta property="og:image" content={ogImage} />}
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" href={faviconDataUrl} type="image/svg+xml" />
+    <link rel="apple-touch-icon" href={faviconDataUrl} />
+    <link rel="manifest" href={`${base}/manifest.webmanifest`} />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="P.S. 165Q" />
+    <link rel="alternate" type="application/rss+xml" title="P.S. 165Q · Shooting Stars News" href={`${base}/rss.xml`} />
+    <link rel="alternate" hreflang="en" href="https://droppedmic.github.io/ps165q-site/" />
+    <link rel="alternate" hreflang="zh" href="https://droppedmic.github.io/ps165q-site/zh/" />
+    <link rel="alternate" hreflang="ko" href="https://droppedmic.github.io/ps165q-site/ko/" />
+    <link rel="alternate" hreflang="es" href="https://droppedmic.github.io/ps165q-site/es/" />
+    <link rel="alternate" hreflang="x-default" href="https://droppedmic.github.io/ps165q-site/" />
+    <script type="application/ld+json" set:html={JSON.stringify(schoolSchema)} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <a href="#main" class="skip">Skip to main content</a>
+
+    <!-- GLOBAL NAV -->
+    <nav class="gnav" role="navigation" aria-label="Global">
+      <div class="gnav-in">
+        <a href={`${base}/`} class="gnav-brand" aria-label="Home">
+          <div class="gnav-crest" aria-hidden="true">165</div>
+          <span class="gnav-name">P.S. 165Q</span>
+        </a>
+        <ul class="gnav-links" id="gnav-links">
+          {navLinks.map((l) => (
+            <li><a href={l.href}>{l.label}</a></li>
+          ))}
+        </ul>
+        <div class="gnav-tools">
+          <a href={`${base}/`} class="gnav-tool" aria-label="English" style="width:auto;padding:0 8px;font-size:12px;letter-spacing:-.005em;text-decoration:none">EN</a>
+          <a href={`${base}/zh/`} class="gnav-tool" aria-label="中文" style="width:auto;padding:0 8px;font-size:12px;letter-spacing:-.005em;text-decoration:none">中</a>
+          <a href={`${base}/ko/`} class="gnav-tool" aria-label="한국어" style="width:auto;padding:0 8px;font-size:12px;letter-spacing:-.005em;text-decoration:none">한</a>
+          <a href={`${base}/es/`} class="gnav-tool" aria-label="Español" style="width:auto;padding:0 8px;font-size:12px;letter-spacing:-.005em;text-decoration:none">ES</a>
+        </div>
+      </div>
+    </nav>
+
+    <main id="main">
+      <slot />
+    </main>
+
+    <!-- APPLE FOOTER -->
+    <footer class="afoot">
+      <div class="afoot-in">
+        <div class="afoot-notes">
+          <p>
+            <sup>1</sup>{i18n.footer.about}
+          </p>
+        </div>
+        <div class="afoot-cols">
+          <div class="afoot-col">
+            <h4>{i18n.footer.h.academics}</h4>
+            <ul>
+              <li><a href={`${base}/#programs`}>{i18n.programs.items.gt.name}</a></li>
+              <li><a href={`${base}/#programs`}>{i18n.programs.items.nest.name}</a></li>
+              <li><a href={`${base}/#programs`}>{i18n.programs.items.sel.name}</a></li>
+              <li><a href={`${base}/#programs`}>{i18n.programs.items.arts.name}</a></li>
+            </ul>
+          </div>
+          <div class="afoot-col">
+            <h4>{i18n.footer.h.families}</h4>
+            <ul>
+              <li><a href="https://www.parentsquare.com" target="_blank" rel="noopener">{i18n.nav.parentSquare}</a></li>
+              <li><a href={`${base}/#calendar`}>{i18n.nav.calendar}</a></li>
+              <li><a href={`${base}/#contact`}>{i18n.nav.contact}</a></li>
+              <li><a href={`${base}/news/`}>{i18n.nav.news}</a></li>
+            </ul>
+          </div>
+          <div class="afoot-col">
+            <h4>{i18n.footer.h.connect}</h4>
+            <ul>
+              <li><a href="https://www.instagram.com/ps165queens/" target="_blank" rel="noopener">Instagram</a></li>
+              <li><a href="https://twitter.com/PS165Queens" target="_blank" rel="noopener">X (Twitter)</a></li>
+              <li><a href="https://www.facebook.com/PS165Q/" target="_blank" rel="noopener">Facebook</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="afoot-bot">
+          <div>Copyright © 2026 P.S. 165Q Edith K. Bergtraum School.</div>
+          <div class="afoot-bot-links">
+            <a href={`${base}/`}>Privacy</a>
+            <a href={`${base}/`}>Accessibility</a>
+            <a href="https://www.schools.nyc.gov/about-us/policies" target="_blank" rel="noopener">DOE Policies</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- PWA + theme bootstrap -->
+    <script>
+      (function () {
+        var saved = localStorage.getItem('theme');
+        var sysDark = matchMedia('(prefers-color-scheme:dark)').matches;
+        document.documentElement.setAttribute('data-theme', saved || (sysDark ? 'dark' : 'light'));
+        if ('serviceWorker' in navigator) {
+          window.addEventListener('load', function () {
+            navigator.serviceWorker.register(import.meta.env.BASE_URL + 'sw.js').catch(function () {});
+          });
+        }
+      })();
+    </script>
+  </body>
+</html>
