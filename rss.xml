@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>P.S. 165Q · Shooting Stars News</title>
+    <link>https://droppedmic.github.io/ps165q-site/</link>
+    <description>News, calendar updates, and highlights from P.S. 165Q Edith K. Bergtraum School in Flushing, Queens.</description>
+    <language>en-US</language>
+    <atom:link href="https://droppedmic.github.io/ps165q-site/rss.xml" rel="self" type="application/rss+xml"/>
+    <lastBuildDate>Fri, 29 May 2026 00:00:00 -0400</lastBuildDate>
+    <copyright>© 2026 P.S. 165Q Edith K. Bergtraum School</copyright>
+    <item>
+      <title>Spring Concert lights up the auditorium</title>
+      <link>https://droppedmic.github.io/ps165q-site/#voices</link>
+      <description>Grades 3–5 took the stage for our annual Spring Concert — a celebration of music, movement, and months of hard work.</description>
+      <pubDate>Sun, 12 Apr 2026 19:00:00 -0400</pubDate>
+      <guid isPermaLink="false">ps165q-news-2026-04-spring-concert</guid>
+    </item>
+    <item>
+      <title>NEST students take home district honors at the STEM Fair</title>
+      <link>https://droppedmic.github.io/ps165q-site/#programs</link>
+      <description>Three NEST teams placed in the District 25 STEM Fair, with a fourth-grade project on bird migration earning Best in Show.</description>
+      <pubDate>Sat, 22 Mar 2026 12:00:00 -0400</pubDate>
+      <guid isPermaLink="false">ps165q-news-2026-03-nest-stem-fair</guid>
+    </item>
+    <item>
+      <title>Pre-K and Kindergarten enrollment open for 2026–2027</title>
+      <link>https://droppedmic.github.io/ps165q-site/#apply</link>
+      <description>Applications for 3-K, Pre-K, and Kindergarten are open through the NYC DOE MySchools portal. Tours run monthly.</description>
+      <pubDate>Sun, 01 Feb 2026 09:00:00 -0500</pubDate>
+      <guid isPermaLink="false">ps165q-news-2026-02-enrollment-open</guid>
+    </item>
+  </channel>
+</rss>

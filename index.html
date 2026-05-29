@@ -12,6 +12,17 @@
 <meta property="og:type" content="website"><meta property="og:url" content="https://droppedmic.github.io/ps165q-site/">
 <link rel="canonical" href="https://droppedmic.github.io/ps165q-site/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23000'/%3E%3Ctext x='50' y='66' font-size='38' font-weight='700' text-anchor='middle' fill='%23f6c94e' font-family='-apple-system,system-ui'%3E165%3C/text%3E%3C/svg%3E" type="image/svg+xml">
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'%3E%3Crect width='180' height='180' rx='40' fill='%23000'/%3E%3Ctext x='90' y='118' font-size='68' font-weight='700' text-anchor='middle' fill='%23f6c94e' font-family='-apple-system,system-ui'%3E165%3C/text%3E%3C/svg%3E">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="P.S. 165Q">
+<link rel="alternate" type="application/rss+xml" title="P.S. 165Q · Shooting Stars News" href="rss.xml">
+<link rel="alternate" hreflang="en" href="https://droppedmic.github.io/ps165q-site/">
+<link rel="alternate" hreflang="zh" href="https://droppedmic.github.io/ps165q-site/?lang=zh">
+<link rel="alternate" hreflang="ko" href="https://droppedmic.github.io/ps165q-site/?lang=ko">
+<link rel="alternate" hreflang="es" href="https://droppedmic.github.io/ps165q-site/?lang=es">
+<link rel="alternate" hreflang="x-default" href="https://droppedmic.github.io/ps165q-site/">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"School","name":"P.S. 165Q Edith K. Bergtraum School","alternateName":["PS 165Q","PS165Q","Bergtraum School"],"url":"https://droppedmic.github.io/ps165q-site/","telephone":"(718) 263-4004","address":{"@type":"PostalAddress","streetAddress":"70-35 150 Street","addressLocality":"Flushing","addressRegion":"NY","postalCode":"11367","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":40.7282,"longitude":-73.8189}}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -120,6 +131,13 @@ h1,h2,h3,h4{font-family:'Inter Tight','Inter','SF Pro Display',-apple-system,Bli
 .gham svg{width:16px;height:16px}
 .gham .x{display:none}.gham[aria-expanded="true"] .b{display:none}.gham[aria-expanded="true"] .x{display:block}
 @media(min-width:1024px){.gham{display:none}}
+/* Language picker (Apple-style mini-dropdown in the global nav) */
+.lang-pick{position:relative;height:100%;display:flex;align-items:center}
+.lang-menu{position:absolute;top:calc(100% - 4px);right:0;background:rgba(40,40,42,.96);backdrop-filter:saturate(180%) blur(20px);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:6px;min-width:130px;display:none;z-index:9998;box-shadow:0 12px 36px rgba(0,0,0,.4)}
+.lang-menu.open{display:block}
+.lang-menu a{display:block;padding:8px 12px;font-size:13px;color:rgba(245,245,247,.7);border-radius:7px;text-decoration:none;letter-spacing:-.005em}
+.lang-menu a:hover{background:rgba(255,255,255,.06);color:#f5f5f7;text-decoration:none}
+.lang-menu a.active{background:rgba(255,255,255,.04);color:#f5f5f7;font-weight:500}
 
 /* ============ STICKY PRODUCT SUB-NAV ============ */
 .snav{position:sticky;top:44px;z-index:9996;background:rgba(251,251,253,.94);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid var(--border-soft);transform:translateY(-100%);transition:transform .35s var(--ease);height:52px}
@@ -517,6 +535,10 @@ html[data-theme="dark"] ::-webkit-scrollbar-thumb{background:rgba(255,255,255,.1
 <li><a href="#contact">Contact</a></li>
 </ul>
 <div class="gnav-tools">
+<div class="lang-pick" id="lang-pick">
+<button class="gnav-tool" id="lang-btn" aria-label="Language" aria-haspopup="true" aria-expanded="false" style="width:auto;padding:0 8px;gap:4px;font-size:12px;letter-spacing:-.005em"><span id="lang-cur">EN</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:10px;height:10px"><polyline points="6 9 12 15 18 9"/></svg></button>
+<div class="lang-menu" id="lang-menu" role="menu"><a href="?lang=en" data-lang="en" role="menuitem">English</a><a href="?lang=zh" data-lang="zh" role="menuitem">中文</a><a href="?lang=ko" data-lang="ko" role="menuitem">한국어</a><a href="?lang=es" data-lang="es" role="menuitem">Español</a></div>
+</div>
 <button class="gnav-tool" id="cmdk-open" aria-label="Search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button>
 <button class="gnav-tool" id="theme-toggle" aria-label="Toggle theme"><svg id="theme-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
 <button class="gham" id="ham-btn" aria-label="Menu" aria-expanded="false" aria-controls="mob"><svg class="b" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="4" y1="8" x2="20" y2="8"/><line x1="4" y1="16" x2="20" y2="16"/></svg><svg class="x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
@@ -535,7 +557,7 @@ html[data-theme="dark"] ::-webkit-scrollbar-thumb{background:rgba(255,255,255,.1
 <li><a href="#voices">Voices</a></li>
 <li><a href="#calendar">Calendar</a></li>
 </ul>
-<a href="#apply" class="snav-cta">Apply <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="9 18 15 12 9 6"/></svg></a>
+<a href="#apply" class="snav-cta"><span data-i18n="snav.apply">Apply</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="9 18 15 12 9 6"/></svg></a>
 </div>
 </div>
 
@@ -562,19 +584,19 @@ html[data-theme="dark"] ::-webkit-scrollbar-thumb{background:rgba(255,255,255,.1
 <main id="main">
 
 <!-- Apple-style strip -->
-<div class="strip">Now enrolling for 2026–27. <a href="#apply">Apply on MySchools ›</a></div>
+<div class="strip"><span data-i18n="strip.body">Now enrolling for 2026–27.</span> <a href="#apply" data-i18n="strip.link">Apply on MySchools ›</a></div>
 
 <!-- THE TILE STACK -->
 <div class="stack">
 
 <!-- TILE 1: HERO (white) -->
 <section class="tile hero white" id="hero">
-<div class="tile-eyebrow">P.S. 165Q · Edith K. Bergtraum School</div>
-<h1 class="tile-h">Every child,<br>a Shooting&nbsp;Star.</h1>
-<p class="tile-sub">An elementary school where curiosity becomes capability.<br>Pre-K through Grade 5 in Flushing, Queens — since 1960.</p>
+<div class="tile-eyebrow" data-i18n="hero.eyebrow">P.S. 165Q · Edith K. Bergtraum School</div>
+<h1 class="tile-h" data-i18n-html="hero.title">Every child,<br>a Shooting&nbsp;Star.</h1>
+<p class="tile-sub" data-i18n-html="hero.sub">An elementary school where curiosity becomes capability.<br>Pre-K through Grade 5 in Flushing, Queens — since 1960.</p>
 <div class="tile-cta">
-<a href="#programs" class="lnk lnk-d">Learn more</a>
-<a href="#apply" class="btn btn-pill" data-magnetic>Apply for 2026–27</a>
+<a href="#programs" class="lnk lnk-d" data-i18n="hero.learn">Learn more</a>
+<a href="#apply" class="btn btn-pill" data-magnetic data-i18n="hero.apply">Apply for 2026–27</a>
 </div>
 <div class="tile-visual" aria-hidden="true">
 <div class="hero-mark">165</div>
@@ -1109,6 +1131,106 @@ if(isFine && !reduced){
   list.addEventListener('click',function(e){var b=e.target.closest('.cmdk-item');if(b)act(b);});
   list.addEventListener('mousemove',function(e){var b=e.target.closest('.cmdk-item');if(b){list.querySelectorAll('.cmdk-item').forEach(function(x){x.classList.remove('sel');});b.classList.add('sel');}});
 })();
+
+/* ============ LANGUAGE SWITCHER ============ */
+(function(){
+  /* Subset of strings translated client-side. Full multilingual ships
+     through the Astro routes (/zh/, /ko/, /es/) once the migration in
+     src/ lands. */
+  var DICT={
+    en:{
+      'strip.body':'Now enrolling for 2026–27.',
+      'strip.link':'Apply on MySchools ›',
+      'snav.apply':'Apply',
+      'hero.eyebrow':'P.S. 165Q · Edith K. Bergtraum School',
+      'hero.title':'Every child,<br>a Shooting&nbsp;Star.',
+      'hero.sub':'An elementary school where curiosity becomes capability.<br>Pre-K through Grade 5 in Flushing, Queens — since 1960.',
+      'hero.learn':'Learn more',
+      'hero.apply':'Apply for 2026–27',
+      'html.lang':'en-US',
+      'lang.short':'EN'
+    },
+    zh:{
+      'strip.body':'2026–27 学年招生中。',
+      'strip.link':'通过 MySchools 申请 ›',
+      'snav.apply':'申请',
+      'hero.eyebrow':'P.S. 165Q · Edith K. Bergtraum 小学',
+      'hero.title':'每一个孩子，<br>都是一颗流星。',
+      'hero.sub':'让好奇心化为能力的小学。<br>位于皇后区法拉盛的学前班至五年级——自 1960 年起。',
+      'hero.learn':'了解更多',
+      'hero.apply':'申请 2026–27 学年',
+      'html.lang':'zh-CN',
+      'lang.short':'中'
+    },
+    ko:{
+      'strip.body':'2026–27학년도 신입생 모집 중.',
+      'strip.link':'MySchools에서 지원하기 ›',
+      'snav.apply':'지원',
+      'hero.eyebrow':'P.S. 165Q · Edith K. Bergtraum 학교',
+      'hero.title':'모든 어린이가<br>슈팅 스타.',
+      'hero.sub':'호기심이 능력이 되는 초등학교.<br>퀸즈 플러싱의 Pre-K부터 5학년까지 — 1960년부터.',
+      'hero.learn':'자세히',
+      'hero.apply':'2026–27학년도 지원',
+      'html.lang':'ko-KR',
+      'lang.short':'한'
+    },
+    es:{
+      'strip.body':'Inscripciones abiertas 2026–27.',
+      'strip.link':'Solicita en MySchools ›',
+      'snav.apply':'Solicitar',
+      'hero.eyebrow':'P.S. 165Q · Edith K. Bergtraum School',
+      'hero.title':'Cada niño,<br>una Shooting&nbsp;Star.',
+      'hero.sub':'Una escuela elemental donde la curiosidad se vuelve capacidad.<br>Pre-K a 5.º grado en Flushing, Queens — desde 1960.',
+      'hero.learn':'Saber más',
+      'hero.apply':'Solicitar para 2026–27',
+      'html.lang':'es-US',
+      'lang.short':'ES'
+    }
+  };
+  function apply(lang){
+    var d=DICT[lang]||DICT.en;
+    document.documentElement.setAttribute('lang',d['html.lang']);
+    document.querySelectorAll('[data-i18n]').forEach(function(el){
+      var k=el.getAttribute('data-i18n');if(d[k]!=null)el.textContent=d[k];
+    });
+    document.querySelectorAll('[data-i18n-html]').forEach(function(el){
+      var k=el.getAttribute('data-i18n-html');if(d[k]!=null)el.innerHTML=d[k];
+    });
+    var cur=document.getElementById('lang-cur');if(cur)cur.textContent=d['lang.short'];
+    document.querySelectorAll('#lang-menu a').forEach(function(a){a.classList.toggle('active',a.dataset.lang===lang);});
+  }
+  /* Resolve initial language: ?lang= → localStorage → browser → en */
+  var params=new URLSearchParams(location.search);
+  var initial=params.get('lang')||localStorage.getItem('ps165q-lang')||((navigator.language||'en').split('-')[0]);
+  if(!DICT[initial])initial='en';
+  apply(initial);
+  localStorage.setItem('ps165q-lang',initial);
+  /* Lang picker UI */
+  var btn=document.getElementById('lang-btn'),menu=document.getElementById('lang-menu');
+  if(btn&&menu){
+    btn.addEventListener('click',function(e){e.stopPropagation();var o=!menu.classList.contains('open');menu.classList.toggle('open',o);btn.setAttribute('aria-expanded',o);});
+    document.addEventListener('click',function(){menu.classList.remove('open');btn.setAttribute('aria-expanded','false');});
+    menu.addEventListener('click',function(e){e.stopPropagation();});
+    menu.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click',function(e){
+        e.preventDefault();
+        var l=a.dataset.lang;
+        localStorage.setItem('ps165q-lang',l);
+        apply(l);
+        menu.classList.remove('open');btn.setAttribute('aria-expanded','false');
+        /* keep ?lang= in URL for shareable links + sitemap hreflang */
+        var u=new URL(location.href);u.searchParams.set('lang',l);history.replaceState(null,'',u);
+      });
+    });
+  }
+})();
+
+/* ============ SERVICE WORKER ============ */
+if('serviceWorker' in navigator){
+  window.addEventListener('load',function(){
+    navigator.serviceWorker.register('sw.js',{scope:'./'}).catch(function(){/* fail silently — no-PWA browsers, file:// dev, etc. */});
+  });
+}
 
 })();
 </script>

@@ -1,0 +1,76 @@
+# P.S. 165Q · GitHub Pages deploy
+#
+# This workflow ships the current static single-file build (index.html + 404 +
+# manifest + sw + sitemap + admin + assets) to GitHub Pages via the official
+# actions/deploy-pages action.
+#
+# It is gated to manual dispatch + main pushes that touch the static surface,
+# so it cannot accidentally fight the existing "Deploy from a branch" setting.
+# To switch over fully:
+#   1. Repo Settings → Pages → Source = "GitHub Actions"
+#   2. Confirm this workflow succeeds end-to-end
+#   3. Remove or disable the legacy branch-based deploy
+#
+# When the Astro migration in src/ is ready, swap the "prepare artifact" step
+# to run `npm ci && npm run build` and upload `dist/` instead of `.`.
+
+name: Deploy to GitHub Pages
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "index.html"
+      - "404.html"
+      - "manifest.webmanifest"
+      - "sw.js"
+      - "robots.txt"
+      - "sitemap.xml"
+      - "rss.xml"
+      - "public/**"
+      - ".github/workflows/deploy.yml"
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Prepare artifact
+        run: |
+          mkdir -p _site
+          # Static surface (single-file build)
+          cp index.html 404.html manifest.webmanifest sw.js _site/
+          cp -f robots.txt sitemap.xml rss.xml _site/ 2>/dev/null || true
+          # Anything intended to ship at the root goes under public/
+          if [ -d public ]; then cp -R public/. _site/; fi
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
