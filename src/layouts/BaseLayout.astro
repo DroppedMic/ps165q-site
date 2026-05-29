@@ -108,13 +108,29 @@ const faviconDataUrl = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/
           ))}
         </ul>
         <div class="gnav-tools">
-          <a href={`${base}/`} class="gnav-tool" aria-label="English" style="width:auto;padding:0 8px;font-size:12px;letter-spacing:-.005em;text-decoration:none">EN</a>
-          <a href={`${base}/zh/`} class="gnav-tool" aria-label="中文" style="width:auto;padding:0 8px;font-size:12px;letter-spacing:-.005em;text-decoration:none">中</a>
-          <a href={`${base}/ko/`} class="gnav-tool" aria-label="한국어" style="width:auto;padding:0 8px;font-size:12px;letter-spacing:-.005em;text-decoration:none">한</a>
-          <a href={`${base}/es/`} class="gnav-tool" aria-label="Español" style="width:auto;padding:0 8px;font-size:12px;letter-spacing:-.005em;text-decoration:none">ES</a>
+          <a href={`${base}/`} class={`gnav-tool ${locale === 'en' ? 'active' : ''}`} aria-label="English" aria-current={locale === 'en' ? 'true' : undefined} style="width:auto;padding:0 8px;font-size:12px;letter-spacing:-.005em;text-decoration:none">EN</a>
+          <a href={`${base}/zh/`} class={`gnav-tool ${locale === 'zh' ? 'active' : ''}`} aria-label="中文" aria-current={locale === 'zh' ? 'true' : undefined} style="width:auto;padding:0 8px;font-size:12px;letter-spacing:-.005em;text-decoration:none">中</a>
+          <a href={`${base}/ko/`} class={`gnav-tool ${locale === 'ko' ? 'active' : ''}`} aria-label="한국어" aria-current={locale === 'ko' ? 'true' : undefined} style="width:auto;padding:0 8px;font-size:12px;letter-spacing:-.005em;text-decoration:none">한</a>
+          <a href={`${base}/es/`} class={`gnav-tool ${locale === 'es' ? 'active' : ''}`} aria-label="Español" aria-current={locale === 'es' ? 'true' : undefined} style="width:auto;padding:0 8px;font-size:12px;letter-spacing:-.005em;text-decoration:none">ES</a>
+          <button class="gnav-tool theme-btn" id="theme-toggle" aria-label="Toggle theme"><svg id="theme-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+          <button class="gham" id="ham-btn" aria-label={i18n.nav.menu} aria-expanded="false" aria-controls="mob"><svg class="b" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="4" y1="8" x2="20" y2="8"/><line x1="4" y1="16" x2="20" y2="16"/></svg><svg class="x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
         </div>
       </div>
     </nav>
+
+    <!-- MOBILE MENU -->
+    <div class="mob" id="mob" role="menu" aria-label={i18n.nav.menu}>
+      {navLinks.map((l) => (
+        <a href={l.href} role="menuitem">
+          {l.label}
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+        </a>
+      ))}
+      <div class="mob-bottom">
+        <a href="https://www.parentsquare.com" target="_blank" rel="noopener" class="btn btn-pill-light">{i18n.nav.parentSquare}</a>
+        <a href={`${base}/#apply`} class="btn btn-pill-gold">{i18n.hero.btnApply || 'Apply 2026–27'}</a>
+      </div>
+    </div>
 
     <main id="main">
       <slot />
@@ -167,15 +183,94 @@ const faviconDataUrl = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/
       </div>
     </footer>
 
-    <!-- PWA + theme bootstrap -->
+    <!-- PWA + theme + chrome interactivity -->
     <script>
       (function () {
+        /* ===== THEME ===== */
         var saved = localStorage.getItem('theme');
         var sysDark = matchMedia('(prefers-color-scheme:dark)').matches;
-        document.documentElement.setAttribute('data-theme', saved || (sysDark ? 'dark' : 'light'));
+        var initial = saved || (sysDark ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', initial);
+
+        function paintIcon(t) {
+          var el = document.getElementById('theme-icon');
+          if (!el) return;
+          if (t === 'dark') {
+            el.innerHTML =
+              '<circle cx="12" cy="12" r="5"/>' +
+              '<line x1="12" y1="1" x2="12" y2="3"/>' +
+              '<line x1="12" y1="21" x2="12" y2="23"/>' +
+              '<line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>' +
+              '<line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>' +
+              '<line x1="1" y1="12" x2="3" y2="12"/>' +
+              '<line x1="21" y1="12" x2="23" y2="12"/>' +
+              '<line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>' +
+              '<line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>';
+          } else {
+            el.innerHTML = '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>';
+          }
+        }
+        paintIcon(initial);
+        var themeBtn = document.getElementById('theme-toggle');
+        if (themeBtn) {
+          themeBtn.addEventListener('click', function () {
+            var cur = document.documentElement.getAttribute('data-theme');
+            var nxt = cur === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', nxt);
+            localStorage.setItem('theme', nxt);
+            paintIcon(nxt);
+          });
+        }
+
+        /* ===== HAMBURGER / MOBILE MENU ===== */
+        var hb = document.getElementById('ham-btn');
+        var mob = document.getElementById('mob');
+        if (hb && mob) {
+          hb.addEventListener('click', function () {
+            var open = hb.getAttribute('aria-expanded') === 'true';
+            hb.setAttribute('aria-expanded', String(!open));
+            mob.classList.toggle('open', !open);
+            document.body.style.overflow = !open ? 'hidden' : '';
+          });
+          mob.querySelectorAll('a').forEach(function (l) {
+            l.addEventListener('click', function () {
+              hb.setAttribute('aria-expanded', 'false');
+              mob.classList.remove('open');
+              document.body.style.overflow = '';
+            });
+          });
+        }
+
+        /* ===== FOCUS TRAP (mobile menu) ===== */
+        document.addEventListener('keydown', function (e) {
+          if (e.key !== 'Tab') return;
+          if (!mob || !mob.classList.contains('open')) return;
+          var fo = mob.querySelectorAll(
+            'a[href]:not([disabled]),button:not([disabled]),input:not([disabled]),[tabindex]:not([tabindex="-1"])'
+          );
+          if (!fo.length) return;
+          var first = fo[0];
+          var last = fo[fo.length - 1];
+          if (e.shiftKey && document.activeElement === first) {
+            e.preventDefault();
+            last.focus();
+          } else if (!e.shiftKey && document.activeElement === last) {
+            e.preventDefault();
+            first.focus();
+          }
+          if (e.key === 'Escape') {
+            mob.classList.remove('open');
+            hb && hb.setAttribute('aria-expanded', 'false');
+            document.body.style.overflow = '';
+          }
+        });
+
+        /* ===== SERVICE WORKER ===== */
         if ('serviceWorker' in navigator) {
           window.addEventListener('load', function () {
-            navigator.serviceWorker.register(import.meta.env.BASE_URL + 'sw.js').catch(function () {});
+            navigator.serviceWorker
+              .register(import.meta.env.BASE_URL + 'sw.js')
+              .catch(function () {});
           });
         }
       })();

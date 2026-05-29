@@ -1,43 +1,11 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { getCollection } from 'astro:content';
-
-const posts = (await getCollection('news', ({ data }) => !data.draft))
-  .sort((a, b) => +b.data.date - +a.data.date);
-
-const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+import NewsIndex from '../../components/NewsIndex.astro';
 ---
 
 <BaseLayout
   title="News — P.S. 165Q"
   description="Latest news, events, and highlights from P.S. 165Q Edith K. Bergtraum School."
 >
-  <section class="page-hero">
-    <div class="wrap">
-      <div class="tile-eyebrow">From the school</div>
-      <h1>News<br /><span style="color:var(--ink-3)">and highlights.</span></h1>
-      <p>What's happening at 165Q. Subscribe to the weekly Shooting Stars digest via the homepage newsletter.</p>
-    </div>
-  </section>
-
-  {posts.length === 0 ? (
-    <section class="psec">
-      <div class="wrap" style="text-align:center;color:var(--ink-3)">No posts yet.</div>
-    </section>
-  ) : (
-    <section class="psec" style="padding-top:clamp(40px,5vw,60px)">
-      <div class="news-grid">
-        {posts.map((p) => (
-          <a href={`${base}/news/${p.id.replace(/\.md$/, '')}/`} class="news-card">
-            <div class="news-date">
-              {p.data.date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
-            </div>
-            <h2 class="news-card-h">{p.data.title}</h2>
-            <p class="news-card-s">{p.data.summary}</p>
-            <span class="news-card-foot">Read story ›</span>
-          </a>
-        ))}
-      </div>
-    </section>
-  )}
+  <NewsIndex lang="en" />
 </BaseLayout>

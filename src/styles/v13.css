@@ -257,3 +257,24 @@ html[data-theme="dark"] .afoot-bot-links a:hover { color: #f5f5f7; }
 .gal-info { position: absolute; left: 0; right: 0; bottom: 0; padding: 24px; color: #fff; background: linear-gradient(180deg, transparent, rgba(0, 0, 0, .7)); z-index: 3; }
 .gal-eyebrow { font-family: 'Inter Tight', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: rgba(255, 255, 255, .7); margin-bottom: 6px; }
 .gal-h { font-family: 'Inter Tight', sans-serif; font-size: 24px; font-weight: 600; letter-spacing: -.025em; color: #fff; line-height: 1.1; }
+
+/* ============ MOBILE MENU + HAMBURGER ============ */
+.gham { width: 36px; height: 100%; border: none; background: transparent; color: #f5f5f7; cursor: pointer; display: flex; align-items: center; justify-content: center; opacity: .88; padding: 0; }
+.gham:hover { opacity: 1; }
+.gham svg { width: 18px; height: 18px; }
+.gham .x { display: none; }
+.gham[aria-expanded="true"] .b { display: none; }
+.gham[aria-expanded="true"] .x { display: block; }
+@media (min-width: 1024px) { .gham { display: none; } }
+
+.mob { position: fixed; inset: 44px 0 0 0; background: rgba(0, 0, 0, .96); backdrop-filter: blur(28px); -webkit-backdrop-filter: blur(28px); z-index: 9995; padding: 0 22px 22px; display: none; flex-direction: column; overflow-y: auto; color: #f5f5f7; }
+.mob.open { display: flex; }
+.mob a { display: flex; justify-content: space-between; align-items: center; padding: 18px 0; font-size: 17px; font-weight: 400; color: #f5f5f7; border-bottom: 1px solid rgba(255, 255, 255, .08); letter-spacing: -.022em; text-decoration: none; }
+.mob a:hover { color: var(--gold); text-decoration: none; }
+.mob a svg { width: 14px; height: 14px; color: rgba(255, 255, 255, .4); transition: transform .2s; }
+.mob a:hover svg { transform: translateX(4px); color: var(--gold); }
+.mob-bottom { margin-top: auto; padding-top: 22px; display: flex; gap: 8px; flex-wrap: wrap; }
+.mob-bottom .btn { flex: 1; min-width: 140px; justify-content: center; }
+
+/* Theme toggle button (extends .gnav-tool) */
+.theme-btn svg { width: 14px; height: 14px; }

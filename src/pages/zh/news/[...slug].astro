@@ -1,6 +1,6 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import NewsPost from '../../components/NewsPost.astro';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import NewsPost from '../../../components/NewsPost.astro';
 import { getCollection } from 'astro:content';
 
 export async function getStaticPaths() {
@@ -15,5 +15,5 @@ const { post } = Astro.props;
 ---
 
 <BaseLayout title={`${post.data.title} — P.S. 165Q`} description={post.data.summary}>
-  <NewsPost lang="en" post={post} />
+  <NewsPost lang="zh" post={post} />
 </BaseLayout>
