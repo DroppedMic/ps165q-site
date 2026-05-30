@@ -308,6 +308,65 @@ main { display: block; }
   min-height: clamp(440px, 56vh, 580px);
 }
 .tile.hero { min-height: clamp(520px, 70vh, 680px); }
+/* Video-background hero variant — Apple iPhone-hero pattern. Drop a file
+   named "hero-video.mp4" (and optionally "hero-video.webm") at the repo
+   root and the <video> sources below resolve and auto-play. Until then,
+   the animated gradient mesh below shows in its place. */
+.tile.hero.video {
+  background:
+    radial-gradient(ellipse 60% 50% at 20% 20%, rgba(246, 201, 78, .35) 0%, transparent 60%),
+    radial-gradient(ellipse 55% 50% at 80% 30%, rgba(0, 113, 227, .35) 0%, transparent 60%),
+    radial-gradient(ellipse 70% 60% at 50% 90%, rgba(231, 76, 60, .25) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 50% at 30% 70%, rgba(124, 58, 237, .25) 0%, transparent 60%),
+    linear-gradient(135deg, #0a1628 0%, #1a3050 100%);
+  background-size: 200% 200%, 200% 200%, 200% 200%, 200% 200%, 100% 100%;
+  animation: heroMesh 30s ease-in-out infinite;
+  color: #fff;
+  min-height: clamp(560px, 82vh, 760px);
+  isolation: isolate;
+}
+@keyframes heroMesh {
+  0%, 100% { background-position: 0% 0%, 100% 0%, 50% 100%, 30% 70%, 0% 0%; }
+  50%      { background-position: 20% 20%, 80% 20%, 50% 80%, 50% 50%, 0% 0%; }
+}
+.hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  background: transparent;
+}
+/* If the <video> can't load any source, it collapses height visually but
+   stays an empty box. The container gradient shows through anyway. */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(0, 0, 0, .25) 0%, rgba(0, 0, 0, .55) 60%, rgba(0, 0, 0, .78) 100%),
+    radial-gradient(ellipse 80% 60% at 50% 100%, rgba(0, 0, 0, .4) 0%, transparent 70%);
+  z-index: 1;
+  pointer-events: none;
+}
+.tile.hero.video > *:not(.hero-video):not(.hero-overlay) { position: relative; z-index: 2; }
+.tile.hero.video .tile-eyebrow { color: var(--gold); }
+.tile.hero.video .tile-h { color: #fff; }
+.tile.hero.video .tile-sub { color: rgba(255, 255, 255, .82); }
+.tile.hero.video .lnk { color: #2997ff; }
+.tile.hero.video .lnk:hover { color: #5cb1ff; }
+.tile.hero.video .hero-mark {
+  background: rgba(255, 255, 255, .12);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, .18);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, .25);
+  color: #fff;
+}
+@media (prefers-reduced-motion: reduce) {
+  .tile.hero.video { animation: none; }
+  .hero-video { display: none; }
+}
 .tile.short { min-height: clamp(360px, 44vh, 460px); padding-top: var(--tile-pad-y-short); padding-bottom: var(--tile-pad-y-short); }
 .tile.tall { min-height: clamp(560px, 72vh, 720px); }
 .tile.dark { background: var(--dark); color: #f5f5f7; }
@@ -682,14 +741,38 @@ html[data-theme="dark"] ::-webkit-scrollbar-thumb { background: rgba(255,255,255
 <!-- TILE STACK -->
 <div class="stack">
 
-  <!-- HERO -->
-  <section class="tile hero" id="hero">
+  <!-- HERO (video-backed, Apple iPhone-hero pattern) -->
+  <section class="tile hero video" id="hero">
+    <!--
+      Video background. Drop your file at the repo root and it auto-plays
+      muted/looped/inline like Apple's product page heroes.
+
+      Recommended source: 10–30 second loop of students at PS 165Q with
+      signed photo/video releases. Encode both formats for browser coverage:
+
+        ffmpeg -i source.mov -vf "scale=1920:-2" -c:v libx264 -profile:v high \
+               -pix_fmt yuv420p -crf 23 -movflags +faststart -an hero-video.mp4
+        ffmpeg -i source.mov -vf "scale=1920:-2" -c:v libvpx-vp9 -b:v 1800k \
+               -row-mt 1 -an hero-video.webm
+
+      Aim for <8 MB total. Keep faces decorative; the gradient overlay
+      below means individuals don't need to be sharply identifiable.
+
+      Until the files exist, the animated gradient mesh on .tile.hero.video
+      shows in their place — the hero still looks finished without them.
+    -->
+    <video class="hero-video" autoplay muted loop playsinline preload="metadata" aria-hidden="true" poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 9'%3E%3Crect width='16' height='9' fill='%230a1628'/%3E%3C/svg%3E">
+      <source src="hero-video.webm" type="video/webm">
+      <source src="hero-video.mp4" type="video/mp4">
+    </video>
+    <div class="hero-overlay" aria-hidden="true"></div>
+
     <div class="tile-eyebrow rv">P.S. 165Q · Edith K. Bergtraum School</div>
     <h1 class="tile-h rv rv-d1">Every child,<br>a Shooting Star.</h1>
     <p class="tile-sub rv rv-d2">An elementary school where curiosity becomes capability. Pre-K through Grade 5 in Flushing, Queens — since 1960.</p>
     <div class="tile-cta rv rv-d3">
       <a href="#programs" class="lnk">Learn more</a>
-      <a href="#apply" class="btn btn-pill">Apply for 2026–27</a>
+      <a href="#apply" class="btn btn-light">Apply for 2026–27</a>
     </div>
     <div class="hero-mark rv rv-d4" aria-hidden="true">165</div>
   </section>
