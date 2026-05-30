@@ -9,558 +9,605 @@
 <meta name="robots" content="index, follow">
 <meta property="og:title" content="P.S. 165Q — Edith K. Bergtraum School">
 <meta property="og:description" content="Every child, a Shooting Star. Pre-K through Grade 5 in Flushing, Queens.">
-<meta property="og:type" content="website"><meta property="og:url" content="https://droppedmic.github.io/ps165q-site/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://droppedmic.github.io/ps165q-site/">
 <link rel="canonical" href="https://droppedmic.github.io/ps165q-site/">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23000'/%3E%3Ctext x='50' y='66' font-size='38' font-weight='700' text-anchor='middle' fill='%23f6c94e' font-family='-apple-system,system-ui'%3E165%3C/text%3E%3C/svg%3E" type="image/svg+xml">
-<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'%3E%3Crect width='180' height='180' rx='40' fill='%23000'/%3E%3Ctext x='90' y='118' font-size='68' font-weight='700' text-anchor='middle' fill='%23f6c94e' font-family='-apple-system,system-ui'%3E165%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23000'/%3E%3Ctext x='50' y='65' font-size='34' font-weight='600' text-anchor='middle' fill='%23f6c94e' font-family='-apple-system,system-ui'%3E165%3C/text%3E%3C/svg%3E" type="image/svg+xml">
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'%3E%3Crect width='180' height='180' rx='40' fill='%23000'/%3E%3Ctext x='90' y='118' font-size='62' font-weight='600' text-anchor='middle' fill='%23f6c94e' font-family='-apple-system,system-ui'%3E165%3C/text%3E%3C/svg%3E">
 <link rel="manifest" href="manifest.webmanifest">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="P.S. 165Q">
-<link rel="alternate" type="application/rss+xml" title="P.S. 165Q · Shooting Stars News" href="rss.xml">
-<link rel="alternate" hreflang="en" href="https://droppedmic.github.io/ps165q-site/">
-<link rel="alternate" hreflang="zh" href="https://droppedmic.github.io/ps165q-site/?lang=zh">
-<link rel="alternate" hreflang="ko" href="https://droppedmic.github.io/ps165q-site/?lang=ko">
-<link rel="alternate" hreflang="es" href="https://droppedmic.github.io/ps165q-site/?lang=es">
-<link rel="alternate" hreflang="x-default" href="https://droppedmic.github.io/ps165q-site/">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"School","name":"P.S. 165Q Edith K. Bergtraum School","alternateName":["PS 165Q","PS165Q","Bergtraum School"],"url":"https://droppedmic.github.io/ps165q-site/","telephone":"(718) 263-4004","address":{"@type":"PostalAddress","streetAddress":"70-35 150 Street","addressLocality":"Flushing","addressRegion":"NY","postalCode":"11367","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":40.7282,"longitude":-73.8189}}</script>
+<link rel="alternate" type="application/rss+xml" title="P.S. 165Q News" href="rss.xml">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"School","name":"P.S. 165Q Edith K. Bergtraum School","alternateName":["PS 165Q","PS165Q"],"url":"https://droppedmic.github.io/ps165q-site/","telephone":"(718) 263-4004","address":{"@type":"PostalAddress","streetAddress":"70-35 150 Street","addressLocality":"Flushing","addressRegion":"NY","postalCode":"11367","addressCountry":"US"}}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <title>P.S. 165Q — Edith K. Bergtraum School</title>
 <style>
 /* ================================================================
-   apple.com — verbatim style language, ported.
-   - Typography: SF Pro Display/Text family. Inter as the open-source
-     substitute. Weight 600 ("Semibold") is the default headline weight.
-   - Headlines are tight: letter-spacing -.022 to -.045em.
-   - Body text: 17px / 1.47. Apple's exact body size.
-   - Colors: #fbfbfd, #f5f5f7, #fff, #000, #1d1d1f, #6e6e73, #86868b,
-     accent blue #0066cc (links), pill blue #0071e3.
-   - Tile architecture: stacked rounded-22px tiles with 12-16px gutters.
-   - CTAs: text link with ">" arrow + filled pill blue. 17px.
+   Apple design system — strict tokens.
+   Typography matches Apple's published "Headline" / "Body" type
+   scale; SF Pro substituted with Inter via -apple-system fallback.
    ================================================================ */
 
-:root{
-  --bg:#fbfbfd;
-  --tile-light:#fafafa;
-  --tile-mid:#f5f5f7;
-  --tile-elev:#ffffff;
-  --tile-dark:#000000;
-  --tile-dark2:#1d1d1f;
-  --ink:#1d1d1f;
-  --ink-2:#424245;
-  --ink-3:#6e6e73;
-  --ink-4:#86868b;
-  --border:#d2d2d7;
-  --border-soft:#e8e8ed;
-  --gold:#f6c94e;
-  --gold-2:#bf8a1f;
-  --link:#0066cc;
-  --link-h:#0077ed;
-  --pill:#0071e3;
-  --pill-h:#0077ed;
-  --max:1240px;
-  --wide:1440px;
-  --ease:cubic-bezier(.42,0,.58,1);
-  --ease-out:cubic-bezier(.16,1,.3,1);
-  --ease-apple:cubic-bezier(.28,.16,.22,1);
-  --ease-spring:cubic-bezier(.32,.72,0,1);
-  --dur-fast:.35s;
-  --dur-med:.7s;
-  --dur-slow:1.2s;
-  --dur-xslow:1.6s;
-  --r-tile:22px;
-  --gap-tile:12px;
+:root {
+  /* Color */
+  --bg: #fbfbfd;
+  --tile: #f5f5f7;
+  --surface: #ffffff;
+  --dark: #000000;
+  --dark-2: #1d1d1f;
+  --ink: #1d1d1f;
+  --ink-2: #424245;
+  --ink-3: #6e6e73;
+  --ink-4: #86868b;
+  --border: #d2d2d7;
+  --border-soft: #e8e8ed;
+  --gold: #f6c94e;
+  --gold-2: #bf8a1f;
+  --link: #06c;
+  --link-h: #0077ed;
+  --pill: #0071e3;
+  --pill-h: #0077ed;
+
+  /* Type scale — Apple Headline Elevated / Headline / Sub */
+  --fs-hero: clamp(40px, 5.4vw, 64px);
+  --fs-headline: clamp(28px, 3.4vw, 48px);
+  --fs-section: clamp(28px, 3vw, 40px);
+  --fs-card-h: 22px;
+  --fs-eyebrow: clamp(17px, 1.6vw, 21px);
+  --fs-sub: clamp(19px, 1.6vw, 24px);
+  --fs-body: 17px;
+  --fs-foot: 14px;
+  --fs-caption: 12px;
+
+  /* Apple letter-spacing per size band */
+  --ls-hero: -0.015em;
+  --ls-headline: -0.022em;
+  --ls-section: -0.022em;
+  --ls-card-h: -0.022em;
+  --ls-body: -0.022em;
+  --ls-caption: -0.005em;
+
+  /* Apple line-heights */
+  --lh-hero: 1.07;
+  --lh-headline: 1.0625;
+  --lh-section: 1.0714286;
+  --lh-card-h: 1.19;
+  --lh-body: 1.47059;
+  --lh-sub: 1.19;
+  --lh-foot: 1.33337;
+
+  /* Apple weights — Semibold 600 is the default for display */
+  --fw-display: 600;
+  --fw-body: 400;
+  --fw-eyebrow: 500;
+
+  /* Spacing — generous like Apple */
+  --tile-pad-y: clamp(64px, 8vw, 96px);
+  --tile-pad-x: clamp(22px, 4vw, 40px);
+  --tile-pad-y-short: clamp(48px, 6vw, 72px);
+  --tile-gap: 12px;
+  --tile-r: 18px;
+  --content-max: 720px;
+  --content-narrow: 560px;
+  --max: 1024px;
+  --wide: 1440px;
+
+  --ease: cubic-bezier(.42, 0, .58, 1);
+  --ease-out: cubic-bezier(.16, 1, .3, 1);
+  --ease-apple: cubic-bezier(.28, .16, .22, 1);
 }
-@media(min-width:768px){:root{--r-tile:24px;--gap-tile:14px}}
-html[data-theme="dark"]{
-  --bg:#000000;
-  --tile-light:#1d1d1f;
-  --tile-mid:#1d1d1f;
-  --tile-elev:#1d1d1f;
-  --ink:#f5f5f7;
-  --ink-2:#cfcfd2;
-  --ink-3:#a1a1a6;
-  --ink-4:#86868b;
-  --border:#3a3a3c;
-  --border-soft:#2c2c2e;
-  --link:#2997ff;
-  --link-h:#5cb1ff;
+@media (min-width: 768px) {
+  :root { --tile-gap: 16px; --tile-r: 22px; }
 }
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-::selection{background:var(--gold);color:#000}
-html{scroll-behavior:smooth;background:var(--bg);-webkit-text-size-adjust:100%}
-body{font-family:'Inter','SF Pro Text',-apple-system,BlinkMacSystemFont,'Helvetica Neue',sans-serif;font-size:17px;line-height:1.47059;color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;overflow-x:hidden;font-weight:400;letter-spacing:-.022em;transition:background .55s var(--ease),color .55s var(--ease)}
-a{color:var(--link);text-decoration:none}
-a:hover{color:var(--link-h);text-decoration:underline}
-a:focus-visible{outline:3px solid var(--link);outline-offset:3px;border-radius:4px}
-h1,h2,h3,h4{font-family:'Inter Tight','Inter','SF Pro Display',-apple-system,BlinkMacSystemFont,sans-serif;color:inherit;font-weight:600;line-height:1.05;letter-spacing:-.022em}
-.mono{font-family:ui-monospace,'SF Mono',Menlo,monospace}
-.skip{position:absolute;top:-100%;left:16px;background:var(--ink);color:var(--bg);padding:12px 22px;border-radius:980px;font-weight:500;z-index:10001;font-size:14px}
-.skip:focus{top:12px}
-.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 
-/* ============ LOADER (very brief flash) ============ */
-.loader{position:fixed;inset:0;background:#000;z-index:99999;display:flex;align-items:center;justify-content:center;transition:opacity .5s var(--ease),visibility .5s}
-.loader.gone{opacity:0;visibility:hidden;pointer-events:none}
-.loader-mark{width:56px;height:56px;border-radius:14px;background:var(--gold);color:#000;display:flex;align-items:center;justify-content:center;font-family:'Inter Tight',sans-serif;font-weight:700;font-size:16px;letter-spacing:-.02em;animation:lp 1.4s var(--ease) infinite}
-@keyframes lp{0%,100%{transform:scale(1)}50%{transform:scale(.93)}}
+html[data-theme="dark"] {
+  --bg: #000;
+  --tile: #1d1d1f;
+  --surface: #1d1d1f;
+  --ink: #f5f5f7;
+  --ink-2: #d2d2d7;
+  --ink-3: #a1a1a6;
+  --ink-4: #86868b;
+  --border: #424245;
+  --border-soft: #2c2c2e;
+  --link: #2997ff;
+  --link-h: #5cb1ff;
+}
 
-/* ============ CUSTOM CURSOR ============ */
-.cursor-dot,.cursor-ring{position:fixed;top:0;left:0;pointer-events:none;z-index:10002;will-change:transform;mix-blend-mode:difference}
-.cursor-dot{width:5px;height:5px;background:#fff;border-radius:50%;transform:translate(-50%,-50%)}
-.cursor-ring{width:28px;height:28px;border:1.5px solid rgba(255,255,255,.5);border-radius:50%;transform:translate(-50%,-50%);transition:width .3s var(--ease-out),height .3s var(--ease-out),border-color .25s}
-.cursor-ring.hover{width:52px;height:52px;border-color:var(--gold);border-width:2px}
-.cursor-ring.click{width:20px;height:20px}
-@media(max-width:1023px),(pointer:coarse){.cursor-dot,.cursor-ring{display:none}}
-.has-cursor body,.has-cursor a,.has-cursor button{cursor:none}
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+::selection { background: var(--gold); color: #000; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; background: var(--bg); }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', sans-serif;
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  color: var(--ink);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: var(--ls-body);
+  font-weight: var(--fw-body);
+  overflow-x: hidden;
+  transition: background-color .6s var(--ease-apple), color .6s var(--ease-apple);
+}
+a { color: var(--link); text-decoration: none; }
+a:hover { color: var(--link-h); text-decoration: underline; }
+a:focus-visible { outline: 3px solid var(--link); outline-offset: 3px; border-radius: 4px; }
+h1, h2, h3, h4 { color: inherit; font-weight: var(--fw-display); }
+img { max-width: 100%; height: auto; display: block; }
+button { font-family: inherit; }
 
-/* ============ GLOBAL NAV (Apple's signature thin black bar) ============ */
-.gnav{position:sticky;top:0;z-index:9997;background:rgba(0,0,0,.8);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);color:#f5f5f7;font-size:12px;height:44px}
-.gnav-in{display:flex;align-items:center;height:100%;max-width:1024px;margin:0 auto;padding:0 22px;gap:0}
-.gnav-brand{display:flex;align-items:center;gap:8px;color:#f5f5f7;text-decoration:none;padding:0 8px;height:100%;margin-right:auto}
-.gnav-brand:hover{text-decoration:none;color:#f5f5f7}
-.gnav-crest{width:22px;height:22px;border-radius:6px;background:var(--gold);color:#000;display:flex;align-items:center;justify-content:center;font-family:'Inter Tight',sans-serif;font-weight:800;font-size:9px;letter-spacing:-.02em}
-.gnav-name{font-weight:400;font-size:12px;color:#f5f5f7;letter-spacing:-.005em;opacity:.88}
-.gnav-links{display:none;list-style:none;align-items:center;height:100%;gap:0;flex:1;justify-content:center}
-.gnav-links li{height:100%;display:flex;align-items:center}
-.gnav-links a{padding:0 10px;font-size:12px;font-weight:400;color:#f5f5f7;opacity:.88;letter-spacing:-.005em;transition:opacity .15s;text-decoration:none;line-height:44px;white-space:nowrap}
-.gnav-links a:hover{opacity:1;text-decoration:none;color:#f5f5f7}
-.gnav-tools{display:flex;align-items:center;height:100%;margin-left:auto}
-.gnav-tool{width:38px;height:100%;border:none;background:transparent;color:#f5f5f7;opacity:.88;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:opacity .15s;font:inherit}
-.gnav-tool:hover{opacity:1}
-.gnav-tool svg{width:15px;height:15px}
-@media(min-width:1024px){.gnav-links{display:flex}.gnav-brand{margin-right:0}}
-.gham{width:32px;height:100%;border:none;background:transparent;color:#f5f5f7;cursor:pointer;display:flex;align-items:center;justify-content:center;opacity:.88;margin-left:auto}
-.gham:hover{opacity:1}
-.gham svg{width:16px;height:16px}
-.gham .x{display:none}.gham[aria-expanded="true"] .b{display:none}.gham[aria-expanded="true"] .x{display:block}
-@media(min-width:1024px){.gham{display:none}}
-/* Language picker (Apple-style mini-dropdown in the global nav) */
-.lang-pick{position:relative;height:100%;display:flex;align-items:center}
-.lang-menu{position:absolute;top:calc(100% - 4px);right:0;background:rgba(40,40,42,.96);backdrop-filter:saturate(180%) blur(20px);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:6px;min-width:130px;display:none;z-index:9998;box-shadow:0 12px 36px rgba(0,0,0,.4)}
-.lang-menu.open{display:block}
-.lang-menu a{display:block;padding:8px 12px;font-size:13px;color:rgba(245,245,247,.7);border-radius:7px;text-decoration:none;letter-spacing:-.005em}
-.lang-menu a:hover{background:rgba(255,255,255,.06);color:#f5f5f7;text-decoration:none}
-.lang-menu a.active{background:rgba(255,255,255,.04);color:#f5f5f7;font-weight:500}
+.skip { position: absolute; top: -100%; left: 16px; background: var(--ink); color: var(--bg); padding: 12px 22px; border-radius: 980px; font-weight: 500; z-index: 10001; font-size: 14px; }
+.skip:focus { top: 12px; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; }
+.wrap { max-width: var(--max); margin: 0 auto; padding: 0 22px; }
+@media (min-width: 768px) { .wrap { padding: 0 36px; } }
 
-/* ============ STICKY PRODUCT SUB-NAV ============ */
-.snav{position:sticky;top:44px;z-index:9996;background:rgba(251,251,253,.94);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid var(--border-soft);transform:translateY(-100%);transition:transform .35s var(--ease);height:52px}
-html[data-theme="dark"] .snav{background:rgba(29,29,31,.94);border-bottom-color:#2c2c2e}
-.snav.v{transform:translateY(0)}
-.snav-in{display:flex;align-items:center;justify-content:space-between;height:100%;max-width:var(--max);margin:0 auto;padding:0 22px;gap:16px}
-.snav-title{font-family:'Inter Tight',sans-serif;font-weight:600;font-size:21px;color:var(--ink);letter-spacing:-.022em;flex-shrink:0}
-.snav-links{display:none;list-style:none;gap:0;align-items:center;margin:0 auto;height:100%}
-.snav-links li{height:100%;display:flex;align-items:center}
-.snav-links a{padding:0 14px;font-size:12px;color:var(--ink-2);letter-spacing:-.005em;text-decoration:none;line-height:52px;font-weight:400}
-.snav-links a:hover,.snav-links a.active{color:var(--ink);text-decoration:none}
-.snav-cta{display:inline-flex;align-items:center;gap:4px;padding:7px 15px;background:var(--pill);color:#fff;font-weight:400;font-size:12px;border-radius:980px;text-decoration:none;flex-shrink:0;letter-spacing:-.005em;transition:background .2s}
-.snav-cta:hover{background:var(--pill-h);text-decoration:none;color:#fff}
-.snav-cta svg{width:10px;height:10px}
-@media(min-width:840px){.snav-links{display:flex}}
+/* ============ LOADER ============ */
+.loader { position: fixed; inset: 0; background: var(--dark); z-index: 99999; display: flex; align-items: center; justify-content: center; transition: opacity .5s var(--ease-apple), visibility .5s; }
+.loader.gone { opacity: 0; visibility: hidden; pointer-events: none; }
+.loader-mark { width: 48px; height: 48px; border-radius: 12px; background: var(--gold); color: #000; display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 14px; letter-spacing: -.022em; animation: lp 1.4s var(--ease-apple) infinite; }
+@keyframes lp { 0%,100% { transform: scale(1); } 50% { transform: scale(.92); } }
 
-/* ============ MOBILE MENU (black like global nav) ============ */
-.mob{position:fixed;inset:44px 0 0 0;background:rgba(0,0,0,.96);backdrop-filter:blur(28px);z-index:9995;padding:0 22px 22px;display:none;flex-direction:column;overflow-y:auto;color:#f5f5f7}
-.mob.open{display:flex}
-.mob a{display:flex;justify-content:space-between;align-items:center;padding:18px 0;font-size:17px;font-weight:400;color:#f5f5f7;border-bottom:1px solid rgba(255,255,255,.08);letter-spacing:-.022em;text-decoration:none}
-.mob a svg{width:14px;height:14px;color:rgba(255,255,255,.4)}
-.mob-bottom{margin-top:auto;padding-top:22px;display:flex;gap:8px;flex-wrap:wrap}
-.mob-bottom .btn{flex:1;min-width:140px;justify-content:center}
+/* ============ GLOBAL NAV (Apple thin black) ============ */
+.gnav { position: sticky; top: 0; z-index: 9997; background: rgba(0,0,0,.8); backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px); color: #f5f5f7; font-size: 12px; height: 44px; }
+.gnav-in { display: flex; align-items: center; height: 100%; max-width: var(--max); margin: 0 auto; padding: 0 22px; gap: 0; }
+.gnav-brand { display: flex; align-items: center; gap: 8px; color: #f5f5f7; text-decoration: none; padding: 0 8px; height: 100%; margin-right: auto; }
+.gnav-brand:hover { color: #f5f5f7; text-decoration: none; }
+.gnav-crest { width: 22px; height: 22px; border-radius: 6px; background: var(--gold); color: #000; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 9px; letter-spacing: -.02em; }
+.gnav-name { font-weight: 400; font-size: 12px; color: #f5f5f7; letter-spacing: -.005em; opacity: .88; }
+.gnav-links { display: none; list-style: none; align-items: center; height: 100%; gap: 0; flex: 1; justify-content: center; }
+.gnav-links li { height: 100%; display: flex; align-items: center; }
+.gnav-links a { padding: 0 10px; font-size: 12px; color: #f5f5f7; opacity: .88; letter-spacing: -.005em; line-height: 44px; white-space: nowrap; text-decoration: none; }
+.gnav-links a:hover { opacity: 1; color: #f5f5f7; text-decoration: none; }
+.gnav-tools { display: flex; align-items: center; height: 100%; gap: 0; margin-left: auto; }
+.gnav-tool { width: 38px; height: 100%; border: none; background: transparent; color: #f5f5f7; opacity: .88; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: opacity .15s; font: inherit; padding: 0; }
+.gnav-tool:hover { opacity: 1; }
+.gnav-tool svg { width: 15px; height: 15px; }
+.gnav-tool.lang { width: auto; padding: 0 8px; font-size: 12px; letter-spacing: -.005em; text-decoration: none; }
+.gnav-tool.lang.active { opacity: 1; color: var(--gold); }
+@media (min-width: 1024px) { .gnav-links { display: flex; } .gnav-brand { margin-right: 0; } }
+
+.gham { width: 32px; height: 100%; border: none; background: transparent; color: #f5f5f7; cursor: pointer; display: flex; align-items: center; justify-content: center; opacity: .88; padding: 0; }
+.gham:hover { opacity: 1; }
+.gham svg { width: 18px; height: 18px; }
+.gham .x { display: none; }
+.gham[aria-expanded="true"] .b { display: none; }
+.gham[aria-expanded="true"] .x { display: block; }
+@media (min-width: 1024px) { .gham { display: none; } }
+
+/* ============ STICKY SUB-NAV ============ */
+.snav { position: sticky; top: 44px; z-index: 9996; background: rgba(251,251,253,.94); backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px); border-bottom: 1px solid var(--border-soft); transform: translateY(-100%); transition: transform .4s var(--ease-apple); height: 52px; }
+html[data-theme="dark"] .snav { background: rgba(29,29,31,.94); border-bottom-color: #2c2c2e; }
+.snav.v { transform: translateY(0); }
+.snav-in { display: flex; align-items: center; justify-content: space-between; height: 100%; max-width: var(--max); margin: 0 auto; padding: 0 22px; gap: 16px; }
+.snav-title { font-size: 21px; font-weight: 600; color: var(--ink); letter-spacing: var(--ls-card-h); line-height: 1.19; flex-shrink: 0; }
+.snav-links { display: none; list-style: none; gap: 0; align-items: center; margin: 0 auto; height: 100%; }
+.snav-links li { height: 100%; display: flex; align-items: center; }
+.snav-links a { padding: 0 14px; font-size: 12px; color: var(--ink-2); letter-spacing: -.005em; text-decoration: none; line-height: 52px; font-weight: 400; }
+.snav-links a:hover, .snav-links a.active { color: var(--ink); text-decoration: none; }
+.snav-cta { display: inline-flex; align-items: center; gap: 4px; padding: 7px 14px; background: var(--pill); color: #fff; font-weight: 400; font-size: 12px; border-radius: 980px; text-decoration: none; flex-shrink: 0; letter-spacing: -.005em; transition: background .2s; line-height: 1; }
+.snav-cta:hover { background: var(--pill-h); color: #fff; text-decoration: none; }
+.snav-cta svg { width: 10px; height: 10px; }
+@media (min-width: 840px) { .snav-links { display: flex; } }
+
+/* ============ MOBILE MENU ============ */
+.mob { position: fixed; inset: 44px 0 0 0; background: rgba(0,0,0,.97); backdrop-filter: blur(28px); -webkit-backdrop-filter: blur(28px); z-index: 9995; padding: 0 22px 22px; display: none; flex-direction: column; overflow-y: auto; color: #f5f5f7; }
+.mob.open { display: flex; }
+.mob a { display: flex; justify-content: space-between; align-items: center; padding: 18px 0; font-size: 17px; font-weight: 400; color: #f5f5f7; border-bottom: 1px solid rgba(255,255,255,.08); letter-spacing: var(--ls-body); text-decoration: none; }
+.mob a:hover { color: var(--gold); text-decoration: none; }
+.mob a svg { width: 14px; height: 14px; color: rgba(255,255,255,.4); transition: transform .2s; }
+.mob a:hover svg { transform: translateX(4px); color: var(--gold); }
+.mob-bottom { margin-top: auto; padding-top: 22px; display: flex; gap: 8px; flex-wrap: wrap; }
+.mob-bottom .btn { flex: 1; min-width: 140px; justify-content: center; }
 
 /* ============ COMMAND PALETTE ============ */
-.cmdk-bg{position:fixed;inset:0;background:rgba(0,0,0,.45);backdrop-filter:blur(14px);z-index:9999;opacity:0;visibility:hidden;transition:all .25s var(--ease);display:flex;align-items:flex-start;justify-content:center;padding-top:14vh}
-.cmdk-bg.open{opacity:1;visibility:visible}
-.cmdk{width:min(580px,92vw);background:var(--tile-elev);border:1px solid var(--border);border-radius:18px;box-shadow:0 30px 90px rgba(0,0,0,.35);overflow:hidden;transform:translateY(-8px) scale(.98);transition:transform .3s var(--ease)}
-html[data-theme="dark"] .cmdk{background:#1d1d1f;border-color:#3a3a3c}
-.cmdk-bg.open .cmdk{transform:translateY(0) scale(1)}
-.cmdk-in{display:flex;align-items:center;gap:12px;padding:16px 20px;border-bottom:1px solid var(--border-soft)}
-.cmdk-in svg{width:18px;height:18px;color:var(--ink-3);flex-shrink:0}
-.cmdk-input{flex:1;border:none;outline:none;background:transparent;font-family:inherit;font-size:16px;color:var(--ink);font-weight:500}
-.cmdk-input::placeholder{color:var(--ink-4)}
-.cmdk-esc{font-size:11px;font-weight:600;color:var(--ink-3);background:rgba(0,0,0,.05);padding:3px 8px;border-radius:5px;border:1px solid var(--border-soft);font-family:ui-monospace,monospace}
-html[data-theme="dark"] .cmdk-esc{background:rgba(255,255,255,.06)}
-.cmdk-list{max-height:48vh;overflow-y:auto;padding:8px}
-.cmdk-empty{padding:36px 20px;text-align:center;color:var(--ink-3);font-size:14px}
-.cmdk-group{padding:6px 0}
-.cmdk-gh{font-size:11px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-4);padding:8px 12px}
-.cmdk-item{display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:8px;cursor:pointer;color:var(--ink-2);font-size:14px;border:none;background:transparent;width:100%;text-align:left;font-family:inherit;transition:background .12s}
-.cmdk-item:hover,.cmdk-item.sel{background:rgba(0,0,0,.04);color:var(--ink)}
-html[data-theme="dark"] .cmdk-item:hover,html[data-theme="dark"] .cmdk-item.sel{background:rgba(255,255,255,.06)}
-.cmdk-ico{width:28px;height:28px;border-radius:7px;background:rgba(0,0,0,.04);color:var(--ink-2);display:flex;align-items:center;justify-content:center;flex-shrink:0}
-html[data-theme="dark"] .cmdk-ico{background:rgba(255,255,255,.06)}
-.cmdk-ico svg{width:14px;height:14px}
-.cmdk-txt{flex:1;min-width:0}
-.cmdk-t{font-weight:500;color:var(--ink);font-size:14px}
-.cmdk-s{font-size:12px;color:var(--ink-3);margin-top:1px}
-.cmdk-arr{color:var(--ink-4);font-size:12px;flex-shrink:0}
-.cmdk-ft{display:flex;justify-content:space-between;align-items:center;padding:10px 16px;border-top:1px solid var(--border-soft);font-size:11px;color:var(--ink-4)}
-.cmdk-ft kbd{font-family:ui-monospace,monospace;font-size:10px;background:var(--bg);border:1px solid var(--border-soft);padding:1px 5px;border-radius:3px;color:var(--ink-3);margin:0 2px}
+.cmdk-bg { position: fixed; inset: 0; background: rgba(0,0,0,.45); backdrop-filter: blur(14px); z-index: 9999; opacity: 0; visibility: hidden; transition: all .25s var(--ease-apple); display: flex; align-items: flex-start; justify-content: center; padding-top: 14vh; }
+.cmdk-bg.open { opacity: 1; visibility: visible; }
+.cmdk { width: min(580px, 92vw); background: var(--surface); border: 1px solid var(--border); border-radius: 18px; box-shadow: 0 30px 90px rgba(0,0,0,.35); overflow: hidden; transform: translateY(-8px) scale(.98); transition: transform .3s var(--ease-apple); }
+html[data-theme="dark"] .cmdk { background: #1d1d1f; border-color: #424245; }
+.cmdk-bg.open .cmdk { transform: translateY(0) scale(1); }
+.cmdk-in { display: flex; align-items: center; gap: 12px; padding: 16px 20px; border-bottom: 1px solid var(--border-soft); }
+.cmdk-in svg { width: 18px; height: 18px; color: var(--ink-3); flex-shrink: 0; }
+.cmdk-input { flex: 1; border: none; outline: none; background: transparent; font-family: inherit; font-size: 16px; color: var(--ink); font-weight: 500; }
+.cmdk-input::placeholder { color: var(--ink-4); }
+.cmdk-esc { font-size: 11px; font-weight: 600; color: var(--ink-3); background: rgba(0,0,0,.05); padding: 3px 8px; border-radius: 5px; border: 1px solid var(--border-soft); font-family: ui-monospace, monospace; }
+html[data-theme="dark"] .cmdk-esc { background: rgba(255,255,255,.06); }
+.cmdk-list { max-height: 48vh; overflow-y: auto; padding: 8px; }
+.cmdk-empty { padding: 36px 20px; text-align: center; color: var(--ink-3); font-size: 14px; }
+.cmdk-group { padding: 6px 0; }
+.cmdk-gh { font-size: 11px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: var(--ink-4); padding: 8px 12px; }
+.cmdk-item { display: flex; align-items: center; gap: 12px; padding: 10px 12px; border-radius: 8px; cursor: pointer; color: var(--ink-2); font-size: 14px; border: none; background: transparent; width: 100%; text-align: left; font-family: inherit; transition: background .12s; }
+.cmdk-item:hover, .cmdk-item.sel { background: rgba(0,0,0,.04); color: var(--ink); }
+html[data-theme="dark"] .cmdk-item:hover, html[data-theme="dark"] .cmdk-item.sel { background: rgba(255,255,255,.06); }
+.cmdk-ico { width: 28px; height: 28px; border-radius: 7px; background: rgba(0,0,0,.04); color: var(--ink-2); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+html[data-theme="dark"] .cmdk-ico { background: rgba(255,255,255,.06); }
+.cmdk-ico svg { width: 14px; height: 14px; }
+.cmdk-txt { flex: 1; min-width: 0; }
+.cmdk-t { font-weight: 500; color: var(--ink); font-size: 14px; }
+.cmdk-s { font-size: 12px; color: var(--ink-3); margin-top: 1px; }
+.cmdk-arr { color: var(--ink-4); font-size: 12px; flex-shrink: 0; }
+.cmdk-ft { display: flex; justify-content: space-between; align-items: center; padding: 10px 16px; border-top: 1px solid var(--border-soft); font-size: 11px; color: var(--ink-4); }
+.cmdk-ft kbd { font-family: ui-monospace, monospace; font-size: 10px; background: var(--bg); border: 1px solid var(--border-soft); padding: 1px 5px; border-radius: 3px; color: var(--ink-3); margin: 0 2px; }
 
-/* ============ ANNOUNCEMENT STRIP (Apple's "Get free shipping" gray) ============ */
-.strip{background:#f5f5f7;color:var(--ink);padding:10px 22px;font-size:14px;text-align:center;letter-spacing:-.016em}
-html[data-theme="dark"] .strip{background:#1d1d1f;color:var(--ink-2)}
-.strip a{color:var(--link);font-weight:400}
+/* ============ ANNOUNCEMENT STRIP ============ */
+.strip { background: var(--tile); color: var(--ink-2); padding: 12px 22px; font-size: 14px; text-align: center; letter-spacing: var(--ls-body); line-height: 1.4; }
+html[data-theme="dark"] .strip { background: #1d1d1f; color: var(--ink-2); }
+.strip a { color: var(--link); }
 
-/* ============ APPLE BUTTONS ============ */
-/* Apple's primary CTA: blue pill, 17px regular, 980px radius */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:4px;padding:12px 22px;font-family:inherit;font-size:17px;font-weight:400;border:none;border-radius:980px;cursor:pointer;transition:background .2s,color .2s,opacity .2s,transform .2s var(--ease);text-decoration:none;white-space:nowrap;letter-spacing:-.022em;line-height:1.176471;min-height:44px}
-.btn:hover{text-decoration:none}
-.btn svg{width:12px;height:12px;transition:transform .25s var(--ease)}
-.btn-pill{background:var(--pill);color:#fff}
-.btn-pill:hover{background:var(--pill-h);color:#fff}
-.btn-pill-dark{background:var(--ink);color:var(--bg)}
-.btn-pill-dark:hover{background:#000;color:var(--bg)}
-html[data-theme="dark"] .btn-pill-dark{background:#fff;color:#000}
-.btn-pill-light{background:#fff;color:#000}
-.btn-pill-light:hover{background:#f5f5f7;color:#000}
-.btn-pill-gold{background:var(--gold);color:#000;font-weight:500}
-.btn-pill-gold:hover{background:#fad86b;color:#000}
-.btn-pill-ghost-w{background:transparent;color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.5)}
-.btn-pill-ghost-w:hover{background:rgba(255,255,255,.1);color:#fff}
-.btn-pill-ghost-d{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink)}
-.btn-pill-ghost-d:hover{background:rgba(0,0,0,.04)}
-/* Apple "Learn more >" text link (their secondary CTA pattern) */
-.lnk{display:inline-flex;align-items:center;gap:3px;color:var(--link);font-size:17px;font-weight:400;letter-spacing:-.022em;line-height:1.176471;min-height:44px;padding:12px 0;text-decoration:none}
-.lnk:hover{text-decoration:underline;color:var(--link)}
-.lnk::after{content:'›';margin-left:2px;font-size:1.4em;line-height:1;font-weight:300;position:relative;top:-1px;transition:transform .2s}
-.lnk:hover::after{transform:translateX(2px)}
-.lnk-w{color:#fff}
-.lnk-w:hover{color:#fff}
-.lnk-d{color:var(--ink)}
-.lnk-d:hover{color:var(--ink)}
+/* ============ BUTTONS ============ */
+/* Apple's primary CTA: 17px regular, pill, 44px min height */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 11px 22px;
+  font-family: inherit;
+  font-size: 17px;
+  font-weight: 400;
+  border: none;
+  border-radius: 980px;
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+  letter-spacing: var(--ls-body);
+  line-height: 1.176;
+  min-height: 44px;
+  transition: background .2s, color .2s;
+}
+.btn:hover { text-decoration: none; }
+.btn-pill { background: var(--pill); color: #fff; }
+.btn-pill:hover { background: var(--pill-h); color: #fff; }
+.btn-dark { background: var(--ink); color: var(--bg); }
+.btn-dark:hover { background: #000; color: var(--bg); }
+.btn-light { background: #fff; color: #000; }
+.btn-light:hover { background: var(--tile); color: #000; }
+.btn-gold { background: var(--gold); color: #000; font-weight: 500; }
+.btn-gold:hover { background: #fad86b; color: #000; }
 
-/* ============ TILE STACK (apple.com homepage core) ============ */
-main{display:block}
-.stack{display:flex;flex-direction:column;gap:var(--gap-tile);padding:0 var(--gap-tile);background:var(--bg)}
-.tile-row{display:grid;grid-template-columns:1fr;gap:var(--gap-tile)}
-@media(min-width:840px){.tile-row{grid-template-columns:1fr 1fr}}
+/* Apple "Learn more ›" inline text link CTA */
+.lnk {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  color: var(--link);
+  font-size: 17px;
+  font-weight: 400;
+  letter-spacing: var(--ls-body);
+  line-height: 1.176;
+  text-decoration: none;
+  padding: 11px 0;
+  min-height: 44px;
+}
+.lnk::after { content: '›'; margin-left: 2px; font-size: 1.4em; line-height: 1; font-weight: 300; position: relative; top: -1px; }
+.lnk:hover { text-decoration: underline; }
+.lnk-w { color: #2997ff; }
+.lnk-w:hover { color: #5cb1ff; }
 
-/* Base tile */
-.tile{position:relative;border-radius:var(--r-tile);overflow:hidden;background:var(--tile-mid);color:var(--ink);min-height:580px;padding:54px 22px;display:flex;flex-direction:column;align-items:center;text-align:center}
-@media(min-width:768px){.tile{padding:64px 30px;min-height:640px}}
-@media(min-width:1024px){.tile{padding:90px 40px}}
-.tile.hero{min-height:780px}
-.tile.short{min-height:480px}
-.tile.tall{min-height:720px}
+/* ============ TILE STACK ============ */
+main { display: block; }
+.stack { display: flex; flex-direction: column; gap: var(--tile-gap); padding: 0 var(--tile-gap); background: var(--bg); }
+.tile-row { display: grid; grid-template-columns: 1fr; gap: var(--tile-gap); }
+@media (min-width: 840px) { .tile-row { grid-template-columns: 1fr 1fr; } }
 
-/* Tile color variants — match Apple's exact tile palette */
-.tile.dark{background:#000;color:#f5f5f7}
-.tile.dark2{background:#1d1d1f;color:#f5f5f7}
-.tile.white{background:#fff;color:var(--ink)}
-.tile.gold{background:var(--gold);color:#1d1d1f}
-.tile.gray{background:#f5f5f7;color:var(--ink)}
-html[data-theme="dark"] .tile.white{background:#fafafa;color:#000}
+.tile {
+  position: relative;
+  border-radius: var(--tile-r);
+  overflow: hidden;
+  background: var(--tile);
+  color: var(--ink);
+  padding: var(--tile-pad-y) var(--tile-pad-x);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-height: clamp(440px, 56vh, 580px);
+}
+.tile.hero { min-height: clamp(520px, 70vh, 680px); }
+.tile.short { min-height: clamp(360px, 44vh, 460px); padding-top: var(--tile-pad-y-short); padding-bottom: var(--tile-pad-y-short); }
+.tile.tall { min-height: clamp(560px, 72vh, 720px); }
+.tile.dark { background: var(--dark); color: #f5f5f7; }
+.tile.dark2 { background: var(--dark-2); color: #f5f5f7; }
+.tile.surface { background: var(--surface); color: var(--ink); }
+html[data-theme="dark"] .tile.surface { background: #1d1d1f; }
+.tile.gold { background: var(--gold); color: #1d1d1f; }
+.tile.gray { background: var(--tile); color: var(--ink); }
 
-/* === Standard Apple tile content layout === */
-.tile-eyebrow{font-family:'Inter Tight',sans-serif;font-size:21px;font-weight:600;color:var(--ink);letter-spacing:-.022em;line-height:1.19048;margin-bottom:6px}
-.tile.dark .tile-eyebrow,.tile.dark2 .tile-eyebrow{color:#f5f5f7}
-.tile.gold .tile-eyebrow{color:#1d1d1f}
-@media(min-width:768px){.tile-eyebrow{font-size:28px}}
+.tile-eyebrow {
+  font-size: var(--fs-eyebrow);
+  font-weight: var(--fw-eyebrow);
+  letter-spacing: var(--ls-card-h);
+  line-height: var(--lh-card-h);
+  margin-bottom: 8px;
+  color: var(--ink);
+  max-width: var(--content-max);
+}
+.tile.dark .tile-eyebrow, .tile.dark2 .tile-eyebrow { color: #f5f5f7; }
+.tile.gold .tile-eyebrow { color: #1d1d1f; }
+.tile.hero .tile-eyebrow { color: var(--gold-2); font-weight: 500; margin-bottom: 14px; }
+html[data-theme="dark"] .tile.hero .tile-eyebrow { color: var(--gold); }
 
-.tile-h{font-family:'Inter Tight',sans-serif;font-weight:600;font-size:clamp(40px,7vw,80px);letter-spacing:-.045em;line-height:1.05;margin-bottom:0;max-width:1000px;color:inherit}
-.tile-h .lt{font-weight:600;color:var(--ink-3)}
-.tile.dark .tile-h .lt,.tile.dark2 .tile-h .lt{color:rgba(245,245,247,.55)}
-.tile.gold .tile-h .lt{color:rgba(29,29,31,.55)}
+.tile-h {
+  font-size: var(--fs-headline);
+  font-weight: var(--fw-display);
+  letter-spacing: var(--ls-headline);
+  line-height: var(--lh-headline);
+  max-width: var(--content-max);
+  color: inherit;
+}
+.tile.hero .tile-h {
+  font-size: var(--fs-hero);
+  letter-spacing: var(--ls-hero);
+  line-height: var(--lh-hero);
+  font-weight: 600;
+}
+.tile-h .lt { font-weight: var(--fw-display); color: var(--ink-3); }
+.tile.dark .tile-h .lt, .tile.dark2 .tile-h .lt { color: rgba(245,245,247,.55); }
+.tile.gold .tile-h .lt { color: rgba(29,29,31,.55); }
 
-.tile-sub{font-size:clamp(17px,1.4vw,21px);color:var(--ink);max-width:660px;line-height:1.381;font-weight:500;margin-top:8px;letter-spacing:-.022em}
-.tile.dark .tile-sub,.tile.dark2 .tile-sub{color:#f5f5f7}
-.tile.gold .tile-sub{color:#1d1d1f}
+.tile-sub {
+  font-size: var(--fs-sub);
+  font-weight: 400;
+  color: var(--ink);
+  max-width: var(--content-narrow);
+  line-height: var(--lh-sub);
+  margin-top: 10px;
+  letter-spacing: var(--ls-body);
+}
+.tile.dark .tile-sub, .tile.dark2 .tile-sub { color: #f5f5f7; }
+.tile.gold .tile-sub { color: #1d1d1f; }
+.tile.hero .tile-sub { margin-top: 16px; }
 
-.tile-foot{font-size:12px;color:var(--ink-3);max-width:520px;line-height:1.33337;font-weight:400;letter-spacing:-.005em;margin-top:14px}
-.tile.dark .tile-foot,.tile.dark2 .tile-foot{color:rgba(245,245,247,.6)}
-.tile.gold .tile-foot{color:rgba(29,29,31,.7)}
-
-/* Apple's "two CTAs" row: text-link + filled pill */
-.tile-cta{display:flex;flex-wrap:wrap;gap:6px 22px;justify-content:center;align-items:center;margin-top:22px}
-
-/* Tile visual — the "product image" area (centered, bottom-aligned) */
-.tile-visual{margin-top:auto;padding-top:36px;display:flex;align-items:center;justify-content:center;width:100%}
-.tile-visual svg{display:block;width:auto;max-width:100%;max-height:300px}
-@media(min-width:768px){.tile-visual svg{max-height:380px}}
-
-/* Left-aligned tile variant */
-.tile.left{align-items:flex-start;text-align:left}
-.tile.left .tile-cta{justify-content:flex-start}
-.tile.left .tile-sub{margin-left:0}
-
-/* ============ HERO TILE (taller, hero-specific) ============ */
-.tile.hero .tile-eyebrow{margin-bottom:12px;font-size:21px;color:var(--gold-2);font-weight:500}
-@media(min-width:768px){.tile.hero .tile-eyebrow{font-size:24px}}
-html[data-theme="dark"] .tile.hero .tile-eyebrow{color:var(--gold)}
-.tile.hero .tile-h{font-size:clamp(56px,11vw,140px);letter-spacing:-.052em;line-height:.96;font-weight:700}
-.tile.hero .tile-sub{font-size:clamp(19px,1.8vw,28px);font-weight:500;color:var(--ink-2);max-width:720px;margin-top:14px}
-.tile.hero .tile-visual{padding-top:48px}
-.tile.hero .hero-mark{font-family:'Inter Tight',sans-serif;font-weight:700;font-size:clamp(120px,22vw,260px);letter-spacing:-.06em;line-height:1;color:transparent;background:linear-gradient(135deg,var(--gold) 0%,var(--gold-2) 50%,#fde68a 100%);-webkit-background-clip:text;background-clip:text;display:inline-block}
-
-/* ============ HIGHLIGHTS STRIP (Apple's "4-up callouts below hero") ============ */
-.highs{display:grid;grid-template-columns:repeat(2,1fr);gap:0;background:var(--tile-elev);border-radius:var(--r-tile);margin:0 var(--gap-tile);padding:24px}
-html[data-theme="dark"] .highs{background:#1d1d1f}
-@media(min-width:768px){.highs{grid-template-columns:repeat(4,1fr);padding:32px 28px}}
-.high{padding:14px 16px;display:flex;flex-direction:column;align-items:flex-start;gap:6px;border-right:1px solid var(--border-soft);text-align:left}
-html[data-theme="dark"] .high{border-right-color:#2c2c2e}
-.high:last-child{border-right:none}
-@media(max-width:767px){.high:nth-child(2n){border-right:none}.high:nth-child(-n+2){border-bottom:1px solid var(--border-soft)}html[data-theme="dark"] .high:nth-child(-n+2){border-bottom-color:#2c2c2e}}
-.high-ico{width:28px;height:28px;border-radius:8px;background:var(--tile-mid);color:var(--ink);display:flex;align-items:center;justify-content:center;margin-bottom:4px}
-html[data-theme="dark"] .high-ico{background:rgba(255,255,255,.06)}
-.high-ico svg{width:14px;height:14px}
-.high-h{font-family:'Inter Tight',sans-serif;font-size:17px;font-weight:600;color:var(--ink);letter-spacing:-.022em;line-height:1.2}
-.high-d{font-size:13px;color:var(--ink-3);letter-spacing:-.005em;line-height:1.4}
-.high a{color:var(--link);font-size:13px;font-weight:400;margin-top:auto}
-
-/* ============ STICKY SCROLLY (principal quote) ============ */
-.scrolly{position:relative;background:#000;color:#fff;overflow:hidden;border-radius:var(--r-tile);margin:0 var(--gap-tile)}
-.scrolly-stage{height:280vh;position:relative}
-.scrolly-pin{position:sticky;top:0;height:100vh;display:flex;align-items:center;justify-content:center;padding:24px;text-align:center}
-.scrolly-eyebrow{font-family:'Inter Tight',sans-serif;font-size:21px;font-weight:600;color:var(--gold);margin-bottom:24px;letter-spacing:-.022em}
-.scrolly-quote{font-family:'Inter Tight',sans-serif;font-size:clamp(28px,5vw,64px);font-weight:600;letter-spacing:-.038em;line-height:1.1;max-width:1000px;color:rgba(255,255,255,.22);padding:0 12px}
-.scrolly-quote span{transition:color .15s linear}
-.scrolly-quote span.lit{color:#fff}
-.scrolly-attr{margin-top:40px;display:inline-flex;align-items:center;gap:14px;font-size:14px}
-.scrolly-av{width:44px;height:44px;border-radius:50%;background:var(--gold);color:#000;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;font-family:'Inter Tight',sans-serif}
-.scrolly-name{font-weight:600;color:#fff;text-align:left}
-.scrolly-role{color:rgba(255,255,255,.55);font-size:12px;margin-top:1px;text-align:left}
-
-/* ============ STATS (oversized, centered, Apple "by the numbers") ============ */
-.stats-tile{padding:80px 22px}
-.stats-h{font-family:'Inter Tight',sans-serif;font-size:clamp(34px,5vw,56px);font-weight:600;letter-spacing:-.042em;text-align:center;margin-bottom:14px}
-.stats-sub{text-align:center;font-size:17px;color:var(--ink-3);max-width:560px;margin:0 auto 56px;line-height:1.4}
-.stats-row{display:grid;grid-template-columns:repeat(2,1fr);gap:40px 20px;max-width:980px;margin:0 auto}
-@media(min-width:768px){.stats-row{grid-template-columns:repeat(4,1fr)}}
-.stat{text-align:center}
-.stat-n{font-family:'Inter Tight',sans-serif;font-size:clamp(56px,9vw,108px);font-weight:700;color:var(--ink);line-height:.95;letter-spacing:-.055em}
-.stat-n .sfx{font-size:.45em;color:var(--gold-2);font-weight:600;vertical-align:.3em;margin-left:2px}
-.stat-n .pre{font-size:.6em;font-weight:600;color:var(--ink-3);margin-right:2px}
-.stat-l{font-size:14px;color:var(--ink-3);margin-top:14px;font-weight:400;letter-spacing:-.005em}
-
-/* ============ GALLERY RAIL (Apple "Get to know" horizontal scroll) ============ */
-.gtile{background:#000;color:#fff;padding:60px 0 50px}
-.gtile-head{padding:0 22px;display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:36px;max-width:var(--max);margin-left:auto;margin-right:auto}
-.gtile-head .tile-eyebrow{color:var(--gold)}
-.gtile-h{font-family:'Inter Tight',sans-serif;font-size:clamp(34px,5vw,56px);font-weight:600;letter-spacing:-.042em;color:#fff;line-height:1.05}
-.gtile-h .lt{font-weight:600;color:rgba(255,255,255,.55)}
-.gal-rail{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 22px 20px;scroll-behavior:smooth;scrollbar-width:none}
-@media(min-width:768px){.gal-rail{padding:0 36px 20px;gap:18px}}
-.gal-rail::-webkit-scrollbar{display:none}
-.gal-card{flex:0 0 min(360px,80vw);height:480px;border-radius:18px;overflow:hidden;position:relative;scroll-snap-align:start;background:#0a0a0c;cursor:pointer;transition:transform .4s var(--ease);border:none;padding:0;text-align:left}
-.gal-card:hover{transform:translateY(-4px)}
-.gal-svg{position:absolute;inset:0;width:100%;height:100%}
-.gal-info{position:absolute;left:0;right:0;bottom:0;padding:24px;color:#fff;background:linear-gradient(180deg,transparent,rgba(0,0,0,.7))}
-.gal-eyebrow{font-family:'Inter Tight',sans-serif;font-size:13px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:rgba(255,255,255,.7);margin-bottom:6px}
-.gal-h{font-family:'Inter Tight',sans-serif;font-size:24px;font-weight:600;letter-spacing:-.025em;color:#fff;line-height:1.1}
-.gal-zoom{position:absolute;top:16px;right:16px;width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.18);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;color:#fff;opacity:0;transform:scale(.85);transition:all .3s var(--ease)}
-.gal-card:hover .gal-zoom{opacity:1;transform:scale(1)}
-.gal-zoom svg{width:14px;height:14px}
-.gal-controls{display:flex;justify-content:flex-end;gap:8px;padding:0 22px;margin-top:24px;max-width:var(--max);margin-left:auto;margin-right:auto}
-.gal-btn{width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,.1);border:none;color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s}
-.gal-btn:hover{background:rgba(255,255,255,.18)}
-.gal-btn svg{width:14px;height:14px}
-
-/* ============ LIGHTBOX ============ */
-.lb{position:fixed;inset:0;background:rgba(0,0,0,.94);backdrop-filter:blur(14px);z-index:10000;opacity:0;visibility:hidden;transition:all .3s var(--ease);display:flex;align-items:center;justify-content:center;padding:48px 20px}
-.lb.open{opacity:1;visibility:visible}
-.lb-content{width:min(820px,100%);aspect-ratio:4/3;background:#000;border-radius:24px;overflow:hidden;position:relative;transform:scale(.96);transition:transform .35s var(--ease)}
-.lb.open .lb-content{transform:scale(1)}
-.lb-svg{width:100%;height:100%}
-.lb-info{position:absolute;left:0;right:0;bottom:0;padding:24px 28px;background:linear-gradient(180deg,transparent,rgba(0,0,0,.7));color:#fff}
-.lb-h{font-family:'Inter Tight',sans-serif;font-weight:600;font-size:24px;letter-spacing:-.025em}
-.lb-m{font-size:13px;color:rgba(255,255,255,.7);margin-top:2px}
-.lb-close,.lb-nav{position:absolute;background:rgba(255,255,255,.12);backdrop-filter:blur(12px);color:#fff;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .2s;border-radius:50%}
-.lb-close{top:20px;right:20px;width:42px;height:42px}
-.lb-close:hover{background:rgba(255,255,255,.22)}
-.lb-nav{top:50%;transform:translateY(-50%);width:46px;height:46px}
-.lb-nav:hover{background:rgba(255,255,255,.22)}
-.lb-nav.prev{left:24px}.lb-nav.next{right:24px}
-.lb-close svg,.lb-nav svg{width:16px;height:16px}
-
-/* ============ VOICES (Apple "auto-rotating quote") ============ */
-.voices{background:var(--bg);padding:100px 22px;text-align:center}
-.voices-eyebrow{font-family:'Inter Tight',sans-serif;font-size:21px;font-weight:600;color:var(--gold-2);margin-bottom:32px;letter-spacing:-.022em}
-.voice-q{font-family:'Inter Tight',sans-serif;font-size:clamp(28px,4.6vw,52px);font-weight:600;letter-spacing:-.038em;line-height:1.12;color:var(--ink);max-width:1000px;margin:0 auto 36px;min-height:1em;transition:opacity .35s var(--ease)}
-.voice-q.fading{opacity:.2}
-.voice-who{display:inline-flex;align-items:center;gap:14px}
-.voice-av{width:48px;height:48px;border-radius:50%;background:var(--ink);color:var(--bg);display:flex;align-items:center;justify-content:center;font-weight:600;font-size:14px;font-family:'Inter Tight',sans-serif}
-html[data-theme="dark"] .voice-av{background:var(--gold);color:#000}
-.voice-name{font-weight:600;font-size:15px;color:var(--ink);text-align:left}
-.voice-role{font-size:13px;color:var(--ink-3);text-align:left;margin-top:1px}
-.voice-dots{display:flex;justify-content:center;gap:8px;margin-top:48px}
-.voice-dot{width:6px;height:6px;border-radius:50%;background:var(--border);border:none;cursor:pointer;padding:0;transition:all .25s}
-.voice-dot.active{background:var(--ink);width:24px;border-radius:3px}
-
-/* ============ CALENDAR ============ */
-.cal-tile{background:var(--bg);padding:100px 22px}
-.cal-head{max-width:var(--max);margin:0 auto 40px}
-.cal-eyebrow{font-family:'Inter Tight',sans-serif;font-size:21px;font-weight:600;color:var(--gold-2);letter-spacing:-.022em;margin-bottom:8px;display:block}
-.cal-h{font-family:'Inter Tight',sans-serif;font-size:clamp(34px,5vw,56px);font-weight:600;letter-spacing:-.042em;line-height:1.05}
-.cal{display:flex;flex-direction:column;gap:1px;background:var(--border-soft);border-radius:18px;overflow:hidden;border:1px solid var(--border-soft);max-width:var(--max);margin:0 auto}
-html[data-theme="dark"] .cal{background:#2c2c2e;border-color:#2c2c2e}
-.cal-item{background:var(--tile-elev);padding:22px 28px;display:flex;align-items:center;gap:28px;transition:background .2s;text-decoration:none;color:var(--ink)}
-html[data-theme="dark"] .cal-item{background:#1d1d1f}
-.cal-item:hover{background:rgba(0,0,0,.02);text-decoration:none;color:var(--ink)}
-html[data-theme="dark"] .cal-item:hover{background:rgba(255,255,255,.04)}
-.cal-date{text-align:center;min-width:54px;flex-shrink:0}
-.cal-mo{font-size:11px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--gold-2)}
-.cal-dy{font-family:'Inter Tight',sans-serif;font-size:28px;font-weight:700;color:var(--ink);line-height:1;letter-spacing:-.022em}
-.cal-t{font-weight:500;font-size:16px;color:var(--ink);letter-spacing:-.008em}
-.cal-tm{font-size:14px;color:var(--ink-3);margin-top:2px}
-.cal-tag{margin-left:auto;font-size:11px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;padding:5px 11px;border-radius:980px;flex-shrink:0}
-.cal-tag.upcoming{background:rgba(246,201,78,.18);color:var(--gold-2)}
-.cal-tag.closed{background:rgba(239,68,68,.1);color:#dc2626}
-.cal-tag.test{background:rgba(0,113,227,.1);color:var(--link)}
-.cal-foot{margin-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:14px;color:var(--ink-3);max-width:var(--max);margin-left:auto;margin-right:auto}
-
-/* ============ CONTACT ============ */
-.ctile{padding:100px 22px;background:var(--bg)}
-.ctile-head{max-width:var(--max);margin:0 auto 40px}
-.contact-grid{display:grid;grid-template-columns:1fr;gap:18px;max-width:var(--max);margin:0 auto}
-@media(min-width:768px){.contact-grid{grid-template-columns:1fr 1fr}}
-.contact-card{background:var(--tile-mid);border-radius:22px;padding:36px}
-html[data-theme="dark"] .contact-card{background:#1d1d1f}
-.c-row{display:flex;align-items:flex-start;gap:16px;padding:16px 0;border-bottom:1px solid var(--border-soft)}
-.c-row:last-child{border-bottom:none}
-.c-row svg{width:18px;height:18px;color:var(--ink-3);flex-shrink:0;margin-top:3px}
-.c-label{font-size:11px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-4);margin-bottom:3px}
-.c-val{font-size:15px;color:var(--ink);font-weight:500;letter-spacing:-.005em}
-.c-val a{color:var(--link)}
-.map-wrap{border-radius:22px;overflow:hidden;min-height:380px;position:relative;background:var(--tile-mid)}
-html[data-theme="dark"] .map-wrap{background:#1d1d1f}
-.map-wrap iframe{width:100%;height:100%;min-height:380px;border:0;filter:saturate(.85)}
-html[data-theme="dark"] .map-wrap iframe{filter:invert(.92) hue-rotate(180deg) saturate(.5) contrast(1.05)}
-
-/* ============ QUICK ACCESS ("Get more out of your P.S. 165Q" 6-up) ============ */
-.qtile{background:var(--bg);padding:80px 22px}
-.qtile-h{font-family:'Inter Tight',sans-serif;font-size:clamp(28px,4vw,40px);font-weight:600;letter-spacing:-.035em;text-align:center;margin-bottom:48px;line-height:1.1}
-.q-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;max-width:var(--max);margin:0 auto}
-@media(min-width:768px){.q-grid{grid-template-columns:repeat(3,1fr);gap:14px}}
-@media(min-width:1024px){.q-grid{grid-template-columns:repeat(6,1fr)}}
-.q-card{background:var(--tile-elev);border-radius:16px;padding:24px 16px;text-align:center;text-decoration:none;color:var(--ink);transition:transform .35s var(--ease);display:flex;flex-direction:column;align-items:center}
-html[data-theme="dark"] .q-card{background:#1d1d1f}
-.q-card:hover{transform:translateY(-3px);text-decoration:none;color:var(--ink)}
-.q-ico{width:38px;height:38px;border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:10px}
-.q-ico svg{width:18px;height:18px}
-.q-ico.dk{background:var(--ink);color:var(--bg)}
-.q-ico.gd{background:var(--gold);color:#000}
-.q-ico.bl{background:var(--pill);color:#fff}
-.q-ico.gr{background:#22c55e;color:#fff}
-.q-ico.pl{background:#a855f7;color:#fff}
-.q-ico.rd{background:#ef4444;color:#fff}
-.q-t{font-family:'Inter Tight',sans-serif;font-size:14px;font-weight:600;color:var(--ink);margin-bottom:2px;letter-spacing:-.005em}
-.q-d{font-size:12px;color:var(--ink-3);line-height:1.35}
-
-/* ============ APPLE FOOTER (the exact deep multi-row pattern) ============ */
-.afoot{background:#f5f5f7;color:var(--ink-3);padding:18px 0 16px;font-size:12px;line-height:1.33337;letter-spacing:-.005em}
-html[data-theme="dark"] .afoot{background:#1d1d1f;color:#86868b}
-.afoot-in{max-width:var(--max);margin:0 auto;padding:0 22px}
-.afoot-notes{padding:16px 0;border-bottom:1px solid #d2d2d7}
-html[data-theme="dark"] .afoot-notes{border-bottom-color:#3a3a3c}
-.afoot-notes p{margin-bottom:8px}
-.afoot-notes p:last-child{margin-bottom:0}
-.afoot-notes sup{font-size:9px;color:var(--ink-3);margin-right:2px}
-.afoot-notes a{color:var(--ink-3);text-decoration:underline}
-.afoot-notes a:hover{color:var(--ink)}
-.afoot-more{padding:16px 0;border-bottom:1px solid #d2d2d7;font-size:14px;color:var(--ink-2);line-height:1.42859}
-html[data-theme="dark"] .afoot-more{border-bottom-color:#3a3a3c;color:#a1a1a6}
-.afoot-more a{color:var(--link);text-decoration:none}
-.afoot-more a:hover{text-decoration:underline;color:var(--link)}
-.afoot-cols{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;padding:24px 0;border-bottom:1px solid #d2d2d7}
-@media(min-width:640px){.afoot-cols{grid-template-columns:repeat(3,1fr)}}
-@media(min-width:1024px){.afoot-cols{grid-template-columns:repeat(5,1fr);gap:32px}}
-html[data-theme="dark"] .afoot-cols{border-bottom-color:#3a3a3c}
-.afoot-col h4{font-family:'Inter',sans-serif;font-size:12px;font-weight:600;color:var(--ink);margin-bottom:8px;letter-spacing:-.005em;line-height:1.33337}
-html[data-theme="dark"] .afoot-col h4{color:#f5f5f7}
-.afoot-col ul{list-style:none}
-.afoot-col li{margin-bottom:6px}
-.afoot-col a{color:var(--ink-3);text-decoration:none}
-.afoot-col a:hover{color:var(--ink);text-decoration:underline}
-html[data-theme="dark"] .afoot-col a{color:#86868b}
-html[data-theme="dark"] .afoot-col a:hover{color:#f5f5f7}
-.afoot-region{padding:14px 0;border-bottom:1px solid #d2d2d7;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
-html[data-theme="dark"] .afoot-region{border-bottom-color:#3a3a3c}
-.afoot-status{display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--ink-3)}
-.afoot-status-dot{width:7px;height:7px;border-radius:50%;background:#22c55e;animation:pulse 2s ease-in-out infinite}
-.afoot-status.closed .afoot-status-dot{background:#ef4444}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
-.afoot-region-right{display:inline-flex;align-items:center;gap:6px;color:var(--ink-3)}
-.afoot-region-right svg{width:14px;height:14px}
-.afoot-region-right span{font-size:12px}
-.afoot-bot{padding:14px 0 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;color:var(--ink-3);font-size:12px}
-.afoot-bot-links{display:flex;gap:0;flex-wrap:wrap;align-items:center}
-.afoot-bot-links a{color:var(--ink-3);text-decoration:none;padding:0 12px;border-right:1px solid #d2d2d7;line-height:1}
-.afoot-bot-links a:first-child{padding-left:0}
-.afoot-bot-links a:last-child{border-right:none}
-.afoot-bot-links a:hover{color:var(--ink);text-decoration:underline}
-html[data-theme="dark"] .afoot-bot-links a{color:#86868b;border-right-color:#3a3a3c}
-html[data-theme="dark"] .afoot-bot-links a:hover{color:#f5f5f7}
-
-/* ============ REVEAL ============ */
-/* Apple-grade reveal: scale + translate + opacity, long ease */
-.rv{opacity:0;transform:translateY(32px) scale(.97);transition:opacity var(--dur-slow) var(--ease-apple),transform var(--dur-slow) var(--ease-apple);will-change:opacity,transform}
-.rv.v{opacity:1;transform:translateY(0) scale(1)}
-.rv-d1{transition-delay:.08s}.rv-d2{transition-delay:.18s}.rv-d3{transition-delay:.28s}.rv-d4{transition-delay:.38s}.rv-d5{transition-delay:.48s}.rv-d6{transition-delay:.58s}
-
-/* Per-word fade-in stagger — set --i index inline */
-.word{display:inline-block;opacity:0;transform:translateY(.5em);transition:opacity .9s var(--ease-apple),transform .9s var(--ease-apple);transition-delay:calc(var(--i,0) * 55ms + 80ms);will-change:opacity,transform}
-.word.v{opacity:1;transform:translateY(0)}
-
-/* Scroll-linked transforms */
-.hero-mark{will-change:transform,opacity}
-.tile.hero{transition:transform .9s var(--ease-apple)}
-
-/* Smooth body-bg color sync (driven by JS adding data-mood) */
-body{transition:background-color var(--dur-xslow) var(--ease-apple),color .55s var(--ease)}
-body[data-mood="dark"]{background:#f0eee5}
-body[data-mood="gold"]{background:#fff8e0}
-html[data-theme="dark"] body[data-mood="dark"]{background:#0a0a0c}
-html[data-theme="dark"] body[data-mood="gold"]{background:#2a2218}
-
-/* Tile-level hover: subtle Apple zoom */
-.tile{transition:transform .9s var(--ease-apple),background-color var(--dur-slow) var(--ease-apple)}
-@media(hover:hover) and (pointer:fine){
-  .tile:hover{transform:translateY(-2px)}
+.tile-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 22px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 22px;
 }
 
-/* Nav blur intensification on scroll */
-.gnav{transition:backdrop-filter .8s var(--ease-apple),background-color .8s var(--ease-apple)}
-.gnav.deep{background:rgba(0,0,0,.92);backdrop-filter:saturate(180%) blur(36px);-webkit-backdrop-filter:saturate(180%) blur(36px)}
+/* Hero refined crest mark — small (Apple uses product photos here) */
+.hero-mark {
+  margin-top: clamp(48px, 7vw, 88px);
+  width: 64px;
+  height: 64px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, var(--gold) 0%, #fad86b 100%);
+  color: var(--dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: -.025em;
+  box-shadow: 0 8px 24px rgba(246, 201, 78, .25);
+}
 
-/* Smooth section dividing snap (off by default — class added by JS on big screens) */
-.snap-scroll{scroll-snap-type:y proximity}
-.snap-scroll .tile{scroll-snap-align:start;scroll-snap-stop:always}
+/* ============ SECTION (non-tile) ============ */
+.sec { padding: clamp(64px, 9vw, 100px) 0; background: var(--bg); }
+.sec-head { max-width: var(--max); margin: 0 auto clamp(36px, 5vw, 56px); padding: 0 22px; text-align: center; }
+.sec-eyebrow {
+  font-size: var(--fs-eyebrow);
+  font-weight: var(--fw-eyebrow);
+  color: var(--gold-2);
+  letter-spacing: var(--ls-card-h);
+  line-height: var(--lh-card-h);
+  display: block;
+  margin-bottom: 8px;
+}
+html[data-theme="dark"] .sec-eyebrow { color: var(--gold); }
+.sec-h {
+  font-size: var(--fs-section);
+  font-weight: var(--fw-display);
+  letter-spacing: var(--ls-section);
+  line-height: var(--lh-section);
+  max-width: 880px;
+  margin: 0 auto;
+}
+.sec-h .lt { font-weight: var(--fw-display); color: var(--ink-3); }
+.sec-lead {
+  font-size: var(--fs-sub);
+  color: var(--ink-3);
+  margin: 14px auto 0;
+  max-width: 620px;
+  line-height: var(--lh-sub);
+  font-weight: 400;
+  letter-spacing: var(--ls-body);
+}
 
-/* Mouse-following hero spotlight — uses CSS custom props updated by JS */
-.tile.hero{position:relative;isolation:isolate}
-.tile.hero::after{content:'';position:absolute;inset:0;background:radial-gradient(600px circle at var(--mx,50%) var(--my,50%),rgba(246,201,78,.18),transparent 55%);opacity:0;transition:opacity 1s var(--ease-apple);pointer-events:none;z-index:0}
-.tile.hero.lit::after{opacity:1}
-.tile.hero > *{position:relative;z-index:1}
+/* ============ PROGRAMS GRID (Apple cards) ============ */
+.prog-grid { display: grid; grid-template-columns: 1fr; gap: 12px; max-width: var(--max); margin: 0 auto; padding: 0 22px; }
+@media (min-width: 640px) { .prog-grid { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 980px) { .prog-grid { grid-template-columns: repeat(3, 1fr); } }
+.prog {
+  background: var(--surface);
+  border-radius: 18px;
+  padding: 28px;
+  text-decoration: none;
+  color: var(--ink);
+  transition: transform .4s var(--ease-apple);
+  display: flex;
+  flex-direction: column;
+}
+html[data-theme="dark"] .prog { background: #1d1d1f; }
+.prog:hover { transform: translateY(-3px); text-decoration: none; color: var(--ink); }
+.prog-tag {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--gold-2);
+  margin-bottom: 14px;
+}
+html[data-theme="dark"] .prog-tag { color: var(--gold); }
+.prog-h {
+  font-size: var(--fs-card-h);
+  font-weight: var(--fw-display);
+  letter-spacing: var(--ls-card-h);
+  line-height: var(--lh-card-h);
+  margin-bottom: 8px;
+  color: var(--ink);
+}
+.prog-d {
+  font-size: 15px;
+  color: var(--ink-2);
+  line-height: 1.4;
+  flex: 1;
+  letter-spacing: var(--ls-body);
+}
+.prog-arr {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  margin-top: 16px;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--link);
+}
+.prog-arr::after { content: '›'; margin-left: 2px; font-size: 1.3em; line-height: 1; font-weight: 300; position: relative; top: -1px; }
 
-/* Sticky scrolly word reveal — Apple letter-by-letter with cascade */
-.scrolly-quote span{transition:color .25s var(--ease-apple),opacity .4s var(--ease-apple);will-change:color,opacity}
+/* ============ CALENDAR ============ */
+.cal-tile { background: var(--bg); padding: clamp(64px, 9vw, 100px) 0; }
+.cal {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  background: var(--border-soft);
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid var(--border-soft);
+  max-width: 880px;
+  margin: 0 auto;
+}
+html[data-theme="dark"] .cal { background: #2c2c2e; border-color: #2c2c2e; }
+.cal-item {
+  background: var(--surface);
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  transition: background .2s;
+  color: var(--ink);
+  text-decoration: none;
+}
+html[data-theme="dark"] .cal-item { background: #1d1d1f; }
+.cal-item:hover { background: rgba(0,0,0,.02); text-decoration: none; color: var(--ink); }
+html[data-theme="dark"] .cal-item:hover { background: rgba(255,255,255,.04); }
+.cal-date { text-align: center; min-width: 48px; flex-shrink: 0; }
+.cal-mo { font-size: 11px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: var(--gold-2); }
+html[data-theme="dark"] .cal-mo { color: var(--gold); }
+.cal-dy { font-size: 24px; font-weight: 600; color: var(--ink); line-height: 1; letter-spacing: var(--ls-card-h); }
+.cal-t { font-weight: 500; font-size: 16px; color: var(--ink); letter-spacing: var(--ls-body); }
+.cal-tm { font-size: 14px; color: var(--ink-3); margin-top: 2px; letter-spacing: var(--ls-body); }
+.cal-tag {
+  margin-left: auto;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: .02em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 980px;
+  flex-shrink: 0;
+}
+.cal-tag.upcoming { background: rgba(246,201,78,.18); color: var(--gold-2); }
+.cal-tag.closed { background: rgba(239,68,68,.1); color: #dc2626; }
+.cal-tag.test { background: rgba(0,113,227,.1); color: var(--link); }
+.cal-foot { margin-top: 22px; text-align: center; font-size: 14px; color: var(--ink-3); }
+.cal-foot a { color: var(--link); }
 
-/* Theme toggle — long smooth transition on every color change */
-html,html *{transition-property:background-color,border-color}
-html.theme-tx,html.theme-tx *{transition-duration:.9s !important;transition-timing-function:var(--ease-apple) !important}
+/* ============ NEWSLETTER (dark tile, in stack) ============ */
 
-@media(prefers-reduced-motion:reduce){
-  .rv,.word,.tile,.gnav,body,html *{transition:none !important;animation:none !important;transform:none !important;opacity:1 !important;will-change:auto}
-  .rv,.word{transform:none}
+/* ============ CONTACT ============ */
+.ctile { padding: clamp(64px, 9vw, 100px) 0; background: var(--bg); }
+.contact-grid { display: grid; grid-template-columns: 1fr; gap: 14px; max-width: var(--max); margin: 0 auto; padding: 0 22px; }
+@media (min-width: 768px) { .contact-grid { grid-template-columns: 1fr 1fr; } }
+.contact-card { background: var(--tile); border-radius: 18px; padding: 32px; }
+html[data-theme="dark"] .contact-card { background: #1d1d1f; }
+.c-row { display: flex; align-items: flex-start; gap: 14px; padding: 14px 0; border-bottom: 1px solid var(--border-soft); }
+html[data-theme="dark"] .c-row { border-bottom-color: #2c2c2e; }
+.c-row:last-child { border-bottom: none; }
+.c-row svg { width: 16px; height: 16px; color: var(--ink-3); flex-shrink: 0; margin-top: 3px; }
+.c-label { font-size: 11px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: var(--ink-4); margin-bottom: 2px; }
+.c-val { font-size: 15px; color: var(--ink); font-weight: 500; letter-spacing: var(--ls-body); }
+.c-val a { color: var(--link); }
+.map-wrap { border-radius: 18px; overflow: hidden; min-height: 360px; position: relative; background: var(--tile); }
+html[data-theme="dark"] .map-wrap { background: #1d1d1f; }
+.map-wrap iframe { width: 100%; height: 100%; min-height: 360px; border: 0; filter: saturate(.85); }
+html[data-theme="dark"] .map-wrap iframe { filter: invert(.92) hue-rotate(180deg) saturate(.5) contrast(1.05); }
+
+/* ============ APPLE FOOTER ============ */
+.afoot { background: var(--tile); color: var(--ink-3); padding: 18px 0 16px; font-size: 12px; line-height: var(--lh-foot); letter-spacing: var(--ls-caption); }
+html[data-theme="dark"] .afoot { background: #1d1d1f; color: #86868b; }
+.afoot-in { max-width: var(--max); margin: 0 auto; padding: 0 22px; }
+.afoot-notes { padding: 16px 0; border-bottom: 1px solid var(--border); }
+html[data-theme="dark"] .afoot-notes { border-bottom-color: #424245; }
+.afoot-notes p { margin-bottom: 8px; }
+.afoot-notes p:last-child { margin-bottom: 0; }
+.afoot-notes sup { font-size: 9px; color: var(--ink-3); margin-right: 2px; }
+.afoot-notes a { color: var(--ink-3); }
+.afoot-notes a:hover { color: var(--ink); }
+.afoot-cols { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; padding: 22px 0; border-bottom: 1px solid var(--border); }
+@media (min-width: 640px) { .afoot-cols { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 980px) { .afoot-cols { grid-template-columns: repeat(5, 1fr); gap: 28px; } }
+html[data-theme="dark"] .afoot-cols { border-bottom-color: #424245; }
+.afoot-col h4 { font-size: 12px; font-weight: 600; color: var(--ink); margin-bottom: 8px; letter-spacing: var(--ls-caption); }
+html[data-theme="dark"] .afoot-col h4 { color: #f5f5f7; }
+.afoot-col ul { list-style: none; }
+.afoot-col li { margin-bottom: 5px; }
+.afoot-col a { color: var(--ink-3); }
+.afoot-col a:hover { color: var(--ink); text-decoration: underline; }
+html[data-theme="dark"] .afoot-col a { color: #86868b; }
+html[data-theme="dark"] .afoot-col a:hover { color: #f5f5f7; }
+.afoot-bot {
+  padding: 14px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  font-size: 12px;
+  color: var(--ink-3);
+}
+.afoot-bot-links { display: flex; gap: 0; flex-wrap: wrap; align-items: center; }
+.afoot-bot-links a { color: var(--ink-3); padding: 0 10px; border-right: 1px solid var(--border); line-height: 1; }
+.afoot-bot-links a:first-child { padding-left: 0; }
+.afoot-bot-links a:last-child { border-right: none; }
+.afoot-bot-links a:hover { color: var(--ink); text-decoration: underline; }
+html[data-theme="dark"] .afoot-bot-links a { color: #86868b; border-right-color: #424245; }
+html[data-theme="dark"] .afoot-bot-links a:hover { color: #f5f5f7; }
+
+/* ============ REVEAL (simple Apple fade) ============ */
+.rv { opacity: 0; transform: translateY(20px); transition: opacity .9s var(--ease-apple), transform .9s var(--ease-apple); will-change: opacity, transform; }
+.rv.v { opacity: 1; transform: translateY(0); }
+.rv-d1 { transition-delay: .08s; }
+.rv-d2 { transition-delay: .16s; }
+.rv-d3 { transition-delay: .24s; }
+.rv-d4 { transition-delay: .32s; }
+@media (prefers-reduced-motion: reduce) {
+  .rv { opacity: 1; transform: none; transition: none; }
 }
 
 /* ============ BACK TO TOP ============ */
-.btt{position:fixed;bottom:24px;right:24px;width:40px;height:40px;border-radius:50%;background:var(--ink);color:var(--bg);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transform:translateY(8px);transition:all .3s var(--ease);z-index:900;box-shadow:0 8px 24px rgba(0,0,0,.2)}
-.btt.v{opacity:1;visibility:visible;transform:translateY(0)}
-.btt:hover{transform:translateY(-3px);background:#000}
-.btt svg{width:14px;height:14px}
+.btt { position: fixed; bottom: 22px; right: 22px; width: 40px; height: 40px; border-radius: 50%; background: var(--ink); color: var(--bg); border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; opacity: 0; visibility: hidden; transform: translateY(8px); transition: all .3s var(--ease-apple); z-index: 900; box-shadow: 0 8px 24px rgba(0,0,0,.2); }
+.btt.v { opacity: 1; visibility: visible; transform: translateY(0); }
+.btt:hover { transform: translateY(-3px); background: #000; }
+.btt svg { width: 14px; height: 14px; }
 
 /* ============ SCROLLBAR ============ */
-::-webkit-scrollbar{width:10px;height:10px}
-::-webkit-scrollbar-track{background:transparent}
-::-webkit-scrollbar-thumb{background:rgba(0,0,0,.18);border-radius:5px;border:2px solid var(--bg)}
-html[data-theme="dark"] ::-webkit-scrollbar-thumb{background:rgba(255,255,255,.18);border-color:var(--bg)}
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(0,0,0,.18); border-radius: 5px; border: 2px solid var(--bg); }
+html[data-theme="dark"] ::-webkit-scrollbar-thumb { background: rgba(255,255,255,.18); border-color: var(--bg); }
 
-@media print{
-  .gnav,.snav,.strip,.mob,.btt,.cursor-dot,.cursor-ring,.loader,.scrolly,.gal-rail{display:none!important}
-  body{font-size:11pt;color:#000;background:#fff}
-  .tile{break-inside:avoid;padding:24px 0;min-height:auto;border-radius:0;page-break-inside:avoid}
+@media print {
+  .gnav, .snav, .strip, .mob, .btt, .loader { display: none !important; }
+  body { font-size: 11pt; color: #000; background: #fff; }
+  .tile { break-inside: avoid; padding: 24px 0; border-radius: 0; min-height: auto; }
 }
 </style>
 </head>
@@ -571,912 +618,421 @@ html[data-theme="dark"] ::-webkit-scrollbar-thumb{background:rgba(255,255,255,.1
 
 <a href="#main" class="skip">Skip to main content</a>
 
-<!-- CUSTOM CURSOR -->
-<div class="cursor-ring" id="cursor-ring" aria-hidden="true"></div>
-<div class="cursor-dot" id="cursor-dot" aria-hidden="true"></div>
-
-<!-- GLOBAL NAV — Apple's signature thin black bar -->
+<!-- GLOBAL NAV -->
 <nav class="gnav" role="navigation" aria-label="Global">
-<div class="gnav-in">
-<a href="#" class="gnav-brand" aria-label="Home"><div class="gnav-crest" aria-hidden="true">165</div><span class="gnav-name">P.S. 165Q</span></a>
-<ul class="gnav-links" id="gnav-links">
-<li><a href="#about">About</a></li>
-<li><a href="#programs">Programs</a></li>
-<li><a href="#life">Life at 165Q</a></li>
-<li><a href="#voices">Voices</a></li>
-<li><a href="#calendar">Calendar</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
-<div class="gnav-tools">
-<div class="lang-pick" id="lang-pick">
-<button class="gnav-tool" id="lang-btn" aria-label="Language" aria-haspopup="true" aria-expanded="false" style="width:auto;padding:0 8px;gap:4px;font-size:12px;letter-spacing:-.005em"><span id="lang-cur">EN</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:10px;height:10px"><polyline points="6 9 12 15 18 9"/></svg></button>
-<div class="lang-menu" id="lang-menu" role="menu"><a href="?lang=en" data-lang="en" role="menuitem">English</a><a href="?lang=zh" data-lang="zh" role="menuitem">中文</a><a href="?lang=ko" data-lang="ko" role="menuitem">한국어</a><a href="?lang=es" data-lang="es" role="menuitem">Español</a></div>
-</div>
-<button class="gnav-tool" id="cmdk-open" aria-label="Search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button>
-<button class="gnav-tool" id="theme-toggle" aria-label="Toggle theme"><svg id="theme-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
-<button class="gham" id="ham-btn" aria-label="Menu" aria-expanded="false" aria-controls="mob"><svg class="b" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="4" y1="8" x2="20" y2="8"/><line x1="4" y1="16" x2="20" y2="16"/></svg><svg class="x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
-</div>
-</div>
+  <div class="gnav-in">
+    <a href="#" class="gnav-brand" aria-label="Home"><div class="gnav-crest" aria-hidden="true">165</div><span class="gnav-name">P.S. 165Q</span></a>
+    <ul class="gnav-links" id="gnav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#programs">Programs</a></li>
+      <li><a href="#life">Life at 165Q</a></li>
+      <li><a href="#calendar">Calendar</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="gnav-tools">
+      <button class="gnav-tool lang active" data-lang="en" aria-label="English">EN</button>
+      <button class="gnav-tool lang" data-lang="zh" aria-label="中文">中</button>
+      <button class="gnav-tool lang" data-lang="ko" aria-label="한국어">한</button>
+      <button class="gnav-tool lang" data-lang="es" aria-label="Español">ES</button>
+      <button class="gnav-tool" id="cmdk-open" aria-label="Search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button>
+      <button class="gnav-tool" id="theme-toggle" aria-label="Toggle theme"><svg id="theme-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+      <button class="gham" id="ham-btn" aria-label="Menu" aria-expanded="false" aria-controls="mob"><svg class="b" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="4" y1="8" x2="20" y2="8"/><line x1="4" y1="16" x2="20" y2="16"/></svg><svg class="x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    </div>
+  </div>
 </nav>
 
-<!-- STICKY PRODUCT SUB-NAV — appears after hero -->
+<!-- STICKY SUB-NAV -->
 <div class="snav" id="snav" aria-label="Page sections">
-<div class="snav-in">
-<div class="snav-title">P.S. 165Q</div>
-<ul class="snav-links" id="snav-links">
-<li><a href="#about">Overview</a></li>
-<li><a href="#programs">Programs</a></li>
-<li><a href="#life">Life</a></li>
-<li><a href="#voices">Voices</a></li>
-<li><a href="#calendar">Calendar</a></li>
-</ul>
-<a href="#apply" class="snav-cta"><span data-i18n="snav.apply">Apply</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="9 18 15 12 9 6"/></svg></a>
-</div>
+  <div class="snav-in">
+    <div class="snav-title">P.S. 165Q</div>
+    <ul class="snav-links" id="snav-links">
+      <li><a href="#about">Overview</a></li>
+      <li><a href="#programs">Programs</a></li>
+      <li><a href="#life">Life</a></li>
+      <li><a href="#calendar">Calendar</a></li>
+    </ul>
+    <a href="#apply" class="snav-cta"><span data-i18n="snav.apply">Apply</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="9 18 15 12 9 6"/></svg></a>
+  </div>
 </div>
 
 <!-- MOBILE MENU -->
 <div class="mob" id="mob" role="menu">
-<a href="#about">About<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></a>
-<a href="#programs">Programs<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></a>
-<a href="#life">Life at 165Q<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></a>
-<a href="#voices">Voices<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></a>
-<a href="#calendar">Calendar<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></a>
-<a href="#contact">Contact<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></a>
-<div class="mob-bottom"><a href="https://www.parentsquare.com" target="_blank" rel="noopener" class="btn btn-pill-light">ParentSquare</a><a href="#apply" class="btn btn-pill-gold">Apply 2026–27</a></div>
+  <a href="#about">About<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></a>
+  <a href="#programs">Programs<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></a>
+  <a href="#life">Life at 165Q<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></a>
+  <a href="#calendar">Calendar<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></a>
+  <a href="#contact">Contact<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></a>
+  <div class="mob-bottom"><a href="https://www.parentsquare.com" target="_blank" rel="noopener" class="btn btn-light">ParentSquare</a><a href="#apply" class="btn btn-gold">Apply</a></div>
 </div>
 
 <!-- COMMAND PALETTE -->
 <div class="cmdk-bg" id="cmdk-bg" role="dialog" aria-modal="true" aria-label="Search">
-<div class="cmdk">
-<div class="cmdk-in"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg><input class="cmdk-input" id="cmdk-input" type="text" placeholder="Search the site or jump to a section…" autocomplete="off"><kbd class="cmdk-esc">ESC</kbd></div>
-<div class="cmdk-list" id="cmdk-list"></div>
-<div class="cmdk-ft"><span><kbd>↑↓</kbd> navigate <kbd>↵</kbd> select <kbd>esc</kbd> close</span><span>P.S. 165Q</span></div>
-</div>
+  <div class="cmdk">
+    <div class="cmdk-in"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg><input class="cmdk-input" id="cmdk-input" type="text" placeholder="Search the site or jump to a section…" autocomplete="off"><kbd class="cmdk-esc">ESC</kbd></div>
+    <div class="cmdk-list" id="cmdk-list"></div>
+    <div class="cmdk-ft"><span><kbd>↑↓</kbd> navigate <kbd>↵</kbd> select <kbd>esc</kbd> close</span><span>P.S. 165Q</span></div>
+  </div>
 </div>
 
 <main id="main">
 
-<!-- Apple-style strip -->
-<div class="strip"><span data-i18n="strip.body">Now enrolling for 2026–27.</span> <a href="#apply" data-i18n="strip.link">Apply on MySchools ›</a></div>
+<!-- ANNOUNCEMENT STRIP -->
+<div class="strip">Now enrolling for 2026–27. <a href="#apply">Apply on MySchools ›</a></div>
 
-<!-- THE TILE STACK -->
+<!-- TILE STACK -->
 <div class="stack">
 
-<!-- TILE 1: HERO (white) -->
-<section class="tile hero white" id="hero">
-<div class="tile-eyebrow" data-i18n="hero.eyebrow">P.S. 165Q · Edith K. Bergtraum School</div>
-<h1 class="tile-h" data-i18n-html="hero.title">Every child,<br>a Shooting&nbsp;Star.</h1>
-<p class="tile-sub" data-i18n-html="hero.sub">An elementary school where curiosity becomes capability.<br>Pre-K through Grade 5 in Flushing, Queens — since 1960.</p>
-<div class="tile-cta">
-<a href="#programs" class="lnk lnk-d" data-i18n="hero.learn">Learn more</a>
-<a href="#apply" class="btn btn-pill" data-magnetic data-i18n="hero.apply">Apply for 2026–27</a>
+  <!-- HERO -->
+  <section class="tile hero" id="hero">
+    <div class="tile-eyebrow rv">P.S. 165Q · Edith K. Bergtraum School</div>
+    <h1 class="tile-h rv rv-d1">Every child,<br>a Shooting Star.</h1>
+    <p class="tile-sub rv rv-d2">An elementary school where curiosity becomes capability. Pre-K through Grade 5 in Flushing, Queens — since 1960.</p>
+    <div class="tile-cta rv rv-d3">
+      <a href="#programs" class="lnk">Learn more</a>
+      <a href="#apply" class="btn btn-pill">Apply for 2026–27</a>
+    </div>
+    <div class="hero-mark rv rv-d4" aria-hidden="true">165</div>
+  </section>
+
+  <!-- G&T -->
+  <section class="tile dark" id="programs">
+    <div class="tile-eyebrow rv">Gifted &amp; Talented</div>
+    <h2 class="tile-h rv rv-d1">Where curious minds are stretched.</h2>
+    <p class="tile-sub rv rv-d2">An accelerated curriculum for students identified through NYC DOE admissions. Advanced problem-solving, independent research, and depth in every core subject.</p>
+    <div class="tile-cta rv rv-d3">
+      <a href="https://www.schools.nyc.gov/enrollment/enroll-grade-by-grade/gifted-and-talented" target="_blank" rel="noopener" class="lnk lnk-w">Learn more</a>
+      <a href="#apply" class="btn btn-light">Apply</a>
+    </div>
+  </section>
+
+  <!-- NEST + ARTS -->
+  <div class="tile-row">
+    <section class="tile surface">
+      <div class="tile-eyebrow rv">NEST</div>
+      <h2 class="tile-h rv rv-d1">Project-based STEM and the arts.</h2>
+      <p class="tile-sub rv rv-d2">Hands-on builds with integrated technology. Work that travels home.</p>
+      <div class="tile-cta rv rv-d3">
+        <a href="#programs" class="lnk">Learn more</a>
+        <a href="#programs" class="btn btn-pill">Explore</a>
+      </div>
+    </section>
+    <section class="tile gold">
+      <div class="tile-eyebrow rv">The Arts</div>
+      <h2 class="tile-h rv rv-d1">Music, theater, visual art.</h2>
+      <p class="tile-sub rv rv-d2">From the Spring Concert to weekly studio time — creative work that stays with them.</p>
+      <div class="tile-cta rv rv-d3">
+        <a href="#programs" class="lnk">Learn more</a>
+        <a href="#programs" class="btn btn-dark">See the Arts</a>
+      </div>
+    </section>
+  </div>
+
+  <!-- APPLY -->
+  <section class="tile gold short" id="apply">
+    <div class="tile-eyebrow rv">Now Enrolling</div>
+    <h2 class="tile-h rv rv-d1">Apply for 2026–27.<br><span class="lt">Make this their year.</span></h2>
+    <p class="tile-sub rv rv-d2">Pre-K, Kindergarten, and grade transfers open through the NYC DOE MySchools portal.</p>
+    <div class="tile-cta rv rv-d3">
+      <a href="#contact" class="lnk">Schedule a tour</a>
+      <a href="https://www.schools.nyc.gov/enrollment/enroll-grade-by-grade" target="_blank" rel="noopener" class="btn btn-dark">Apply on MySchools</a>
+    </div>
+  </section>
+
 </div>
-<div class="tile-visual" aria-hidden="true">
-<div class="hero-mark">165</div>
-</div>
+
+<!-- PROGRAMS GRID -->
+<section class="sec" id="academics">
+  <div class="sec-head rv">
+    <span class="sec-eyebrow">Academics</span>
+    <h2 class="sec-h">Programs that shape<br><span class="lt">the way they think.</span></h2>
+    <p class="sec-lead">From accelerated G&amp;T to social-emotional learning, every program is built around how children actually grow.</p>
+  </div>
+  <div class="prog-grid">
+    <a href="#programs" class="prog rv rv-d1"><span class="prog-tag">Gifted &amp; Talented</span><h3 class="prog-h">G&amp;T Program</h3><p class="prog-d">An accelerated curriculum with advanced problem-solving and enriched content across all core subjects.</p><span class="prog-arr">Learn more</span></a>
+    <a href="#programs" class="prog rv rv-d2"><span class="prog-tag">Enrichment</span><h3 class="prog-h">NEST</h3><p class="prog-d">Project-based STEM and arts with integrated technology and weekly hands-on builds.</p><span class="prog-arr">Learn more</span></a>
+    <a href="#programs" class="prog rv rv-d3"><span class="prog-tag">Wellbeing</span><h3 class="prog-h">SEL</h3><p class="prog-d">Self-awareness, empathy, and responsible decision-making, woven into every grade.</p><span class="prog-arr">Learn more</span></a>
+    <a href="#programs" class="prog rv rv-d1"><span class="prog-tag">Creative Arts</span><h3 class="prog-h">The Arts</h3><p class="prog-d">Visual arts, music, and theater, culminating in the annual Spring Concert.</p><span class="prog-arr">Learn more</span></a>
+    <a href="#programs" class="prog rv rv-d2"><span class="prog-tag">Athletics</span><h3 class="prog-h">Sports</h3><p class="prog-d">Competitive and recreational athletics building teamwork and confidence.</p><span class="prog-arr">Learn more</span></a>
+    <a href="#programs" class="prog rv rv-d3"><span class="prog-tag">Technology</span><h3 class="prog-h">Digital Learning</h3><p class="prog-d">1:1 devices, coding curriculum, and digital citizenship for a technology-driven future.</p><span class="prog-arr">Learn more</span></a>
+  </div>
 </section>
 
-<!-- HIGHLIGHTS STRIP -->
-<div class="highs">
-<div class="high">
-<div class="high-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
-<div class="high-h">Now enrolling</div>
-<div class="high-d">2026–27 school year</div>
-<a href="#apply">Apply ›</a>
-</div>
-<div class="high">
-<div class="high-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-<div class="high-h">G&amp;T + NEST</div>
-<div class="high-d">Accelerated learning</div>
-<a href="#programs">See programs ›</a>
-</div>
-<div class="high">
-<div class="high-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
-<div class="high-h">ParentSquare</div>
-<div class="high-d">Daily updates &amp; alerts</div>
-<a href="https://www.parentsquare.com" target="_blank" rel="noopener">Sign in ›</a>
-</div>
-<div class="high">
-<div class="high-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-<div class="high-h">Flushing, Queens</div>
-<div class="high-d">District 25 · 70-35 150 St</div>
-<a href="#contact">Visit us ›</a>
-</div>
-</div>
-
-<!-- TILE 2: G&T (dark) -->
-<section class="tile dark" id="programs">
-<div class="tile-eyebrow">Gifted &amp; Talented</div>
-<h2 class="tile-h">Where curious minds<br>are stretched.</h2>
-<p class="tile-sub">An accelerated curriculum for students identified through NYC DOE admissions. Advanced problem-solving, independent research, and depth in every core subject.</p>
-<div class="tile-cta">
-<a href="https://www.schools.nyc.gov/enrollment/enroll-grade-by-grade/gifted-and-talented" target="_blank" rel="noopener" class="lnk lnk-w">Learn more</a>
-<a href="#apply" class="btn btn-pill-light">Apply</a>
-</div>
-<div class="tile-visual" aria-hidden="true">
-<svg viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="rg1" cx=".5" cy=".5"><stop offset="0" stop-color="#f6c94e" stop-opacity=".4"/><stop offset="1" stop-color="#f6c94e" stop-opacity="0"/></radialGradient></defs><circle cx="300" cy="150" r="140" fill="url(#rg1)"/><polygon points="300,40 332,128 426,128 350,184 380,272 300,218 220,272 250,184 174,128 268,128" fill="#f6c94e"/><circle cx="80" cy="50" r="2" fill="#fff" opacity=".6"/><circle cx="520" cy="80" r="1.5" fill="#fff" opacity=".5"/><circle cx="500" cy="240" r="2" fill="#fff" opacity=".5"/><circle cx="100" cy="220" r="1.5" fill="#fff" opacity=".4"/></svg>
-</div>
-</section>
-
-<!-- TILE 3: 2-up NEST + Arts -->
-<div class="tile-row">
-<section class="tile white" data-magnetic>
-<div class="tile-eyebrow">NEST</div>
-<h2 class="tile-h">Project-based<br>STEM and arts.</h2>
-<p class="tile-sub">Hands-on builds with integrated technology. Work that travels home.</p>
-<div class="tile-cta">
-<a href="#programs" class="lnk lnk-d">Learn more</a>
-<a href="#programs" class="btn btn-pill">Explore</a>
-</div>
-<div class="tile-visual" aria-hidden="true">
-<svg viewBox="0 0 500 240" xmlns="http://www.w3.org/2000/svg"><rect x="60" y="140" width="100" height="80" rx="8" fill="#0a1628" opacity=".9"/><rect x="180" y="110" width="100" height="110" rx="8" fill="#0a1628" opacity=".75"/><rect x="300" y="80" width="100" height="140" rx="8" fill="#0a1628"/><circle cx="110" cy="60" r="16" fill="#f6c94e"/><line x1="110" y1="76" x2="110" y2="140" stroke="#0a1628" stroke-width="2" opacity=".4"/></svg>
-</div>
-</section>
-<section class="tile gold" data-magnetic>
-<div class="tile-eyebrow">The Arts</div>
-<h2 class="tile-h">Music, theater,<br>visual art.</h2>
-<p class="tile-sub">From the Spring Concert to weekly studio time — creative work that stays with them.</p>
-<div class="tile-cta">
-<a href="#programs" class="lnk lnk-d">Learn more</a>
-<a href="#programs" class="btn btn-pill-dark">See the Arts</a>
-</div>
-<div class="tile-visual" aria-hidden="true">
-<svg viewBox="0 0 500 240" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="160" r="48" fill="#0a1628" opacity=".88"/><circle cx="240" cy="140" r="40" fill="#fff" opacity=".7"/><circle cx="360" cy="170" r="46" fill="#e74c3c"/><rect x="60" y="220" width="380" height="6" rx="3" fill="#0a1628" opacity=".5"/></svg>
-</div>
-</section>
-</div>
-
-<!-- TILE 4: APPLY CTA (gold, short) -->
-<section class="tile gold short" id="apply">
-<div class="tile-eyebrow">Now Enrolling</div>
-<h2 class="tile-h">Apply for 2026–27.<br><span class="lt">Make this their year.</span></h2>
-<p class="tile-sub">Pre-K, Kindergarten, and grade transfers open through the NYC DOE MySchools portal.</p>
-<div class="tile-cta">
-<a href="#contact" class="lnk lnk-d">Schedule a tour</a>
-<a href="https://www.schools.nyc.gov/enrollment/enroll-grade-by-grade" target="_blank" rel="noopener" class="btn btn-pill-dark">Apply on MySchools</a>
-</div>
-</section>
-
-</div>
-
-<!-- TILE 5: PRINCIPAL (sticky scrolly, dark) -->
-<section class="scrolly" id="about">
-<div class="scrolly-stage" id="scrolly-stage">
-<div class="scrolly-pin">
-<div>
-<div class="scrolly-eyebrow">From the Principal</div>
-<p class="scrolly-quote" id="scrolly-q">At P.S. 165Q, we believe every child is a Shooting Star — bright, unique, and capable of extraordinary things. For over six decades, we've been a cornerstone of Flushing.</p>
-<div class="scrolly-attr">
-<div class="scrolly-av">TD</div>
-<div><div class="scrolly-name">Tiffany L. Davis-Nealy</div><div class="scrolly-role">Principal · P.S. 165Q</div></div>
-</div>
-</div>
-</div>
-</div>
-</section>
-
-<!-- TILE 6: STATS -->
-<section class="stats-tile">
-<h2 class="stats-h rv">A school built on six decades.</h2>
-<p class="stats-sub rv rv-d1">From a single grade in 1960 to a full Pre-K through Grade 5 community today.</p>
-<div class="stats-row">
-<div class="stat rv rv-d1"><div class="stat-n"><span data-count="65">0</span><span class="sfx">+</span></div><div class="stat-l">Years in Flushing</div></div>
-<div class="stat rv rv-d2"><div class="stat-n"><span data-count="7">0</span></div><div class="stat-l">Academic programs</div></div>
-<div class="stat rv rv-d3"><div class="stat-n"><span data-count="6">0</span></div><div class="stat-l">Grade levels</div></div>
-<div class="stat rv rv-d4"><div class="stat-n"><span class="pre">D</span><span data-count="25">0</span></div><div class="stat-l">NYC District</div></div>
-</div>
-</section>
-
-<!-- TILE 7: GALLERY (dark, horizontal rail) -->
+<!-- LIFE TILE (placeholder for gallery, lighter Apple touch) -->
 <div class="stack">
-<section class="gtile" id="life" style="border-radius:var(--r-tile)">
-<div class="gtile-head rv">
-<div>
-<div class="tile-eyebrow">A day at 165Q</div>
-<h2 class="gtile-h">Life,<br><span class="lt">in motion.</span></h2>
-</div>
-</div>
-<div class="gal-rail" id="gal-rail"></div>
-<div class="gal-controls">
-<button class="gal-btn" id="gal-prev" aria-label="Previous"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg></button>
-<button class="gal-btn" id="gal-next" aria-label="Next"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></button>
-</div>
-</section>
+  <section class="tile dark2 short" id="life">
+    <div class="tile-eyebrow rv">A day at 165Q</div>
+    <h2 class="tile-h rv rv-d1">Life, in motion.</h2>
+    <p class="tile-sub rv rv-d2">Glimpses of what makes our school community special — published weekly on ParentSquare and Instagram.</p>
+    <div class="tile-cta rv rv-d3">
+      <a href="https://www.instagram.com/ps165queens/" target="_blank" rel="noopener" class="lnk lnk-w">Follow @PS165Queens</a>
+      <a href="https://www.parentsquare.com" target="_blank" rel="noopener" class="btn btn-light">Open ParentSquare</a>
+    </div>
+  </section>
 </div>
 
-<!-- LIGHTBOX -->
-<div class="lb" id="lb" role="dialog" aria-modal="true">
-<button class="lb-close" id="lb-close" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
-<button class="lb-nav prev" id="lb-prev" aria-label="Previous"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg></button>
-<button class="lb-nav next" id="lb-next" aria-label="Next"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></button>
-<div class="lb-content" id="lb-content"></div>
-</div>
-
-<!-- TILE 8: VOICES -->
-<section class="voices" id="voices">
-<div class="voices-eyebrow rv">Community voices</div>
-<p class="voice-q" id="voice-q">The teachers genuinely care about every child. My daughter has bloomed since starting in Pre-K — she comes home excited about reading every single day.</p>
-<div class="voice-who">
-<div class="voice-av" id="voice-av">MR</div>
-<div><div class="voice-name" id="voice-name">Maria R.</div><div class="voice-role" id="voice-role">Parent · Pre-K family</div></div>
-</div>
-<div class="voice-dots" id="voice-dots"></div>
-</section>
-
-<!-- TILE 9: CALENDAR -->
+<!-- CALENDAR -->
 <section class="cal-tile" id="calendar">
-<div class="cal-head rv">
-<span class="cal-eyebrow">Upcoming</span>
-<h2 class="cal-h">School calendar.</h2>
-</div>
-<div class="cal rv">
-<a href="#" class="cal-item"><div class="cal-date"><div class="cal-mo">Apr</div><div class="cal-dy">4</div></div><div><div class="cal-t">Parent-Teacher Conferences</div><div class="cal-tm">12 PM – 2:20 PM &amp; 5 PM – 8 PM</div></div><span class="cal-tag upcoming">Upcoming</span></a>
-<a href="#" class="cal-item"><div class="cal-date"><div class="cal-mo">Apr</div><div class="cal-dy">14</div></div><div><div class="cal-t">Spring Recess Begins</div><div class="cal-tm">Schools closed April 14–22</div></div><span class="cal-tag closed">Closed</span></a>
-<a href="#" class="cal-item"><div class="cal-date"><div class="cal-mo">Apr</div><div class="cal-dy">23</div></div><div><div class="cal-t">Students Return</div><div class="cal-tm">Regular schedule resumes</div></div></a>
-<a href="#" class="cal-item"><div class="cal-date"><div class="cal-mo">May</div><div class="cal-dy">5</div></div><div><div class="cal-t">ELA State Testing</div><div class="cal-tm">Grades 3–5</div></div><span class="cal-tag test">Testing</span></a>
-<a href="#" class="cal-item"><div class="cal-date"><div class="cal-mo">May</div><div class="cal-dy">26</div></div><div><div class="cal-t">Memorial Day</div><div class="cal-tm">Schools closed</div></div><span class="cal-tag closed">Closed</span></a>
-<a href="#" class="cal-item"><div class="cal-date"><div class="cal-mo">Jun</div><div class="cal-dy">26</div></div><div><div class="cal-t">Last Day of School</div><div class="cal-tm">Early dismissal</div></div></a>
-</div>
-<div class="cal-foot rv"><span>Showing the next six events.</span><a href="https://www.ps165q.net/calendar" target="_blank" rel="noopener">View full calendar ›</a></div>
+  <div class="sec-head rv">
+    <span class="sec-eyebrow">Upcoming</span>
+    <h2 class="sec-h">School calendar.</h2>
+  </div>
+  <div class="cal rv">
+    <a href="#" class="cal-item"><div class="cal-date"><div class="cal-mo">Apr</div><div class="cal-dy">4</div></div><div><div class="cal-t">Parent-Teacher Conferences</div><div class="cal-tm">12 PM – 2:20 PM &amp; 5 PM – 8 PM</div></div><span class="cal-tag upcoming">Upcoming</span></a>
+    <a href="#" class="cal-item"><div class="cal-date"><div class="cal-mo">Apr</div><div class="cal-dy">14</div></div><div><div class="cal-t">Spring Recess Begins</div><div class="cal-tm">Schools closed April 14–22</div></div><span class="cal-tag closed">Closed</span></a>
+    <a href="#" class="cal-item"><div class="cal-date"><div class="cal-mo">Apr</div><div class="cal-dy">23</div></div><div><div class="cal-t">Students Return</div><div class="cal-tm">Regular schedule resumes</div></div></a>
+    <a href="#" class="cal-item"><div class="cal-date"><div class="cal-mo">May</div><div class="cal-dy">5</div></div><div><div class="cal-t">ELA State Testing</div><div class="cal-tm">Grades 3–5</div></div><span class="cal-tag test">Testing</span></a>
+    <a href="#" class="cal-item"><div class="cal-date"><div class="cal-mo">May</div><div class="cal-dy">26</div></div><div><div class="cal-t">Memorial Day</div><div class="cal-tm">Schools closed</div></div><span class="cal-tag closed">Closed</span></a>
+    <a href="#" class="cal-item"><div class="cal-date"><div class="cal-mo">Jun</div><div class="cal-dy">26</div></div><div><div class="cal-t">Last Day of School</div><div class="cal-tm">Early dismissal</div></div></a>
+  </div>
+  <div class="cal-foot rv"><a href="https://www.ps165q.net/calendar" target="_blank" rel="noopener">View full calendar ›</a></div>
 </section>
 
-<!-- TILE 10: NEWSLETTER (dark, in tile stack) -->
+<!-- NEWSLETTER -->
 <div class="stack">
-<section class="tile dark short">
-<div class="tile-eyebrow" style="color:var(--gold)">Newsletter</div>
-<h2 class="tile-h">Don't miss<br>a moment.</h2>
-<p class="tile-sub">The weekly Shooting Stars digest — calendar reminders, classroom highlights, PTA news. Every Sunday evening.</p>
-<!--
-  Newsletter form ships disabled until a real endpoint is wired up.
-  To enable:
-    1. Create a form at formspree.io (or buttondown.email / mailchimp).
-    2. Replace the action URL below with your form ID.
-    3. Remove data-stub and the e.preventDefault() will release.
--->
-<form class="tile-cta" id="news-form" action="https://formspree.io/f/REPLACE_WITH_FORM_ID" method="POST" data-stub="1" novalidate style="margin-top:28px;width:100%;justify-content:center;max-width:480px;margin-left:auto;margin-right:auto">
-<input class="cmdk-input" id="news-email" name="email" type="email" placeholder="your@email.com" aria-label="Email address" autocomplete="email" required style="background:rgba(255,255,255,.06);border:1.5px solid rgba(255,255,255,.1);border-radius:980px;color:#fff;padding:12px 22px;font-size:15px;min-width:0;flex:1">
-<input type="hidden" name="_subject" value="New Shooting Stars Digest subscriber">
-<button class="btn btn-pill-gold" type="submit">Subscribe</button>
-</form>
-<div id="news-ok" role="status" aria-live="polite" style="display:none;margin-top:14px;font-size:14px;color:#86efac">You're on the list — welcome aboard.</div>
-</section>
+  <section class="tile dark short">
+    <div class="tile-eyebrow rv" style="color:var(--gold)">Newsletter</div>
+    <h2 class="tile-h rv rv-d1">Don't miss a moment.</h2>
+    <p class="tile-sub rv rv-d2">The weekly Shooting Stars digest — calendar reminders, classroom highlights, PTA news. Every Sunday.</p>
+    <form class="tile-cta rv rv-d3" id="news-form" action="https://formspree.io/f/REPLACE_WITH_FORM_ID" method="POST" data-stub="1" novalidate style="max-width:480px;width:100%;flex-wrap:nowrap">
+      <input class="cmdk-input" id="news-email" name="email" type="email" placeholder="your@email.com" aria-label="Email address" autocomplete="email" required style="background:rgba(255,255,255,.06);border:1.5px solid rgba(255,255,255,.12);border-radius:980px;color:#fff;padding:11px 22px;font-size:15px;min-width:0;flex:1">
+      <button class="btn btn-gold" type="submit" style="margin-left:8px">Subscribe</button>
+    </form>
+    <div id="news-ok" role="status" aria-live="polite" style="display:none;margin-top:14px;font-size:14px;color:#86efac">You're on the list — welcome aboard.</div>
+  </section>
 </div>
 
-<!-- TILE 11: CONTACT -->
+<!-- CONTACT -->
 <section class="ctile" id="contact">
-<div class="ctile-head rv">
-<span class="cal-eyebrow">Contact</span>
-<h2 class="cal-h">Get in touch.</h2>
-</div>
-<div class="contact-grid rv">
-<div class="contact-card">
-<div class="c-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><div><div class="c-label">Address</div><div class="c-val">70-35 150 Street, Flushing, NY 11367</div></div></div>
-<div class="c-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg><div><div class="c-label">Main Office</div><div class="c-val"><a href="tel:7182634004">(718) 263-4004</a></div></div></div>
-<div class="c-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22 6 12 13 2 6"/></svg><div><div class="c-label">Fax</div><div class="c-val">(718) 793-9812</div></div></div>
-<div class="c-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><div><div class="c-label">Hours</div><div class="c-val">Mon – Fri, 8:00 AM – 2:20 PM</div></div></div>
-<div class="c-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg><div><div class="c-label">NYC DOE</div><div class="c-val"><a href="https://www.schools.nyc.gov/schools/Q165" target="_blank" rel="noopener">schools.nyc.gov/schools/Q165</a></div></div></div>
-</div>
-<div class="map-wrap"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.23!2d-73.821!3d40.728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2604b39e0e3c3%3A0x0!2s70-35+150th+St%2C+Flushing%2C+NY+11367!5e0!3m2!1sen!2sus!4v1" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Map"></iframe></div>
-</div>
-</section>
-
-<!-- TILE 12: QUICK ACCESS ("More from P.S. 165Q") -->
-<section class="qtile">
-<h2 class="qtile-h rv">More from P.S. 165Q.</h2>
-<div class="q-grid">
-<a href="https://www.parentsquare.com" target="_blank" rel="noopener" class="q-card rv rv-d1"><div class="q-ico dk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><div class="q-t">ParentSquare</div><div class="q-d">Messages &amp; alerts</div></a>
-<a href="https://www.ps165q.net/calendar" target="_blank" rel="noopener" class="q-card rv rv-d2"><div class="q-ico gd"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div><div class="q-t">Calendar</div><div class="q-d">Dates &amp; events</div></a>
-<a href="https://www.ps165q.net/" target="_blank" rel="noopener" class="q-card rv rv-d3"><div class="q-ico bl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg></div><div class="q-t">Handbook</div><div class="q-d">Policies &amp; info</div></a>
-<a href="https://www.schools.nyc.gov/school-meals" target="_blank" rel="noopener" class="q-card rv rv-d4"><div class="q-ico gr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/></svg></div><div class="q-t">Lunch Menu</div><div class="q-d">Free meals daily</div></a>
-<a href="https://www.ps165q.net/" target="_blank" rel="noopener" class="q-card rv rv-d5"><div class="q-ico pl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><div class="q-t">After School</div><div class="q-d">Programs &amp; sports</div></a>
-<a href="https://www.ps165q.net/" target="_blank" rel="noopener" class="q-card rv rv-d6"><div class="q-ico rd"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div><div class="q-t">PTA</div><div class="q-d">Get involved</div></a>
-</div>
+  <div class="sec-head rv">
+    <span class="sec-eyebrow">Contact</span>
+    <h2 class="sec-h">Get in touch.</h2>
+  </div>
+  <div class="contact-grid rv">
+    <div class="contact-card">
+      <div class="c-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><div><div class="c-label">Address</div><div class="c-val">70-35 150 Street, Flushing, NY 11367</div></div></div>
+      <div class="c-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07"/></svg><div><div class="c-label">Main Office</div><div class="c-val"><a href="tel:7182634004">(718) 263-4004</a></div></div></div>
+      <div class="c-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><div><div class="c-label">Hours</div><div class="c-val">Mon – Fri, 8:00 AM – 2:20 PM</div></div></div>
+      <div class="c-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg><div><div class="c-label">NYC DOE</div><div class="c-val"><a href="https://www.schools.nyc.gov/schools/Q165" target="_blank" rel="noopener">schools.nyc.gov/schools/Q165</a></div></div></div>
+    </div>
+    <div class="map-wrap"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.23!2d-73.821!3d40.728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2604b39e0e3c3%3A0x0!2s70-35+150th+St%2C+Flushing%2C+NY+11367!5e0!3m2!1sen!2sus!4v1" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Map"></iframe></div>
+  </div>
 </section>
 
 </main>
 
 <!-- APPLE FOOTER -->
 <footer class="afoot">
-<div class="afoot-in">
-
-<div class="afoot-notes">
-<p><sup>1</sup> Information on this site is provided for informational purposes. For official policy and admissions decisions, see the NYC Department of Education at <a href="https://www.schools.nyc.gov" target="_blank" rel="noopener">schools.nyc.gov</a>.</p>
-<p><sup>2</sup> Gifted &amp; Talented admissions are administered by the NYC DOE through the MySchools portal. Eligibility, deadlines, and outcomes are subject to DOE policy.</p>
-<p><sup>3</sup> Free meals are provided to all NYC public school students under the NYC DOE School Food program.</p>
-</div>
-
-<div class="afoot-more">
-More ways to connect: <a href="#contact">Visit the school</a> or <a href="tel:7182634004">call the main office</a>. Sign in to <a href="https://www.parentsquare.com" target="_blank" rel="noopener">ParentSquare</a> for daily updates.
-</div>
-
-<div class="afoot-cols">
-<div class="afoot-col">
-<h4>Apply</h4>
-<ul>
-<li><a href="https://www.schools.nyc.gov/enrollment/enroll-grade-by-grade" target="_blank" rel="noopener">MySchools Portal</a></li>
-<li><a href="https://www.schools.nyc.gov/enrollment/enroll-grade-by-grade/gifted-and-talented" target="_blank" rel="noopener">G&amp;T Admissions</a></li>
-<li><a href="#contact">Schedule a Tour</a></li>
-<li><a href="#apply">Pre-K &amp; Kindergarten</a></li>
-</ul>
-</div>
-<div class="afoot-col">
-<h4>Academics</h4>
-<ul>
-<li><a href="#programs">G&amp;T Program</a></li>
-<li><a href="#programs">NEST Enrichment</a></li>
-<li><a href="#programs">Social-Emotional Learning</a></li>
-<li><a href="#programs">The Arts</a></li>
-<li><a href="#programs">Athletics</a></li>
-<li><a href="#programs">Digital Learning</a></li>
-</ul>
-</div>
-<div class="afoot-col">
-<h4>For Families</h4>
-<ul>
-<li><a href="https://www.parentsquare.com" target="_blank" rel="noopener">ParentSquare</a></li>
-<li><a href="https://www.ps165q.net/calendar" target="_blank" rel="noopener">School Calendar</a></li>
-<li><a href="https://www.schools.nyc.gov/school-meals" target="_blank" rel="noopener">Lunch Menu</a></li>
-<li><a href="#programs">After School</a></li>
-<li><a href="#programs">PTA</a></li>
-<li><a href="#contact">Contact Office</a></li>
-</ul>
-</div>
-<div class="afoot-col">
-<h4>About</h4>
-<ul>
-<li><a href="#about">Our Principal</a></li>
-<li><a href="#about">Leadership</a></li>
-<li><a href="#about">History</a></li>
-<li><a href="#about">Mission</a></li>
-<li><a href="https://www.schools.nyc.gov/schools/Q165" target="_blank" rel="noopener">DOE Profile</a></li>
-<li><a href="https://insideschools.org/school/25Q165" target="_blank" rel="noopener">InsideSchools</a></li>
-</ul>
-</div>
-<div class="afoot-col">
-<h4>Connect</h4>
-<ul>
-<li><a href="https://www.instagram.com/ps165queens/" target="_blank" rel="noopener">Instagram</a></li>
-<li><a href="https://twitter.com/PS165Queens" target="_blank" rel="noopener">X (Twitter)</a></li>
-<li><a href="https://www.facebook.com/PS165Q/" target="_blank" rel="noopener">Facebook</a></li>
-<li><a href="https://twitter.com/PrincipalNealy" target="_blank" rel="noopener">Principal Davis-Nealy</a></li>
-</ul>
-</div>
-</div>
-
-<div class="afoot-region">
-<span class="afoot-status" id="foot-status"><span class="afoot-status-dot"></span><span id="foot-status-text">School open</span></span>
-<div class="afoot-region-right">
-<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-<span>United States</span>
-</div>
-</div>
-
-<div class="afoot-bot">
-<div>Copyright © 2026 P.S. 165Q Edith K. Bergtraum School. All rights reserved.</div>
-<div class="afoot-bot-links">
-<a href="#">Privacy Policy</a>
-<a href="#">Terms of Use</a>
-<a href="#">Accessibility</a>
-<a href="#">Site Map</a>
-<a href="https://www.schools.nyc.gov/about-us/policies" target="_blank" rel="noopener">DOE Policies</a>
-</div>
-</div>
-
-</div>
+  <div class="afoot-in">
+    <div class="afoot-notes">
+      <p><sup>1</sup> Information on this site is provided for informational purposes. For official policy and admissions decisions, see the NYC Department of Education at <a href="https://www.schools.nyc.gov" target="_blank" rel="noopener">schools.nyc.gov</a>.</p>
+      <p><sup>2</sup> Gifted &amp; Talented admissions are administered by the NYC DOE through the MySchools portal.</p>
+    </div>
+    <div class="afoot-cols">
+      <div class="afoot-col"><h4>Apply</h4><ul><li><a href="https://www.schools.nyc.gov/enrollment/enroll-grade-by-grade" target="_blank" rel="noopener">MySchools Portal</a></li><li><a href="https://www.schools.nyc.gov/enrollment/enroll-grade-by-grade/gifted-and-talented" target="_blank" rel="noopener">G&amp;T Admissions</a></li><li><a href="#contact">Schedule a Tour</a></li><li><a href="#apply">Pre-K &amp; Kindergarten</a></li></ul></div>
+      <div class="afoot-col"><h4>Academics</h4><ul><li><a href="#programs">G&amp;T Program</a></li><li><a href="#programs">NEST</a></li><li><a href="#programs">SEL</a></li><li><a href="#programs">The Arts</a></li><li><a href="#programs">Athletics</a></li><li><a href="#programs">Digital Learning</a></li></ul></div>
+      <div class="afoot-col"><h4>For Families</h4><ul><li><a href="https://www.parentsquare.com" target="_blank" rel="noopener">ParentSquare</a></li><li><a href="https://www.ps165q.net/calendar" target="_blank" rel="noopener">School Calendar</a></li><li><a href="https://www.schools.nyc.gov/school-meals" target="_blank" rel="noopener">Lunch Menu</a></li><li><a href="#programs">PTA</a></li></ul></div>
+      <div class="afoot-col"><h4>About</h4><ul><li><a href="#about">Our Principal</a></li><li><a href="https://www.schools.nyc.gov/schools/Q165" target="_blank" rel="noopener">DOE Profile</a></li><li><a href="https://insideschools.org/school/25Q165" target="_blank" rel="noopener">InsideSchools</a></li></ul></div>
+      <div class="afoot-col"><h4>Connect</h4><ul><li><a href="https://www.instagram.com/ps165queens/" target="_blank" rel="noopener">Instagram</a></li><li><a href="https://twitter.com/PS165Queens" target="_blank" rel="noopener">X (Twitter)</a></li><li><a href="https://www.facebook.com/PS165Q/" target="_blank" rel="noopener">Facebook</a></li></ul></div>
+    </div>
+    <div class="afoot-bot">
+      <div>Copyright © 2026 P.S. 165Q Edith K. Bergtraum School. All rights reserved.</div>
+      <div class="afoot-bot-links">
+        <a href="#">Privacy</a><a href="#">Terms</a><a href="#">Accessibility</a><a href="#">Site Map</a><a href="https://www.schools.nyc.gov/about-us/policies" target="_blank" rel="noopener">DOE Policies</a>
+      </div>
+    </div>
+  </div>
 </footer>
 
 <button class="btt" id="btt" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg></button>
 
 <script>
-(function(){
-'use strict';
-var reduced=matchMedia('(prefers-reduced-motion:reduce)').matches;
-var isFine=matchMedia('(hover:hover) and (pointer:fine)').matches;
+(function () {
+  'use strict';
+  var reduced = matchMedia('(prefers-reduced-motion:reduce)').matches;
 
-/* THEME */
-var saved=localStorage.getItem('theme');
-var sysDark=matchMedia('(prefers-color-scheme:dark)').matches;
-var initial=saved||(sysDark?'dark':'light');
-document.documentElement.setAttribute('data-theme',initial);
-var themeIcon=document.getElementById('theme-icon');
-function paintIcon(t){
-  if(t==='dark')themeIcon.innerHTML='<circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>';
-  else themeIcon.innerHTML='<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>';
-}
-paintIcon(initial);
-document.getElementById('theme-toggle').addEventListener('click',function(){
-  var cur=document.documentElement.getAttribute('data-theme'),nxt=cur==='dark'?'light':'dark';
-  document.documentElement.setAttribute('data-theme',nxt);localStorage.setItem('theme',nxt);paintIcon(nxt);
-});
-
-/* LOADER */
-window.addEventListener('load',function(){setTimeout(function(){document.getElementById('loader').classList.add('gone');},reduced?100:400);});
-
-/* STICKY SUB-NAV */
-(function(){
-  var snav=document.getElementById('snav');
-  var hero=document.getElementById('hero');
-  if(!snav||!hero)return;
-  function check(){var r=hero.getBoundingClientRect();snav.classList.toggle('v', r.bottom < 100);}
-  addEventListener('scroll',check,{passive:true});check();
-})();
-
-/* BTT */
-var btt=document.getElementById('btt');
-addEventListener('scroll',function(){btt.classList.toggle('v',scrollY>600);},{passive:true});
-btt.addEventListener('click',function(){window.scrollTo({top:0,behavior:reduced?'auto':'smooth'});});
-
-/* LIVE SCHOOL STATUS */
-(function(){
-  function nyc(){var s=new Date().toLocaleString('en-US',{timeZone:'America/New_York',hour12:false,weekday:'short',hour:'2-digit',minute:'2-digit'});var m=s.match(/(\w+),?\s*(\d{1,2}):(\d{2})/);return m?{d:m[1],h:+m[2],mi:+m[3]}:null;}
-  var t=nyc();if(!t)return;
-  var el=document.getElementById('foot-status'),txt=document.getElementById('foot-status-text');
-  var weekday=['Mon','Tue','Wed','Thu','Fri'].indexOf(t.d)>=0;
-  var min=t.h*60+t.mi,open=weekday && min>=8*60 && min<14*60+20;
-  if(open){txt.textContent='School open · '+String(t.h).padStart(2,'0')+':'+String(t.mi).padStart(2,'0')+' ET';}
-  else{el.classList.add('closed');txt.textContent=weekday?'School closed for today':'Weekend';}
-})();
-
-/* CUSTOM CURSOR */
-if(isFine && !reduced){
-  document.documentElement.classList.add('has-cursor');
-  var cd=document.getElementById('cursor-dot'),cr=document.getElementById('cursor-ring');
-  var tx=0,ty=0,rx=0,ry=0;
-  document.addEventListener('mousemove',function(e){tx=e.clientX;ty=e.clientY;cd.style.transform='translate('+(tx-2.5)+'px,'+(ty-2.5)+'px)';});
-  function tick(){rx+=(tx-rx)*.2;ry+=(ty-ry)*.2;cr.style.transform='translate('+(rx-14)+'px,'+(ry-14)+'px)';requestAnimationFrame(tick);}
-  tick();
-  document.addEventListener('mousedown',function(){cr.classList.add('click');});
-  document.addEventListener('mouseup',function(){cr.classList.remove('click');});
-  document.querySelectorAll('a,button,.tile,.q-card,.cal-item,.gal-card').forEach(function(el){
-    el.addEventListener('mouseenter',function(){cr.classList.add('hover');});
-    el.addEventListener('mouseleave',function(){cr.classList.remove('hover');});
-  });
-}
-
-/* HAMBURGER */
-var hb=document.getElementById('ham-btn'),mob=document.getElementById('mob');
-hb.addEventListener('click',function(){var o=hb.getAttribute('aria-expanded')==='true';hb.setAttribute('aria-expanded',!o);mob.classList.toggle('open',!o);document.body.style.overflow=!o?'hidden':'';});
-mob.querySelectorAll('a').forEach(function(l){l.addEventListener('click',function(){hb.setAttribute('aria-expanded','false');mob.classList.remove('open');document.body.style.overflow='';});});
-
-/* REVEAL */
-if(!reduced){
-  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('v');io.unobserve(e.target);}});},{threshold:.04,rootMargin:'0px 0px -40px 0px'});
-  document.querySelectorAll('.rv').forEach(function(el){io.observe(el);});
-}else document.querySelectorAll('.rv').forEach(function(el){el.classList.add('v');});
-
-/* COUNT UP */
-function animCount(el){var target=parseInt(el.getAttribute('data-count')||el.textContent,10);if(isNaN(target))return;if(reduced){el.textContent=target;return;}var dur=1300,start=performance.now();function step(now){var t=Math.min(1,(now-start)/dur);var e=1-Math.pow(1-t,3);el.textContent=Math.round(target*e);if(t<1)requestAnimationFrame(step);else el.textContent=target;}requestAnimationFrame(step);}
-var cio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){animCount(e.target);cio.unobserve(e.target);}});},{threshold:.4});
-document.querySelectorAll('[data-count]').forEach(function(el){cio.observe(el);});
-
-/* NAV ACTIVE (with aria-current for assistive tech) */
-(function(){
-  var gl=document.querySelectorAll('#gnav-links a, #snav-links a');
-  var map={};gl.forEach(function(a){var k=a.getAttribute('href').slice(1);(map[k]=map[k]||[]).push(a);});
-  var sections=Array.from(document.querySelectorAll('main section[id]'));
-  var spy=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var id=e.target.id;gl.forEach(function(l){l.classList.remove('active');l.removeAttribute('aria-current');});(map[id]||[]).forEach(function(l){l.classList.add('active');l.setAttribute('aria-current','location');});}});},{rootMargin:'-40% 0px -55% 0px'});
-  sections.forEach(function(s){spy.observe(s);});
-})();
-
-/* FOCUS TRAP for modals — captures Tab within an open modal and restores
-   focus to the trigger element on close. */
-(function(){
-  var modals=[{open:'.cmdk-bg.open',box:'.cmdk',watch:document.getElementById('cmdk-bg')},
-              {open:'.lb.open',box:'.lb-content',watch:document.getElementById('lb')},
-              {open:'.mob.open',box:'.mob',watch:document.getElementById('mob')}];
-  document.addEventListener('keydown',function(e){
-    if(e.key!=='Tab')return;
-    var found=null;
-    for(var i=0;i<modals.length;i++){if(document.querySelector(modals[i].open)){found=modals[i];break;}}
-    if(!found)return;
-    var box=document.querySelector(found.box);if(!box)return;
-    var fo=box.querySelectorAll('a[href]:not([disabled]),button:not([disabled]),input:not([disabled]),textarea:not([disabled]),[tabindex]:not([tabindex="-1"])');
-    if(!fo.length)return;
-    var first=fo[0],last=fo[fo.length-1];
-    if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}
-    else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}
-  });
-  /* Restore focus to opener on close via class-change observation */
-  var stash={};
-  modals.forEach(function(m){
-    if(!m.watch)return;
-    var key=m.box;
-    var obs=new MutationObserver(function(){
-      var isOpen=m.watch.classList.contains('open');
-      if(isOpen && !stash[key]){stash[key]=document.activeElement;}
-      else if(!isOpen && stash[key]){var el=stash[key];stash[key]=null;setTimeout(function(){if(el && el.focus)try{el.focus();}catch(_){}},30);}
-    });
-    obs.observe(m.watch,{attributes:true,attributeFilter:['class']});
-  });
-})();
-
-/* SMOOTH ANCHORS */
-document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var h=a.getAttribute('href');if(h==='#')return;var t=document.querySelector(h);if(t){e.preventDefault();t.scrollIntoView({behavior:reduced?'auto':'smooth',block:'start'});}});});
-
-/* MAGNETIC */
-if(isFine && !reduced){
-  document.querySelectorAll('[data-magnetic]').forEach(function(el){
-    var k=5;
-    el.addEventListener('mousemove',function(e){var r=el.getBoundingClientRect();var x=(e.clientX-r.left-r.width/2)/r.width;var y=(e.clientY-r.top-r.height/2)/r.height;el.style.transform='translate('+(x*k)+'px,'+(y*k)+'px)';});
-    el.addEventListener('mouseleave',function(){el.style.transform='';});
-  });
-}
-
-/* STICKY SCROLLY — word-by-word */
-(function(){
-  var stage=document.getElementById('scrolly-stage');
-  var q=document.getElementById('scrolly-q');
-  if(!stage||!q)return;
-  var txt=q.textContent.trim();
-  var words=txt.split(/(\s+)/);
-  q.innerHTML='';
-  var spans=[];
-  words.forEach(function(w){var s=document.createElement('span');s.textContent=w;q.appendChild(s);if(w.trim())spans.push(s);});
-  function update(){var r=stage.getBoundingClientRect();var total=r.height-window.innerHeight;var p=Math.min(1,Math.max(0,(-r.top)/total));var lit=Math.floor(p*spans.length);for(var i=0;i<spans.length;i++){spans[i].classList.toggle('lit',i<=lit);}}
-  addEventListener('scroll',update,{passive:true});addEventListener('resize',update);update();
-})();
-
-/* GALLERY */
-(function(){
-  function circle(x,y,r,c,o){return '<circle cx="'+x+'" cy="'+y+'" r="'+r+'" fill="'+c+'" '+(o?'opacity="'+o+'"':'')+'/>';}
-  function rect(x,y,w,h,c,o){return '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="3" fill="'+c+'" '+(o?'opacity="'+o+'"':'')+'/>';}
-  function tri(cx,cy,bw,bh,c,o){return '<polygon points="'+cx+','+(cy-bh)+' '+(cx-bw/2)+','+(cy+bh/2)+' '+(cx+bw/2)+','+(cy+bh/2)+'" fill="'+c+'" '+(o?'opacity="'+o+'"':'')+'/>';}
-  function txt(x,y,t,size,c){return '<text x="'+x+'" y="'+y+'" font-size="'+size+'" font-family="Inter Tight,sans-serif" font-weight="700" fill="'+c+'" text-anchor="middle" dominant-baseline="middle">'+t+'</text>';}
-  function scene(a,b,parts){var id='g'+Math.random().toString(36).slice(2,8);return '<svg class="gal-svg" viewBox="0 0 400 480" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="'+id+'" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="'+a+'"/><stop offset="1" stop-color="'+b+'"/></linearGradient></defs><rect width="400" height="480" fill="url(#'+id+')"/>'+parts.join('')+'<circle cx="60" cy="60" r="2" fill="#fff" opacity=".5"/><circle cx="340" cy="80" r="1.5" fill="#fff" opacity=".4"/><circle cx="320" cy="400" r="2" fill="#fff" opacity=".5"/></svg>';}
-  var scenes=[
-    {h:'STEM Lab',m:'NEST Program',svg:scene('#0a1628','#1a3050',[circle(120,200,32,'#f6c94e'),circle(180,180,18,'#fde68a'),rect(60,280,300,8,'#fff','.3'),rect(80,300,260,4,'#fff','.15'),tri(220,240,50,40,'#a78bfa'),circle(280,220,12,'#f6c94e')])},
-    {h:'Reading Nook',m:'Literacy',svg:scene('#0071e3','#0a1628',[rect(50,240,300,14,'#fff','.2'),rect(70,260,260,8,'#fff','.12'),rect(60,160,80,80,'#f6c94e'),rect(150,160,70,80,'#fde68a'),rect(230,160,80,80,'#fff','.6')])},
-    {h:'Math Mastery',m:'Grade 4',svg:scene('#16a34a','#0a1628',[txt(200,220,'∑',92,'#f6c94e'),circle(120,160,16,'#fff','.7'),circle(280,170,10,'#fff','.5'),tri(150,320,40,30,'#fff','.3'),rect(220,320,80,30,'#fff','.2')])},
-    {h:'Spring Concert',m:'The Arts',svg:scene('#7c3aed','#0a1628',[circle(200,270,90,'#f6c94e','.15'),tri(180,240,40,80,'#f6c94e'),tri(220,240,40,80,'#fde68a'),circle(200,200,18,'#fff'),rect(60,380,280,6,'#fff','.4')])},
-    {h:'Recess Joy',m:'Daily',svg:scene('#f6c94e','#d4a52a',[circle(120,220,32,'#0a1628'),circle(280,210,30,'#fff','.7'),rect(50,340,300,10,'#0a1628','.3'),tri(200,170,30,30,'#0a1628')])},
-    {h:'Coding Club',m:'Digital Learning',svg:scene('#0a1628','#16a34a',[txt(100,220,'&lt;/&gt;',56,'#22c55e'),txt(280,220,'{ }',52,'#f6c94e'),rect(40,300,320,4,'#fff','.2'),rect(40,320,200,4,'#fff','.15')])},
-    {h:'Art Studio',m:'Visual Arts',svg:scene('#e74c3c','#7c3aed',[circle(100,220,42,'#f6c94e'),circle(180,200,32,'#fff','.8'),circle(260,240,38,'#22c55e'),rect(50,350,300,8,'#fff','.3')])},
-    {h:'Field Day',m:'Athletics',svg:scene('#22c55e','#16a34a',[circle(150,240,14,'#fff'),circle(180,240,14,'#f6c94e'),circle(210,240,14,'#fff'),circle(240,240,14,'#f6c94e'),tri(110,240,22,22,'#fff','.7'),tri(280,240,22,22,'#fff','.7')])}
-  ];
-  var rail=document.getElementById('gal-rail');
-  scenes.forEach(function(s,i){var b=document.createElement('button');b.className='gal-card';b.dataset.i=i;b.innerHTML=s.svg+'<div class="gal-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></div><div class="gal-info"><div class="gal-eyebrow">'+s.m+'</div><div class="gal-h">'+s.h+'</div></div>';rail.appendChild(b);});
-  function step(d){var c=rail.querySelector('.gal-card');if(!c)return;var w=c.offsetWidth+18;rail.scrollBy({left:d*w,behavior:reduced?'auto':'smooth'});}
-  document.getElementById('gal-prev').addEventListener('click',function(){step(-1);});
-  document.getElementById('gal-next').addEventListener('click',function(){step(1);});
-  var lb=document.getElementById('lb'),lbc=document.getElementById('lb-content'),cur=0;
-  function open(i){cur=((i%scenes.length)+scenes.length)%scenes.length;var s=scenes[cur];lbc.innerHTML=s.svg.replace('class="gal-svg"','class="lb-svg"')+'<div class="lb-info"><div class="lb-h">'+s.h+'</div><div class="lb-m">'+s.m+' · P.S. 165Q</div></div>';lb.classList.add('open');document.body.style.overflow='hidden';}
-  function close(){lb.classList.remove('open');document.body.style.overflow='';}
-  rail.addEventListener('click',function(e){var b=e.target.closest('.gal-card');if(b)open(+b.dataset.i);});
-  document.getElementById('lb-close').addEventListener('click',close);
-  document.getElementById('lb-prev').addEventListener('click',function(){open(cur-1);});
-  document.getElementById('lb-next').addEventListener('click',function(){open(cur+1);});
-  lb.addEventListener('click',function(e){if(e.target===lb)close();});
-  document.addEventListener('keydown',function(e){if(!lb.classList.contains('open'))return;if(e.key==='Escape')close();else if(e.key==='ArrowLeft')open(cur-1);else if(e.key==='ArrowRight')open(cur+1);});
-})();
-
-/* VOICES */
-(function(){
-  var quotes=[
-    {q:'The teachers genuinely care about every child. My daughter has bloomed since starting in Pre-K — she comes home excited about reading every single day.',i:'MR',n:'Maria R.',r:'Parent · Pre-K family'},
-    {q:'Principal Davis-Nealy sets a tone that makes 165Q feel like a real community. The G&T program has challenged my son in the best way.',i:'JC',n:'Jenny C.',r:'Parent · Grade 3'},
-    {q:'The arts program here is exceptional. From the spring musical to weekly visual art, my kids have found their passions and friendships.',i:'DK',n:'David K.',r:'Parent · Grades 2 & 4'},
-    {q:'ParentSquare keeps me in the loop every day — and the translation feature means my parents can read updates in Mandarin. It matters.',i:'SL',n:'Susan L.',r:'Parent · Grade 5'},
-    {q:'SEL is woven into every grade. My child knows how to name feelings, work through problems, and be kind. That’s the foundation.',i:'AP',n:'Aisha P.',r:'Parent · Grade 1'}
-  ];
-  var idx=0,q=document.getElementById('voice-q'),av=document.getElementById('voice-av'),nm=document.getElementById('voice-name'),rl=document.getElementById('voice-role'),dotsEl=document.getElementById('voice-dots');
-  quotes.forEach(function(_,i){var d=document.createElement('button');d.className='voice-dot'+(i===0?' active':'');d.setAttribute('aria-label','Quote '+(i+1));d.addEventListener('click',function(){go(i);});dotsEl.appendChild(d);});
-  function go(i){idx=(i+quotes.length)%quotes.length;q.classList.add('fading');setTimeout(function(){var qt=quotes[idx];q.textContent=qt.q;av.textContent=qt.i;nm.textContent=qt.n;rl.textContent=qt.r;q.classList.remove('fading');dotsEl.querySelectorAll('.voice-dot').forEach(function(d,j){d.classList.toggle('active',j===idx);});},reduced?0:350);}
-  var auto=setInterval(function(){if(document.hidden)return;go(idx+1);},6500);
-  q.parentElement.addEventListener('mouseenter',function(){clearInterval(auto);});
-})();
-
-/* NEWSLETTER — when data-stub is set we intercept; otherwise the form
-   posts to its action (Formspree etc.) and we still show the inline ack
-   via Formspree's AJAX path. */
-(function(){
-  var f=document.getElementById('news-form');if(!f)return;
-  function ack(){
-    var ok=document.getElementById('news-ok');
-    ok.style.display='block';
-    document.getElementById('news-email').value='';
-    setTimeout(function(){ok.style.display='none';},6000);
+  /* THEME */
+  var saved = localStorage.getItem('theme');
+  var sysDark = matchMedia('(prefers-color-scheme:dark)').matches;
+  var initial = saved || (sysDark ? 'dark' : 'light');
+  document.documentElement.setAttribute('data-theme', initial);
+  var themeIcon = document.getElementById('theme-icon');
+  function paintIcon(t) {
+    if (t === 'dark') themeIcon.innerHTML = '<circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>';
+    else themeIcon.innerHTML = '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>';
   }
-  f.addEventListener('submit',function(e){
-    var email=document.getElementById('news-email').value.trim();
-    if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){e.preventDefault();return;}
-    if(f.hasAttribute('data-stub')){e.preventDefault();ack();return;}
-    /* Real submit: progressively enhance with fetch so the user stays on the page */
-    e.preventDefault();
-    fetch(f.action,{method:'POST',body:new FormData(f),headers:{Accept:'application/json'}})
-      .then(function(r){if(r.ok)ack();else f.submit();})
-      .catch(function(){f.submit();});
+  paintIcon(initial);
+  document.getElementById('theme-toggle').addEventListener('click', function () {
+    var cur = document.documentElement.getAttribute('data-theme');
+    var nxt = cur === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', nxt);
+    localStorage.setItem('theme', nxt);
+    paintIcon(nxt);
   });
-})();
 
-/* COMMAND PALETTE */
-(function(){
-  var bg=document.getElementById('cmdk-bg'),input=document.getElementById('cmdk-input'),list=document.getElementById('cmdk-list');
-  var items=[
-    {g:'Navigate',t:'Overview',s:'Hero & highlights',href:'#hero',ico:'i'},
-    {g:'Navigate',t:'About',s:'Principal message',href:'#about',ico:'i'},
-    {g:'Navigate',t:'Programs',s:'G&T, NEST, SEL, Arts',href:'#programs',ico:'b'},
-    {g:'Navigate',t:'Life at 165Q',s:'Photo gallery',href:'#life',ico:'p'},
-    {g:'Navigate',t:'Voices',s:'Community testimonials',href:'#voices',ico:'q'},
-    {g:'Navigate',t:'Calendar',s:'Upcoming events',href:'#calendar',ico:'c'},
-    {g:'Navigate',t:'Contact & Map',s:'70-35 150 Street, Flushing',href:'#contact',ico:'m'},
-    {g:'Resources',t:'Apply on MySchools',s:'NYC DOE enrollment',href:'https://www.schools.nyc.gov/enrollment/enroll-grade-by-grade',ext:1,ico:'ps'},
-    {g:'Resources',t:'ParentSquare',s:'Messages & announcements',href:'https://www.parentsquare.com',ext:1,ico:'ps'},
-    {g:'Resources',t:'School calendar',s:'ps165q.net/calendar',href:'https://www.ps165q.net/calendar',ext:1,ico:'c'},
-    {g:'Resources',t:'NYC DOE Profile',s:'schools.nyc.gov/schools/Q165',href:'https://www.schools.nyc.gov/schools/Q165',ext:1,ico:'doe'},
-    {g:'Resources',t:'Lunch menu',s:'Free meals daily',href:'https://www.schools.nyc.gov/school-meals',ext:1,ico:'f'},
-    {g:'Contact',t:'Call main office',s:'(718) 263-4004',href:'tel:7182634004',ico:'ph'},
-    {g:'Contact',t:'Get directions',s:'Open in Maps',href:'https://www.google.com/maps/dir/?api=1&destination=70-35+150+St+Flushing+NY+11367',ext:1,ico:'m'},
-    {g:'Social',t:'Instagram',s:'@PS165Queens',href:'https://www.instagram.com/ps165queens/',ext:1,ico:'ig'},
-    {g:'Social',t:'X (Twitter)',s:'@PS165Queens',href:'https://twitter.com/PS165Queens',ext:1,ico:'x'},
-    {g:'Social',t:'Facebook',s:'P.S. 165Q',href:'https://www.facebook.com/PS165Q/',ext:1,ico:'fb'},
-    {g:'Theme',t:'Toggle theme',s:'Switch light/dark',action:'theme',ico:'th'}
-  ];
-  var ICO={i:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>',b:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg>',p:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>',c:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/></svg>',q:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>',m:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>',ps:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>',doe:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M3 7v1a3 3 0 0 0 6 0V7m0 0V4h6v3m0 0v1a3 3 0 0 0 6 0V7"/></svg>',f:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/></svg>',ph:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07"/></svg>',ig:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/></svg>',x:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231z"/></svg>',fb:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669"/></svg>',th:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>'};
-  function render(f){var fl=(f||'').toLowerCase().trim();var m=items.filter(function(it){return !fl||(it.t+' '+it.s+' '+it.g).toLowerCase().indexOf(fl)>=0;});if(!m.length){list.innerHTML='<div class="cmdk-empty">No results for &ldquo;'+fl+'&rdquo;</div>';return;}var groups={};m.forEach(function(it){(groups[it.g]=groups[it.g]||[]).push(it);});var html='';Object.keys(groups).forEach(function(g){html+='<div class="cmdk-group"><div class="cmdk-gh">'+g+'</div>';groups[g].forEach(function(it){html+='<button class="cmdk-item" data-href="'+(it.href||'')+'" data-ext="'+(it.ext?1:0)+'" data-action="'+(it.action||'')+'"><div class="cmdk-ico">'+(ICO[it.ico]||ICO.i)+'</div><div class="cmdk-txt"><div class="cmdk-t">'+it.t+'</div><div class="cmdk-s">'+it.s+'</div></div><div class="cmdk-arr">↵</div></button>';});html+='</div>';});list.innerHTML=html;sel(0);}
-  function sel(i){var b=list.querySelectorAll('.cmdk-item');if(!b.length)return;b.forEach(function(x){x.classList.remove('sel');});var idx=Math.max(0,Math.min(b.length-1,i));b[idx].classList.add('sel');b[idx].scrollIntoView({block:'nearest'});}
-  function act(btn){var a=btn.dataset.action;if(a==='theme'){document.getElementById('theme-toggle').click();close();return;}var h=btn.dataset.href,ext=btn.dataset.ext==='1';if(!h)return;close();if(ext)window.open(h,'_blank','noopener');else if(h.startsWith('#')){var t=document.querySelector(h);if(t)t.scrollIntoView({behavior:reduced?'auto':'smooth'});}else location.href=h;}
-  function open(){bg.classList.add('open');input.value='';render('');setTimeout(function(){input.focus();},50);document.body.style.overflow='hidden';}
-  function close(){bg.classList.remove('open');document.body.style.overflow='';}
-  document.getElementById('cmdk-open').addEventListener('click',open);
-  bg.addEventListener('click',function(e){if(e.target===bg)close();});
-  input.addEventListener('input',function(){render(input.value);});
-  document.addEventListener('keydown',function(e){
-    if((e.metaKey||e.ctrlKey)&&e.key.toLowerCase()==='k'){e.preventDefault();bg.classList.contains('open')?close():open();return;}
-    if(e.key==='/'&&!/INPUT|TEXTAREA/.test(document.activeElement.tagName)){e.preventDefault();open();return;}
-    if(!bg.classList.contains('open'))return;
-    var b=list.querySelectorAll('.cmdk-item');if(!b.length)return;
-    var cur=Array.from(b).findIndex(function(x){return x.classList.contains('sel');});
-    if(e.key==='Escape'){e.preventDefault();close();}
-    else if(e.key==='ArrowDown'){e.preventDefault();sel(cur+1);}
-    else if(e.key==='ArrowUp'){e.preventDefault();sel(cur-1);}
-    else if(e.key==='Enter'){e.preventDefault();if(cur>=0)act(b[cur]);}
+  /* LOADER */
+  window.addEventListener('load', function () { setTimeout(function () { document.getElementById('loader').classList.add('gone'); }, reduced ? 100 : 400); });
+
+  /* STICKY SUB-NAV */
+  (function () {
+    var snav = document.getElementById('snav');
+    var hero = document.getElementById('hero');
+    if (!snav || !hero) return;
+    function check() { var r = hero.getBoundingClientRect(); snav.classList.toggle('v', r.bottom < 100); }
+    addEventListener('scroll', check, { passive: true });
+    check();
+  })();
+
+  /* BACK TO TOP */
+  var btt = document.getElementById('btt');
+  addEventListener('scroll', function () { btt.classList.toggle('v', scrollY > 600); }, { passive: true });
+  btt.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: reduced ? 'auto' : 'smooth' }); });
+
+  /* HAMBURGER */
+  var hb = document.getElementById('ham-btn'), mob = document.getElementById('mob');
+  hb.addEventListener('click', function () { var o = hb.getAttribute('aria-expanded') === 'true'; hb.setAttribute('aria-expanded', !o); mob.classList.toggle('open', !o); document.body.style.overflow = !o ? 'hidden' : ''; });
+  mob.querySelectorAll('a').forEach(function (l) { l.addEventListener('click', function () { hb.setAttribute('aria-expanded', 'false'); mob.classList.remove('open'); document.body.style.overflow = ''; }); });
+
+  /* REVEAL */
+  if (!reduced) {
+    var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('v'); io.unobserve(e.target); } }); }, { threshold: .08, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.rv').forEach(function (el) { io.observe(el); });
+  } else document.querySelectorAll('.rv').forEach(function (el) { el.classList.add('v'); });
+
+  /* NAV ACTIVE */
+  (function () {
+    var gl = document.querySelectorAll('#gnav-links a, #snav-links a');
+    var map = {}; gl.forEach(function (a) { var k = a.getAttribute('href').slice(1); (map[k] = map[k] || []).push(a); });
+    var sections = Array.from(document.querySelectorAll('main section[id]'));
+    var spy = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { var id = e.target.id; gl.forEach(function (l) { l.classList.remove('active'); l.removeAttribute('aria-current'); }); (map[id] || []).forEach(function (l) { l.classList.add('active'); l.setAttribute('aria-current', 'location'); }); } }); }, { rootMargin: '-40% 0px -55% 0px' });
+    sections.forEach(function (s) { spy.observe(s); });
+  })();
+
+  /* SMOOTH ANCHORS */
+  document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+    a.addEventListener('click', function (e) { var h = a.getAttribute('href'); if (h === '#') return; var t = document.querySelector(h); if (t) { e.preventDefault(); t.scrollIntoView({ behavior: reduced ? 'auto' : 'smooth', block: 'start' }); } });
   });
-  list.addEventListener('click',function(e){var b=e.target.closest('.cmdk-item');if(b)act(b);});
-  list.addEventListener('mousemove',function(e){var b=e.target.closest('.cmdk-item');if(b){list.querySelectorAll('.cmdk-item').forEach(function(x){x.classList.remove('sel');});b.classList.add('sel');}});
-})();
 
-/* ============ LANGUAGE SWITCHER ============ */
-(function(){
-  /* Subset of strings translated client-side. Full multilingual ships
-     through the Astro routes (/zh/, /ko/, /es/) once the migration in
-     src/ lands. */
-  var DICT={
-    en:{
-      'strip.body':'Now enrolling for 2026–27.',
-      'strip.link':'Apply on MySchools ›',
-      'snav.apply':'Apply',
-      'hero.eyebrow':'P.S. 165Q · Edith K. Bergtraum School',
-      'hero.title':'Every child,<br>a Shooting&nbsp;Star.',
-      'hero.sub':'An elementary school where curiosity becomes capability.<br>Pre-K through Grade 5 in Flushing, Queens — since 1960.',
-      'hero.learn':'Learn more',
-      'hero.apply':'Apply for 2026–27',
-      'html.lang':'en-US',
-      'lang.short':'EN'
-    },
-    zh:{
-      'strip.body':'2026–27 学年招生中。',
-      'strip.link':'通过 MySchools 申请 ›',
-      'snav.apply':'申请',
-      'hero.eyebrow':'P.S. 165Q · Edith K. Bergtraum 小学',
-      'hero.title':'每一个孩子，<br>都是一颗流星。',
-      'hero.sub':'让好奇心化为能力的小学。<br>位于皇后区法拉盛的学前班至五年级——自 1960 年起。',
-      'hero.learn':'了解更多',
-      'hero.apply':'申请 2026–27 学年',
-      'html.lang':'zh-CN',
-      'lang.short':'中'
-    },
-    ko:{
-      'strip.body':'2026–27학년도 신입생 모집 중.',
-      'strip.link':'MySchools에서 지원하기 ›',
-      'snav.apply':'지원',
-      'hero.eyebrow':'P.S. 165Q · Edith K. Bergtraum 학교',
-      'hero.title':'모든 어린이가<br>슈팅 스타.',
-      'hero.sub':'호기심이 능력이 되는 초등학교.<br>퀸즈 플러싱의 Pre-K부터 5학년까지 — 1960년부터.',
-      'hero.learn':'자세히',
-      'hero.apply':'2026–27학년도 지원',
-      'html.lang':'ko-KR',
-      'lang.short':'한'
-    },
-    es:{
-      'strip.body':'Inscripciones abiertas 2026–27.',
-      'strip.link':'Solicita en MySchools ›',
-      'snav.apply':'Solicitar',
-      'hero.eyebrow':'P.S. 165Q · Edith K. Bergtraum School',
-      'hero.title':'Cada niño,<br>una Shooting&nbsp;Star.',
-      'hero.sub':'Una escuela elemental donde la curiosidad se vuelve capacidad.<br>Pre-K a 5.º grado en Flushing, Queens — desde 1960.',
-      'hero.learn':'Saber más',
-      'hero.apply':'Solicitar para 2026–27',
-      'html.lang':'es-US',
-      'lang.short':'ES'
+  /* NEWSLETTER */
+  (function () {
+    var f = document.getElementById('news-form'); if (!f) return;
+    function ack() { document.getElementById('news-ok').style.display = 'block'; document.getElementById('news-email').value = ''; setTimeout(function () { document.getElementById('news-ok').style.display = 'none'; }, 6000); }
+    f.addEventListener('submit', function (e) {
+      var email = document.getElementById('news-email').value.trim();
+      if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) { e.preventDefault(); return; }
+      if (f.hasAttribute('data-stub')) { e.preventDefault(); ack(); return; }
+      e.preventDefault();
+      fetch(f.action, { method: 'POST', body: new FormData(f), headers: { Accept: 'application/json' } }).then(function (r) { if (r.ok) ack(); else f.submit(); }).catch(function () { f.submit(); });
+    });
+  })();
+
+  /* COMMAND PALETTE */
+  (function () {
+    var bg = document.getElementById('cmdk-bg'), input = document.getElementById('cmdk-input'), list = document.getElementById('cmdk-list');
+    var items = [
+      { g: 'Navigate', t: 'About the school', s: 'Principal & history', href: '#about', ico: 'i' },
+      { g: 'Navigate', t: 'Programs', s: 'G&T, NEST, SEL, Arts', href: '#programs', ico: 'b' },
+      { g: 'Navigate', t: 'Life at 165Q', s: 'Daily highlights', href: '#life', ico: 'p' },
+      { g: 'Navigate', t: 'Calendar', s: 'Upcoming events', href: '#calendar', ico: 'c' },
+      { g: 'Navigate', t: 'Contact', s: '70-35 150 Street, Flushing', href: '#contact', ico: 'm' },
+      { g: 'Resources', t: 'Apply on MySchools', s: 'NYC DOE enrollment', href: 'https://www.schools.nyc.gov/enrollment/enroll-grade-by-grade', ext: 1, ico: 'ps' },
+      { g: 'Resources', t: 'ParentSquare', s: 'Messages & announcements', href: 'https://www.parentsquare.com', ext: 1, ico: 'ps' },
+      { g: 'Resources', t: 'NYC DOE Profile', s: 'schools.nyc.gov/schools/Q165', href: 'https://www.schools.nyc.gov/schools/Q165', ext: 1, ico: 'doe' },
+      { g: 'Contact', t: 'Call main office', s: '(718) 263-4004', href: 'tel:7182634004', ico: 'ph' },
+      { g: 'Theme', t: 'Toggle theme', s: 'Switch light/dark', action: 'theme', ico: 'th' }
+    ];
+    var ICO = { i: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>', b: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg>', p: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>', c: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/></svg>', m: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>', ps: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>', doe: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M3 7v1a3 3 0 0 0 6 0V7m0 0V4h6v3m0 0v1a3 3 0 0 0 6 0V7"/></svg>', ph: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07"/></svg>', th: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>' };
+    function render(f) { var fl = (f || '').toLowerCase().trim(); var m = items.filter(function (it) { return !fl || (it.t + ' ' + it.s + ' ' + it.g).toLowerCase().indexOf(fl) >= 0; }); if (!m.length) { list.innerHTML = '<div class="cmdk-empty">No results for &ldquo;' + fl + '&rdquo;</div>'; return; } var groups = {}; m.forEach(function (it) { (groups[it.g] = groups[it.g] || []).push(it); }); var html = ''; Object.keys(groups).forEach(function (g) { html += '<div class="cmdk-group"><div class="cmdk-gh">' + g + '</div>'; groups[g].forEach(function (it) { html += '<button class="cmdk-item" data-href="' + (it.href || '') + '" data-ext="' + (it.ext ? 1 : 0) + '" data-action="' + (it.action || '') + '"><div class="cmdk-ico">' + (ICO[it.ico] || ICO.i) + '</div><div class="cmdk-txt"><div class="cmdk-t">' + it.t + '</div><div class="cmdk-s">' + it.s + '</div></div><div class="cmdk-arr">↵</div></button>'; }); html += '</div>'; }); list.innerHTML = html; sel(0); }
+    function sel(i) { var b = list.querySelectorAll('.cmdk-item'); if (!b.length) return; b.forEach(function (x) { x.classList.remove('sel'); }); var idx = Math.max(0, Math.min(b.length - 1, i)); b[idx].classList.add('sel'); b[idx].scrollIntoView({ block: 'nearest' }); }
+    function act(btn) { var a = btn.dataset.action; if (a === 'theme') { document.getElementById('theme-toggle').click(); close(); return; } var h = btn.dataset.href, ext = btn.dataset.ext === '1'; if (!h) return; close(); if (ext) window.open(h, '_blank', 'noopener'); else if (h.startsWith('#')) { var t = document.querySelector(h); if (t) t.scrollIntoView({ behavior: reduced ? 'auto' : 'smooth' }); } else location.href = h; }
+    function open() { bg.classList.add('open'); input.value = ''; render(''); setTimeout(function () { input.focus(); }, 50); document.body.style.overflow = 'hidden'; }
+    function close() { bg.classList.remove('open'); document.body.style.overflow = ''; }
+    document.getElementById('cmdk-open').addEventListener('click', open);
+    bg.addEventListener('click', function (e) { if (e.target === bg) close(); });
+    input.addEventListener('input', function () { render(input.value); });
+    document.addEventListener('keydown', function (e) {
+      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') { e.preventDefault(); bg.classList.contains('open') ? close() : open(); return; }
+      if (e.key === '/' && !/INPUT|TEXTAREA/.test(document.activeElement.tagName)) { e.preventDefault(); open(); return; }
+      if (!bg.classList.contains('open')) return;
+      var b = list.querySelectorAll('.cmdk-item'); if (!b.length) return;
+      var cur = Array.from(b).findIndex(function (x) { return x.classList.contains('sel'); });
+      if (e.key === 'Escape') { e.preventDefault(); close(); }
+      else if (e.key === 'ArrowDown') { e.preventDefault(); sel(cur + 1); }
+      else if (e.key === 'ArrowUp') { e.preventDefault(); sel(cur - 1); }
+      else if (e.key === 'Enter') { e.preventDefault(); if (cur >= 0) act(b[cur]); }
+    });
+    list.addEventListener('click', function (e) { var b = e.target.closest('.cmdk-item'); if (b) act(b); });
+    list.addEventListener('mousemove', function (e) { var b = e.target.closest('.cmdk-item'); if (b) { list.querySelectorAll('.cmdk-item').forEach(function (x) { x.classList.remove('sel'); }); b.classList.add('sel'); } });
+  })();
+
+  /* LANGUAGE PICKER (visible swap of subset of strings — full multilingual ships via Astro routes) */
+  (function () {
+    var DICT = {
+      en: { 'snav.apply': 'Apply', 'hero.eyebrow': 'P.S. 165Q · Edith K. Bergtraum School', 'hero.title': 'Every child,<br>a Shooting Star.', 'hero.sub': 'An elementary school where curiosity becomes capability. Pre-K through Grade 5 in Flushing, Queens — since 1960.', 'hero.learn': 'Learn more', 'hero.apply': 'Apply for 2026–27', 'html.lang': 'en-US' },
+      zh: { 'snav.apply': '申请', 'hero.eyebrow': 'P.S. 165Q · Edith K. Bergtraum 小学', 'hero.title': '每一个孩子，<br>都是一颗流星。', 'hero.sub': '让好奇心化为能力的小学。皇后区法拉盛学前班至五年级——自 1960 年起。', 'hero.learn': '了解更多', 'hero.apply': '申请 2026–27 学年', 'html.lang': 'zh-CN' },
+      ko: { 'snav.apply': '지원', 'hero.eyebrow': 'P.S. 165Q · Edith K. Bergtraum 학교', 'hero.title': '모든 어린이가<br>슈팅 스타.', 'hero.sub': '호기심이 능력이 되는 초등학교. 퀸즈 플러싱의 Pre-K부터 5학년까지 — 1960년부터.', 'hero.learn': '자세히', 'hero.apply': '2026–27학년도 지원', 'html.lang': 'ko-KR' },
+      es: { 'snav.apply': 'Solicitar', 'hero.eyebrow': 'P.S. 165Q · Edith K. Bergtraum School', 'hero.title': 'Cada niño,<br>una Shooting Star.', 'hero.sub': 'Una escuela elemental donde la curiosidad se vuelve capacidad. Pre-K a 5.º grado en Flushing, Queens — desde 1960.', 'hero.learn': 'Saber más', 'hero.apply': 'Solicitar para 2026–27', 'html.lang': 'es-US' }
+    };
+    function apply(lang) {
+      var d = DICT[lang] || DICT.en;
+      document.documentElement.setAttribute('lang', d['html.lang']);
+      document.querySelectorAll('[data-i18n]').forEach(function (el) { var k = el.getAttribute('data-i18n'); if (d[k] != null) el.textContent = d[k]; });
+      document.querySelectorAll('[data-i18n-html]').forEach(function (el) { var k = el.getAttribute('data-i18n-html'); if (d[k] != null) el.innerHTML = d[k]; });
+      document.querySelectorAll('.gnav-tool.lang').forEach(function (b) { b.classList.toggle('active', b.dataset.lang === lang); });
     }
-  };
-  function apply(lang){
-    var d=DICT[lang]||DICT.en;
-    document.documentElement.setAttribute('lang',d['html.lang']);
-    document.querySelectorAll('[data-i18n]').forEach(function(el){
-      var k=el.getAttribute('data-i18n');if(d[k]!=null)el.textContent=d[k];
-    });
-    document.querySelectorAll('[data-i18n-html]').forEach(function(el){
-      var k=el.getAttribute('data-i18n-html');if(d[k]!=null)el.innerHTML=d[k];
-    });
-    var cur=document.getElementById('lang-cur');if(cur)cur.textContent=d['lang.short'];
-    document.querySelectorAll('#lang-menu a').forEach(function(a){a.classList.toggle('active',a.dataset.lang===lang);});
-  }
-  /* Resolve initial language: ?lang= → localStorage → browser → en */
-  var params=new URLSearchParams(location.search);
-  var initial=params.get('lang')||localStorage.getItem('ps165q-lang')||((navigator.language||'en').split('-')[0]);
-  if(!DICT[initial])initial='en';
-  apply(initial);
-  localStorage.setItem('ps165q-lang',initial);
-  /* Lang picker UI */
-  var btn=document.getElementById('lang-btn'),menu=document.getElementById('lang-menu');
-  if(btn&&menu){
-    btn.addEventListener('click',function(e){e.stopPropagation();var o=!menu.classList.contains('open');menu.classList.toggle('open',o);btn.setAttribute('aria-expanded',o);});
-    document.addEventListener('click',function(){menu.classList.remove('open');btn.setAttribute('aria-expanded','false');});
-    menu.addEventListener('click',function(e){e.stopPropagation();});
-    menu.querySelectorAll('a').forEach(function(a){
-      a.addEventListener('click',function(e){
-        e.preventDefault();
-        var l=a.dataset.lang;
-        localStorage.setItem('ps165q-lang',l);
+    var params = new URLSearchParams(location.search);
+    var initial = params.get('lang') || localStorage.getItem('ps165q-lang') || ((navigator.language || 'en').split('-')[0]);
+    if (!DICT[initial]) initial = 'en';
+    apply(initial);
+    localStorage.setItem('ps165q-lang', initial);
+    document.querySelectorAll('.gnav-tool.lang').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var l = b.dataset.lang;
+        localStorage.setItem('ps165q-lang', l);
         apply(l);
-        menu.classList.remove('open');btn.setAttribute('aria-expanded','false');
-        /* keep ?lang= in URL for shareable links + sitemap hreflang */
-        var u=new URL(location.href);u.searchParams.set('lang',l);history.replaceState(null,'',u);
+        var u = new URL(location.href); u.searchParams.set('lang', l); history.replaceState(null, '', u);
       });
     });
-  }
-})();
+  })();
 
-/* ============ V19 APPLE-GRADE MOTION ============ */
-(function(){
-  if(reduced)return;
-
-  /* ===== Hero word-by-word reveal ===== */
-  var hero=document.querySelector('.tile.hero');
-  var heroH=hero && hero.querySelector('.tile-h');
-  var heroSub=hero && hero.querySelector('.tile-sub');
-  var heroEye=hero && hero.querySelector('.tile-eyebrow');
-  function wrapWords(el,startIndex){
-    if(!el)return startIndex;
-    var lines=el.innerHTML.split(/<br\s*\/?>/i);
-    var idx=startIndex||0;
-    el.innerHTML=lines.map(function(line){
-      return line.split(/(\s+)/).map(function(tok){
-        if(!tok.trim())return tok;
-        var span='<span class="word" style="--i:'+idx+'">'+tok+'</span>';
-        idx++;
-        return span;
-      }).join('');
-    }).join('<br>');
-    return idx;
-  }
-  var wi=0;
-  if(heroEye){heroEye.classList.add('word');heroEye.style.setProperty('--i',0);wi=1;}
-  if(heroH)wi=wrapWords(heroH,wi);
-  if(heroSub)wi=wrapWords(heroSub,wi+1);
-  // Reveal after a frame so transitions kick in
-  requestAnimationFrame(function(){
-    requestAnimationFrame(function(){
-      document.querySelectorAll('.tile.hero .word').forEach(function(w){w.classList.add('v');});
+  /* FOCUS TRAP for modals */
+  (function () {
+    var modals = [{ open: '.cmdk-bg.open', box: '.cmdk', watch: document.getElementById('cmdk-bg') }, { open: '.mob.open', box: '.mob', watch: document.getElementById('mob') }];
+    document.addEventListener('keydown', function (e) {
+      if (e.key !== 'Tab') return;
+      var found = null;
+      for (var i = 0; i < modals.length; i++) { if (document.querySelector(modals[i].open)) { found = modals[i]; break; } }
+      if (!found) return;
+      var box = document.querySelector(found.box); if (!box) return;
+      var fo = box.querySelectorAll('a[href]:not([disabled]),button:not([disabled]),input:not([disabled]),[tabindex]:not([tabindex="-1"])');
+      if (!fo.length) return;
+      var first = fo[0], last = fo[fo.length - 1];
+      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
     });
-  });
+  })();
 
-  /* ===== Section header word stagger (sec-h, psec-h, gtile-h, qtile-h, tile-h not on hero) ===== */
-  var headerSel='.psec-h, .gtile-h, .qtile-h, .nsec h2, .cal-h';
-  document.querySelectorAll(headerSel).forEach(function(h){
-    if(h.closest('.tile.hero'))return;
-    wrapWords(h,0);
-  });
-  var headIo=new IntersectionObserver(function(es){
-    es.forEach(function(e){
-      if(e.isIntersecting){
-        e.target.querySelectorAll('.word').forEach(function(w){w.classList.add('v');});
-        headIo.unobserve(e.target);
-      }
-    });
-  },{threshold:.15});
-  document.querySelectorAll(headerSel).forEach(function(h){if(!h.closest('.tile.hero'))headIo.observe(h);});
-
-  /* ===== Scroll-driven hero mark (zoom-down + translate) ===== */
-  var heroMark=document.querySelector('.hero-mark');
-  var heroSection=document.querySelector('.tile.hero');
-  function updateHero(){
-    if(!heroMark||!heroSection)return;
-    var r=heroSection.getBoundingClientRect();
-    var h=window.innerHeight;
-    var p=Math.min(1,Math.max(0,-r.top/(r.height*0.7)));
-    var scale=1-p*0.18;
-    var ty=-p*40;
-    var op=1-p*0.55;
-    heroMark.style.transform='translate3d(0,'+ty+'px,0) scale('+scale+')';
-    heroMark.style.opacity=op;
-    // also shrink the hero title slightly as you scroll past
-    if(heroH){
-      var tScale=1-p*0.05;
-      var tOp=1-p*0.4;
-      heroH.style.transform='translate3d(0,'+(-p*20)+'px,0) scale('+tScale+')';
-      heroH.style.opacity=tOp;
-    }
+  /* SERVICE WORKER */
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function () { navigator.serviceWorker.register('sw.js', { scope: './' }).catch(function () { }); });
   }
-  addEventListener('scroll',updateHero,{passive:true});
-  addEventListener('resize',updateHero);
-  updateHero();
-
-  /* ===== Mouse-following hero spotlight + parallax ===== */
-  if(isFine && heroSection){
-    var pX=50,pY=50;
-    heroSection.addEventListener('mouseenter',function(){heroSection.classList.add('lit');});
-    heroSection.addEventListener('mouseleave',function(){
-      heroSection.classList.remove('lit');
-      heroSection.style.setProperty('--mx','50%');
-      heroSection.style.setProperty('--my','50%');
-      if(heroEye)heroEye.style.transform='';
-      if(heroH)heroH.style.transform='';
-      if(heroMark)heroMark.style.transform='';
-    });
-    heroSection.addEventListener('mousemove',function(e){
-      var r=heroSection.getBoundingClientRect();
-      var nx=(e.clientX-r.left)/r.width;
-      var ny=(e.clientY-r.top)/r.height;
-      heroSection.style.setProperty('--mx',(nx*100)+'%');
-      heroSection.style.setProperty('--my',(ny*100)+'%');
-      // subtle parallax — different depths per layer
-      var dx=(nx-.5),dy=(ny-.5);
-      if(heroEye)heroEye.style.transform='translate3d('+(dx*-6)+'px,'+(dy*-4)+'px,0)';
-      if(heroH)heroH.style.transform='translate3d('+(dx*-12)+'px,'+(dy*-8)+'px,0)';
-      if(heroMark)heroMark.style.transform='translate3d('+(dx*22)+'px,'+(dy*16)+'px,0)';
-    });
-  }
-
-  /* ===== Body bg color sync — driven by which tile dominates the viewport ===== */
-  var moodTiles=Array.from(document.querySelectorAll('.tile.dark, .tile.gold, .scrolly, .nsec'));
-  var moodIo=new IntersectionObserver(function(es){
-    es.forEach(function(e){
-      var el=e.target;
-      var mood='';
-      if(el.classList.contains('gold'))mood='gold';
-      else if(el.classList.contains('dark')||el.classList.contains('scrolly')||el.classList.contains('nsec'))mood='dark';
-      if(e.intersectionRatio>0.55){
-        document.body.setAttribute('data-mood',mood);
-      }
-    });
-  },{threshold:[0,0.55,1]});
-  moodTiles.forEach(function(t){moodIo.observe(t);});
-  // clear mood when none dominates
-  var clearIo=new IntersectionObserver(function(es){
-    var anyDom=moodTiles.some(function(t){var r=t.getBoundingClientRect();return r.top<window.innerHeight*.45 && r.bottom>window.innerHeight*.55;});
-    if(!anyDom)document.body.removeAttribute('data-mood');
-  },{threshold:0});
-  addEventListener('scroll',function(){
-    var anyDom=moodTiles.some(function(t){var r=t.getBoundingClientRect();return r.top<window.innerHeight*.45 && r.bottom>window.innerHeight*.55;});
-    if(!anyDom)document.body.removeAttribute('data-mood');
-  },{passive:true});
-
-  /* ===== Nav blur intensification when scrolled away from top ===== */
-  var gnav=document.querySelector('.gnav, .nav');
-  if(gnav){
-    addEventListener('scroll',function(){gnav.classList.toggle('deep',scrollY>40);},{passive:true});
-  }
-
-  /* ===== Smooth theme transition flag ===== */
-  var themeBtn=document.getElementById('theme-toggle');
-  if(themeBtn){
-    themeBtn.addEventListener('click',function(){
-      document.documentElement.classList.add('theme-tx');
-      setTimeout(function(){document.documentElement.classList.remove('theme-tx');},950);
-    },{capture:true});
-  }
-})();
-
-/* ============ SERVICE WORKER ============ */
-if('serviceWorker' in navigator){
-  window.addEventListener('load',function(){
-    navigator.serviceWorker.register('sw.js',{scope:'./'}).catch(function(){/* fail silently — no-PWA browsers, file:// dev, etc. */});
-  });
-}
-
 })();
 </script>
+
+<!-- Hidden i18n markers (attached to visible nodes) -->
+<script>
+(function () {
+  /* Attach data-i18n to the hero/strip/snav nodes that exist already */
+  var hero = document.querySelector('.tile.hero');
+  if (hero) {
+    var eye = hero.querySelector('.tile-eyebrow'); if (eye) eye.setAttribute('data-i18n', 'hero.eyebrow');
+    var h = hero.querySelector('.tile-h'); if (h) h.setAttribute('data-i18n-html', 'hero.title');
+    var sub = hero.querySelector('.tile-sub'); if (sub) sub.setAttribute('data-i18n', 'hero.sub');
+    var cta = hero.querySelectorAll('.tile-cta > *');
+    if (cta[0]) cta[0].setAttribute('data-i18n', 'hero.learn');
+    if (cta[1]) cta[1].setAttribute('data-i18n', 'hero.apply');
+  }
+})();
+</script>
+
 </body>
 </html>
