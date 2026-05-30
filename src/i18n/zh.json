@@ -1,0 +1,192 @@
+{
+  "lang": { "name": "中文", "code": "zh", "html": "zh-CN" },
+  "topbar": {
+    "doe": "纽约市教育局",
+    "district": "第25学区，皇后区",
+    "open": "学校开放中",
+    "openTime": "学校开放中 · {time} 美东时间",
+    "closedToday": "今日学校关闭",
+    "closedWeekend": "学校关闭 · 周末",
+    "doeProfile": "教育局档案"
+  },
+  "nav": {
+    "home": "首页",
+    "about": "关于",
+    "programs": "课程",
+    "gallery": "图集",
+    "calendar": "校历",
+    "leadership": "校领导",
+    "voices": "家长心声",
+    "community": "社区",
+    "contact": "联系我们",
+    "news": "新闻",
+    "staff": "教职员",
+    "parentSquare": "ParentSquare",
+    "search": "搜索",
+    "menu": "菜单",
+    "language": "语言",
+    "theme": "主题"
+  },
+  "hero": {
+    "badge": "2026–2027 学年招生中",
+    "title1": "P.S. 165Q",
+    "title2": "Edith K. Bergtraum 小学",
+    "sub": "位于皇后区法拉盛的公立小学，提供学前班至五年级教育——让每个孩子成为世界公民与终身学习者。",
+    "ctaParent": "ParentSquare",
+    "ctaPrograms": "了解课程",
+    "infoLocation": "皇后区法拉盛",
+    "infoDistrict": "第25学区",
+    "card1Label": "招生年级",
+    "card1Val": "学前班 – 五年级",
+    "card1Desc": "完整的小学课程",
+    "card2Label": "特色课程",
+    "card2Val": "G&T + NEST",
+    "card2Desc": "天才班与拓展项目",
+    "card3Label": "建校于",
+    "card3Val": "1960 年",
+    "card3Desc": "服务法拉盛 65 余年",
+    "scroll": "向下滚动"
+  },
+  "ticker": [
+    "Shooting Stars 流星之家",
+    "2026–2027 学年招生中",
+    "G&T 与 NEST 课程",
+    "加入 ParentSquare",
+    "课后活动项目",
+    "关注 @PS165Queens"
+  ],
+  "qa": {
+    "tag": "家长服务",
+    "title": "快速入口",
+    "desc": "家长和家庭所需的一切——一键直达。",
+    "parentSquare": { "t": "ParentSquare", "d": "消息与通知" },
+    "calendar": { "t": "校历", "d": "重要日期与活动" },
+    "handbook": { "t": "家长手册", "d": "政策与信息" },
+    "lunch": { "t": "午餐菜单", "d": "每日免费餐" },
+    "afterschool": { "t": "课后活动", "d": "项目与体育" },
+    "pta": { "t": "家长会 PTA", "d": "积极参与" }
+  },
+  "about": {
+    "tag": "关于本校",
+    "title": "来自",
+    "title2": "校长的寄语",
+    "principal": "Tiffany L. Davis-Nealy",
+    "role": "P.S. 165Q 校长",
+    "quote": "在 P.S. 165Q，我们相信每个孩子都是一颗流星——明亮、独特、潜力无限。",
+    "body": "欢迎加入我们的校园社区。六十多年来，P.S. 165Q 一直是皇后区法拉盛的教育基石，培育学前班至五年级的孩子们。我们的教师团队每天通过批判性思维、创造力、协作和沟通，为每个孩子打造稳固而公平的学习基础。我们以天才班 (G&T) 课程、NEST 拓展项目以及丰富的艺术、体育和社会情感学习活动为荣。期待与您携手，共同陪伴孩子的成长之旅。",
+    "floatNum": "65+",
+    "floatLabel": "服务法拉盛年数",
+    "monoLabel": "校长 · 建校 1960"
+  },
+  "mission": {
+    "title1": "培养世界公民与",
+    "title2": "终身学习者",
+    "body": "我们以批判性思维、创造力、协作与沟通为基石，为每位学生打造稳固而公平的学习起点，让他们在多元互联的世界中茁壮成长。",
+    "pillars": ["批判性思维", "创造力", "协作", "沟通"]
+  },
+  "stats": {
+    "years": "服务法拉盛年数",
+    "programs": "学术项目",
+    "grades": "年级",
+    "district": "纽约学区"
+  },
+  "programs": {
+    "tag": "学术",
+    "title1": "让流星们与众不同的",
+    "title2": "课程项目",
+    "desc": "严谨而丰富的课程，启发每一位学习者。",
+    "learnMore": "了解更多",
+    "items": {
+      "gt": {
+        "tag": "天才班",
+        "name": "G&T 项目",
+        "desc": "面向通过纽约市教育局选拔的学生的加速课程。强调高阶问题解决、独立研究和各核心学科的深度学习。",
+        "stat1": "纽约教育局",
+        "stat1Label": "录取途径",
+        "stat2": "加速",
+        "stat2Label": "进阶课程"
+      },
+      "nest": { "tag": "拓展", "name": "NEST 项目", "desc": "通过 STEM 与艺术培养卓越。项目式学习与技术深度融合，提升投入感。" },
+      "sel": { "tag": "身心健康", "name": "社会情感学习", "desc": "在每个年级培养自我意识、同理心和负责任的决策能力。" },
+      "arts": { "tag": "创意艺术", "name": "艺术", "desc": "视觉艺术、音乐与戏剧——包括备受赞誉的年度演出。" },
+      "sports": { "tag": "体育", "name": "运动", "desc": "竞技与休闲体育，培养团队精神、纪律与体能。" },
+      "lit": { "tag": "学业支持", "name": "阅读与数学辅导", "desc": "针对性的小组教学与辅导，确保每位学生达到年级标准。" },
+      "tech": { "tag": "科技", "name": "数字学习", "desc": "1:1 设备、编程课程及数字公民教育，迎接科技驱动的未来。" }
+    }
+  },
+  "gallery": {
+    "tag": "校园生活",
+    "title": "165Q 的一天",
+    "desc": "捕捉校园社区中那些特别的瞬间——点击图片可放大查看。",
+    "captions": {
+      "stem": "STEM 实验室", "stemMeta": "NEST 项目",
+      "reading": "阅读角", "readingMeta": "语文",
+      "math": "数学课堂", "mathMeta": "四年级",
+      "concert": "春季音乐会", "concertMeta": "艺术",
+      "recess": "课间欢乐", "recessMeta": "每日",
+      "code": "编程社", "codeMeta": "数字学习",
+      "art": "美术工作室", "artMeta": "视觉艺术",
+      "field": "运动会", "fieldMeta": "体育"
+    }
+  },
+  "psCta": {
+    "title": "通过 ParentSquare 保持联系",
+    "body": "实时通知、家长同意书，以及自动翻译成您语言的消息。",
+    "btn": "加入 ParentSquare"
+  },
+  "leadership": {
+    "tag": "我们的团队",
+    "title": "学校领导",
+    "principal": "校长",
+    "assistantPrincipal": "副校长"
+  },
+  "calendar": {
+    "tag": "近期活动",
+    "title": "校历",
+    "full": "完整校历",
+    "downloadIcs": "下载 .ics",
+    "badges": { "upcoming": "即将到来", "closed": "停课", "testing": "州考" }
+  },
+  "voices": {
+    "tag": "社区心声",
+    "title": "家长怎么说"
+  },
+  "community": {
+    "tag": "社区",
+    "title": "关注我们的流星们",
+    "ig": { "body": "每日精彩瞬间、课堂特写、演出和实地考察。", "foot": "查看 Instagram" },
+    "x1": { "body": "公告、活动更新与校园实时动态。", "foot": "查看 X" },
+    "x2": { "body": "校长 Davis-Nealy 的直接更新。", "foot": "查看 X" },
+    "fb": { "body": "社区活动、家长会动态与照片集。", "foot": "查看 Facebook" }
+  },
+  "newsletter": {
+    "title1": "别错过任何",
+    "title2": "精彩时刻",
+    "body": "订阅每周流星电子刊——校历提醒、课堂亮点和家长会新闻。每周日晚发送。",
+    "placeholder": "your@email.com",
+    "btn": "订阅",
+    "privacy": "无垃圾邮件。一键退订。",
+    "success": "您已成功订阅——欢迎加入！"
+  },
+  "contact": {
+    "tag": "联系",
+    "title": "联系我们",
+    "address": "地址",
+    "office": "主办公室",
+    "fax": "传真",
+    "hours": "时间",
+    "hoursVal": "周一至周五，上午 8:00 – 下午 2:20",
+    "doe": "纽约教育局"
+  },
+  "cmdk": {
+    "placeholder": "搜索网站、跳转章节或查找资源…",
+    "empty": "未找到结果：",
+    "groups": { "navigate": "导航", "resources": "资源", "contact": "联系", "social": "社交", "theme": "主题", "language": "语言" },
+    "hints": { "navigate": "导航", "select": "选择", "close": "关闭" }
+  },
+  "footer": {
+    "about": "自 1960 年起，培养皇后区法拉盛的世界公民与终身学习者。Shooting Stars 流星之家。",
+    "h": { "academics": "学术", "families": "家长", "connect": "联系" }
+  },
+  "breadcrumbs": { "home": "首页" }
+}

@@ -1,0 +1,47 @@
+---
+import { render, type CollectionEntry } from 'astro:content';
+import type { Locale } from '../i18n/ui';
+import { pages } from '../i18n/pages';
+import { dateLocaleFor } from '../i18n/home';
+
+interface Props {
+  lang: Locale;
+  post: CollectionEntry<'news'>;
+}
+
+const { lang, post } = Astro.props;
+const p = pages(lang);
+const dateLocale = dateLocaleFor(lang);
+const { Content } = await render(post);
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const langPrefix = lang === 'en' ? '' : `/${lang}`;
+
+const dateFmt = post.data.date.toLocaleDateString(dateLocale, {
+  weekday: 'long',
+  month: 'long',
+  day: 'numeric',
+  year: 'numeric',
+});
+---
+
+<article class="article" style="padding-top:clamp(60px,8vw,100px)">
+  <a href={`${base}${langPrefix}/news/`} class="back-link">{p.news.back}</a>
+  <header>
+    <div class="article-eyebrow">{p.news.eyebrowPost}</div>
+    <h1 class="article-h">{post.data.title}</h1>
+    <div class="article-meta">
+      <span class="by">{p.news.byPrefix} {post.data.author}</span>
+      <span>·</span>
+      <time datetime={post.data.date.toISOString()}>{dateFmt}</time>
+      {post.data.tags && post.data.tags.length > 0 && (
+        <>
+          <span>·</span>
+          <span>{post.data.tags.join(' · ')}</span>
+        </>
+      )}
+    </div>
+  </header>
+  <div class="prose">
+    <Content />
+  </div>
+</article>

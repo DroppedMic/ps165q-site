@@ -1,0 +1,19 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import ProgramDetail from '../../../components/ProgramDetail.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const programs = await getCollection('programs');
+  return programs.map((program) => ({
+    params: { slug: program.id.replace(/\.md$/, '') },
+    props: { program },
+  }));
+}
+
+const { program } = Astro.props;
+---
+
+<BaseLayout title={`${program.data.title} — P.S. 165Q`} description={program.data.summary}>
+  <ProgramDetail lang="ko" program={program} />
+</BaseLayout>

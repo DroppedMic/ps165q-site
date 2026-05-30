@@ -1,0 +1,188 @@
+---
+import { getCollection } from 'astro:content';
+import type { Locale } from '../i18n/ui';
+import { home, dateLocaleFor } from '../i18n/home';
+import Gallery from './Gallery.astro';
+
+interface Props {
+  lang: Locale;
+}
+
+const { lang } = Astro.props;
+const i = home(lang);
+const dateLocale = dateLocaleFor(lang);
+
+const programs = (await getCollection('programs'))
+  .sort((a, b) => a.data.order - b.data.order)
+  .slice(0, 6);
+
+const upcomingEvents = (await getCollection('events'))
+  .sort((a, b) => +a.data.date - +b.data.date)
+  .slice(0, 6);
+
+const news = (await getCollection('news', ({ data }) => !data.draft))
+  .sort((a, b) => +b.data.date - +a.data.date)
+  .slice(0, 3);
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const langPrefix = lang === 'en' ? '' : `/${lang}`;
+const monthFmt = (d: Date) => d.toLocaleString(dateLocale, { month: 'short' });
+const fullDateFmt = (d: Date) =>
+  d.toLocaleDateString(dateLocale, { month: 'short', day: 'numeric', year: 'numeric' });
+---
+
+<div class="strip">
+  <span>{i.strip.body}</span> <a href="#apply">{i.strip.link}</a>
+</div>
+
+<div class="stack">
+  <!-- HERO -->
+  <section class="tile hero white" id="hero">
+    <div class="tile-eyebrow">{i.hero.eyebrow}</div>
+    <h1 class="tile-h">{i.hero.title1}<br />{i.hero.title2}</h1>
+    <p class="tile-sub">
+      {i.hero.sub1}<br />{i.hero.sub2}
+    </p>
+    <div class="tile-cta">
+      <a href="#programs" class="lnk">{i.hero.learn}</a>
+      <a href="#apply" class="btn btn-pill">{i.hero.apply}</a>
+    </div>
+    <div class="tile-visual">
+      <div class="hero-mark">165</div>
+    </div>
+  </section>
+
+  <!-- G&T -->
+  <section class="tile dark" id="programs">
+    <div class="tile-eyebrow">{i.gt.eyebrow}</div>
+    <h2 class="tile-h">{i.gt.title1}<br />{i.gt.title2}</h2>
+    <p class="tile-sub">{i.gt.sub}</p>
+    <div class="tile-cta">
+      <a
+        href="https://www.schools.nyc.gov/enrollment/enroll-grade-by-grade/gifted-and-talented"
+        target="_blank"
+        rel="noopener"
+        class="lnk"
+        style="color:#fff"
+      >{i.gt.learn}</a>
+      <a href="#apply" class="btn btn-pill-light">{i.gt.apply}</a>
+    </div>
+  </section>
+
+  <!-- NEST + Arts -->
+  <div class="tile-row">
+    <section class="tile white">
+      <div class="tile-eyebrow">{i.nest.eyebrow}</div>
+      <h2 class="tile-h">{i.nest.title1}<br />{i.nest.title2}</h2>
+      <p class="tile-sub">{i.nest.sub}</p>
+      <div class="tile-cta">
+        <a href={`${base}${langPrefix}/news/`} class="lnk">{i.nest.learn}</a>
+        <a href="#programs" class="btn btn-pill">{i.nest.cta}</a>
+      </div>
+    </section>
+    <section class="tile gold">
+      <div class="tile-eyebrow">{i.arts.eyebrow}</div>
+      <h2 class="tile-h">{i.arts.title1}<br />{i.arts.title2}</h2>
+      <p class="tile-sub">{i.arts.sub}</p>
+      <div class="tile-cta">
+        <a href={`${base}${langPrefix}/news/`} class="lnk">{i.arts.learn}</a>
+        <a href="#programs" class="btn btn-pill-dark">{i.arts.cta}</a>
+      </div>
+    </section>
+  </div>
+
+  <!-- APPLY CTA -->
+  <section class="tile gold short" id="apply">
+    <div class="tile-eyebrow">{i.apply.eyebrow}</div>
+    <h2 class="tile-h">{i.apply.title1}<br /><span class="lt">{i.apply.title2}</span></h2>
+    <p class="tile-sub">{i.apply.sub}</p>
+    <div class="tile-cta">
+      <a href="#contact" class="lnk">{i.apply.tour}</a>
+      <a
+        href="https://www.schools.nyc.gov/enrollment/enroll-grade-by-grade"
+        target="_blank"
+        rel="noopener"
+        class="btn btn-pill-dark"
+      >{i.apply.cta}</a>
+    </div>
+  </section>
+</div>
+
+<!-- GALLERY -->
+<Gallery lang={lang} />
+
+<!-- ALL PROGRAMS -->
+<section class="psec" style="padding-top:clamp(60px,8vw,100px)">
+  <div class="psec-head">
+    <span class="psec-eyebrow">{i.programs.eyebrow}</span>
+    <h2 class="psec-h">{i.programs.title1}<br /><span class="lt">{i.programs.title2}</span></h2>
+    <p class="psec-lead">{i.programs.lead}</p>
+  </div>
+  <div class="prog-grid">
+    {programs.map((p) => (
+      <a href={`${base}${langPrefix}/programs/${p.id.replace(/\.md$/, '')}/`} class="prog">
+        <span class="prog-tag">{p.data.tag}</span>
+        <h3 class="prog-h">{p.data.title}</h3>
+        <p class="prog-d">{p.data.summary}</p>
+        <span class="prog-arr">{i.programs.learnMore}</span>
+      </a>
+    ))}
+  </div>
+</section>
+
+<!-- LATEST NEWS -->
+{news.length > 0 && (
+  <section class="psec" style="padding-top:0">
+    <div class="psec-head">
+      <span class="psec-eyebrow">{i.news.eyebrow}</span>
+      <h2 class="psec-h">{i.news.title}</h2>
+    </div>
+    <div class="news-grid">
+      {news.map((n) => (
+        <a href={`${base}${langPrefix}/news/${n.id.replace(/\.md$/, '')}/`} class="news-card">
+          <div class="news-date">{fullDateFmt(n.data.date)}</div>
+          <h3 class="news-card-h">{n.data.title}</h3>
+          <p class="news-card-s">{n.data.summary}</p>
+          <span class="news-card-foot">{i.news.readMore}</span>
+        </a>
+      ))}
+    </div>
+    <div style="text-align:center;margin-top:36px">
+      <a href={`${base}${langPrefix}/news/`} class="lnk">{i.news.all}</a>
+    </div>
+  </section>
+)}
+
+<!-- CALENDAR -->
+<section class="psec" id="calendar" style="padding-top:0">
+  <div class="psec-head">
+    <span class="psec-eyebrow">{i.calendar.eyebrow}</span>
+    <h2 class="psec-h">{i.calendar.title}</h2>
+  </div>
+  <div class="cal">
+    {upcomingEvents.map((ev) => (
+      <a href={`${base}${langPrefix}/#calendar`} class="cal-item">
+        <div class="cal-date">
+          <div class="cal-mo">{monthFmt(ev.data.date)}</div>
+          <div class="cal-dy">{ev.data.date.getDate()}</div>
+        </div>
+        <div>
+          <div class="cal-t">{ev.data.title}</div>
+          {ev.data.time && <div class="cal-tm">{ev.data.time}</div>}
+        </div>
+        {ev.data.badge !== 'none' && (
+          <span class={`cal-tag ${ev.data.badge}`}>{ev.data.badge}</span>
+        )}
+      </a>
+    ))}
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="psec" id="contact" style="padding-top:0">
+  <div class="psec-head">
+    <span class="psec-eyebrow">{i.contact.eyebrow}</span>
+    <h2 class="psec-h">{i.contact.title}</h2>
+    <p class="psec-lead">{i.contact.line}</p>
+  </div>
+</section>

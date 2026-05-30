@@ -1,0 +1,82 @@
+# P.S. 165Q · GitHub Pages deploy
+#
+# Astro build pipeline. Runs `npm ci && npm run build` and ships the
+# resulting `dist/` directory to GitHub Pages via actions/deploy-pages.
+#
+# The static files at the repo root (V13 single-file index.html, 404,
+# manifest, sw, sitemap, rss, robots, public/admin) are NOT used by this
+# workflow — Astro's build produces equivalents from src/, and the
+# extras in public/ (admin/, sw.js, manifest.webmanifest, robots.txt,
+# 404.html if present there) get copied through automatically.
+#
+# To switch over from the legacy branch-based deploy:
+#   1. Repo Settings → Pages → Source = "GitHub Actions"
+#   2. Confirm a workflow run succeeds end-to-end
+#   3. Remove or disable the legacy branch-based deploy
+#
+# Until Pages is flipped, the existing root index.html keeps serving the
+# live site. Both can coexist on `main` without conflict.
+
+name: Deploy to GitHub Pages
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "src/**"
+      - "public/**"
+      - "astro.config.mjs"
+      - "package.json"
+      - "package-lock.json"
+      - "tsconfig.json"
+      - ".github/workflows/deploy.yml"
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build Astro site
+        run: npm run build
+        env:
+          NODE_ENV: production
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

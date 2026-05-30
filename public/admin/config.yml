@@ -1,0 +1,138 @@
+# Decap CMS configuration for P.S. 165Q
+#
+# Collections are wired to the Markdown files already in src/content/
+# (mirrored from the in-progress Astro structure). When Astro builds,
+# these same files render the public news / staff / programs / events
+# pages — so editing here updates the live site once the Astro deploy
+# is wired up.
+#
+# Backend: GitHub OAuth. Requires the Decap CMS OAuth app installed on
+# the repo, or a small OAuth proxy. Until then, use Local Backend by
+# running `npx decap-server` and visiting /admin/?local=true.
+
+backend:
+  name: github
+  repo: DroppedMic/ps165q-site
+  branch: main
+  base_url: https://api.netlify.com
+  auth_endpoint: auth
+
+# For local development: `npx decap-server` then visit /admin/?local=true
+local_backend: true
+
+media_folder: "src/assets/photos"
+public_folder: "/photos"
+
+site_url: https://droppedmic.github.io/ps165q-site/
+display_url: https://droppedmic.github.io/ps165q-site/
+logo_url: https://droppedmic.github.io/ps165q-site/icon-192.svg
+
+publish_mode: editorial_workflow
+
+collections:
+  - name: "news"
+    label: "News"
+    label_singular: "News post"
+    folder: "src/content/news"
+    create: true
+    slug: "{{year}}-{{month}}-{{slug}}"
+    extension: "md"
+    summary: "{{title}} — {{date | date('YYYY-MM-DD')}}"
+    sortable_fields: ["date", "title"]
+    view_filters:
+      - label: "Drafts"
+        field: draft
+        pattern: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish date", name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false }
+      - { label: "Author", name: "author", widget: "string", default: "P.S. 165Q" }
+      - { label: "Summary", name: "summary", widget: "text", hint: "1–2 sentence preview shown on the news list." }
+      - { label: "Tags", name: "tags", widget: "list", default: [], required: false }
+      - { label: "Cover image", name: "cover", widget: "image", required: false }
+      - { label: "Cover alt text", name: "coverAlt", widget: "string", required: false }
+      - { label: "Draft", name: "draft", widget: "boolean", default: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "staff"
+    label: "Staff"
+    label_singular: "Staff member"
+    folder: "src/content/staff"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    summary: "{{name}} — {{role}}"
+    sortable_fields: ["order", "name"]
+    fields:
+      - { label: "Name", name: "name", widget: "string" }
+      - { label: "Role", name: "role", widget: "string" }
+      - { label: "Initials", name: "initials", widget: "string", pattern: ['^[A-Z]{1,3}$', "Use 1–3 uppercase letters"] }
+      - { label: "Email", name: "email", widget: "string", required: false }
+      - { label: "Photo", name: "photo", widget: "image", required: false }
+      - { label: "Display order", name: "order", widget: "number", default: 99, min: 1 }
+      - { label: "Short bio", name: "bio", widget: "text", required: false }
+
+  - name: "programs"
+    label: "Programs"
+    label_singular: "Program"
+    folder: "src/content/programs"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    summary: "{{title}} ({{tag}})"
+    sortable_fields: ["order", "title"]
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Tag (eyebrow)", name: "tag", widget: "string" }
+      - label: "Color"
+        name: "color"
+        widget: "select"
+        options: ["navy", "gold", "coral", "green", "plum", "blue"]
+        default: "navy"
+      - { label: "Summary", name: "summary", widget: "text" }
+      - { label: "Display order", name: "order", widget: "number", default: 99, min: 1 }
+      - { label: "Featured", name: "featured", widget: "boolean", default: false }
+      - label: "Stats"
+        name: "stats"
+        widget: "list"
+        required: false
+        fields:
+          - { label: "Value", name: "value", widget: "string" }
+          - { label: "Label", name: "label", widget: "string" }
+      - { label: "Learn more URL", name: "learnMoreUrl", widget: "string", required: false }
+      - { label: "Body", name: "body", widget: "markdown", required: false }
+
+  - name: "events"
+    label: "Calendar events"
+    label_singular: "Event"
+    folder: "src/content/events"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    extension: "md"
+    summary: "{{title}} — {{date | date('YYYY-MM-DD')}}"
+    sortable_fields: ["date", "title"]
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false }
+      - { label: "End date (multi-day)", name: "endDate", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false, required: false }
+      - { label: "Time / detail line", name: "time", widget: "string", required: false }
+      - label: "Badge"
+        name: "badge"
+        widget: "select"
+        options: ["upcoming", "closed", "testing", "none"]
+        default: "none"
+      - { label: "Location", name: "location", widget: "string", default: "P.S. 165Q" }
+      - { label: "Description", name: "description", widget: "text", required: false }
+
+  - name: "settings"
+    label: "Settings"
+    label_singular: "Settings"
+    files:
+      - file: "src/content/settings/announcement.md"
+        label: "Top announcement strip"
+        name: "announcement"
+        fields:
+          - { label: "Active", name: "active", widget: "boolean", default: true }
+          - { label: "Text", name: "text", widget: "string", hint: "Shown across the top of every page." }
+          - { label: "Link label", name: "linkLabel", widget: "string", required: false }
+          - { label: "Link URL", name: "linkUrl", widget: "string", required: false }

@@ -1,0 +1,192 @@
+{
+  "lang": { "name": "한국어", "code": "ko", "html": "ko-KR" },
+  "topbar": {
+    "doe": "뉴욕시 교육청",
+    "district": "제25학군, 퀸즈",
+    "open": "수업 중",
+    "openTime": "수업 중 · {time} 미동부 시간",
+    "closedToday": "오늘 휴교",
+    "closedWeekend": "휴교 · 주말",
+    "doeProfile": "교육청 프로필"
+  },
+  "nav": {
+    "home": "홈",
+    "about": "학교 소개",
+    "programs": "프로그램",
+    "gallery": "갤러리",
+    "calendar": "학사 일정",
+    "leadership": "학교 운영진",
+    "voices": "학부모 의견",
+    "community": "커뮤니티",
+    "contact": "연락처",
+    "news": "소식",
+    "staff": "교직원",
+    "parentSquare": "ParentSquare",
+    "search": "검색",
+    "menu": "메뉴",
+    "language": "언어",
+    "theme": "테마"
+  },
+  "hero": {
+    "badge": "2026–2027학년도 신입생 모집 중",
+    "title1": "P.S. 165Q",
+    "title2": "Edith K. Bergtraum 학교",
+    "sub": "퀸즈 플러싱에 위치한 유치원(Pre-K)부터 5학년까지의 공립 초등학교입니다. 모든 어린이가 세계 시민이자 평생 학습자로 성장하는 곳입니다.",
+    "ctaParent": "ParentSquare",
+    "ctaPrograms": "프로그램 보기",
+    "infoLocation": "퀸즈 플러싱",
+    "infoDistrict": "제25학군",
+    "card1Label": "운영 학년",
+    "card1Val": "Pre-K – 5학년",
+    "card1Desc": "완전한 초등 교육과정",
+    "card2Label": "주요 프로그램",
+    "card2Val": "G&T + NEST",
+    "card2Desc": "영재 및 심화 트랙",
+    "card3Label": "설립",
+    "card3Val": "1960년부터",
+    "card3Desc": "플러싱에서 65년 이상",
+    "scroll": "스크롤"
+  },
+  "ticker": [
+    "Shooting Stars의 보금자리",
+    "2026–2027학년도 모집 중",
+    "G&T 및 NEST 프로그램",
+    "ParentSquare 가입하기",
+    "방과 후 프로그램",
+    "@PS165Queens 팔로우"
+  ],
+  "qa": {
+    "tag": "학부모를 위해",
+    "title": "바로가기",
+    "desc": "학부모와 가정에 필요한 모든 것 — 한 번의 클릭으로.",
+    "parentSquare": { "t": "ParentSquare", "d": "메시지 및 알림" },
+    "calendar": { "t": "학사 일정", "d": "날짜와 행사" },
+    "handbook": { "t": "학교 안내서", "d": "정책 및 정보" },
+    "lunch": { "t": "급식 메뉴", "d": "매일 무료 식사" },
+    "afterschool": { "t": "방과 후", "d": "프로그램 및 스포츠" },
+    "pta": { "t": "PTA", "d": "참여하기" }
+  },
+  "about": {
+    "tag": "학교 소개",
+    "title": "교장 선생님의",
+    "title2": "메시지",
+    "principal": "Tiffany L. Davis-Nealy",
+    "role": "P.S. 165Q 교장",
+    "quote": "P.S. 165Q에서 우리는 모든 어린이가 빛나고 독특하며 비범한 일을 해낼 수 있는 슈팅 스타라고 믿습니다.",
+    "body": "저희 학교 커뮤니티에 오신 것을 환영합니다. 60년이 넘는 동안 P.S. 165Q는 퀸즈 플러싱의 교육 중심지로서 Pre-K부터 5학년까지의 어린이들을 키워왔습니다. 헌신적인 교직원은 비판적 사고, 창의성, 협력, 의사소통을 통해 모든 학생에게 견고하고 공평한 기초를 만들어 갑니다. 저희는 G&T 프로그램, NEST 심화 트랙, 그리고 다양한 예술·체육·사회정서학습 기회를 자랑스럽게 운영하고 있습니다. 자녀의 교육 여정에 동반자가 되어드리겠습니다.",
+    "floatNum": "65+",
+    "floatLabel": "플러싱 봉사 연수",
+    "monoLabel": "교장 · 1960년 설립"
+  },
+  "mission": {
+    "title1": "세계 시민과",
+    "title2": "평생 학습자 양성",
+    "body": "비판적 사고, 창의성, 협력, 의사소통을 바탕으로 모든 학생이 다양하고 연결된 세상에서 잘 자라도록 견고하고 공평한 기초를 만듭니다.",
+    "pillars": ["비판적 사고", "창의성", "협력", "의사소통"]
+  },
+  "stats": {
+    "years": "플러싱 봉사 연수",
+    "programs": "학술 프로그램",
+    "grades": "학년 수",
+    "district": "뉴욕 학군"
+  },
+  "programs": {
+    "tag": "학업",
+    "title1": "Shooting Stars를 빛나게 하는",
+    "title2": "프로그램",
+    "desc": "모든 학습자를 영감으로 이끄는 깊이 있고 풍부한 프로그램.",
+    "learnMore": "자세히",
+    "items": {
+      "gt": {
+        "tag": "영재 프로그램",
+        "name": "G&T 프로그램",
+        "desc": "NYC DOE 입학 절차로 선발된 학생을 위한 가속 교육과정. 고급 문제 해결, 독립 연구, 핵심 과목의 심화 학습을 강조합니다.",
+        "stat1": "NYC DOE",
+        "stat1Label": "입학 경로",
+        "stat2": "심화",
+        "stat2Label": "가속 교육과정"
+      },
+      "nest": { "tag": "심화", "name": "NEST 프로그램", "desc": "STEM과 예술을 통한 탁월함의 양성. 통합 기술을 활용한 프로젝트 기반 학습." },
+      "sel": { "tag": "웰빙", "name": "사회정서학습", "desc": "모든 학년에서 자기인식, 공감, 책임 있는 의사결정 능력을 기릅니다." },
+      "arts": { "tag": "창의 예술", "name": "예술", "desc": "시각 예술, 음악, 연극 — 호평을 받는 연례 공연을 포함합니다." },
+      "sports": { "tag": "체육", "name": "스포츠", "desc": "팀워크, 규율, 체력을 기르는 경쟁적·취미적 운동." },
+      "lit": { "tag": "학업 지원", "name": "문해 및 수학 보충", "desc": "학년 수준에 도달하도록 소그룹 지도와 튜터링을 제공합니다." },
+      "tech": { "tag": "기술", "name": "디지털 학습", "desc": "1:1 기기, 코딩 교육과정, 디지털 시민 의식 — 기술 중심 미래를 위한 준비." }
+    }
+  },
+  "gallery": {
+    "tag": "학교 생활",
+    "title": "165Q에서의 하루",
+    "desc": "우리 학교 커뮤니티의 특별함을 엿보세요 — 이미지를 클릭하여 확대하세요.",
+    "captions": {
+      "stem": "STEM 실험실", "stemMeta": "NEST 프로그램",
+      "reading": "독서 코너", "readingMeta": "문해 교육",
+      "math": "수학 시간", "mathMeta": "4학년",
+      "concert": "봄 콘서트", "concertMeta": "예술",
+      "recess": "쉬는 시간의 즐거움", "recessMeta": "매일",
+      "code": "코딩 동아리", "codeMeta": "디지털 학습",
+      "art": "미술실", "artMeta": "시각 예술",
+      "field": "운동회", "fieldMeta": "체육"
+    }
+  },
+  "psCta": {
+    "title": "ParentSquare로 연결을 유지하세요",
+    "body": "실시간 공지, 동의서, 그리고 사용 언어로 자동 번역되는 메시지.",
+    "btn": "ParentSquare 가입"
+  },
+  "leadership": {
+    "tag": "교직원",
+    "title": "학교 운영진",
+    "principal": "교장",
+    "assistantPrincipal": "부교장"
+  },
+  "calendar": {
+    "tag": "다가오는 일정",
+    "title": "학사 일정",
+    "full": "전체 일정",
+    "downloadIcs": ".ics 다운로드",
+    "badges": { "upcoming": "예정", "closed": "휴교", "testing": "시험" }
+  },
+  "voices": {
+    "tag": "커뮤니티의 목소리",
+    "title": "학부모 후기"
+  },
+  "community": {
+    "tag": "커뮤니티",
+    "title": "Shooting Stars 팔로우",
+    "ig": { "body": "매일의 하이라이트, 교실 스포트라이트, 공연, 현장학습.", "foot": "Instagram 보기" },
+    "x1": { "body": "공지, 행사 소식, 실시간 학교 뉴스.", "foot": "X 보기" },
+    "x2": { "body": "Davis-Nealy 교장 선생님의 직접 소식.", "foot": "X 보기" },
+    "fb": { "body": "커뮤니티 행사, PTA 소식, 사진 앨범.", "foot": "Facebook 보기" }
+  },
+  "newsletter": {
+    "title1": "어떤 순간도",
+    "title2": "놓치지 마세요",
+    "body": "매주 Shooting Stars 다이제스트 — 일정 알림, 교실 하이라이트, PTA 소식. 매주 일요일 저녁 발송.",
+    "placeholder": "your@email.com",
+    "btn": "구독",
+    "privacy": "스팸 없음. 한 번의 클릭으로 해지.",
+    "success": "구독 완료 — 환영합니다!"
+  },
+  "contact": {
+    "tag": "연락처",
+    "title": "문의하기",
+    "address": "주소",
+    "office": "교무실",
+    "fax": "팩스",
+    "hours": "운영 시간",
+    "hoursVal": "월 – 금, 오전 8:00 – 오후 2:20",
+    "doe": "NYC DOE"
+  },
+  "cmdk": {
+    "placeholder": "사이트 검색, 섹션 이동, 자료 찾기…",
+    "empty": "결과 없음:",
+    "groups": { "navigate": "이동", "resources": "자료", "contact": "연락처", "social": "소셜", "theme": "테마", "language": "언어" },
+    "hints": { "navigate": "이동", "select": "선택", "close": "닫기" }
+  },
+  "footer": {
+    "about": "1960년부터 퀸즈 플러싱에서 세계 시민과 평생 학습자를 키워온 Shooting Stars의 보금자리.",
+    "h": { "academics": "학업", "families": "학부모", "connect": "연결" }
+  },
+  "breadcrumbs": { "home": "홈" }
+}

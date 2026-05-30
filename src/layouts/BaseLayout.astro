@@ -1,0 +1,279 @@
+---
+import '../styles/v13.css';
+import { getLocaleFromUrl, t, type Locale } from '../i18n/ui';
+
+interface Props {
+  title: string;
+  description?: string;
+  ogImage?: string;
+  noIndex?: boolean;
+  showSubNav?: boolean;
+}
+
+const {
+  title,
+  description = 'P.S. 165Q Edith K. Bergtraum School — Pre-K through Grade 5 in Flushing, Queens, District 25. Home of the Shooting Stars.',
+  ogImage,
+  noIndex = false,
+  showSubNav = true,
+} = Astro.props;
+
+const locale: Locale = getLocaleFromUrl(Astro.url.pathname);
+const i18n = t(locale);
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const canonical = new URL(Astro.url.pathname, Astro.site ?? 'https://droppedmic.github.io').toString();
+const fullTitle = title.includes('P.S. 165Q') ? title : `${title} — P.S. 165Q`;
+
+const schoolSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'School',
+  name: 'P.S. 165Q Edith K. Bergtraum School',
+  alternateName: ['PS 165Q', 'PS165Q', 'Bergtraum School'],
+  url: 'https://droppedmic.github.io/ps165q-site/',
+  telephone: '(718) 263-4004',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: '70-35 150 Street',
+    addressLocality: 'Flushing',
+    addressRegion: 'NY',
+    postalCode: '11367',
+    addressCountry: 'US',
+  },
+  geo: { '@type': 'GeoCoordinates', latitude: 40.7282, longitude: -73.8189 },
+};
+
+const navLinks = [
+  { href: `${base}/#about`, label: i18n.nav.about },
+  { href: `${base}/#programs`, label: i18n.nav.programs },
+  { href: `${base}/#life`, label: 'Life at 165Q' },
+  { href: `${base}/#voices`, label: i18n.nav.voices },
+  { href: `${base}/#calendar`, label: i18n.nav.calendar },
+  { href: `${base}/#contact`, label: i18n.nav.contact },
+];
+
+const faviconDataUrl = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23000'/%3E%3Ctext x='50' y='66' font-size='38' font-weight='700' text-anchor='middle' fill='%23f6c94e' font-family='-apple-system,system-ui'%3E165%3C/text%3E%3C/svg%3E";
+---
+
+<!DOCTYPE html>
+<html lang={i18n.lang.html} data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#fbfbfd" media="(prefers-color-scheme: light)" />
+    {noIndex && <meta name="robots" content="noindex,nofollow" />}
+    {!noIndex && <meta name="robots" content="index,follow" />}
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    {ogImage && <meta property="og:image" content={ogImage} />}
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" href={faviconDataUrl} type="image/svg+xml" />
+    <link rel="apple-touch-icon" href={faviconDataUrl} />
+    <link rel="manifest" href={`${base}/manifest.webmanifest`} />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="P.S. 165Q" />
+    <link rel="alternate" type="application/rss+xml" title="P.S. 165Q · Shooting Stars News" href={`${base}/rss.xml`} />
+    <link rel="alternate" hreflang="en" href="https://droppedmic.github.io/ps165q-site/" />
+    <link rel="alternate" hreflang="zh" href="https://droppedmic.github.io/ps165q-site/zh/" />
+    <link rel="alternate" hreflang="ko" href="https://droppedmic.github.io/ps165q-site/ko/" />
+    <link rel="alternate" hreflang="es" href="https://droppedmic.github.io/ps165q-site/es/" />
+    <link rel="alternate" hreflang="x-default" href="https://droppedmic.github.io/ps165q-site/" />
+    <script type="application/ld+json" set:html={JSON.stringify(schoolSchema)} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <a href="#main" class="skip">Skip to main content</a>
+
+    <!-- GLOBAL NAV -->
+    <nav class="gnav" role="navigation" aria-label="Global">
+      <div class="gnav-in">
+        <a href={`${base}/`} class="gnav-brand" aria-label="Home">
+          <div class="gnav-crest" aria-hidden="true">165</div>
+          <span class="gnav-name">P.S. 165Q</span>
+        </a>
+        <ul class="gnav-links" id="gnav-links">
+          {navLinks.map((l) => (
+            <li><a href={l.href}>{l.label}</a></li>
+          ))}
+        </ul>
+        <div class="gnav-tools">
+          <a href={`${base}/`} class={`gnav-tool ${locale === 'en' ? 'active' : ''}`} aria-label="English" aria-current={locale === 'en' ? 'true' : undefined} style="width:auto;padding:0 8px;font-size:12px;letter-spacing:-.005em;text-decoration:none">EN</a>
+          <a href={`${base}/zh/`} class={`gnav-tool ${locale === 'zh' ? 'active' : ''}`} aria-label="中文" aria-current={locale === 'zh' ? 'true' : undefined} style="width:auto;padding:0 8px;font-size:12px;letter-spacing:-.005em;text-decoration:none">中</a>
+          <a href={`${base}/ko/`} class={`gnav-tool ${locale === 'ko' ? 'active' : ''}`} aria-label="한국어" aria-current={locale === 'ko' ? 'true' : undefined} style="width:auto;padding:0 8px;font-size:12px;letter-spacing:-.005em;text-decoration:none">한</a>
+          <a href={`${base}/es/`} class={`gnav-tool ${locale === 'es' ? 'active' : ''}`} aria-label="Español" aria-current={locale === 'es' ? 'true' : undefined} style="width:auto;padding:0 8px;font-size:12px;letter-spacing:-.005em;text-decoration:none">ES</a>
+          <button class="gnav-tool theme-btn" id="theme-toggle" aria-label="Toggle theme"><svg id="theme-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+          <button class="gham" id="ham-btn" aria-label={i18n.nav.menu} aria-expanded="false" aria-controls="mob"><svg class="b" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="4" y1="8" x2="20" y2="8"/><line x1="4" y1="16" x2="20" y2="16"/></svg><svg class="x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- MOBILE MENU -->
+    <div class="mob" id="mob" role="menu" aria-label={i18n.nav.menu}>
+      {navLinks.map((l) => (
+        <a href={l.href} role="menuitem">
+          {l.label}
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+        </a>
+      ))}
+      <div class="mob-bottom">
+        <a href="https://www.parentsquare.com" target="_blank" rel="noopener" class="btn btn-pill-light">{i18n.nav.parentSquare}</a>
+        <a href={`${base}/#apply`} class="btn btn-pill-gold">{i18n.hero.btnApply || 'Apply 2026–27'}</a>
+      </div>
+    </div>
+
+    <main id="main">
+      <slot />
+    </main>
+
+    <!-- APPLE FOOTER -->
+    <footer class="afoot">
+      <div class="afoot-in">
+        <div class="afoot-notes">
+          <p>
+            <sup>1</sup>{i18n.footer.about}
+          </p>
+        </div>
+        <div class="afoot-cols">
+          <div class="afoot-col">
+            <h4>{i18n.footer.h.academics}</h4>
+            <ul>
+              <li><a href={`${base}/#programs`}>{i18n.programs.items.gt.name}</a></li>
+              <li><a href={`${base}/#programs`}>{i18n.programs.items.nest.name}</a></li>
+              <li><a href={`${base}/#programs`}>{i18n.programs.items.sel.name}</a></li>
+              <li><a href={`${base}/#programs`}>{i18n.programs.items.arts.name}</a></li>
+            </ul>
+          </div>
+          <div class="afoot-col">
+            <h4>{i18n.footer.h.families}</h4>
+            <ul>
+              <li><a href="https://www.parentsquare.com" target="_blank" rel="noopener">{i18n.nav.parentSquare}</a></li>
+              <li><a href={`${base}/#calendar`}>{i18n.nav.calendar}</a></li>
+              <li><a href={`${base}/#contact`}>{i18n.nav.contact}</a></li>
+              <li><a href={`${base}/news/`}>{i18n.nav.news}</a></li>
+            </ul>
+          </div>
+          <div class="afoot-col">
+            <h4>{i18n.footer.h.connect}</h4>
+            <ul>
+              <li><a href="https://www.instagram.com/ps165queens/" target="_blank" rel="noopener">Instagram</a></li>
+              <li><a href="https://twitter.com/PS165Queens" target="_blank" rel="noopener">X (Twitter)</a></li>
+              <li><a href="https://www.facebook.com/PS165Q/" target="_blank" rel="noopener">Facebook</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="afoot-bot">
+          <div>Copyright © 2026 P.S. 165Q Edith K. Bergtraum School.</div>
+          <div class="afoot-bot-links">
+            <a href={`${base}/`}>Privacy</a>
+            <a href={`${base}/`}>Accessibility</a>
+            <a href="https://www.schools.nyc.gov/about-us/policies" target="_blank" rel="noopener">DOE Policies</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- PWA + theme + chrome interactivity -->
+    <script>
+      (function () {
+        /* ===== THEME ===== */
+        var saved = localStorage.getItem('theme');
+        var sysDark = matchMedia('(prefers-color-scheme:dark)').matches;
+        var initial = saved || (sysDark ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', initial);
+
+        function paintIcon(t) {
+          var el = document.getElementById('theme-icon');
+          if (!el) return;
+          if (t === 'dark') {
+            el.innerHTML =
+              '<circle cx="12" cy="12" r="5"/>' +
+              '<line x1="12" y1="1" x2="12" y2="3"/>' +
+              '<line x1="12" y1="21" x2="12" y2="23"/>' +
+              '<line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>' +
+              '<line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>' +
+              '<line x1="1" y1="12" x2="3" y2="12"/>' +
+              '<line x1="21" y1="12" x2="23" y2="12"/>' +
+              '<line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>' +
+              '<line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>';
+          } else {
+            el.innerHTML = '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>';
+          }
+        }
+        paintIcon(initial);
+        var themeBtn = document.getElementById('theme-toggle');
+        if (themeBtn) {
+          themeBtn.addEventListener('click', function () {
+            var cur = document.documentElement.getAttribute('data-theme');
+            var nxt = cur === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', nxt);
+            localStorage.setItem('theme', nxt);
+            paintIcon(nxt);
+          });
+        }
+
+        /* ===== HAMBURGER / MOBILE MENU ===== */
+        var hb = document.getElementById('ham-btn');
+        var mob = document.getElementById('mob');
+        if (hb && mob) {
+          hb.addEventListener('click', function () {
+            var open = hb.getAttribute('aria-expanded') === 'true';
+            hb.setAttribute('aria-expanded', String(!open));
+            mob.classList.toggle('open', !open);
+            document.body.style.overflow = !open ? 'hidden' : '';
+          });
+          mob.querySelectorAll('a').forEach(function (l) {
+            l.addEventListener('click', function () {
+              hb.setAttribute('aria-expanded', 'false');
+              mob.classList.remove('open');
+              document.body.style.overflow = '';
+            });
+          });
+        }
+
+        /* ===== FOCUS TRAP (mobile menu) ===== */
+        document.addEventListener('keydown', function (e) {
+          if (e.key !== 'Tab') return;
+          if (!mob || !mob.classList.contains('open')) return;
+          var fo = mob.querySelectorAll(
+            'a[href]:not([disabled]),button:not([disabled]),input:not([disabled]),[tabindex]:not([tabindex="-1"])'
+          );
+          if (!fo.length) return;
+          var first = fo[0];
+          var last = fo[fo.length - 1];
+          if (e.shiftKey && document.activeElement === first) {
+            e.preventDefault();
+            last.focus();
+          } else if (!e.shiftKey && document.activeElement === last) {
+            e.preventDefault();
+            first.focus();
+          }
+          if (e.key === 'Escape') {
+            mob.classList.remove('open');
+            hb && hb.setAttribute('aria-expanded', 'false');
+            document.body.style.overflow = '';
+          }
+        });
+
+        /* ===== SERVICE WORKER ===== */
+        if ('serviceWorker' in navigator) {
+          window.addEventListener('load', function () {
+            navigator.serviceWorker
+              .register(import.meta.env.BASE_URL + 'sw.js')
+              .catch(function () {});
+          });
+        }
+      })();
+    </script>
+  </body>
+</html>

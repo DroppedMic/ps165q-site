@@ -1,0 +1,192 @@
+{
+  "lang": { "name": "English", "code": "en", "html": "en-US" },
+  "topbar": {
+    "doe": "NYC Department of Education",
+    "district": "District 25, Queens",
+    "open": "School Open",
+    "openTime": "School Open · {time} ET",
+    "closedToday": "School Closed for Today",
+    "closedWeekend": "School Closed · Weekend",
+    "doeProfile": "DOE Profile"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "programs": "Programs",
+    "gallery": "Gallery",
+    "calendar": "Calendar",
+    "leadership": "Leadership",
+    "voices": "Voices",
+    "community": "Community",
+    "contact": "Contact",
+    "news": "News",
+    "staff": "Staff",
+    "parentSquare": "ParentSquare",
+    "search": "Search",
+    "menu": "Menu",
+    "language": "Language",
+    "theme": "Theme"
+  },
+  "hero": {
+    "badge": "Now Enrolling 2026–2027",
+    "title1": "P.S. 165Q",
+    "title2": "Edith K. Bergtraum",
+    "sub": "A Pre-K through Grade 5 public school in Flushing, Queens — where every child becomes a citizen of the world and a life-long learner.",
+    "ctaParent": "ParentSquare",
+    "ctaPrograms": "Explore Programs",
+    "infoLocation": "Flushing, Queens",
+    "infoDistrict": "District 25",
+    "card1Label": "Grades Served",
+    "card1Val": "Pre-K – 5",
+    "card1Desc": "Full elementary program",
+    "card2Label": "Featured Programs",
+    "card2Val": "G&T + NEST",
+    "card2Desc": "Gifted & enrichment tracks",
+    "card3Label": "Established",
+    "card3Val": "Since 1960",
+    "card3Desc": "65+ years serving Flushing",
+    "scroll": "Scroll"
+  },
+  "ticker": [
+    "Home of the Shooting Stars",
+    "Now Enrolling 2026–2027",
+    "G&T and NEST Programs",
+    "Join ParentSquare",
+    "After School Programs",
+    "Follow @PS165Queens"
+  ],
+  "qa": {
+    "tag": "For Families",
+    "title": "Quick Access",
+    "desc": "Everything parents and families need — one click away.",
+    "parentSquare": { "t": "ParentSquare", "d": "Messages & alerts" },
+    "calendar": { "t": "Calendar", "d": "Dates & events" },
+    "handbook": { "t": "Handbook", "d": "Policies & info" },
+    "lunch": { "t": "Lunch Menu", "d": "Free meals daily" },
+    "afterschool": { "t": "After School", "d": "Programs & sports" },
+    "pta": { "t": "PTA", "d": "Get involved" }
+  },
+  "about": {
+    "tag": "About Our School",
+    "title": "A Message from",
+    "title2": "Our Principal",
+    "principal": "Tiffany L. Davis-Nealy",
+    "role": "Principal, P.S. 165Q",
+    "quote": "At P.S. 165Q, we believe every child is a Shooting Star — bright, unique, and capable of extraordinary things.",
+    "body": "Welcome to our school community. For over six decades, P.S. 165Q has been a cornerstone of Flushing, Queens — nurturing young minds from Pre-K through Grade 5. Our dedicated staff works every day to build a solid, equitable foundation through critical thinking, creativity, collaboration, and communication. We are proud of our Gifted & Talented program, our NEST enrichment track, and the wide range of arts, athletics, and social-emotional learning opportunities we offer. We look forward to partnering with you on your child's educational journey.",
+    "floatNum": "65+",
+    "floatLabel": "Years Serving Flushing",
+    "monoLabel": "Principal · Est. 1960"
+  },
+  "mission": {
+    "title1": "Cultivating citizens of the world and",
+    "title2": "life-long learners",
+    "body": "We build a solid and equitable foundation through critical thinking, creativity, collaboration, and communication — preparing every student to thrive in a diverse, interconnected world.",
+    "pillars": ["Critical Thinking", "Creativity", "Collaboration", "Communication"]
+  },
+  "stats": {
+    "years": "Years in Flushing",
+    "programs": "Academic Programs",
+    "grades": "Grade Levels",
+    "district": "NYC District"
+  },
+  "programs": {
+    "tag": "Academics",
+    "title1": "Programs That Set Our",
+    "title2": "Shooting Stars Apart",
+    "desc": "Rigorous, enriching programs designed to inspire every learner.",
+    "learnMore": "Learn more",
+    "items": {
+      "gt": {
+        "tag": "Gifted & Talented",
+        "name": "G&T Program",
+        "desc": "An accelerated curriculum for students identified through NYC DOE admissions. Emphasizes advanced problem-solving, independent research, and enriched content across all core subjects.",
+        "stat1": "NYC DOE",
+        "stat1Label": "Admissions pathway",
+        "stat2": "Advanced",
+        "stat2Label": "Accelerated curriculum"
+      },
+      "nest": { "tag": "Enrichment", "name": "NEST Program", "desc": "Nurturing Excellence through STEM and the arts. Project-based learning with integrated technology for deeper engagement." },
+      "sel": { "tag": "Wellbeing", "name": "Social-Emotional Learning", "desc": "Building self-awareness, empathy, and responsible decision-making across every grade." },
+      "arts": { "tag": "Creative Arts", "name": "The Arts", "desc": "Visual arts, music, and theater — including celebrated annual productions and performances." },
+      "sports": { "tag": "Athletics", "name": "Sports", "desc": "Competitive and recreational athletics developing teamwork, discipline, and physical fitness." },
+      "lit": { "tag": "Academic Support", "name": "Literacy & Math Intervention", "desc": "Targeted small-group instruction and tutoring to ensure every student meets grade-level standards." },
+      "tech": { "tag": "Technology", "name": "Digital Learning", "desc": "1:1 devices, coding curriculum, and digital citizenship for a technology-driven future." }
+    }
+  },
+  "gallery": {
+    "tag": "School Life",
+    "title": "A Day at 165Q",
+    "desc": "Glimpses of what makes our school community special — click any image to expand.",
+    "captions": {
+      "stem": "STEM Lab", "stemMeta": "NEST Program",
+      "reading": "Reading Nook", "readingMeta": "Literacy",
+      "math": "Math Mastery", "mathMeta": "Grade 4",
+      "concert": "Spring Concert", "concertMeta": "The Arts",
+      "recess": "Recess Joy", "recessMeta": "Daily",
+      "code": "Coding Club", "codeMeta": "Digital Learning",
+      "art": "Art Studio", "artMeta": "Visual Arts",
+      "field": "Field Day", "fieldMeta": "Athletics"
+    }
+  },
+  "psCta": {
+    "title": "Stay connected with ParentSquare",
+    "body": "Real-time announcements, permission slips, and auto-translated messages in your language.",
+    "btn": "Join ParentSquare"
+  },
+  "leadership": {
+    "tag": "Our Team",
+    "title": "School Leadership",
+    "principal": "Principal",
+    "assistantPrincipal": "Assistant Principal"
+  },
+  "calendar": {
+    "tag": "Upcoming",
+    "title": "School Calendar",
+    "full": "Full Calendar",
+    "downloadIcs": "Download .ics",
+    "badges": { "upcoming": "Upcoming", "closed": "Closed", "testing": "Testing" }
+  },
+  "voices": {
+    "tag": "Community Voices",
+    "title": "What Families Say"
+  },
+  "community": {
+    "tag": "Community",
+    "title": "Follow Our Shooting Stars",
+    "ig": { "body": "Daily highlights, classroom spotlights, performances, and field trips.", "foot": "View on Instagram" },
+    "x1": { "body": "Announcements, event updates, and real-time school news.", "foot": "View on X" },
+    "x2": { "body": "Direct updates from Principal Davis-Nealy.", "foot": "View on X" },
+    "fb": { "body": "Community events, PTA updates, and photo albums.", "foot": "View on Facebook" }
+  },
+  "newsletter": {
+    "title1": "Don't miss a",
+    "title2": "moment",
+    "body": "Get the weekly Shooting Stars digest — calendar reminders, classroom highlights, and PTA news. Sent every Sunday evening.",
+    "placeholder": "your@email.com",
+    "btn": "Subscribe",
+    "privacy": "No spam. Unsubscribe with one click.",
+    "success": "You're on the list — welcome aboard!"
+  },
+  "contact": {
+    "tag": "Contact",
+    "title": "Get in Touch",
+    "address": "Address",
+    "office": "Main Office",
+    "fax": "Fax",
+    "hours": "Hours",
+    "hoursVal": "Mon – Fri, 8:00 AM – 2:20 PM",
+    "doe": "NYC DOE"
+  },
+  "cmdk": {
+    "placeholder": "Search the site, jump to a section, or find a resource…",
+    "empty": "No results for",
+    "groups": { "navigate": "Navigate", "resources": "Resources", "contact": "Contact", "social": "Social", "theme": "Theme", "language": "Language" },
+    "hints": { "navigate": "navigate", "select": "select", "close": "close" }
+  },
+  "footer": {
+    "about": "Preparing citizens of the world and life-long learners in Flushing, Queens since 1960. Home of the Shooting Stars.",
+    "h": { "academics": "Academics", "families": "Families", "connect": "Connect" }
+  },
+  "breadcrumbs": { "home": "Home" }
+}
